@@ -13,6 +13,7 @@ const Home: NextPage = () => {
       <SEO
         shouldExcludeTitleSuffix
         title='Tools4CSS'
+        description='Free CSS Generator | Our tools are designed to help you streamline your code development with dynamic and intuitive CSS generators'
       />
       <HeaderApp />
       <Main />
