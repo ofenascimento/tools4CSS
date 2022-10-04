@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 15px 10px;
+  padding: 15px 85px;
 
   ul {
     margin: 0;
@@ -20,7 +20,7 @@
         Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
         sans-serif;
       :hover {
-        color: #096ffe;
+        color: #464852;
       }
     }
   }
@@ -31,7 +31,7 @@
     text-decoration: none;
     margin-top: 10px;
     h1 {
-      background: linear-gradient(-80deg,  #096ffe, #096ffe, #b23fe0, #ff00dd);
+      background-color: #096ffe;
       background-size: 300%;
       font-weight: 900;
       font-size: 30px;

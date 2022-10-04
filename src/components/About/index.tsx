@@ -22,7 +22,7 @@ export default function About() {
                 WebkitBackgroundClip: 'text',
                 color: 'transparent',
                 backgroundClip: 'text',
-                background: `linear-gradient(${direction}, #00d0ff, #ff00dd)`,
+                background: `linear-gradient(${direction}, #096ffe, #ff00dd)`,
               }}
             >
               How it works?

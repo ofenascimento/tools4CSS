@@ -84,13 +84,13 @@ const BackgroundGradient = () => {
                 checked={animated}
                 onChange={handleChange}
                 className={style.checkbox}
-                onColor='#86d3ff'
-                onHandleColor='#0F54B4'
+                onColor='#fff'
+                onHandleColor='#0f54b4'
                 handleDiameter={30}
                 uncheckedIcon={false}
                 checkedIcon={false}
                 offColor='#ffffff'
-                offHandleColor='#0F54B4'
+                offHandleColor='#464852'
                 activeBoxShadow='0px 0px 1px 10px rgba(0, 0, 0, 0.2)'
                 height={20}
                 width={48}

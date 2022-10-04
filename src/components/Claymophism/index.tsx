@@ -5,7 +5,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Claymorphism = () => {
   const [blur, setBlur] = useState<number>(0);
-  const [color, setColor] = useState<string>('#8ed1fc');
+  const [color, setColor] = useState<string>('#74757B');
   const [trasnparency, setTransparency] = useState<number>(0.15);
   const [depth, setDepth] = useState<number>(12);
   const [text, setText] = useState<string>('COPY');
@@ -53,7 +53,7 @@ const Claymorphism = () => {
             backdropFilter: `blur(${blur}px)`,
             boxShadow: `35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)`,
             borderRadius: 12,
-            width: '300px',
+            width: '320px',
             height: '320px',
             backgroundColor: `rgba(255, 255, 255, ${trasnparency})`,
           }}

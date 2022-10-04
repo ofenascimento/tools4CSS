@@ -1,15 +1,13 @@
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 import style from './styles.module.scss';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Slider } from '@material-ui/core';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 
-//#623cea
 export default function Main() {
   const router = useRouter();
-  const [blur, setBlur] = useState<number>(0);
-  const [color, setColor] = useState<string>('#096FFE');
+  const [depth, setDepth] = useState<number>(8);
+  const [color, setColor] = useState<string>('#3377FF');
 
   const Redirect = () => {
     router.push('/tools/text-gradient');
@@ -55,6 +53,7 @@ export default function Main() {
             <p
               onClick={() => Redirect()}
               style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}
+              className={style.buttonMain}
             >
               Try it for free 🚀
             </p>
@@ -63,6 +62,7 @@ export default function Main() {
               target='_blank'
               rel='noreferrer'
             >
+              
               <img
                 src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=356512&theme=light'
                 alt='Tools4CSS - Tools&#0032;to&#0032;help&#0032;developers&#0032;build&#0032;interfaces&#0032;modern&#0032;quickly | Product Hunt'
@@ -84,21 +84,20 @@ export default function Main() {
               <div
                 className={style.container}
                 style={{
-                  backdropFilter: `blur(${blur}px)`,
-                  WebkitBackdropFilter: `blur(${blur}px)`,
-                  width: '300px',
+                  width: '320px',
                   height: '320px',
                   borderRadius: 12,
-                  backgroundColor: `rgba(${r}, ${g}, ${b}, 0.25)`,
+                  boxShadow: `35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)`,
                 }}
               ></div>
             </div>
-            <label>Change the blur 👇</label>
+            <label>Change the depth 👇</label>
             <Slider
-              value={blur}
-              onChange={(e, value) => setBlur(value as number)}
-              defaultValue={30}
+              value={depth}
+              onChange={(e, value) => setDepth(value as number)}
+              defaultValue={12}
               className={style.slider}
+              max={12}
             />
             <input
               type='color'

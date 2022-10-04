@@ -2,27 +2,12 @@
   backdrop-filter: blur(0px);
   --webkit-backdrop-filter: blur(0px);
   --moz-backdrop-filter: blur(0px);
-  background-color: #438dfc;
+  background-color: #131420;
   height: 100vh;
   width: 300px;
   display: flex;
   flex-direction: column;
-  scrollbar-color:#0F54B4 #438dfc;
   z-index: 999;
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #438dfc;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #1860de;
-    border-radius: 12px;
-  }
 
   .logo {
     margin-bottom: 10px;
@@ -33,7 +18,7 @@
 
   .textLogo {
     h1 {
-      background: linear-gradient(-45deg, #096ffe, #096ffe, #fff, #f2f4f6);
+      background: linear-gradient(-80deg, #b23fe0, #ff00dd, #096ffe, #096ffe);
       background-size: 300%;
       font-weight: 900;
       font-size: 40px;
@@ -60,45 +45,28 @@
 
   .links {
     height: 75vh;
-    overflow-y: scroll;
     overflow-x: hidden;
   }
 
   .row {
-    margin: 10px;
-    padding: 60px;
+    margin: 20px;
+    padding: 20px;
     position: relative;
     border-radius: 8px;
     cursor: pointer;
 
     .text {
       width: 100%;
-      border-end-end-radius: 8px;
-      border-end-start-radius: 6px;
+      border-radius: 8px;
       position: absolute;
       bottom: 0;
-      background-color: #1860de;
+      background-color: #464852;
       left: 0;
       display: flex;
       justify-content: center;
       color: #fff;
+      padding: 10px;
     }
-  }
-
-  .row:nth-child(1) {
-    background-image: url('/text-gradient.png');
-  }
-  .row:nth-child(2) {
-    background-image: url('/background-gradient.png');
-  }
-  .row:nth-child(3) {
-    background-image: url('/claymorphism.png');
-  }
-  .row:nth-child(4) {
-    background-image: url('/neumorphism.png');
-  }
-  .row:nth-child(5) {
-    background-image: url('/glassmorphism.png');
   }
 
   .link {
@@ -111,7 +79,6 @@
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     text-align: center;
-    padding: 8px 50px;
   }
   .footer {
     bottom: 0;

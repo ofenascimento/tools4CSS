@@ -11,7 +11,7 @@
   .row {
     width: 430px;
     margin: 0px 50px;
-    
+
     .about {
       display: flex;
       flex-direction: column;
@@ -36,7 +36,7 @@
         }
       }
       p {
-        color: #1363df;
+        color: #131420;
         margin: 0px;
         margin-bottom: 13px;
         font-size: 18px;
@@ -79,29 +79,32 @@
 
       .textarea {
         width: 300px;
-        height: 150px;
-        color: #1363df;
+        height: 170px;
+        background-color: #464852;
+        padding: 10px;
+        color: #fff;
         font-weight: 500;
         margin-top: 10px;
-        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI,
-          Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-          Helvetica Neue, sans-serif;
-        font-size: 13px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+          Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+          sans-serif;
+        font-size: 12px;
+        outline: none;
+        border-radius: 4px;
       }
+    
       button {
-        background-color: #096ffe;
+        background-color: #0f54b4;
+        margin: 5px 0px;
         border: 0px;
         width: 300px;
         color: #fff;
         padding: 10px 20px;
+        border-radius: 8px;
         cursor: pointer;
-        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI,
-          Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-          Helvetica Neue, sans-serif;
-          border-end-end-radius: 12px;
-          border-end-start-radius: 12px;
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+          Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+          sans-serif;
       }
       p {
         color: #a7a4a4;

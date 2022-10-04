@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .container {
   display: flex;
@@ -22,7 +22,7 @@
     h1 {
       width: 500px;
       line-height: 90px;
-      background: linear-gradient(-80deg, #b23fe0, #ff00dd, #096ffe, #096ffe);
+      background: linear-gradient(-80deg, #121720, #121720, #096ffe, #096ffe);
       background-size: 300%;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 900;
@@ -118,7 +118,7 @@
         border: none;
       }
       label {
-        color: #1363df;
+        color: #464852;
         font-weight: 500;
       }
     }

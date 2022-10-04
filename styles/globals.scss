@@ -27,5 +27,10 @@ textarea::-webkit-scrollbar {
   width: 1em;
 }
 textarea::-webkit-scrollbar-thumb {
-  background-color: #0f54b4;
+  background-color: #0F54B4;
+}
+
+textarea {
+  border: 0;
+  outline: none;
 }

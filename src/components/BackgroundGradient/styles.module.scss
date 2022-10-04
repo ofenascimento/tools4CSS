@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     margin: 10px 100px;
     padding: 10px;
-    background-color: #438dfc;
+    background-color: #131420;
     border-radius: 12px;
   }
 }
@@ -26,7 +26,6 @@
 }
 
 .controls {
-  background-color: #438dfc;
   padding: 20px;
   @media screen and (max-width: 840px) {
     padding: 20px 50px;
@@ -68,27 +67,31 @@
   color: #fff !important;
 }
 .cssCopy {
-  background-color: #438dfc;
   padding: 20px;
 
   .textarea {
     width: 300px;
-    height: 140px;
-    background-color: #fff;
-    color: #096ffe;
+    height: 170px;
+    background-color: #464852;
+    padding: 10px;
+    color: #fff;
     font-weight: 500;
     margin-top: 10px;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-size: 12px;
+    outline: none;
+    border-radius: 4px;
   }
+
   button {
     background-color: #0f54b4;
     border: 0px;
     width: 300px;
     color: #fff;
     padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -135,7 +138,7 @@
     flex-wrap: wrap;
     margin: 10px 100px;
     padding: 10px;
-    background-color: #438dfc;
+    background-color: #131420;
     border-radius: 12px;
   }
 }
@@ -150,7 +153,6 @@
 }
 
 .controls {
-  background-color: #438dfc;
   padding: 20px;
   @media screen and (max-width: 840px) {
     padding: 20px 50px;
@@ -199,27 +201,31 @@
   color: #fff !important;
 }
 .cssCopy {
-  background-color: #438dfc;
   padding: 20px;
 
   .textarea {
     width: 300px;
-    height: 160px;
-    background-color: #fff;
-    color: #096ffe;
+    height: 170px;
+    background-color: #464852;
+    padding: 10px;
+    color: #fff;
     font-weight: 500;
     margin-top: 10px;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     font-size: 12px;
+    outline: none;
+    border-radius: 4px;
   }
+
   button {
     background-color: #0f54b4;
     border: 0px;
     width: 300px;
     color: #fff;
     padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -230,7 +236,7 @@
 .directions {
   button {
     padding: 10px;
-    background-color: #0f54b4;
+    background-color: #464852;
     border: 0;
     margin: 5px;
     border-radius: 12px;
