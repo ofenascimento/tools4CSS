@@ -10,7 +10,7 @@ export default function Main() {
   const [color, setColor] = useState<string>('#3377FF');
 
   const Redirect = () => {
-    router.push('/tools/text-gradient');
+    router.push('/tools/claymorphism');
   };
 
   interface IHexToRGBA {
