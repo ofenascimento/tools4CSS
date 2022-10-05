@@ -13,17 +13,17 @@ const Sidebar = () => {
         <h1>Tools4CSS</h1>
       </div>
       <div className={style.links}>
+      <Link href='/tools/neumorphism'>
+          <div className={style.row}>
+            <div className={style.text}>
+              <div className={style.link}>Neumorphism</div>
+            </div>
+          </div>
+        </Link>
         <Link href='/tools/claymorphism'>
           <div className={style.row}>
             <div className={style.text}>
               <div className={style.link}>Claymorphism</div>
-            </div>
-          </div>
-        </Link>
-        <Link href='/tools/neumorphism'>
-          <div className={style.row}>
-            <div className={style.text}>
-              <div className={style.link}>Neumorphism</div>
             </div>
           </div>
         </Link>
