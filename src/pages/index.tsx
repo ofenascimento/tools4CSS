@@ -17,9 +17,6 @@ const Home: NextPage = () => {
       />
       <HeaderApp />
       <Main />
-      <VideoComponent />
-      <About />
-      <Contact />
     </>
   );
 };

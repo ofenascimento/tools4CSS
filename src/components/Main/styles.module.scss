@@ -54,12 +54,14 @@
     }
     .content {
       button {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI,
+          Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+          Helvetica Neue, sans-serif;
         font-size: 18px;
         margin: 20px 0px;
         margin-bottom: 8px;
         line-height: 46px;
         background-color: #0F54B4;
-        font-family: Poppins;
         border: 0;
         font-weight: 500;
         padding: 0px 70px;
@@ -68,6 +70,9 @@
         text-align: center;
         max-width: 300px;
         cursor: pointer;
+        @media screen and (max-width: 1320px) {
+          padding: 0px 50px;
+        }
         :hover {
           background-color: #438dfc;
           border-radius: 12px;
