@@ -4,6 +4,9 @@
   align-items: center;
   margin-top: 20px;
   flex-direction: column;
+  @media screen and (max-width: 880px) {
+    display: none;
+  }
   h1 {
     font-style: normal;
     font-weight: 500;
@@ -22,14 +25,5 @@
     max-width: auto;
     height: auto;
   }
-  .gif {
-    display: none;
-    margin: 0px 12px;
-    @media screen and (max-width: 880px) {
-      display: block;
-    }
-    img {
-      border-radius: 12px;
-    }
-  }
+  
 }
