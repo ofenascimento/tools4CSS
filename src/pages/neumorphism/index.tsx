@@ -1,8 +1,8 @@
 import React from 'react';
-import HeaderMobile from '../../../components/HeaderMobile';
-import Neumorphism from '../../../components/Neumorphism';
-import { SEO } from '../../../components/SEO';
-import Sidebar from '../../../components/Sidebar';
+import HeaderMobile from '../../components/HeaderMobile';
+import Neumorphism from '../../components/Neumorphism';
+import { SEO } from '../../components/SEO';
+import Sidebar from '../../components/Sidebar';
 
 const neumorphism = () => {
   return (

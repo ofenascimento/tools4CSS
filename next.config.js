@@ -4,4 +4,8 @@ const nextConfig = {
   swcMinify: true,
 }
 
+module.exports = {
+  basePath: '/docs',
+}
+
 module.exports = nextConfig

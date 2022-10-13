@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
-import Claymorphism from '../../../components/Claymophism';
-import HeaderMobile from '../../../components/HeaderMobile';
-import { SEO } from '../../../components/SEO';
+import Claymorphism from '../../components/Claymophism';
+import HeaderMobile from '../../components/HeaderMobile';
+import { SEO } from '../../components/SEO';
 
-import Sidebar from '../../../components/Sidebar';
+import Sidebar from '../../components/Sidebar';
 
 
 const claymorphism: NextPage = () => {

@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
-import BackgroundGradient from '../../../components/BackgroundGradient';
-import HeaderMobile from '../../../components/HeaderMobile';
-import { SEO } from '../../../components/SEO';
-import Sidebar from '../../../components/Sidebar';
+import BackgroundGradient from '../../components/BackgroundGradient';
+import HeaderMobile from '../../components/HeaderMobile';
+import { SEO } from '../../components/SEO';
+import Sidebar from '../../components/Sidebar';
 
 
 const BackgroundGradientPage: NextPage = () => {

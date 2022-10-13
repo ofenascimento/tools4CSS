@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 const VideoComponent = () => {
   return (
-    <div className={styles.video}>
+    <div className={styles.video} id="preview">
       <h1>Preview</h1>
       <video loop autoPlay id='vid' muted>
         <source src='/review.mp4' />

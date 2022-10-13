@@ -6,8 +6,8 @@ import Switch from 'react-switch';
 const BackgroundGradient = () => {
   const [color1, setColor1] = useState<string>('#12C2E9');
   const [color2, setColor2] = useState<string>('#d954c8');
-  const [animated, setAnimated] = useState(false);
-  const [direction, setDirection] = useState<string>('to top');
+  const [animated, setAnimated] = useState(true);
+  const [direction, setDirection] = useState<string>('to right');
   const [text, setText] = useState<string>('COPY');
   const Copy = () => {
     setText('COPIED 🎉');
@@ -111,7 +111,7 @@ const BackgroundGradient = () => {
             className={style.textarea}
             value={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
               animated
-                ? '\nbackground-size: 400% 400%;\nanimation: gradient 15s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
+                ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
                 : ''
             } `}
             readOnly
@@ -120,7 +120,7 @@ const BackgroundGradient = () => {
           <CopyToClipboard
             text={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
               animated
-                ? '\nbackground-size: 400% 400%;\nanimation: gradient 15s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
+                ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
                 : ''
             } `}
           >
