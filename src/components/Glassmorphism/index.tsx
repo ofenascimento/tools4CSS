@@ -3,8 +3,6 @@ import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-
-
 const Glassmorphism = () => {
   const [blur, setBlur] = useState<number>(3);
   const [color, setColor] = useState<string>('#8ed1fc');
@@ -46,7 +44,6 @@ const Glassmorphism = () => {
 
   return (
     <div className={style.app}>
-      
       <div className={style.background}>
         <div
           className={style.container}
@@ -88,8 +85,8 @@ const Glassmorphism = () => {
           <div className={style.flexColor}>
             <div>
               <div className={style.label}>
-                {color}
                 <span>Color</span>
+                {color}
               </div>
               <input
                 type='color'

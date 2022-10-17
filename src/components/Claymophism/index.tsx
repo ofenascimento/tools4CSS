@@ -98,8 +98,8 @@ const Claymorphism = () => {
           <div className={style.flexColor}>
             <div>
               <div className={style.label}>
-                {color}
                 <span>Color</span>
+                {color}
               </div>
               <input
                 type='color'

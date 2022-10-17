@@ -47,8 +47,8 @@ const TextGradiemt = () => {
         <div className={style.controls}>
           <div>
             <div className={style.label}>
-              {color1}
               <span>Color 1</span>
+              {color1}
             </div>
             <input
               type='color'
@@ -58,8 +58,8 @@ const TextGradiemt = () => {
           </div>
           <div>
             <div className={style.label}>
-              {color2}
               <span>Color 2</span>
+              {color2}
             </div>
             <input
               type='color'
