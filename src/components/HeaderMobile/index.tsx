@@ -13,19 +13,19 @@ export default function HeaderApp() {
       </label>
       <ul className={styles.menu}>
         <li>
-          <Link href='/tools/claymorphism'>Claymorphism</Link>
+          <Link href='/background-gradient'>Background Gradient</Link>
         </li>
         <li>
-          <Link href='/tools/neumorphism'>Neumorphism</Link>
+          <Link href='/text-gradient'>Text Gradient</Link>
         </li>
         <li>
-          <Link href='/tools/glassmorphism'>Glassmorphism</Link>
+          <Link href='/claymorphism'>Claymorphism</Link>
         </li>
         <li>
-          <Link href='/tools/text-gradient'>Text Gradient</Link>
+          <Link href='/neumorphism'>Neumorphism</Link>
         </li>
         <li>
-          <Link href='/tools/background-gradient'>Background Gradient</Link>
+          <Link href='/glassmorphism'>Glassmorphism</Link>
         </li>
       </ul>
     </header>
