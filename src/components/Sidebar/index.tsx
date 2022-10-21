@@ -53,7 +53,7 @@ const Sidebar = () => {
       <div className={style.footer}>
         Made with ❤️ by
         <span>
-          <Link href='https://gomestzx.github.io'> gomestzx</Link>
+          <Link href='https://gomestzx.github.io'> Felipe Matheus</Link>
         </span>
       </div>
     </div>

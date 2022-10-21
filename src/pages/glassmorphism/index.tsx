@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Glassmorphism from '../../components/Glassmorphism';
-import HeaderMobile from '../../components/HeaderMobile';
+import HeaderMobile from '../../components/HeaderDash';
 import { SEO } from '../../components/SEO';
 
 

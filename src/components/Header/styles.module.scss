@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 15px 85px;
-
+  background-color: #131420;
   ul {
     margin: 0;
     padding: 0;
@@ -15,12 +15,12 @@
       font-weight: 500;
       font-size: 18px;
       line-height: 27px;
-      color: rgb(167, 164, 164);
+      color: #fff;
       font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI,
         Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
         sans-serif;
       :hover {
-        color: #0F54B4;
+        color: #0f54b4;
       }
     }
   }
@@ -31,7 +31,7 @@
     text-decoration: none;
     margin-top: 10px;
     h1 {
-      background-color: #B2B8C9;
+      background-color: #b2b8c9;
       background-size: 300%;
       font-weight: 900;
       font-size: 30px;
@@ -169,7 +169,7 @@
         font-weight: 500;
         font-size: 17px;
         line-height: 27px;
-        color: rgb(167, 164, 164);
+        color: #fff;
         a {
           padding: 15px;
         }
@@ -196,7 +196,7 @@
         font-weight: 500;
         font-size: 17px;
         line-height: 27px;
-        color: rgb(167, 164, 164);
+        color: #fff;
         a {
           padding: 15px;
         }

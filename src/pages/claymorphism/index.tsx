@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Claymorphism from '../../components/Claymophism';
-import HeaderMobile from '../../components/HeaderMobile';
+import HeaderMobile from '../../components/HeaderDash';
 import { SEO } from '../../components/SEO';
 
 import Sidebar from '../../components/Sidebar';

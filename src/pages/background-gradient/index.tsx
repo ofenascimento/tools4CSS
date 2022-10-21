@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import BackgroundGradient from '../../components/BackgroundGradient';
-import HeaderMobile from '../../components/HeaderMobile';
+import HeaderMobile from '../../components/HeaderDash';
 import { SEO } from '../../components/SEO';
 import Sidebar from '../../components/Sidebar';
 

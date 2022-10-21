@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderMobile from '../../components/HeaderMobile';
+import HeaderMobile from '../../components/HeaderDash';
 import Neumorphism from '../../components/Neumorphism';
 import { SEO } from '../../components/SEO';
 import Sidebar from '../../components/Sidebar';

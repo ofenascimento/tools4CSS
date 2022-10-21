@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import HeaderMobile from '../../components/HeaderMobile';
+import HeaderMobile from '../../components/HeaderDash';
 import { SEO } from '../../components/SEO';
 import Sidebar from '../../components/Sidebar';
 import TextGradient from '../../components/TextGradient';
