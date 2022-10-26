@@ -6,5 +6,8 @@
     padding: 20px 0;
     color: #fff;
     font-size: 15px;
+    @media screen and (max-width: 840px) {
+      font-size: 10px;
+    }
   }
 }
