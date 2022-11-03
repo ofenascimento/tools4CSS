@@ -5,9 +5,9 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Claymorphism = () => {
   const [blur, setBlur] = useState<number>(0);
-  const [color, setColor] = useState<string>('#74757B');
+  const [color, setColor] = useState<string>('#6770a8');
   const [trasnparency, setTransparency] = useState<number>(0.15);
-  const [depth, setDepth] = useState<number>(12);
+  const [depth, setDepth] = useState<number>(4);
   const [text, setText] = useState<string>('COPY');
   const Copy = () => {
     setText('COPIED 🎉');

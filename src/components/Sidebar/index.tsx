@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import style from './styles.module.scss';
 
 const Sidebar = () => {
+  const { asPath } = useRouter();
+  console.log(asPath);
   return (
     <div className={style.sidebar}>
       <div className={style.logo}>
@@ -13,41 +16,64 @@ const Sidebar = () => {
         <h1>Tools4CSS</h1>
       </div>
       <div className={style.links}>
-        <Link href='/background-gradient'>
+        <Link href='/claymorphism'>
           <div className={style.row}>
-            <div className={style.text}>
-              <div className={style.link}>Background Gradient</div>
-            </div>
-          </div>
-        </Link>
-        <Link href='/text-gradient'>
-          <div className={style.row}>
-            <div className={style.text}>
-              <div className={style.link}>Text Gradient</div>
+            <div
+              className={`${
+                asPath == '/claymorphism' ? style.textActivated : style.text
+              }`}
+            >
+              <div className={style.link}>Claymorphism</div>
             </div>
           </div>
         </Link>
         <Link href='/neumorphism'>
           <div className={style.row}>
-            <div className={style.text}>
+            <div
+              className={`${
+                asPath == '/neumorphism' ? style.textActivated : style.text
+              }`}
+            >
               <div className={style.link}>Neumorphism</div>
-            </div>
-          </div>
-        </Link>
-        <Link href='/claymorphism'>
-          <div className={style.row}>
-            <div className={style.text}>
-              <div className={style.link}>Claymorphism</div>
             </div>
           </div>
         </Link>
         <Link href='/glassmorphism'>
           <div className={style.row}>
-            <div className={style.text}>
+            <div
+              className={`${
+                asPath == '/glassmorphism' ? style.textActivated : style.text
+              }`}
+            >
               <div className={style.link}>Glassmorphism</div>
             </div>
           </div>
         </Link>
+        <Link href='/text-gradient'>
+          <div className={style.row}>
+            <div
+              className={`${
+                asPath == '/text-gradient' ? style.textActivated : style.text
+              }`}
+            >
+              <div className={style.link}>Text Gradient</div>
+            </div>
+          </div>
+        </Link>
+        <Link href='/background-gradient'>
+          <div className={style.row}>
+            <div
+              className={`${
+                asPath == '/background-gradient'
+                  ? style.textActivated
+                  : style.text
+              }`}
+            >
+              <div className={style.link}>Background Gradient</div>
+            </div>
+          </div>
+        </Link>
+        
       </div>
 
       <div className={style.footer}>

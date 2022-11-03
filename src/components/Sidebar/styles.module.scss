@@ -62,9 +62,22 @@
       background-color: #232634;
       left: 0;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       color: #fff;
       padding: 10px;
+    }
+    .textActivated {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: #232634;
+      left: 0;
+      display: flex;
+      justify-content: flex-start;
+      color: #fff;
+      padding: 8.5px 10px !important;
+      border-bottom: 3px solid #096ffe;
+      border-radius: 4px;
     }
   }
 
