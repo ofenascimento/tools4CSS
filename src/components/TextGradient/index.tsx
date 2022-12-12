@@ -3,7 +3,7 @@ import style from './styles.module.scss';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Switch from 'react-switch';
 
-const TextGradiemt = () => {
+const TextGradient = () => {
   const [color1, setColor1] = useState<string>('#00d0ff');
   const [color2, setColor2] = useState<string>('#ff00dd');
   const [direction, setDirection] = useState<string>('-80deg');
@@ -159,4 +159,4 @@ const TextGradiemt = () => {
   );
 };
 
-export default TextGradiemt;
+export default TextGradient;

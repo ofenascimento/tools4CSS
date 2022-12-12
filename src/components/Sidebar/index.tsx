@@ -1,12 +1,11 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
+import { useRender } from '../../hooks/useRender';
 import style from './styles.module.scss';
 
 const Sidebar = () => {
-  const { asPath } = useRouter();
-  console.log(asPath);
+  const { setComponent, component } = useRender();
+  console.log(component);
   return (
     <div className={style.sidebar}>
       <div className={style.logo}>
@@ -15,72 +14,68 @@ const Sidebar = () => {
       <div className={style.textLogo}>
         <h1>Tools4CSS</h1>
       </div>
-      <div className={style.links}>
-        <Link href='/claymorphism'>
+      <div className={style.buttons}>
+        <button onClick={() => setComponent('claymorphism')}>
           <div className={style.row}>
             <div
               className={`${
-                asPath == '/claymorphism' ? style.textActivated : style.text
+                component == 'claymorphism' ? style.textActivated : style.text
               }`}
             >
-              <div className={style.link}>Claymorphism</div>
+              <div className={style.button}>Claymorphism</div>
             </div>
           </div>
-        </Link>
-        <Link href='/neumorphism'>
+        </button>
+        <button onClick={() => setComponent('neumorphism')}>
           <div className={style.row}>
             <div
               className={`${
-                asPath == '/neumorphism' ? style.textActivated : style.text
+                component == 'neumorphism' ? style.textActivated : style.text
               }`}
             >
-              <div className={style.link}>Neumorphism</div>
+              <div className={style.button}>Neumorphism</div>
             </div>
           </div>
-        </Link>
-        <Link href='/glassmorphism'>
+        </button>
+        <button onClick={() => setComponent('glassmorphism')}>
           <div className={style.row}>
             <div
               className={`${
-                asPath == '/glassmorphism' ? style.textActivated : style.text
+                component == 'glassmorphism' ? style.textActivated : style.text
               }`}
             >
-              <div className={style.link}>Glassmorphism</div>
+              <div className={style.button}>Glassmorphism</div>
             </div>
           </div>
-        </Link>
-        <Link href='/text-gradient'>
+        </button>
+        <button onClick={() => setComponent('text-gradient')}>
           <div className={style.row}>
             <div
               className={`${
-                asPath == '/text-gradient' ? style.textActivated : style.text
+                component == 'text-gradient' ? style.textActivated : style.text
               }`}
             >
-              <div className={style.link}>Text Gradient</div>
+              <div className={style.button}>Text Gradient</div>
             </div>
           </div>
-        </Link>
-        <Link href='/background-gradient'>
+        </button>
+        <button onClick={() => setComponent('background-gradient')}>
           <div className={style.row}>
             <div
               className={`${
-                asPath == '/background-gradient'
+                component == 'background-gradient'
                   ? style.textActivated
                   : style.text
               }`}
             >
-              <div className={style.link}>Background Gradient</div>
+              <div className={style.button}>Background Gradient</div>
             </div>
           </div>
-        </Link>
-        
+        </button>
       </div>
 
       <div className={style.footer}>
-        Made with ❤️ by
-        <span>
-          <Link href='https://gomestzx.github.io'> Felipe Matheus</Link>
-        </span>
+        Made with ❤️ by <span>Felipe Matheus</span>
       </div>
     </div>
   );

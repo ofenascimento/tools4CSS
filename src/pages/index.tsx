@@ -1,23 +1,44 @@
 import type { NextPage } from 'next';
 import { SEO } from '../components/SEO';
+import { useRender } from '../hooks/useRender';
+import React from 'react';
+import Sidebar from '../components/Sidebar';
 
-import React, { useEffect } from "react";
-import Router from 'next/router'
+// Generators
+import Claymorphism from '../components/Claymophism';
+import Glassmorphism from '../components/Glassmorphism';
+import Neumorphism from '../components/Neumorphism';
+import TextGradient from '../components/TextGradient';
+import BackgroundGradient from '../components/BackgroundGradient';
+
+function renderSwitch(params: any) {
+  switch (params) {
+    case 'claymorphism':
+      return <Claymorphism />;
+    case 'neumorphism':
+      return <Neumorphism />;
+    case 'glassmorphism':
+      return <Glassmorphism />;
+    case 'text-gradient':
+      return <TextGradient />;
+    case 'background-gradient':
+      return <BackgroundGradient />;
+  }
+}
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    const {pathname} = Router
-    if(pathname == '/' ){
-        Router.push('/claymorphism')
-    }
-  });
+  const { component } = useRender();
   return (
     <>
       <SEO
         shouldExcludeTitleSuffix
-        title='Tools4CSS'
-        description='Free CSS Generator. Our tools are designed to help you streamline your code development with dynamic and intuitive CSS generators.'
+        title='Tools4CSS - Free CSS Generators'
+        description='Free CSS Generators. Our tools are designed to help you streamline your code development with dynamic and intuitive CSS generators.'
       />
+      <div className='grid'>
+        <Sidebar />
+        {renderSwitch(component)}
+      </div>
     </>
   );
 };

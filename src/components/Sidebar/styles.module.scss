@@ -43,13 +43,13 @@
     }
   }
 
-  .links {
+  .buttons {
     height: 75vh;
     overflow-x: hidden;
   }
 
   .row {
-    margin: 12px;
+    margin: 5px;
     padding: 20px;
     position: relative;
     cursor: pointer;
@@ -81,16 +81,20 @@
     }
   }
 
-  .link {
+  button {
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 27px;
     color: #fff;
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: 'Poppins', -apple-system, BbuttonMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     text-align: center;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    width: 100%;
   }
   .footer {
     bottom: 0;
