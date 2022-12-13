@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './styles.module.scss';
 import Switch from 'react-switch';
 import CopyButton from '../CopyButton';
 import Textarea from '../Textarea';
+import { useControls } from '../../hooks/useControls';
 
 const BackgroundGradient = () => {
-  const [color1, setColor1] = useState<string>('#12C2E9');
-  const [color2, setColor2] = useState<string>('#d954c8');
-  const [animated, setAnimated] = useState(true);
-  const [direction, setDirection] = useState<string>('to right');
-
-  const handleChange = (
-    nextChecked: boolean | ((prevState: boolean) => boolean),
-  ) => {
-    setAnimated(nextChecked);
-    setDirection('-80deg');
-  };
+  const {
+    colorVariant1,
+    setColorVariant1,
+    colorVariant2,
+    setColorVariant2,
+    direction,
+    setDirection,
+    animated,
+    setAnimated,
+  } = useControls();
 
   return (
     <div
       className={`${animated ? style.animatedApp : style.app}  `}
       style={{
-        backgroundImage: `linear-gradient(${direction}, ${color1}, ${
-          animated ? color1 + ',' : ''
-        } ${color2} ${animated ? ',' + color2 : ''})`,
+        backgroundImage: `linear-gradient(${direction}, ${colorVariant1}, ${
+          animated ? colorVariant1 + ',' : ''
+        } ${colorVariant2} ${animated ? ',' + colorVariant2 : ''})`,
         height: '100vh',
       }}
     >
@@ -33,23 +33,23 @@ const BackgroundGradient = () => {
           <div>
             <div className={style.label}>
               <span>Color 1</span>
-              {color1}
+              {colorVariant1}
             </div>
             <input
               type='color'
-              onChange={(e) => setColor1(e.target.value)}
-              value={color1}
+              onChange={(e) => setColorVariant1(e.target.value)}
+              value={colorVariant1}
             />
           </div>
           <div>
             <div className={style.label}>
               <span>Color 2</span>
-              {color2}
+              {colorVariant2}
             </div>
             <input
               type='color'
-              onChange={(e) => setColor2(e.target.value)}
-              value={color2}
+              onChange={(e) => setColorVariant2(e.target.value)}
+              value={colorVariant2}
             />
           </div>
           <div className={style.directions}>
@@ -76,7 +76,12 @@ const BackgroundGradient = () => {
             <div className={style.Icheckbox}>
               <Switch
                 checked={animated}
-                onChange={handleChange}
+                onChange={(
+                  nextChecked: boolean | ((prevState: boolean) => boolean),
+                ) => {
+                  setAnimated(nextChecked);
+                  setDirection('-80deg');
+                }}
                 className={style.checkbox}
                 onColor='#fff'
                 onHandleColor='#0f54b4'
@@ -103,14 +108,14 @@ const BackgroundGradient = () => {
         <div className={style.cssCopy}>
           <Textarea
             height={170}
-            value={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
+            value={`background-image: linear-gradient(${direction}, ${colorVariant1}, ${colorVariant2});${
               animated
                 ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
                 : ''
             } `}
           />
           <CopyButton
-            textToCopy={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
+            textToCopy={`background-image: linear-gradient(${direction}, ${colorVariant1}, ${colorVariant2});${
               animated
                 ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
                 : ''

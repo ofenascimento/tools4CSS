@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
 import { useControls } from '../../hooks/useControls';

@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './styles.module.scss';
 import Switch from 'react-switch';
 import CopyButton from '../CopyButton';
 import Textarea from '../Textarea';
+import { useControls } from '../../hooks/useControls';
 
 const TextGradient = () => {
-  const [color1, setColor1] = useState<string>('#00d0ff');
-  const [color2, setColor2] = useState<string>('#ff00dd');
-  const [direction, setDirection] = useState<string>('-80deg');
-  const [animated, setAnimated] = useState(false);
-
-  const handleChange = (
-    nextChecked: boolean | ((prevState: boolean) => boolean),
-  ) => {
-    setAnimated(nextChecked);
-    setDirection('-80deg');
-  };
+  const {
+    colorVariant1,
+    setColorVariant1,
+    colorVariant2,
+    setColorVariant2,
+    direction,
+    setDirection,
+    animated,
+    setAnimated,
+  } = useControls();
 
   return (
     <div className={style.app}>
@@ -28,9 +28,9 @@ const TextGradient = () => {
               WebkitBackgroundClip: 'text',
               color: 'transparent',
               backgroundClip: 'text',
-              background: `linear-gradient(${direction}, ${color1}, ${
-                animated ? color1 + ',' : ''
-              } ${color2} ${animated ? ',' + color2 : ''})`,
+              background: `linear-gradient(${direction}, ${colorVariant1}, ${
+                animated ? colorVariant1 + ',' : ''
+              } ${colorVariant2} ${animated ? ',' + colorVariant2 : ''})`,
             }}
           >
             Tools4CSS
@@ -42,23 +42,23 @@ const TextGradient = () => {
           <div>
             <div className={style.label}>
               <span>Color 1</span>
-              {color1}
+              {colorVariant1}
             </div>
             <input
               type='color'
-              onChange={(e) => setColor1(e.target.value)}
-              value={color1}
+              onChange={(e) => setColorVariant1(e.target.value)}
+              value={colorVariant1}
             />
           </div>
           <div>
             <div className={style.label}>
               <span>Color 2</span>
-              {color2}
+              {colorVariant2}
             </div>
             <input
               type='color'
-              onChange={(e) => setColor2(e.target.value)}
-              value={color2}
+              onChange={(e) => setColorVariant2(e.target.value)}
+              value={colorVariant2}
             />
           </div>
 
@@ -87,7 +87,12 @@ const TextGradient = () => {
             <div className={style.Icheckbox}>
               <Switch
                 checked={animated}
-                onChange={handleChange}
+                onChange={(
+                  nextChecked: boolean | ((prevState: boolean) => boolean),
+                ) => {
+                  setAnimated(nextChecked);
+                  setDirection('-80deg');
+                }}
                 className={style.checkbox}
                 onColor='#fff'
                 onHandleColor='#0f54b4'
@@ -112,30 +117,31 @@ const TextGradient = () => {
           </div>
         </div>
         <div className={style.cssCopy}>
-          <Textarea 
-          height={170}
-          value={`background: linear-gradient(${direction}, ${color1}, ${
-              animated ? color1 + ',' : ''
-            } ${color2}${
-              animated ? ', ' + color2 : ''
-            });\nbackground: -webkit-linear-gradient(${direction}, ${color1}, ${
-              animated ? color1 + ',' : ''
-            } ${color2}${
-              animated ? ', ' + color2 : ''
+          <Textarea
+            height={170}
+            value={`background: linear-gradient(${direction}, ${colorVariant1}, ${
+              animated ? colorVariant1 + ',' : ''
+            } ${colorVariant2}${
+              animated ? ', ' + colorVariant2 : ''
+            });\nbackground: -webkit-linear-gradient(${direction}, ${colorVariant1}, ${
+              animated ? colorVariant1 + ',' : ''
+            } ${colorVariant2}${
+              animated ? ', ' + colorVariant2 : ''
             });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
               animated
                 ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '
                 : ''
-            }`}/>
+            }`}
+          />
           <CopyButton
-            textToCopy={`background: linear-gradient(${direction}, ${color1}, ${
-              animated ? color1 + ',' : ''
-            } ${color2}${
-              animated ? ', ' + color2 : ''
-            });\nbackground: -webkit-linear-gradient(${direction}, ${color1}, ${
-              animated ? color1 + ',' : ''
-            } ${color2}${
-              animated ? ', ' + color2 : ''
+            textToCopy={`background: linear-gradient(${direction}, ${colorVariant1}, ${
+              animated ? colorVariant1 + ',' : ''
+            } ${colorVariant2}${
+              animated ? ', ' + colorVariant2 : ''
+            });\nbackground: -webkit-linear-gradient(${direction}, ${colorVariant1}, ${
+              animated ? colorVariant1 + ',' : ''
+            } ${colorVariant2}${
+              animated ? ', ' + colorVariant2 : ''
             });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
               animated
                 ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
 import { useControls } from '../../hooks/useControls';
@@ -7,14 +7,12 @@ import CopyButton from '../CopyButton';
 import Textarea from '../Textarea';
 
 const Glassmorphism = () => {
-  const [color, setColor] = useState<string>('#8ed1fc');
-  const [trasnparency, setTransparency] = useState<number>(0.15);
+  const { blur, setBlur, color, setColor, trasnparency, setTransparency } =
+    useControls();
 
   const r = hexToRgb(color)?.r;
   const g = hexToRgb(color)?.g;
   const b = hexToRgb(color)?.b;
-
-  const { blur, setBlur } = useControls();
 
   return (
     <div className={style.app}>
