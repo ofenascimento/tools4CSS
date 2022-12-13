@@ -1,47 +1,21 @@
 import React, { useState } from 'react';
 import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { useControls } from '../../hooks/useControls';
+import { hexToRgb } from '../../utils/hexToRGB';
+import CopyButton from '../CopyButton';
+import Textarea from '../Textarea';
 
 const Claymorphism = () => {
-  const [blur, setBlur] = useState<number>(0);
   const [color, setColor] = useState<string>('#6770a8');
   const [trasnparency, setTransparency] = useState<number>(0.15);
   const [depth, setDepth] = useState<number>(4);
-  const [text, setText] = useState<string>('COPY');
-  const Copy = () => {
-    setText('COPIED 🎉');
-    setTimeout(() => {
-      setText('COPY');
-    }, 2500);
-  };
-
-  interface IHexToRGBA {
-    m: string;
-    r: string;
-    g: string;
-    b: string;
-  }
-
-  function hexToRgb(hex: any) {
-    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, function ({ m, r, g, b }: IHexToRGBA) {
-      return r + r + g + g + b + b;
-    });
-
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result
-      ? {
-          r: parseInt(result[1], 16),
-          g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16),
-        }
-      : null;
-  }
 
   const r = hexToRgb(color)?.r;
   const g = hexToRgb(color)?.g;
   const b = hexToRgb(color)?.b;
+
+  const { blur, setBlur } = useControls();
 
   return (
     <div className={style.app}>
@@ -49,7 +23,6 @@ const Claymorphism = () => {
         <div
           className={style.container}
           style={{
-            backdropFilter: `blur(${blur}px)`,
             boxShadow: `35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255)`,
             borderRadius: 12,
             width: '320px',
@@ -70,16 +43,6 @@ const Claymorphism = () => {
             onChange={(e, value) => setDepth(value as number)}
             className={style.slider}
             max={12}
-          />
-          <div className={style.label}>
-            <span>Blur</span>
-            <span> {blur}</span>
-          </div>
-          <Slider
-            value={blur}
-            onChange={(e, value) => setBlur(value as number)}
-            defaultValue={30}
-            className={style.slider}
           />
           <div className={style.label}>
             <span>Transparency</span>
@@ -110,17 +73,13 @@ const Claymorphism = () => {
           </div>
         </div>
         <div className={style.cssCopy}>
-          <textarea
-            className={style.textarea}
-            value={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(255, 255, 255, ${trasnparency}); box-shadow: 35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);`}
-            readOnly
-          ></textarea>
-          <br />
-          <CopyToClipboard
-            text={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(255, 255, 255, ${trasnparency}); box-shadow: 35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);`}
-          >
-            <button onClick={() => Copy()}>{text}</button>
-          </CopyToClipboard>
+          <Textarea
+            height={120}
+            value={`background-color: rgba(255, 255, 255, ${trasnparency}); box-shadow: 35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);`}
+          />
+          <CopyButton
+            textToCopy={`background-color: rgba(255, 255, 255, ${trasnparency}); box-shadow: 35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);`}
+          />
         </div>
       </div>
     </div>

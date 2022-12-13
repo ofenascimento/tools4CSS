@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
 import style from './styles.module.scss';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Switch from 'react-switch';
+import CopyButton from '../CopyButton';
+import Textarea from '../Textarea';
 
 const TextGradient = () => {
   const [color1, setColor1] = useState<string>('#00d0ff');
   const [color2, setColor2] = useState<string>('#ff00dd');
   const [direction, setDirection] = useState<string>('-80deg');
   const [animated, setAnimated] = useState(false);
-  const [text, setText] = useState<string>('COPY');
-  const Copy = () => {
-    setText('COPIED 🎉');
-    setTimeout(() => {
-      setText('COPY');
-    }, 2500);
-  };
 
   const handleChange = (
     nextChecked: boolean | ((prevState: boolean) => boolean),
@@ -118,9 +112,23 @@ const TextGradient = () => {
           </div>
         </div>
         <div className={style.cssCopy}>
-          <textarea
-            className={style.textarea}
-            value={`background: linear-gradient(${direction}, ${color1}, ${
+          <Textarea 
+          height={170}
+          value={`background: linear-gradient(${direction}, ${color1}, ${
+              animated ? color1 + ',' : ''
+            } ${color2}${
+              animated ? ', ' + color2 : ''
+            });\nbackground: -webkit-linear-gradient(${direction}, ${color1}, ${
+              animated ? color1 + ',' : ''
+            } ${color2}${
+              animated ? ', ' + color2 : ''
+            });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
+              animated
+                ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '
+                : ''
+            }`}/>
+          <CopyButton
+            textToCopy={`background: linear-gradient(${direction}, ${color1}, ${
               animated ? color1 + ',' : ''
             } ${color2}${
               animated ? ', ' + color2 : ''
@@ -133,26 +141,7 @@ const TextGradient = () => {
                 ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '
                 : ''
             }`}
-            readOnly
-          ></textarea>
-          <br />
-          <CopyToClipboard
-            text={`background: linear-gradient(${direction}, ${color1}, ${
-              animated ? color1 + ',' : ''
-            } ${color2}${
-              animated ? ', ' + color2 : ''
-            });\nbackground: -webkit-linear-gradient(${direction}, ${color1}, ${
-              animated ? color1 + ',' : ''
-            } ${color2}${
-              animated ? ', ' + color2 : ''
-            });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
-              animated
-                ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '
-                : ''
-            }`}
-          >
-            <button onClick={() => Copy()}>{text}</button>
-          </CopyToClipboard>
+          />
         </div>
       </div>
     </div>

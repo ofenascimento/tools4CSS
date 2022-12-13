@@ -1,8 +1,12 @@
 import { createContext, useState } from 'react';
 
 interface IControlsContext {
-  blur: Number;
+  blur: number;
   setBlur(e: any): void;
+  borderRadius: number;
+  setBorderRadius(e: any): void;
+  distance: number;
+  setDistance(e: any): void;
 }
 
 interface IProvider {
@@ -12,8 +16,21 @@ interface IProvider {
 export const ControlsContext = createContext({} as IControlsContext);
 
 export function ControlsProvider({ children }: IProvider) {
-  const [blur, setBlur] = useState(3)
+  const [blur, setBlur] = useState(20);
+  const [borderRadius, setBorderRadius] = useState(25);
+  const [distance, setDistance] = useState<number>(10);
   return (
-    <ControlsContext.Provider value={{blur: blur, setBlur}}>{children}</ControlsContext.Provider>
+    <ControlsContext.Provider
+      value={{
+        blur: blur,
+        setBlur,
+        borderRadius: borderRadius,
+        setBorderRadius,
+        distance: distance,
+        setDistance,
+      }}
+    >
+      {children}
+    </ControlsContext.Provider>
   );
 }

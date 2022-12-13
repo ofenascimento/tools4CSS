@@ -1,38 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Image from 'next/image';
-
+import { useControls } from '../../hooks/useControls';
+import CopyButton from '../CopyButton';
+import Textarea from '../Textarea';
 
 const Neumorphism = () => {
-  const [blur, setBlur] = useState<number>(38);
-  const [background, setBackground] = useState<string>('#F2F4F6');
-  const [text, setText] = useState<string>('COPY');
-  const [distance, setDistance] = useState<number>(10);
-  const [borderRadius, setBorderRadius] = useState<number>(25);
-  const Copy = () => {
-    setText('COPIED 🎉');
-    setTimeout(() => {
-      setText('COPY');
-    }, 2500);
-  };
+  const {
+    blur,
+    setBlur,
+    borderRadius,
+    setBorderRadius,
+    distance,
+    setDistance,
+  } = useControls();
 
   return (
-    <div className={style.app} style={{backgroundColor: `${background}`}}>
-      <div className={style.background} >
+    <div className={style.app}>
+      <div className={style.background}>
         <div
           className={style.container}
           style={{
             width: '300px',
             height: '320px',
-            background: `${background}`,
             borderRadius: `${borderRadius}px`,
             boxShadow: `${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff`,
           }}
-        >
-          <Image src='/main.png' width={320} height={320} alt='Main'/>
-        </div>
+        ></div>
       </div>
       <div className={style.flex}>
         <div className={style.controls}>
@@ -41,6 +35,7 @@ const Neumorphism = () => {
             <span> {distance}</span>
           </div>
           <Slider
+            style={{ width: 200, marginLeft: 20, marginRight: 20 }}
             value={distance}
             onChange={(e, value) => setDistance(value as number)}
             defaultValue={30}
@@ -52,37 +47,34 @@ const Neumorphism = () => {
             <span> {blur}</span>
           </div>
           <Slider
+            style={{ width: 200, marginLeft: 20, marginRight: 20 }}
             value={blur}
             onChange={(e, value) => setBlur(value as number)}
             defaultValue={30}
             className={style.slider}
           />
-          <div>
+
           <div className={style.label}>
             <span>Border Radius</span>
             <span> {borderRadius}</span>
           </div>
           <Slider
+            style={{ width: 200, marginLeft: 20, marginRight: 20 }}
             value={borderRadius}
             onChange={(e, value) => setBorderRadius(value as number)}
             defaultValue={30}
             className={style.slider}
             max={60}
           />
-          </div>
         </div>
         <div className={style.cssCopy}>
-          <textarea
-            className={style.textarea}
-            value={`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nbackground: ${background};\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
-            readOnly
-          ></textarea>
-          <br />
-          <CopyToClipboard
-            text={`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nbackground: ${background};\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
-          >
-            <button onClick={() => Copy()}>{text}</button>
-          </CopyToClipboard>
+          <Textarea
+            height={120}
+            value={`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
+          />
+          <CopyButton
+            textToCopy={`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
+          />
         </div>
       </div>
     </div>

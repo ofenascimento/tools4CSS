@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
 import style from './styles.module.scss';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Switch from 'react-switch';
+import CopyButton from '../CopyButton';
+import Textarea from '../Textarea';
 
 const BackgroundGradient = () => {
   const [color1, setColor1] = useState<string>('#12C2E9');
   const [color2, setColor2] = useState<string>('#d954c8');
   const [animated, setAnimated] = useState(true);
   const [direction, setDirection] = useState<string>('to right');
-  const [text, setText] = useState<string>('COPY');
-  const Copy = () => {
-    setText('COPIED 🎉');
-    setTimeout(() => {
-      setText('COPY');
-    }, 2500);
-  };
 
   const handleChange = (
     nextChecked: boolean | ((prevState: boolean) => boolean),
@@ -107,25 +101,21 @@ const BackgroundGradient = () => {
           </div>
         </div>
         <div className={style.cssCopy}>
-          <textarea
-            className={style.textarea}
+          <Textarea
+            height={170}
             value={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
               animated
                 ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
                 : ''
             } `}
-            readOnly
-          ></textarea>
-          <br />
-          <CopyToClipboard
-            text={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
+          />
+          <CopyButton
+            textToCopy={`background-image: linear-gradient(${direction}, ${color1}, ${color2});${
               animated
                 ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
                 : ''
             } `}
-          >
-            <button onClick={() => Copy()}>{text}</button>
-          </CopyToClipboard>
+          />
         </div>
       </div>
     </div>

@@ -1,46 +1,20 @@
 import React, { useState } from 'react';
 import style from './styles.module.scss';
 import { Slider } from '@material-ui/core';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { useControls } from '../../hooks/useControls';
+import { hexToRgb } from '../../utils/hexToRGB';
+import CopyButton from '../CopyButton';
+import Textarea from '../Textarea';
 
 const Glassmorphism = () => {
-  const [blur, setBlur] = useState<number>(3);
   const [color, setColor] = useState<string>('#8ed1fc');
   const [trasnparency, setTransparency] = useState<number>(0.15);
-  const [text, setText] = useState<string>('COPY');
-  const Copy = () => {
-    setText('COPIED 🎉');
-    setTimeout(() => {
-      setText('COPY');
-    }, 2500);
-  };
-
-  interface IHexToRGBA {
-    m: string;
-    r: string;
-    g: string;
-    b: string;
-  }
-
-  function hexToRgb(hex: any) {
-    let shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, function ({ m, r, g, b }: IHexToRGBA) {
-      return r + r + g + g + b + b;
-    });
-
-    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result
-      ? {
-          r: parseInt(result[1], 16),
-          g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16),
-        }
-      : null;
-  }
 
   const r = hexToRgb(color)?.r;
   const g = hexToRgb(color)?.g;
   const b = hexToRgb(color)?.b;
+
+  const { blur, setBlur } = useControls();
 
   return (
     <div className={style.app}>
@@ -97,17 +71,13 @@ const Glassmorphism = () => {
           </div>
         </div>
         <div className={style.cssCopy}>
-          <textarea
-            className={style.textarea}
+          <Textarea
+            height={100}
             value={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
-            readOnly
-          ></textarea>
-          <br />
-          <CopyToClipboard
-            text={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
-          >
-            <button onClick={() => Copy()}>{text}</button>
-          </CopyToClipboard>
+          />
+          <CopyButton
+            textToCopy={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
+          />
         </div>
       </div>
     </div>
