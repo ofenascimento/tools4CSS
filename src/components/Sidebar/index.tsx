@@ -8,9 +8,6 @@ const Sidebar = () => {
   console.log(component);
   return (
     <div className={style.sidebar}>
-      <div className={style.logo}>
-        <Image src='/logo-white.png' alt='' width={190} height={60} />
-      </div>
       <div className={style.textLogo}>
         <h1>Tools4CSS</h1>
       </div>
