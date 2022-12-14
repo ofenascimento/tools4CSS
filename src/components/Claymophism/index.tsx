@@ -5,6 +5,7 @@ import { useControls } from '../../hooks/useControls';
 import { hexToRgb } from '../../utils/hexToRGB';
 import CopyButton from '../CopyButton';
 import Textarea from '../Textarea';
+import ColorInput from '../ColorInput';
 
 const Claymorphism = () => {
   const { trasnparency, setTransparency, color, setColor, depth, setDepth } =
@@ -54,22 +55,14 @@ const Claymorphism = () => {
             min={0.0}
             max={1}
           />
-
-          <div className={style.flexColor}>
-            <div>
-              <div className={style.label}>
-                <span>Color</span>
-                {color}
-              </div>
-              <input
-                type='color'
-                onChange={(e) => setColor(e.target.value)}
-                value={color}
-              />
-            </div>
-          </div>
+          <ColorInput
+            label='Color'
+            preview={color}
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+          />
         </div>
-        <div className={style.cssCopy}>
+        <div className={style.copy}>
           <Textarea
             height={120}
             value={`background-color: rgba(255, 255, 255, ${trasnparency}); box-shadow: 35px 35px 68px 0px rgba(${r}, ${g}, ${b}, 0.5), inset -${depth}px -${depth}px 16px 0px rgba(${r}, ${g}, ${b}, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);`}

@@ -5,6 +5,7 @@ import { useControls } from '../../hooks/useControls';
 import { hexToRgb } from '../../utils/hexToRGB';
 import CopyButton from '../CopyButton';
 import Textarea from '../Textarea';
+import ColorInput from '../ColorInput';
 
 const Glassmorphism = () => {
   const { blur, setBlur, color, setColor, trasnparency, setTransparency } =
@@ -54,21 +55,14 @@ const Glassmorphism = () => {
             min={0.0}
             max={0.99}
           />
-          <div className={style.flexColor}>
-            <div>
-              <div className={style.label}>
-                <span>Color</span>
-                {color}
-              </div>
-              <input
-                type='color'
-                onChange={(e) => setColor(e.target.value)}
-                value={color}
-              />
-            </div>
-          </div>
+          <ColorInput
+            label='Color'
+            preview={color}
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+          />
         </div>
-        <div className={style.cssCopy}>
+        <div className={style.copy}>
           <Textarea
             height={100}
             value={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}

@@ -5,7 +5,6 @@ import style from './styles.module.scss';
 
 const Sidebar = () => {
   const { setComponent, component } = useRender();
-  console.log(component);
   return (
     <div className={style.sidebar}>
       <div className={style.textLogo}>

@@ -6,7 +6,6 @@
   width: 80vw;
   width: 100vw;
   background-color: #F2F4F6;
-
   .flex {
     display: flex;
     justify-content: center;
@@ -23,7 +22,6 @@
 }
 
 .controls {
-  background-color: #121720;
   padding: 20px;
   @media screen and (max-width: 840px) {
     padding: 10px;
@@ -37,28 +35,6 @@
     font-weight: 500;
     font-size: 15px;
   }
-  .flexColor {
-    display: flex;
-    margin: 0;
-    input[type='color'] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 220px;
-      height: 40px;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
-    input[type='color']::-webkit-color-swatch {
-      border-radius: 5px;
-      border: none;
-    }
-    input[type='color']::-moz-color-swatch {
-      border-radius: 15px;
-      border: none;
-    }
-  }
 }
 
 .slider {
@@ -67,8 +43,7 @@
   margin-right: 20px;
   color: #fff !important;
 }
-.cssCopy {
-  background-color: #121720;
+.copy {
   padding: 20px;
   display: flex;
   flex-direction: column;

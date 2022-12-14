@@ -4,6 +4,7 @@ import Switch from 'react-switch';
 import CopyButton from '../CopyButton';
 import Textarea from '../Textarea';
 import { useControls } from '../../hooks/useControls';
+import ColorInput from '../ColorInput';
 
 const BackgroundGradient = () => {
   const {
@@ -30,28 +31,18 @@ const BackgroundGradient = () => {
       <div className={style.background}></div>
       <div className={style.flex}>
         <div className={style.controls}>
-          <div>
-            <div className={style.label}>
-              <span>Color 1</span>
-              {colorVariant1}
-            </div>
-            <input
-              type='color'
-              onChange={(e) => setColorVariant1(e.target.value)}
-              value={colorVariant1}
-            />
-          </div>
-          <div>
-            <div className={style.label}>
-              <span>Color 2</span>
-              {colorVariant2}
-            </div>
-            <input
-              type='color'
-              onChange={(e) => setColorVariant2(e.target.value)}
-              value={colorVariant2}
-            />
-          </div>
+          <ColorInput
+            label='Color 1'
+            preview={colorVariant1}
+            onChange={(e) => setColorVariant1(e.target.value)}
+            value={colorVariant1}
+          />
+          <ColorInput
+            label='Color 2'
+            preview={colorVariant2}
+            onChange={(e) => setColorVariant2(e.target.value)}
+            value={colorVariant2}
+          />
           <div className={style.directions}>
             <div className={style.label}>
               <span>Directions </span>
@@ -105,7 +96,7 @@ const BackgroundGradient = () => {
             </div>
           </div>
         </div>
-        <div className={style.cssCopy}>
+        <div className={style.copy}>
           <Textarea
             height={170}
             value={`background-image: linear-gradient(${direction}, ${colorVariant1}, ${colorVariant2});${

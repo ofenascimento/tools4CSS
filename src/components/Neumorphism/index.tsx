@@ -67,7 +67,7 @@ const Neumorphism = () => {
             max={60}
           />
         </div>
-        <div className={style.cssCopy}>
+        <div className={style.copy}>
           <Textarea
             height={120}
             value={`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\nborder-radius: ${borderRadius}px;`}
