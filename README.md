@@ -12,7 +12,14 @@
 
 ```
 git clone https://github.com/gomestzx/tools4CSS.git
-npm run dev
+
+cd tools4CSS
+
+yarn 
+# or
+npm install
+
+npm start
 # or
 yarn dev
 ```
