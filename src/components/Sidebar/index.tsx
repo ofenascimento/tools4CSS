@@ -1,4 +1,4 @@
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { useRender } from '../../hooks/useRender';
 import style from './styles.module.scss';
@@ -82,6 +82,7 @@ const Sidebar = () => {
       </div>
 
       <div className={style.footer}>
+      <a href="https://www.producthunt.com/posts/tools4css?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tools4css" target="_blank" rel="noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=356512&theme=dark" alt="Tools4CSS - Tools&#0032;to&#0032;help&#0032;developers&#0032;build&#0032;interfaces&#0032;modern&#0032;quickly | Product Hunt" width="250" height="54" /></a>
         Made with ❤️ by <span>Felipe Matheus</span>
       </div>
     </div>
