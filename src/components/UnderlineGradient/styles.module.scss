@@ -1,0 +1,51 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #f2f4f6;
+    .flex {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px 100px;
+      padding: 10px;
+      background-color: #131420;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 100px;
+      margin: 10px;
+      color: #131420;
+      @media screen and (max-width: 840px) {
+        font-size: 55px;
+      }
+    }
+  }
+  .controls {
+    background-color: #131420;
+    padding: 20px;
+    @media screen and (max-width: 840px) {
+      padding: 20px 50px;
+    }
+    .label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 200px;
+      color: #fff;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+  .copy {
+    background-color: #131420;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  

@@ -108,7 +108,7 @@ const TextGradient = () => {
         </div>
         <div className={style.copy}>
           <Textarea
-            height={170}
+            height={150}
             value={`background: linear-gradient(${direction}, ${colorVariant1}, ${
               animated ? colorVariant1 + ',' : ''
             } ${colorVariant2}${

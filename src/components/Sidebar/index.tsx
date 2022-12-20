@@ -68,6 +68,17 @@ const Sidebar = () => {
             </div>
           </div>
         </button>
+        <button onClick={() => setComponent('underline-gradient')}>
+          <div className={style.row}>
+            <div
+              className={`${
+                component == 'underline-gradient' ? style.textActivated : style.text
+              }`}
+            >
+              <div className={style.button}>Underline Gradient</div>
+            </div>
+          </div>
+        </button>
       </div>
 
       <div className={style.footer}>

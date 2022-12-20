@@ -10,6 +10,8 @@ import Glassmorphism from '../components/Glassmorphism';
 import Neumorphism from '../components/Neumorphism';
 import TextGradient from '../components/TextGradient';
 import BackgroundGradient from '../components/BackgroundGradient';
+import UnderlineGradient from '../components/UnderlineGradient';
+
 
 function renderSwitch(params: any) {
   switch (params) {
@@ -23,6 +25,8 @@ function renderSwitch(params: any) {
       return <TextGradient />;
     case 'background-gradient':
       return <BackgroundGradient />;
+    case 'underline-gradient':
+      return <UnderlineGradient />;
   }
 }
 
