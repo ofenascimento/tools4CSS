@@ -1,9 +1,6 @@
 .sidebar {
-  backdrop-filter: blur(0px);
-  --webkit-backdrop-filter: blur(0px);
-  --moz-backdrop-filter: blur(0px);
   background-color: #131420;
-  height: 100vh;
+  height: auto;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -37,7 +34,7 @@
   }
 
   .buttons {
-    height: 75vh;
+    height: 100vh;
     overflow-x: hidden;
   }
 
