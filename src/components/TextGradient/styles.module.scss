@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 100vw;
+  height: 100vh;
   background-color: #f2f4f6;
   .flex {
     display: flex;
@@ -89,14 +90,4 @@
   justify-content: center;
 }
 
-.directions {
-  button {
-    padding: 10px;
-    background-color: #464852;
-    border: 0;
-    margin: 5px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 17px;
-  }
-}
+

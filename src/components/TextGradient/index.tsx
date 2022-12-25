@@ -5,6 +5,7 @@ import CopyButton from '../CopyButton';
 import Textarea from '../Textarea';
 import { useControls } from '../../hooks/useControls';
 import ColorInput from '../ColorInput';
+import DirectionButton from '../DirectionButton';
 
 const TextGradient = () => {
   const {
@@ -52,24 +53,7 @@ const TextGradient = () => {
             onChange={(e) => setColorVariant2(e.target.value)}
             value={colorVariant2}
           />
-          <div className={style.directions}>
-            <div className={style.label}>
-              <span>Directions </span>
-            </div>
-            {animated ? (
-              <></>
-            ) : (
-              <>
-                {' '}
-                <button onClick={() => setDirection('180deg')}>👆</button>
-                <button onClick={() => setDirection('380deg')}>👇</button>
-              </>
-            )}
-
-            <button onClick={() => setDirection('80deg')}>👈</button>
-            <button onClick={() => setDirection('-80deg')}>👉</button>
-          </div>
-
+          <DirectionButton />
           <div>
             <div className={style.label}>
               <span>Animation</span>
