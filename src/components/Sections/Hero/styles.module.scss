@@ -1,0 +1,57 @@
+.textGradient {
+    background: linear-gradient(-80deg, #b23fe0, #ff00dd, #096ffe, #096ffe);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 8s ease-in-out infinite;
+    -moz-animation: animated_text 8s ease-in-out infinite;
+    -webkit-animation: animated_text 8s ease-in-out infinite;
+
+    @keyframes animated_text {
+        0% {
+            background-position: 0px 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0px 50%;
+        }
+    }
+}
+
+.underlineGradient {
+    background-image: linear-gradient(-80deg, #009dff, #ff00dd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease-in;
+    animation: animated 15s ease-in-out infinite;
+    -moz-animation: animated 15s ease-in-out infinite;
+    -webkit-animation: animated 15s ease-in-out infinite;
+
+    
+
+    @keyframes animated {
+        0% {
+            background-size: 100% 0%;
+        }
+
+        50% {
+            background-size: 100% 90%;
+        }
+
+        100% {
+            background-size: 100% 0%;
+        }
+
+        
+
+    }
+}
+
+.buttonGradient {
+    background-image: linear-gradient(-80deg, #8ed1fc, #ff00dd) !important;
+}

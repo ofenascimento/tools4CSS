@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <div className={style.sidebar}>
       <div className={style.textLogo}>
-        <h1>Tools4CSS</h1>
+        <h1 className='my-4'>Tools4CSS</h1>
       </div>
       <div className={style.buttons}>
         <button onClick={() => setComponent('claymorphism')}>

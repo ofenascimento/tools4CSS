@@ -28,7 +28,7 @@ const BackgroundGradient = () => {
         } ${colorVariant2} ${animated ? ',' + colorVariant2 : ''})`,
         height: '100vh',
       }}
-    >
+    > 
       <div className={style.background}></div>
       <div className={style.flex}>
         <div className={style.controls}>
