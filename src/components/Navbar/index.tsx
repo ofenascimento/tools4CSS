@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <nav className='w-full bg-black 800 fixed pt-2 z-50'>
+    <nav className='w-full bg-black 800 sm:fixed lg:absolute pt-2 z-50'>
       <div className='justify-between md:w-4/6  px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
@@ -55,16 +55,16 @@ export default function Navbar() {
               }`}
           >
             <ul className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
-              <li className='text-gray-500 text-2xl font-semibold'>
+              <li className='text-gray-500 text-xl font-semibold'>
                 <Link href='#perguntas-frequentes'>Tools</Link>
               </li>
-              <li className='text-gray-500 text-2xl font-semibold'>
+              <li className='text-gray-500 text-xl font-semibold'>
                 <Link href=''>Blog</Link>
               </li>
-              <li className='text-gray-500 text-2xl font-semibold'>
+              <li className='text-gray-500 text-xl font-semibold'>
                 <Link href=''>About Us</Link>
               </li>
-              <li className='text-2xl font-semibold bg-gray-700 p-4 rounded-md text-white'>
+              <li className='text-xl font-semibold bg-gray-700 p-4 rounded-md text-white'>
                 <Link href='/app'>APP DEMO</Link>
               </li>
             </ul>

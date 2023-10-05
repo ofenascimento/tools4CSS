@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.scss'
-import Image from 'next/image'
-Image
+import Link from 'next/link'
+
 
 const Hero = () => {
     return (
@@ -10,7 +10,9 @@ const Hero = () => {
             <h1 className={`text-white text-7xl lg:text-9xl text-center leading-85 ${styles.textGradient}`}>awesome</h1>
             <h1 className='text-white  text-7xl lg:text-9xl text-center leading-85'>interfaces</h1>
             <h3 className=' text-gray-500 text-3xl mx-16 my-4 lg:my-0 lg:mx-auto'>Take advantage of our tools to speed<br /> up the styling of your components</h3>
-            <button className='text-white mt-4 p-6 text-3xl rounded-full bg-blue-600 hover:bg-blue-700'>Get Started</button>
+            <div className='text-white mt-6 p-6 text-3xl rounded-full bg-blue-600 hover:bg-blue-700'>
+            <Link  href='/app' >Get Started</Link>
+            </div>
         </div>
     )
 }
