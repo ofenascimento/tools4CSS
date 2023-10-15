@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 
+
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
@@ -55,8 +56,37 @@ export default function Navbar() {
               }`}
           >
             <ul className='items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
-              <li className='text-slate-900'>
-                <Link href=''>Tools</Link>
+              <li className='text-slate-900 group relative cursor-pointer'>
+                <span className='group-hover:block hidden'>
+                  <ul className='mt-7 absolute bg-white border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4'>
+                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                      <Link href='/app'>Background Gradient</Link>
+                    </li>
+                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                      <Link href='/app'>Text Gradient</Link>
+                    </li>
+                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                      <Link href='/app'>Underline Gradient</Link>
+                    </li >
+                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                      <Link href='/app'>Glassmorphism</Link>
+                    </li>
+                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                      <Link href='/app'>Claymorphism</Link>
+                    </li>
+                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                      <Link href='/app'>Neumorphism</Link>
+                    </li>
+                  </ul>
+                </span>
+                <Link href=''>
+                  <div className='flex gap-2 justify-center items-centerS'>
+                  Tools
+                  <Image src="/arrow-down.svg" width={18} height={18} alt='icon-arrow-down' />
+                  </div>
+                    </Link>
+                
+                
               </li>
               <li className='text-slate-900'>
                 <Link href=''>Blog</Link>

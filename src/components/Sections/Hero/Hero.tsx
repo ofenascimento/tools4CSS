@@ -17,7 +17,7 @@ const Hero = () => {
                     <Link href='/app' >Get Started</Link>
                 </div>
             </div>
-            <div className='w-full lg:w-2/4 mt-6 lg:mt-0'>
+            <div className='w-full lg:w-2/4 mt-6 lg:mt-0 z-0'>
                 <Image src='/app.png' width={1307} height={874} layout='responsive' alt='' />
             </div>
             
