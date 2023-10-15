@@ -54,7 +54,7 @@ export default function Navbar() {
             className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
               }`}
           >
-            <ul className='items-center justify-center text-base font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
+            <ul className='items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
               <li className='text-slate-900'>
                 <Link href=''>Tools</Link>
               </li>
