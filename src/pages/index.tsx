@@ -4,7 +4,6 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Sections/Hero/Hero';
 import Tools from '../components/Sections/Tools/Tools';
-import Inspired from '../components/Sections/Inspired/Inspired';
 import Footer from '../components/Sections/Footer/Footer';
 
 
@@ -20,7 +19,6 @@ const Home: NextPage = () => {
       <Navbar />
       <Hero />
       <Tools />
-      <Inspired />
       <Footer />
     </div>
   );

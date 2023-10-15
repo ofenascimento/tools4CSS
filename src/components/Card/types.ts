@@ -1,6 +1,5 @@
 export interface ICard {
-    backgroundImage: string,
-    title: string,
-    content: string,
-    href: string
+    title: string;
+    slug: string;
+    img?: string;
 }

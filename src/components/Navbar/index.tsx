@@ -6,8 +6,8 @@ import Image from 'next/image';
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <nav className='w-full bg-black 800 sm:fixed lg:absolute pt-2 z-50'>
-      <div className='justify-between md:w-4/6  px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8'>
+    <nav className='w-full pt-2 z-50 top-0'>
+      <div className='justify-between md:w-4/6 px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-0'>
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
             <Image src='/logo.png' width={60} height={60} alt='' />
@@ -19,9 +19,9 @@ export default function Navbar() {
                 {navbar ? (
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='w-6 h-6 text-white'
+                    className='w-6 h-6 text-slate-900'
                     viewBox='0 0 20 20'
-                    fill='#fff'
+                    fill='#000'
                   >
                     <path
                       fillRule='evenodd'
@@ -32,10 +32,10 @@ export default function Navbar() {
                 ) : (
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='w-6 h-6 text-white'
+                    className='w-6 h-6  text-slate-900'
                     fill='none'
                     viewBox='0 0 24 24'
-                    stroke='#fff'
+                    stroke='#000'
                     strokeWidth={2}
                   >
                     <path
@@ -51,21 +51,21 @@ export default function Navbar() {
         </div>
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
+            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
               }`}
           >
-            <ul className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
-              <li className='text-gray-500 text-xl font-semibold'>
-                <Link href='#perguntas-frequentes'>Tools</Link>
+            <ul className='items-center justify-center text-base font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
+              <li className='text-slate-900'>
+                <Link href=''>Tools</Link>
               </li>
-              <li className='text-gray-500 text-xl font-semibold'>
+              <li className='text-slate-900'>
                 <Link href=''>Blog</Link>
               </li>
-              <li className='text-gray-500 text-xl font-semibold'>
+              <li className='text-slate-900'>
                 <Link href=''>About Us</Link>
               </li>
-              <li className='text-xl font-semibold bg-gray-700 p-4 rounded-md text-white'>
-                <Link href='/app'>APP DEMO</Link>
+              <li className=' font-medium bg-blue-700 py-2 px-4 rounded-md text-white'>
+                <Link href='/app'>App demo</Link>
               </li>
             </ul>
           </div>
