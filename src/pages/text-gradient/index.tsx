@@ -98,7 +98,7 @@ const TextGradient = () => {
                 <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
                     <h1 className='font-semibold text-3xl'>What is Text Gradient Generator?</h1>
                     <br />
-                    <p>A text gradient is a graphic design technique that involves applying a smooth color transition to specific text or words. Instead of solid text in a single color, text gradient creates an visually appealing effect by having the text blend gradually from one color to another, giving a sense of depth and dynamism. This is often achieved using a spectrum of colors or a custom color blend, and it can be a powerful way to make text elements in design projects stand out and captivate the viewer's attention. Text gradients are commonly used in various design applications, including web design, advertising, and branding, to create eye-catching and engaging typography.</p>                    <br />
+                    <p>A text gradient is a graphic design technique that involves applying a smooth color transition to specific text or words. Instead of solid text in a single color, text gradient creates an visually appealing effect by having the text blend gradually from one color to another, giving a sense of depth and dynamism. This is often achieved using a spectrum of colors or a custom color blend, and it can be a powerful way to make text elements in design projects stand out and captivate the viewer&apos;s attention. Text gradients are commonly used in various design applications, including web design, advertising, and branding, to create eye-catching and engaging typography.</p>                    <br />
                 </div>
             </div>
             <Footer />
