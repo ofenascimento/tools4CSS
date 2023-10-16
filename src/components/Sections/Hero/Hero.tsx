@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <div className=' w-full lg:w-4/6 mx-auto mt-8 flex justify-center items-center md:justify-between flex-wrap' id='hero'>
+        <div className='w-full lg:w-4/6 mx-auto mt-8 flex justify-center items-center md:justify-between flex-wrap' id='hero'>
             <div className='w-full lg:w-2/4 font-semibold flex flex-col justify-center items-center lg:justify-start lg:items-start'>
                 <div className={` leading-85 text-6xl xl:text-8xl lg:text-6xl flex mt-0 lg:mt-6 gap-5`}>Lets <h1 className={`text-black  leading-85`}>build</h1></div>
                 <h1 className={` leading-85 text-6xl xl:text-8xl lg:text-6xl ${styles.textGradient}`}>awesome</h1>

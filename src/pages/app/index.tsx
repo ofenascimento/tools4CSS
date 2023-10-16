@@ -2,15 +2,15 @@ import type { NextPage } from 'next';
 import { SEO } from '../../components/SEO';
 import { useRender } from '../../hooks/useRender';
 import React from 'react';
-import Sidebar from '../../components/Sidebar';
+import Sidebar from '../../oldComponents/Sidebar';
 
 // Generators
-import Claymorphism from '../../components/Claymophism';
-import Glassmorphism from '../../components/Glassmorphism';
-import Neumorphism from '../../components/Neumorphism';
-import TextGradient from '../../components/TextGradient';
-import BackgroundGradient from '../../components/BackgroundGradient';
-import UnderlineGradient from '../../components/UnderlineGradient';
+import Claymorphism from '../../oldComponents/Claymophism';
+import Glassmorphism from '../../oldComponents/Glassmorphism';
+import Neumorphism from '../../oldComponents/Neumorphism';
+import TextGradient from '../../oldComponents/TextGradient';
+import BackgroundGradient from '../../oldComponents/BackgroundGradient';
+import UnderlineGradient from '../../oldComponents/UnderlineGradient';
 
 
 function renderSwitch(params: any) {

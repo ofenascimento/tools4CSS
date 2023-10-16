@@ -27,6 +27,11 @@ module.exports = {
       lineHeight: {
         '85': '85%'
       },
+      fontFamily: {
+        'manrope': 'Manrope',
+        'prompt': 'Prompt'
+
+      }
     },
   },
   plugins: [],

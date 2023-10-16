@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 
+
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
@@ -11,7 +12,11 @@ export default function Navbar() {
       <div className='justify-between md:w-4/6 px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-0'>
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-            <Image src='/logo.png' width={60} height={60} alt='' />
+            <Link href='/' className='cursor-pointer'>
+            <Image className='cursor-pointer' src='/logo.png' width={60} height={60} alt='' />
+            </Link>
+
+            
             <div className='md:hidden'>
               <button
                 className='p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border'
@@ -63,7 +68,7 @@ export default function Navbar() {
                       <Link href='/app'>Background Gradient</Link>
                     </li>
                     <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
-                      <Link href='/app'>Text Gradient</Link>
+                      <Link href='/text-gradient'>Text Gradient</Link>
                     </li>
                     <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
                       <Link href='/app'>Underline Gradient</Link>

@@ -1,0 +1,32 @@
+.textGradient {
+    font-size: 100px;
+    margin: 10px;
+    -webkit-background-clip: text !important;
+    @media screen and (max-width: 840px) {
+      font-size: 55px;
+    }
+  }
+
+.animated {
+    margin-top: 50px;
+    font-size: 100px;
+    margin: 10px;
+    background-clip: text !important;
+    background-size: 300% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 10s ease-in-out infinite;
+    -moz-animation: animated_text 10s ease-in-out infinite;
+    -webkit-animation: animated_text 10s ease-in-out infinite;
+    @keyframes animated_text {
+      0% {
+        background-position: 0px 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0px 50%;
+      }
+    }
+  }

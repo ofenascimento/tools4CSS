@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../Card/Card'
+import Card from '../../../oldComponents/Card/Card'
 
 const Tools = () => {
     return (
@@ -7,7 +7,7 @@ const Tools = () => {
         <br />
         <div className='flex flex-wrap'>
           <Card title='Background Gradient' slug='app' img='1.png?version=' />
-          <Card title='Text Gradient' slug='app' img='2.png?version=' />
+          <Card title='Text Gradient' slug='text-gradient' img='2.png?version=' />
           <Card title='Glassmorphism Generator' slug='app' img='3.png' />
           <Card title='Claymorphism Generator' slug='app' img='4.png' />
           <Card title='Neumorphism Generator' slug='app' img='5.png?version=' />
