@@ -8,10 +8,11 @@ const Tools = () => {
         <div className='flex flex-wrap'>
           <Card title='Background Gradient' slug='app' img='1.png?version=' />
           <Card title='Text Gradient' slug='text-gradient' img='2.png?version=' />
+          <Card title='Underline Gradient' slug='underline-gradient' img='6.png' />
           <Card title='Glassmorphism Generator' slug='app' img='3.png' />
           <Card title='Claymorphism Generator' slug='app' img='4.png' />
           <Card title='Neumorphism Generator' slug='app' img='5.png?version=' />
-          <Card title='Underline Gradient' slug='app' img='6.png' />
+          
         </div>
       </div>
     )

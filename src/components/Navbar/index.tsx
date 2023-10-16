@@ -71,7 +71,7 @@ export default function Navbar() {
                       <Link href='/text-gradient'>Text Gradient</Link>
                     </li>
                     <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
-                      <Link href='/app'>Underline Gradient</Link>
+                      <Link href='/underline-gradient'>Underline Gradient</Link>
                     </li >
                     <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
                       <Link href='/app'>Glassmorphism</Link>
