@@ -10,6 +10,7 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Footer from '../../components/Sections/Footer/Footer'
 import { SEO } from '../../components/SEO'
+import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 
 
 
@@ -27,10 +28,14 @@ const TextGradient = () => {
     } = useControls();
 
     return (
-        <>  
+        <>
             <SEO title='Text Gradient Generator' />
             <Navbar />
             <div className='w-full lg:w-4/6 mx-auto font-medium'>
+                <Breadcrumb links={[
+                    { href: '/', label: 'Home' },
+                    { label: 'Text Gradient Generator' },
+                ]} />
                 <div className='mt-4'>
                     <h1 className={`${animated ? style.animated : style.textGradient} lg:text-8xl text-center font-semibold`}
                         style={{

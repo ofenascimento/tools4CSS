@@ -10,6 +10,7 @@ import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Footer from '../../components/Sections/Footer/Footer'
 import { Slider } from '@material-ui/core';
 import { SEO } from '../../components/SEO'
+import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 
 
 
@@ -29,10 +30,14 @@ const BakcgroundGradient = () => {
     } = useControls();
 
     return (
-        <>  
+        <>
             <SEO title='Background Gradient Generator' />
             <Navbar />
             <div className='w-full lg:w-4/6 mx-auto font-medium'>
+                <Breadcrumb links={[
+                    { href: '/', label: 'Home' },
+                    { label: 'Background Gradient Generator' },
+                ]} />
                 <div className='mt-4'>
                     <div className={`${animated ? style.animatedApp : style.app} py-32 rounded-md  `}
                         style={{
@@ -81,7 +86,7 @@ const BakcgroundGradient = () => {
                             id='material-switch'
                         />
                     </div>
-                    
+
 
                 </div>
 

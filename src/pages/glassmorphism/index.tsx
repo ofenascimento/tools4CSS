@@ -11,6 +11,9 @@ import { SEO } from '../../components/SEO'
 import { Slider } from '@material-ui/core';
 import { hexToRgb } from '../../utils/hexToRGB'
 import styles from './styles.module.scss'
+import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
+
+
 
 
 
@@ -34,6 +37,10 @@ const Glassmorphism = () => {
             <SEO title='Glassmorphism Generator' />
             <Navbar />
             <div className='w-full lg:w-4/6 mx-auto font-medium'>
+                <Breadcrumb links={[
+                    { href: '/', label: 'Home' },
+                    { label: 'Glassmorphism Generator' },
+                ]} />
                 <div className='mt-4'>
                     <div className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center  `}>
                         <span className='text-5xl lg:text-7xl text-center font-semibold text-white p-4 rounded-md' style={{
