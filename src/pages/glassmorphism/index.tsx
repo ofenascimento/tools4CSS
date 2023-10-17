@@ -31,7 +31,7 @@ const Glassmorphism = () => {
 
     return (
         <>
-            <SEO title='Underline Gradient Generator' />
+            <SEO title='Glassmorphism Generator' />
             <Navbar />
             <div className='w-full lg:w-4/6 mx-auto font-medium'>
                 <div className='mt-4'>
