@@ -47,7 +47,7 @@ const UnderlineGradient = () => {
 
                 <div className='w-full bg-slate-600 mt-4'>
                     <SyntaxHighlighter language="css" style={darcula}>
-                        {`background-image: linear-gradient(${direction}, ${colorVariant1},${colorVariant2} 100%); \n background-repeat: no-repeat; \n background-size: 100% 0.3em; \n background-position: 0 80%;`}
+                        {`background-image: linear-gradient(${direction}, ${colorVariant1},${colorVariant2} 100%); \nbackground-repeat: no-repeat; \nbackground-size: 100% 0.3em; \nbackground-position: 0 80%;`}
                     </SyntaxHighlighter>
                 </div>
 
@@ -58,7 +58,9 @@ const UnderlineGradient = () => {
                 <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
                     <h1 className='font-semibold text-3xl'>What is Underline Gradient Generator?</h1>
                     <br />
-                    <p>An underline gradient generator is a web development tool or resource designed to streamline the creation of gradient effects for the underline of text, typically used in links or other text elements. These tools allow developers to easily customize the appearance of the underline, setting desired gradient colors and directions without the need to write CSS code manually. With an underline gradient generator, developers can save time and effort, creating visually engaging and dynamic underlines for their web content.</p>                    <br />
+                    <p>An underline gradient generator is a web development tool or resource designed to streamline the creation of gradient effects for the underline of text, typically used in links or other text elements. These tools allow developers to easily customize the appearance of the underline, setting desired gradient colors and directions without the need to write CSS code manually. With an underline gradient generator, developers can save time and effort, creating visually engaging and dynamic underlines for their web content.</p>             
+                    <br />
+                    <p>Creating an underline gradient for text elements can be a visually appealing and dynamic way to enhance the user experience on a website. By applying gradient effects to underlines, web developers can add depth and style to hyperlinks or other text-based elements. This technique allows for creative customization, enabling designers to match the underline gradient to a website&apos;s overall aesthetic or to convey specific visual cues. CSS properties like linear-gradient or background-image can be employed to achieve this effect, giving developers fine-grained control over the gradient&apos;s colors, direction, and transition. With the help of CSS, underline gradients become a powerful tool in the arsenal of web designers, allowing them to make user interactions more engaging and visually appealing.</p>
                 </div>
             </div>
             <Footer />

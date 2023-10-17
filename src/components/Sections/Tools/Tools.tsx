@@ -12,7 +12,6 @@ const Tools = () => {
           <Card title='Glassmorphism Generator' slug='app' img='3.png' />
           <Card title='Claymorphism Generator' slug='app' img='4.png' />
           <Card title='Neumorphism Generator' slug='app' img='5.png?version=' />
-          
         </div>
       </div>
     )
