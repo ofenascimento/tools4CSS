@@ -65,7 +65,7 @@ export default function Navbar() {
                 <span className='group-hover:block hidden'>
                   <ul className='mt-7 absolute bg-white border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4'>
                     <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
-                      <Link href='/app'>Background Gradient</Link>
+                      <Link href='/background-gradient'>Background Gradient</Link>
                     </li>
                     <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
                       <Link href='/text-gradient'>Text Gradient</Link>

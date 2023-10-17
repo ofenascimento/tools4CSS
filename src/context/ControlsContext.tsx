@@ -21,6 +21,8 @@ interface IControlsContext {
   setTransparency(e: any): void;
   depth: number;
   setDepth(e: any): void;
+  angle: number;
+  setAngle(e: any): void;
 }
 
 interface IProvider {
@@ -40,6 +42,7 @@ export function ControlsProvider({ children }: IProvider) {
   const [direction, setDirection] = useState('80deg');
   const [trasnparency, setTransparency] = useState(0.15);
   const [depth, setDepth] = useState(4);
+  const [angle, setAngle] = useState(180);
   return (
     <ControlsContext.Provider
       value={{
@@ -63,6 +66,8 @@ export function ControlsProvider({ children }: IProvider) {
         setTransparency,
         depth,
         setDepth,
+        angle,
+        setAngle
       }}
     >
       {children}
