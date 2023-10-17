@@ -13,10 +13,10 @@ export default function Navbar() {
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
             <Link href='/' className='cursor-pointer'>
-            <Image className='cursor-pointer' src='/logo.png' width={60} height={60} alt='' />
+              <Image className='cursor-pointer' src='/logo.png' width={60} height={60} alt='' />
             </Link>
 
-            
+
             <div className='md:hidden'>
               <button
                 className='p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border'
@@ -61,46 +61,43 @@ export default function Navbar() {
               }`}
           >
             <ul className='items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
-              <li className='text-slate-900 group relative cursor-pointer'>
+              <li className='text-slate-900  group relative cursor-pointer'>
                 <span className='group-hover:block hidden'>
-                  <ul className='mt-7 absolute bg-white border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4'>
-                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                  <ul className='mt-7 absolute bg-slate-100 border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4'>
+                    <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/background-gradient'>Background Gradient</Link>
                     </li>
-                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                    <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/text-gradient'>Text Gradient</Link>
                     </li>
-                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                    <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/underline-gradient'>Underline Gradient</Link>
                     </li >
-                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
-                      <Link href='/app'>Glassmorphism</Link>
+                    <li className='p-2 rounded-md w-full m-2'>
+                      <Link href='/glassmorphism'>Glassmorphism</Link>
                     </li>
-                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
+                    {/* <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
                       <Link href='/app'>Claymorphism</Link>
                     </li>
                     <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
                       <Link href='/app'>Neumorphism</Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </span>
                 <Link href=''>
                   <div className='flex gap-2 justify-center items-centerS'>
-                  Tools
-                  <Image src="/arrow-down.svg" width={18} height={18} alt='icon-arrow-down' />
+                    Tools
+                    <Image src="/arrow-down.svg" width={18} height={18} alt='icon-arrow-down' />
                   </div>
-                    </Link>
-                
-                
+                </Link>
+
+
               </li>
               <li className='text-slate-900'>
                 <Link href=''>Blog</Link>
               </li>
               <li className='text-slate-900'>
                 <Link href=''>About Us</Link>
-              </li>
-              <li className=' font-medium bg-blue-700 py-2 px-4 rounded-md text-white'>
-                <Link href='/app'>App demo</Link>
               </li>
             </ul>
           </div>

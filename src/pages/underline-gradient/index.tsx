@@ -8,6 +8,7 @@ import CopyButton from '../../components/CopyButton/CopyButton'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Footer from '../../components/Sections/Footer/Footer'
+import { SEO } from '../../components/SEO'
 
 
 
@@ -19,13 +20,12 @@ const UnderlineGradient = () => {
         colorVariant2,
         setColorVariant2,
         direction,
-        setDirection,
-        animated,
         setAnimated,
     } = useControls();
 
     return (
         <>
+            <SEO title='Underline Gradient Generator' />
             <Navbar />
             <div className='w-full lg:w-4/6 mx-auto font-medium'>
                 <div className='mt-4 text-center'>

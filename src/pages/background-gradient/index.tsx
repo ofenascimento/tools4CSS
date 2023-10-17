@@ -3,13 +3,13 @@ import Navbar from '../../components/Navbar'
 import ColorInput from '../../components/ColorInput/ColorInput'
 import { useControls } from '../../hooks/useControls'
 import style from './styles.module.scss'
-import DirectionButton from '../../components/DirectionButton/DirectionButton'
 import Switch from 'react-switch';
 import CopyButton from '../../components/CopyButton/CopyButton'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Footer from '../../components/Sections/Footer/Footer'
 import { Slider } from '@material-ui/core';
+import { SEO } from '../../components/SEO'
 
 
 
@@ -29,11 +29,12 @@ const BakcgroundGradient = () => {
     } = useControls();
 
     return (
-        <>
+        <>  
+            <SEO title='Background Gradient Generator' />
             <Navbar />
             <div className='w-full lg:w-4/6 mx-auto font-medium'>
                 <div className='mt-4'>
-                    <div className={`${animated ? style.animatedApp : style.app} py-20 rounded-md  `}
+                    <div className={`${animated ? style.animatedApp : style.app} py-32 rounded-md  `}
                         style={{
                             backgroundImage: `linear-gradient(${angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                                 } ${colorVariant2} ${animated ? ',' + colorVariant2 : ''})`,

@@ -32,17 +32,17 @@ interface IProvider {
 export const ControlsContext = createContext({} as IControlsContext);
 
 export function ControlsProvider({ children }: IProvider) {
-  const [blur, setBlur] = useState(20);
+  const [blur, setBlur] = useState(6);
   const [borderRadius, setBorderRadius] = useState(25);
   const [distance, setDistance] = useState(10);
-  const [color, setColor] = useState('#8ed1fc');
+  const [color, setColor] = useState('#ffffff');
   const [colorVariant1, setColorVariant1] = useState('#1D4ED8');
   const [colorVariant2, setColorVariant2] = useState('#24ff8e');
   const [animated, setAnimated] = useState(false);
   const [direction, setDirection] = useState('80deg');
   const [trasnparency, setTransparency] = useState(0.15);
   const [depth, setDepth] = useState(4);
-  const [angle, setAngle] = useState(180);
+  const [angle, setAngle] = useState(80);
   return (
     <ControlsContext.Provider
       value={{

@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../../oldComponents/Card/Card'
+import Card from '../../Card/Card'
 
 const Tools = () => {
     return (
@@ -9,9 +9,9 @@ const Tools = () => {
           <Card title='Background Gradient' slug='background-gradient' img='1.png?version=' />
           <Card title='Text Gradient' slug='text-gradient' img='2.png?version=' />
           <Card title='Underline Gradient' slug='underline-gradient' img='6.png' />
-          <Card title='Glassmorphism Generator' slug='app' img='3.png' />
-          <Card title='Claymorphism Generator' slug='app' img='4.png' />
-          <Card title='Neumorphism Generator' slug='app' img='5.png?version=' />
+          <Card title='Glassmorphism Generator' slug='glassmorphism' img='3.png' />
+          {/* <Card title='Claymorphism Generator' slug='app' img='4.png' />
+          <Card title='Neumorphism Generator' slug='app' img='5.png?version=' /> */}
         </div>
       </div>
     )
