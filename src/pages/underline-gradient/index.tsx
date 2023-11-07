@@ -44,8 +44,8 @@ const UnderlineGradient = () => {
                     >Underline Gradient</span>
                 </div>
                 <div className='p-4 bg-slate-200 text-gray-700 flex gap-10 mt-4 flex-wrap rounded-md justify-center items-center font-prompt font-semibold'>
-                    <ColorInput label='Color 1:' preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
-                    <ColorInput label='Color 2:' preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
+                    <ColorInput preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
+                    <ColorInput preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
                     <DirectionButton />
 
                 </div>
