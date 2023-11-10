@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 interface IColorInput {
   value?: string;
@@ -7,16 +7,29 @@ interface IColorInput {
   preview?: string;
 }
 
-const ColorInput = (props: IColorInput) => {
+const ColorInput = ({ value, onChange, label, preview }: IColorInput) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
-    <div className='flex gap-4 items-center justify-center' >
+    <div className='flex gap-4 items-center justify-center relative'>
       <div>
-        <span>{props.label}</span>
-        
+        <span>{label}</span>
       </div>
-      <input type='color' onChange={props.onChange} value={props.value} />
+      <div
+        className='w-8 h-8 rounded-full cursor-pointer'
+        style={{ backgroundColor: value }}
+        onClick={() => inputRef.current!.click()}
+      >
+        <input
+          ref={inputRef}
+          type='color'
+          onChange={onChange}
+          value={value}
+          className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
+        />
+      </div>
       <div>
-      {props.preview}
+        <span>{preview}</span>
       </div>
     </div>
   );
