@@ -40,7 +40,16 @@ textarea::-webkit-scrollbar-thumb {
   background-color: #0F54B4;
 }
 
-textarea {
-  border: 0;
-  outline: none;
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 99px;
 }
