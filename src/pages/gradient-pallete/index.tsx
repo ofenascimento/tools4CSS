@@ -17,7 +17,7 @@ const PalleteGradient = () => {
                     { href: '/', label: 'Home' },
                     { label: 'Pallet Gradient' },
                 ]} />
-                <div className='flex mt-4 gap-6 justify-between items-center flex-wrap'>
+                <div className='flex mt-4 gap-6 lg:justify-between justify-center  items-center flex-wrap'>
                     {palleteGradient.map((gradient) => (
                         <div key={gradient.id} className="flex justify-center items-center gap-2">
                             <div

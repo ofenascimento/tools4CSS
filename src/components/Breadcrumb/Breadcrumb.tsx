@@ -3,7 +3,7 @@ import { TBreadcrumb } from './types';
 
 export const Breadcrumb = ({ links }: TBreadcrumb): React.ReactElement => {
   return (
-    <nav className='text-md font-medium'>
+    <nav className='lg:ml-0 ml-6 text-md font-medium'>
       <ol className='list-none p-0 flex'>
         {links.map((link, index) => (
           <li className='flex items-center' key={index}>
