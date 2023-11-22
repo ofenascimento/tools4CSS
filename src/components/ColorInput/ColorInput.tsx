@@ -1,11 +1,6 @@
 import React from 'react';
+import { IColorInput } from './types';
 
-interface IColorInput {
-  value?: string;
-  onChange?(e: any): void;
-  label?: string;
-  preview?: string;
-}
 
 const ColorInput = (props: IColorInput) => {
   return (

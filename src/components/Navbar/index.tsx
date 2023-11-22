@@ -76,6 +76,9 @@ export default function Navbar() {
                     <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/glassmorphism'>Glassmorphism</Link>
                     </li>
+                    <li className='p-2 rounded-md w-full m-2'>
+                      <Link href='/gradient-pallete'>Gradient Pallete</Link>
+                    </li>
                     {/* <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
                       <Link href='/app'>Claymorphism</Link>
                     </li>
