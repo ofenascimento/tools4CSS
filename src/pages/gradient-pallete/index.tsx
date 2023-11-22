@@ -1,10 +1,10 @@
 import React from 'react';
-import { palleteGradient } from './data';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb';
 import Navbar from '../../components/Navbar';
 import { SEO } from '../../components/SEO';
 import Footer from '../../components/Sections/Footer/Footer';
 import CopyButton from '../../components/CopyButton/CopyButton';
+import { palleteGradient } from '../../utils/gradients';
 
 
 const PalleteGradient = () => {
