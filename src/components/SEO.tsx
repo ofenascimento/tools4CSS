@@ -27,8 +27,7 @@ export function SEO({ title, description, image, shouldExcludeTitleSuffix = fals
       {image && <meta name="image" content={pageImage ?? undefined} />}
 
       {!shouldIndexPage && <meta name="robots" content="noindex,nofollow" />}
-
-      <meta name="google-site-verification" content="pNMs4Qp9GYXMnVZOtEHXTnHX-bSo_jHjy5dAXZWVVZA" />
+      <meta name="google-site-verification" content="2lY706DMH74WLj3g_B35OkbkFWSh41iWN7DrexrZGDM" />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
