@@ -11,6 +11,7 @@ import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import Footer from '../../components/Sections/Footer/Footer'
 import { SEO } from '../../components/SEO'
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
+import { Slider } from '@material-ui/core'
 
 
 
@@ -25,6 +26,8 @@ const TextGradient = () => {
         setDirection,
         animated,
         setAnimated,
+        angle,
+        setAngle
     } = useControls();
 
     return (
@@ -43,14 +46,26 @@ const TextGradient = () => {
                             WebkitTextFillColor: 'transparent',
                             color: 'transparent',
                             backgroundClip: 'text',
-                            background: `linear-gradient(${direction}, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
+                            background: `linear-gradient(${animated ? 80 : angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                                 } ${colorVariant2} ${animated ? ',' + colorVariant2 : ''})`,
                         }}>Text Gradient</h1>
                 </div>
                 <div className='p-4 bg-slate-200 text-gray-700 flex gap-10 mt-4 flex-wrap rounded-md justify-center items-center font-prompt font-semibold'>
                     <ColorInput preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
                     <ColorInput preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
-                    <DirectionButton />
+                    <div className='flex items-center justify-center gap-2'>
+                        <span>Direction:</span>
+                        <Slider
+                            style={{ width: 140, marginLeft: 20, marginRight: 20 }}
+                            value={angle}
+                            onChange={(e, value) => setAngle(value as number)}
+                            className={style.slider}
+                            step={90}
+                            min={0}
+                            max={360}
+                            disabled={animated}
+                        />
+                    </div>
                     <div className='flex items-center justify-center gap-4'>
                         <span>Animation:</span>
                         <Switch
@@ -80,9 +95,9 @@ const TextGradient = () => {
 
                 <div className='w-full bg-slate-600 mt-4'>
                     <SyntaxHighlighter language="css" style={darcula}>
-                        {`background: linear-gradient(${direction}, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
+                        {`background: linear-gradient(${animated ? 80 : angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                             } ${colorVariant2}${animated ? ', ' + colorVariant2 : ''
-                            }); \nbackground: -webkit-linear-gradient(${direction}, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
+                            }); \nbackground: -webkit-linear-gradient(${angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                             } ${colorVariant2}${animated ? ', ' + colorVariant2 : ''
                             });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${animated
                                 ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '
@@ -92,9 +107,9 @@ const TextGradient = () => {
                 </div>
 
                 <div className=''>
-                    <CopyButton textToCopy={`background: linear-gradient(${direction}, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
+                    <CopyButton textToCopy={`background: linear-gradient(${animated ? 80 : angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                         } ${colorVariant2}${animated ? ', ' + colorVariant2 : ''
-                        });\nbackground: -webkit-linear-gradient(${direction}, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
+                        });\nbackground: -webkit-linear-gradient(${angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                         } ${colorVariant2}${animated ? ', ' + colorVariant2 : ''
                         });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${animated
                             ? 'background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} '

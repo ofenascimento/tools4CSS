@@ -21,8 +21,6 @@ const BakcgroundGradient = () => {
         setColorVariant1,
         colorVariant2,
         setColorVariant2,
-        direction,
-        setDirection,
         animated,
         setAnimated,
         angle,
