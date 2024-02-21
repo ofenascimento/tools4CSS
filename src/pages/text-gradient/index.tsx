@@ -3,7 +3,6 @@ import Navbar from '../../components/Navbar'
 import ColorInput from '../../components/ColorInput/ColorInput'
 import { useControls } from '../../hooks/useControls'
 import style from './styles.module.scss'
-import DirectionButton from '../../components/DirectionButton/DirectionButton'
 import Switch from 'react-switch';
 import CopyButton from '../../components/CopyButton/CopyButton'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
