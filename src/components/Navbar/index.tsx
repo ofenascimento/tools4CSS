@@ -61,7 +61,7 @@ export default function Navbar() {
               }`}
           >
             <ul className='items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
-              <li className='text-slate-900  group relative cursor-pointer'>
+              <li className='md:block text-slate-900  group relative cursor-pointer'>
                 <span className='group-hover:block hidden'>
                   <ul className='mt-7 absolute bg-slate-100 border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4'>
                     <li className='p-2 rounded-md w-full m-2'>
@@ -79,28 +79,41 @@ export default function Navbar() {
                     <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/gradient-pallete'>Gradient Pallete</Link>
                     </li>
-                    {/* <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
-                      <Link href='/app'>Claymorphism</Link>
+                    <li className='p-2 rounded-md w-full m-22'>
+                      <Link href='/neumorphism'>Neumorphism</Link>
                     </li>
-                    <li className='p-2 bg-slate-100 rounded-md w-full m-2'>
-                      <Link href='/app'>Neumorphism</Link>
-                    </li> */}
                   </ul>
                 </span>
+
                 <Link href=''>
-                  <div className='flex gap-2 justify-center items-centerS'>
+                  <div className='gap-2 justify-center items-center hidden md:flex'>
                     Tools
                     <Image src="/arrow-down.svg" width={18} height={18} alt='icon-arrow-down' />
                   </div>
                 </Link>
-
-
               </li>
-              <li className='text-slate-900'>
-                <Link href=''>Blog</Link>
+
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/background-gradient'>Background Gradient</Link>
               </li>
-              <li className='text-slate-900'>
-                <Link href=''>About Us</Link>
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/text-gradient'>Text Gradient</Link>
+              </li>
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/underline-gradient'>Underline Gradient</Link>
+              </li >
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/glassmorphism'>Glassmorphism</Link>
+              </li>
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/gradient-pallete'>Gradient Pallete</Link>
+              </li>
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/neumorphism'>Neumorphism</Link>
+              </li>
+              <li className='text-slate-900  border-2 border-slate-900 rounded-full p-2 flex justify-center items-center gap-2 hover:bg-slate-200'>
+                <Image src="/icons/github.png" width={18} height={18} alt='icon-arrow-down' />
+                <Link href='https://github.com/gomestzx/tools4CSS'>Github</Link>
               </li>
             </ul>
           </div>
