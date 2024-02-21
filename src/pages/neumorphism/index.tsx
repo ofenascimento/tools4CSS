@@ -19,19 +19,18 @@ const Neumorphism = () => {
         blur,
         setBlur,
         borderRadius,
-        setBorderRadius,
         distance,
         setDistance,
     } = useControls();
 
     return (
         <>
-            <SEO title='Background Gradient Generator' />
+            <SEO title='Neumorphism' />
             <Navbar />
             <div className='w-full lg:w-4/6 mx-auto font-medium'>
                 <Breadcrumb links={[
                     { href: '/', label: 'Home' },
-                    { label: 'Background Gradient Generator' },
+                    { label: 'Neumorphism' },
                 ]} />
                 <div className='mt-4 flex justify-center'>
                     <div
