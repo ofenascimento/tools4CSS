@@ -31,12 +31,12 @@ const BakcgroundGradient = () => {
         <>
             <SEO title='Background Gradient Generator' />
             <Navbar />
-            <div className='w-full lg:w-4/6 mx-auto font-medium'>
+            <div className='w-full lg:w-4/6 mx-auto'>
                 <Breadcrumb links={[
                     { href: '/', label: 'Home' },
                     { label: 'Background Gradient Generator' },
                 ]} />
-                <div className='mt-4'>
+                <div className='mt-4 mx-4 md:mx-0'>
                     <div className={`${animated ? style.animatedApp : style.app} py-32 rounded-md  `}
                         style={{
                             backgroundImage: `linear-gradient(${angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
@@ -45,7 +45,7 @@ const BakcgroundGradient = () => {
 
                     </div>
                 </div>
-                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-6 mt-4 flex-wrap justify-center items-center font-EuclidRegular'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 mt-4 flex flex-wrap justify-center items-center gap-6 font-EuclidRegular mx-4 md:mx-0'>
                     <ColorInput preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
                     <ColorInput preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
                     <div className='flex items-center justify-center gap-2'>
@@ -89,7 +89,7 @@ const BakcgroundGradient = () => {
 
                 </div>
 
-                <div className='w-full bg-slate-600 mt-4'>
+                <div className='w-auto md:w-full bg-slate-600 mt-4 mx-4 md:mx-0'>
                     <SyntaxHighlighter language="css" style={darcula}>
                         {`background-image: linear-gradient(${angle}deg, ${colorVariant1}, ${colorVariant2});${animated
                             ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
@@ -98,14 +98,14 @@ const BakcgroundGradient = () => {
                     </SyntaxHighlighter>
                 </div>
 
-                <div className=''>
+                <div className='mx-4 md:mx-0'>
                     <CopyButton textToCopy={`background-image: linear-gradient(${angle}deg, ${colorVariant1}, ${colorVariant2});${animated
                         ? '\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}'
                         : ''
                         } `} />
                 </div>
 
-                <div className='w-full mt-4 p-4 bg-slate-200 font-manrope text-lg'>
+                <div className='w-auto md:w-full mt-4 p-4 bg-slate-200 font-manrope text-lg mx-4 md:mx-0'>
                     <h1 className='text-3xl'>What is Background Gradient Generator?</h1>
                     <br />
                     <p>The CSS Background Gradient Generator is a web development tool that assists in creating gradient backgrounds for HTML elements using Cascading Style Sheets (CSS). With this generator, designers and developers can define and customize gradients, specifying colors, angles, and other properties to achieve the desired visual effect. The resulting CSS code can then be easily integrated into web projects, allowing for the creation of stylish and dynamic backgrounds for web pages and user interfaces. This tool simplifies the process of implementing gradient backgrounds in CSS, enhancing the overall design and user experience of websites and web applications.</p>                    <br />

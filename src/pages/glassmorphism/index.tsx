@@ -41,7 +41,7 @@ const Glassmorphism = () => {
                     { label: 'Glassmorphism Generator' },
                 ]} />
                 <div className='mt-4'>
-                    <div className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center  `}>
+                    <div className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center  mx-4 md:mx-0`}>
                         <span className='text-5xl lg:text-7xl text-center text-white p-4 rounded-md' style={{
                             backdropFilter: `blur(${blur}px)`,
                             WebkitBackdropFilter: `blur(${blur}px)`,
@@ -49,7 +49,7 @@ const Glassmorphism = () => {
                         }}>glassmorphism</span>
                     </div>
                 </div>
-                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 md:mx-0'>
                     <ColorInput label='Color:' preview={color} value={color} onChange={(e) => setColor(e.target.value)} />
                     <div className='flex items-center justify-center gap-2'>
                         <span>Blur:</span>
@@ -76,17 +76,17 @@ const Glassmorphism = () => {
 
                 </div>
 
-                <div className='w-full bg-slate-600 mt-4'>
+                <div className='w-auto md:w-full bg-slate-600 mt-4 mx-4 md:mx-0'>
                     <SyntaxHighlighter language="css" style={darcula}>
                         {`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
                     </SyntaxHighlighter>
                 </div>
 
-                <div className=''>
+                <div className='mx-4 md:mx-0'>
                     <CopyButton textToCopy={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`} />
                 </div>
 
-                <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
+                <div className='w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 md:mx-0'>
                     <h1 className='text-3xl'>What is Glassmorphism Generator?</h1>
                     <br />
                     <p>A Glassmorphism Generator is a specialized tool or software application that allows designers and developers to create graphical user interface (GUI) elements with the popular glassmorphism design style. Glassmorphism is characterized by frosted glass-like elements that are semi-transparent, with a blurred background, creating a sleek and modern look for UI components.</p>

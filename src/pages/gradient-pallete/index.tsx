@@ -17,7 +17,7 @@ const PalleteGradient = () => {
                     { href: '/', label: 'Home' },
                     { label: 'Gradient Pallete' },
                 ]} />
-                <div className='flex mt-4 gap-6 lg:justify-between justify-center  items-center flex-wrap'>
+                <div className='flex mt-4 gap-4 justify-start p-5 md:p-0 lg:justify-between md:justify-center items-center flex-wrap'>
                     {palleteGradient.map((gradient) => (
                         <div key={gradient.id} className="flex justify-center items-center gap-2">
                             <div
@@ -28,10 +28,10 @@ const PalleteGradient = () => {
                                 }}
                             >
 
-                                <CopyButton className='bg-transparent p-0 absolute right-0 top-0 px-2 py-1 m-2 w-auto bg-stone-600 rounded-lg cursor-pointer' textToCopy={`linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`} withIcon />
+                                <CopyButton className='bg-transparent p-0 absolute right-0 top-0 px-2 py-1 m-2 w-auto rounded-lg cursor-pointer' textToCopy={`linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`} withIcon />
                             </div>
 
-                            <div className='flex flex-col gap-3'>
+                            <div className='flex flex-col gap-3 w-22'>
                                 <div>
                                     <CopyButton className='text-black bg-transparent m-0 p-0 w-auto' textClassName='text-black' textToCopy={gradient.color1} initialText={gradient.color1} copiedText='copied' />
                                 </div>

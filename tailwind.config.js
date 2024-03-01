@@ -37,6 +37,9 @@ module.exports = {
         'EuclidMedium': 'EuclidMedium',
         'EuclidBold': 'EuclidBold'
 
+      },
+      width: {
+        '22': '74px'
       }
     },
   },

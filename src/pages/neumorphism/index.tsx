@@ -40,7 +40,7 @@ const Neumorphism = () => {
                         }}
                     ></div>
                 </div>
-                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-6 mt-8 flex-wrap justify-center items-center font-EuclidRegular'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-6 mt-8 flex-wrap justify-center items-center font-EuclidRegular mx-4 md:mx-0'>
 
                     <div className='flex items-center justify-center gap-2'>
                         <span>Direction:</span>
@@ -65,17 +65,17 @@ const Neumorphism = () => {
 
                 </div>
 
-                <div className='w-full bg-slate-600 mt-4'>
+                <div className='w-auto md:w-full bg-slate-600 mt-4 mx-4 md:mx-0'>
                     <SyntaxHighlighter language="css" style={darcula}>
                         {`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;`}
                     </SyntaxHighlighter>
                 </div>
 
-                <div className=''>
+                <div className='mx-4 md:mx-0'>
                     <CopyButton textToCopy={`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;`} />
                 </div>
 
-                <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
+                <div className='w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 md:mx-0'>
                     <h1 className='text-3xl'>What is Neumorphism?</h1>
                     <br />
                     <p>Neumorphism is a design trend that has gained popularity in user interface (UI) design. It represents a blend of background colors, soft shadow, and smooth shapes to emulate physicality through digital elements. Unlike traditional skeuomorphism, which aims to mimic real-world textures and objects closely, neumorphism focuses on subtle, soft, and almost tactile surfaces that appear to extrude from or recede into the background. </p>
