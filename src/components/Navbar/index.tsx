@@ -9,7 +9,7 @@ export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <nav className='w-full pt-2 z-50 top-0'>
-      <div className='justify-between md:w-4/6 px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-0'>
+      <div className='justify-between lg:w-4/6 px-4 mx-auto lg:max-w-7xl md:items-center md:flex lg:px-0'>
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
             <Link href='/' className='cursor-pointer'>
