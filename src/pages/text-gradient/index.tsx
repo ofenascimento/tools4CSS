@@ -5,8 +5,8 @@ import { useControls } from '../../hooks/useControls'
 import style from './styles.module.scss'
 import Switch from 'react-switch';
 import CopyButton from '../../components/CopyButton/CopyButton'
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import Footer from '../../components/Sections/Footer/Footer'
 import { SEO } from '../../components/SEO'
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
