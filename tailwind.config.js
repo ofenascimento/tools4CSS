@@ -29,7 +29,9 @@ module.exports = {
       },
       fontFamily: {
         'manrope': 'Manrope',
-        'prompt': 'Prompt'
+        'prompt': 'Prompt',
+        'GilroyMedium': 'GilroyMedium',
+        'EuclidRegular': 'EuclidRegular'
 
       }
     },

@@ -45,7 +45,7 @@ const BakcgroundGradient = () => {
 
                     </div>
                 </div>
-                <div className='p-4 bg-slate-200 text-gray-700 flex gap-6 mt-4 flex-wrap rounded-md justify-center items-center font-prompt font-semibold'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-6 mt-4 flex-wrap justify-center items-center font-EuclidRegular font-semibold'>
                     <ColorInput preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
                     <ColorInput preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
                     <div className='flex items-center justify-center gap-2'>
@@ -70,14 +70,15 @@ const BakcgroundGradient = () => {
                                 setAnimated(nextChecked);
                                 setAngle(120)
                             }}
-                            onColor='#fff'
+                            onColor='#CBD5FF'
                             onHandleColor='#0f54b4'
-                            className='mt-0'
+                            className='mt-0 border border-slate-300 shadow-sm'
+                            
                             handleDiameter={10}
                             uncheckedIcon={false}
                             checkedIcon={false}
-                            offColor='#ffffff'
-                            offHandleColor='#464852'
+                            offColor='#fff'
+                            offHandleColor='#0f54b4'
                             activeBoxShadow='0px 0px 1px 10px rgba(0, 0, 0, 0.2)'
                             height={20}
                             width={48}
@@ -104,7 +105,7 @@ const BakcgroundGradient = () => {
                         } `} />
                 </div>
 
-                <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
+                <div className='w-full mt-4 p-4 bg-slate-200 font-manrope text-lg'>
                     <h1 className='font-semibold text-3xl'>What is Background Gradient Generator?</h1>
                     <br />
                     <p>The CSS Background Gradient Generator is a web development tool that assists in creating gradient backgrounds for HTML elements using Cascading Style Sheets (CSS). With this generator, designers and developers can define and customize gradients, specifying colors, angles, and other properties to achieve the desired visual effect. The resulting CSS code can then be easily integrated into web projects, allowing for the creation of stylish and dynamic backgrounds for web pages and user interfaces. This tool simplifies the process of implementing gradient backgrounds in CSS, enhancing the overall design and user experience of websites and web applications.</p>                    <br />

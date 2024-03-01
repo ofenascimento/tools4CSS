@@ -50,7 +50,7 @@ const Glassmorphism = () => {
                         }}>glassmorphism</span>
                     </div>
                 </div>
-                <div className='p-4 bg-slate-200 text-gray-700 flex gap-10 mt-4 flex-wrap rounded-md justify-center items-center font-prompt font-semibold'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular font-semibold'>
                     <ColorInput label='Color:' preview={color} value={color} onChange={(e) => setColor(e.target.value)} />
                     <div className='flex items-center justify-center gap-2'>
                         <span>Blur:</span>

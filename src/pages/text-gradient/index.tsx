@@ -39,7 +39,7 @@ const TextGradient = () => {
                     { label: 'Text Gradient Generator' },
                 ]} />
                 <div className='mt-4'>
-                    <h1 className={`${animated ? style.animated : style.textGradient} lg:text-8xl text-center font-semibold`}
+                    <h1 className={`${animated ? style.animated : style.textGradient} lg:text-8xl text-center font-semibold font-semibold`}
                         style={{
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
@@ -49,13 +49,13 @@ const TextGradient = () => {
                                 } ${colorVariant2} ${animated ? ',' + colorVariant2 : ''})`,
                         }}>Text Gradient</h1>
                 </div>
-                <div className='p-4 bg-slate-200 text-gray-700 flex gap-10 mt-4 flex-wrap rounded-md justify-center items-center font-prompt font-semibold'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular font-semibold'>
                     <ColorInput preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
                     <ColorInput preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
                     <div className='flex items-center justify-center gap-2'>
                         <span>Direction:</span>
                         <Slider
-                            style={{ width: 140, marginLeft: 20, marginRight: 20 }}
+                            style={{ width: 120, marginLeft: 20, marginRight: 20 }}
                             value={angle}
                             onChange={(e, value) => setAngle(value as number)}
                             className={style.slider}
@@ -75,14 +75,14 @@ const TextGradient = () => {
                                 setAnimated(nextChecked);
                                 setDirection('-80deg');
                             }}
-                            onColor='#fff'
+                            onColor='#CBD5FF'
                             onHandleColor='#0f54b4'
-                            className='mt-0'
+                            className='border border-slate-300 shadow-sm'
                             handleDiameter={10}
                             uncheckedIcon={false}
                             checkedIcon={false}
-                            offColor='#ffffff'
-                            offHandleColor='#464852'
+                            offColor='#fff'
+                            offHandleColor='#0f54b4'
                             activeBoxShadow='0px 0px 1px 10px rgba(0, 0, 0, 0.2)'
                             height={20}
                             width={48}

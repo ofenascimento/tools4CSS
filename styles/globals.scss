@@ -2,9 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.cdnfonts.com/css/euclid-circular-a');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300&display=swap');
+
+@font-face {
+  font-family: 'GilroyMedium';
+  src: url('../public/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GilroyMedium';
+  src: url('../public/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidRegular';
+  src: url('../public/fonts/Euclid\ Circular\ A\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidMedium';
+  src: url('../public/fonts/Euclid\ Circular\ A\ Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidSemiBold';
+  src: url('../public/fonts/Euclid\ Circular\ A\ SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuclidBold';
+  src: url('../public/fonts/Euclid\ Circular\ A\ Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
 body {
@@ -15,7 +56,7 @@ body {
   background-color: #F2F4F6 !important;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: 'Euclid Circular A', sans-serif;
+  font-family: 'EuclidMedium', sans-serif;
                                                 
 }
 
