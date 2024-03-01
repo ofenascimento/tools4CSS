@@ -31,7 +31,11 @@ module.exports = {
         'manrope': 'Manrope',
         'prompt': 'Prompt',
         'GilroyMedium': 'GilroyMedium',
-        'EuclidRegular': 'EuclidRegular'
+        'GilroyBold': 'GilroyBold',
+        'GilroyExtraBold': 'GilroyExtraBold',
+        'EuclidRegular': 'EuclidRegular',
+        'EuclidMedium': 'EuclidMedium',
+        'EuclidBold': 'EuclidBold'
 
       }
     },

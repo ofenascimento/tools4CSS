@@ -42,14 +42,14 @@ const Glassmorphism = () => {
                 ]} />
                 <div className='mt-4'>
                     <div className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center  `}>
-                        <span className='text-5xl lg:text-7xl text-center font-semibold text-white p-4 rounded-md' style={{
+                        <span className='text-5xl lg:text-7xl text-center text-white p-4 rounded-md' style={{
                             backdropFilter: `blur(${blur}px)`,
                             WebkitBackdropFilter: `blur(${blur}px)`,
                             backgroundColor: `rgba(${r}, ${g}, ${b}, ${trasnparency})`,
                         }}>glassmorphism</span>
                     </div>
                 </div>
-                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular font-semibold'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular'>
                     <ColorInput label='Color:' preview={color} value={color} onChange={(e) => setColor(e.target.value)} />
                     <div className='flex items-center justify-center gap-2'>
                         <span>Blur:</span>
@@ -87,7 +87,7 @@ const Glassmorphism = () => {
                 </div>
 
                 <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
-                    <h1 className='font-semibold text-3xl'>What is Glassmorphism Generator?</h1>
+                    <h1 className='text-3xl'>What is Glassmorphism Generator?</h1>
                     <br />
                     <p>A Glassmorphism Generator is a specialized tool or software application that allows designers and developers to create graphical user interface (GUI) elements with the popular glassmorphism design style. Glassmorphism is characterized by frosted glass-like elements that are semi-transparent, with a blurred background, creating a sleek and modern look for UI components.</p>
                 </div>

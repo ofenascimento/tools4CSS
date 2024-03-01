@@ -42,7 +42,7 @@ const PalleteGradient = () => {
                         </div>
                     ))}
                     <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
-                        <h1 className='font-semibold text-3xl'>What is Gradient Pallete ?</h1>
+                        <h1 className='text-3xl'>What is Gradient Pallete ?</h1>
                         <br />
                         <p>Gradient Palette is a versatile and user-friendly CSS gradient generator designed for web developers and designers who seek to add a vibrant touch to their projects. This tool provides an extensive collection of beautiful and modern background gradients, perfect for enhancing the visual appeal of websites and applications. Users can easily browse through a wide array of gradient styles, from subtle pastel blends to bold and dynamic color transitions. Each gradient in the palette comes with ready-to-use CSS code, simplifying the process of integrating these stunning backgrounds into your web designs. Gradient Palette also offers customization options, allowing users to tweak the colors and direction of the gradients to match their specific design needs. Whether you&apos;re building a professional website, a personal blog, or a creative portfolio, Gradient Palette is an invaluable resource for making your projects stand out with minimal effort.</p>                    <br />
                     </div>

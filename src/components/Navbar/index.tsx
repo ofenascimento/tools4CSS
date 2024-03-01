@@ -60,10 +60,10 @@ export default function Navbar() {
             className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
               }`}
           >
-            <ul className='items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300'>
+            <ul className='items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300 font-EuclidMedium'>
               <li className='md:block text-slate-900  group relative cursor-pointer'>
                 <span className='group-hover:block hidden'>
-                  <ul className='mt-7 absolute bg-slate-100 border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4'>
+                  <ul className='mt-7 absolute bg-slate-100 border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium'>
                     <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/background-gradient'>Background Gradient</Link>
                     </li>

@@ -33,7 +33,7 @@ const UnderlineGradient = () => {
                     { label: 'Underline Gradient Generator' },
                 ]} />
                 <div className='mt-4 text-center'>
-                    <span className='lg:text-8xl font-semibold text'
+                    <span className='text-6xl xl:text-9xl lg:text-8xl font-GilroyBold'
                         style={{
                             backgroundImage: `linear-gradient(${direction}, ${colorVariant1},${colorVariant2} 100%)`,
                             backgroundRepeat: 'no-repeat',
@@ -42,7 +42,7 @@ const UnderlineGradient = () => {
                         }}
                     >Underline Gradient</span>
                 </div>
-                <div className='order border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular font-semibold'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular'>
                     <ColorInput preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
                     <ColorInput preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
                     <DirectionButton />
@@ -60,7 +60,7 @@ const UnderlineGradient = () => {
                 </div>
 
                 <div className='w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg'>
-                    <h1 className='font-semibold text-3xl'>What is Underline Gradient Generator?</h1>
+                    <h1 className='text-3xl'>What is Underline Gradient Generator?</h1>
                     <br />
                     <p>An underline gradient generator is a web development tool or resource designed to streamline the creation of gradient effects for the underline of text, typically used in links or other text elements. These tools allow developers to easily customize the appearance of the underline, setting desired gradient colors and directions without the need to write CSS code manually. With an underline gradient generator, developers can save time and effort, creating visually engaging and dynamic underlines for their web content.</p>             
                     <br />
