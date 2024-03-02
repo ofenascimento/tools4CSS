@@ -6,8 +6,6 @@ import Hero from '../components/Sections/Hero/Hero';
 import Tools from '../components/Sections/Tools/Tools';
 import Footer from '../components/Sections/Footer/Footer';
 
-
-
 const Home: NextPage = () => {
   return (
     <div>

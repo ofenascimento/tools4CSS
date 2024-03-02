@@ -49,7 +49,7 @@ const TextGradient = () => {
                                 } ${colorVariant2} ${animated ? ',' + colorVariant2 : ''})`,
                         }}>Text Gradient</h1>
                 </div>
-                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 md:mx-0'>
+                <div className='border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 lg:mx-0'>
                     <ColorInput preview={colorVariant1} value={colorVariant1} onChange={(e) => setColorVariant1(e.target.value)} />
                     <ColorInput preview={colorVariant2} value={colorVariant2} onChange={(e) => setColorVariant2(e.target.value)} />
                     <div className='flex items-center justify-center gap-2'>
@@ -92,7 +92,7 @@ const TextGradient = () => {
 
                 </div>
 
-                <div className='w-auto md:w-full bg-slate-600 mt-4 mx-4 md:mx-0'>
+                <div className='w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0'>
                     <SyntaxHighlighter language="css" style={darcula}>
                         {`background: linear-gradient(${animated ? 80 : angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                             } ${colorVariant2}${animated ? ', ' + colorVariant2 : ''
@@ -105,7 +105,7 @@ const TextGradient = () => {
                     </SyntaxHighlighter>
                 </div>
 
-                <div className='mx-4 md:mx-0'>
+                <div className='mx-4 lg:mx-0'>
                     <CopyButton textToCopy={`background: linear-gradient(${animated ? 80 : angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
                         } ${colorVariant2}${animated ? ', ' + colorVariant2 : ''
                         });\nbackground: -webkit-linear-gradient(${angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + ',' : ''
@@ -116,7 +116,7 @@ const TextGradient = () => {
                         }`} />
                 </div>
 
-                <div className='w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 md:mx-0'>
+                <div className='w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 lg:mx-0'>
                     <h1 className='text-3xl'>What is Text Gradient Generator?</h1>
                     <br />
                     <p>A text gradient is a graphic design technique that involves applying a smooth color transition to specific text or words. Instead of solid text in a single color, text gradient creates an visually appealing effect by having the text blend gradually from one color to another, giving a sense of depth and dynamism. This is often achieved using a spectrum of colors or a custom color blend, and it can be a powerful way to make text elements in design projects stand out and captivate the viewer&apos;s attention. Text gradients are commonly used in various design applications, including web design, advertising, and branding, to create eye-catching and engaging typography.</p>                    <br />
