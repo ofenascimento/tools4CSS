@@ -24,14 +24,14 @@ export function SEO({ title, description, image, shouldExcludeTitleSuffix = fals
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-PV9613VCEX`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-XT9VNYPKE0`}
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-PV9613VCEX');
+          gtag('config', 'G-XT9VNYPKE0');
         `}
       </Script>
       <Head>
