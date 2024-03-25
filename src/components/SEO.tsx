@@ -42,6 +42,7 @@ export function SEO({ title, description, image, shouldExcludeTitleSuffix = fals
 
         {!shouldIndexPage && <meta name="robots" content="noindex,nofollow" />}
         <meta name="google-site-verification" content="2lY706DMH74WLj3g_B35OkbkFWSh41iWN7DrexrZGDM" />
+        <meta name="google-adsense-account" content="ca-pub-2529229033686497"></meta>
 
 
 
