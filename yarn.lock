@@ -309,6 +309,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@types/cssbeautify@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@types/cssbeautify/-/cssbeautify-0.3.5.tgz#b44fe836901b4277be27027b90ca1f9f54fd2538"
+  integrity sha512-bkxuJdUu7Liw14EouI8IFNvJXvd5IioAZdDvlCFBXv+Sel8uPK9rcxfvOchQKqw2AtppxRvcYaWmimi0t0Yuow==
+
 "@types/hast@^2.0.0":
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/@types/hast/-/hast-2.3.6.tgz#bb8b05602112a26d22868acb70c4b20984ec7086"
@@ -716,6 +721,11 @@ css-vendor@^2.0.8:
   dependencies:
     "@babel/runtime" "^7.8.3"
     is-in-browser "^1.0.2"
+
+cssbeautify@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/cssbeautify/-/cssbeautify-0.3.1.tgz#12dd1f734035c2e6faca67dcbdcef74e42811397"
+  integrity sha512-ljnSOCOiMbklF+dwPbpooyB78foId02vUrTDogWzu6ca2DCNB7Kc/BHEGBnYOlUYtwXvSW0mWTwaiO2pwFIoRg==
 
 cssesc@^3.0.0:
   version "3.0.0"

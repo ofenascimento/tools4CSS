@@ -76,9 +76,6 @@ export default function Navbar() {
                     <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/glassmorphism'>Glassmorphism</Link>
                     </li>
-                    <li className='p-2 rounded-md w-full m-2'>
-                      <Link href='/gradient-pallete'>Gradient Pallete</Link>
-                    </li>
                     <li className='p-2 rounded-md w-full m-22'>
                       <Link href='/neumorphism'>Neumorphism</Link>
                     </li>
@@ -87,8 +84,44 @@ export default function Navbar() {
 
                 <Link href=''>
                   <div className='gap-2 justify-center items-center hidden md:flex'>
-                    Tools
-                    <Image src="/arrow-down.svg" width={18} height={18} alt='icon-arrow-down' />
+                    CSS Generators
+                    <svg width="18" height="18" viewBox="0 0 320 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clipPath="url(#clip0_127_13614)">
+                        <path d="M137.4 374.6C149.9 387.1 170.2 387.1 182.7 374.6L310.7 246.6C319.9 237.4 322.6 223.7 317.6 211.7C312.6 199.7 301 191.9 288 191.9L32 192C19.1 192 7.40001 199.8 2.40001 211.8C-2.59999 223.8 0.200006 237.5 9.30001 246.7L137.3 374.7L137.4 374.6Z" fill="#c7cbd8"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_127_13614">
+                          <rect width="320" height="512" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>                  </div>
+                </Link>
+              </li>
+              <li className='md:block text-slate-900  group relative cursor-pointer'>
+                <span className='group-hover:block hidden'>
+                  <ul className='mt-7 absolute bg-slate-100 border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium'>
+                    <li className='p-2 rounded-md w-full m-2'>
+                      <Link href='/gradient-pallete'>Gradient Pallete</Link>
+                    </li>
+                    <li className='p-2 rounded-md w-full m-22'>
+                      <Link href='/css-formatter'>CSS Formatter</Link>
+                    </li>
+                  </ul>
+                </span>
+
+                <Link href=''>
+                  <div className='gap-2 justify-center items-center hidden md:flex'>
+                    CSS Tools
+                    <svg width="18" height="18" viewBox="0 0 320 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clipPath="url(#clip0_127_13614)">
+                        <path d="M137.4 374.6C149.9 387.1 170.2 387.1 182.7 374.6L310.7 246.6C319.9 237.4 322.6 223.7 317.6 211.7C312.6 199.7 301 191.9 288 191.9L32 192C19.1 192 7.40001 199.8 2.40001 211.8C-2.59999 223.8 0.200006 237.5 9.30001 246.7L137.3 374.7L137.4 374.6Z" fill="#c7cbd8"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_127_13614">
+                          <rect width="320" height="512" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
                   </div>
                 </Link>
               </li>
@@ -112,8 +145,10 @@ export default function Navbar() {
                 <Link href='/neumorphism'>Neumorphism</Link>
               </li>
               <li className='text-slate-900  border-2 border-slate-900 rounded-full p-2 flex justify-center items-center gap-2 hover:bg-slate-200'>
-                <Image src="/icons/github.png" width={18} height={18} alt='icon-arrow-down' />
-                <Link href='https://github.com/gomestzx/tools4CSS'>Github</Link>
+                <a href='https://github.com/gomestzx/tools4CSS' className=' flex justify-center items-center gap-2'>
+                  <Image src="/icons/github.png" width={18} height={18} alt='icon-arrow-down' />
+                  github
+                </a>
               </li>
             </ul>
           </div>
