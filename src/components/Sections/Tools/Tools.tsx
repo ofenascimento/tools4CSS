@@ -5,12 +5,12 @@ const Tools = () => {
   return (
     <div className='w-full md:w-4/6 mx-auto mt-8 flex justify-center md:justify-between flex-wrap mb-4'>
       <br />
-      <div className='w-auto md:w-full mt-4 font-manrope text-lg lg:mx-0 mb-6'>
-        <span className='text-3xl text-center' style={{
+      <div className='w-auto md:w-full mt-4 font-GilroyMedium text-lg lg:mx-0 mb-6'>
+        <span className='text-2xl text-center' style={{
           backgroundImage: 'linear-gradient(80deg, #1D4ED8, #4972d8 100%)',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 0.3em',
-          backgroundPosition: '0 110%'
+          backgroundSize: '100% 0.25em',
+          backgroundPosition: '0 120%'
         }} >CSS Generators</span>
       </div>
       <div className='flex flex-wrap'>
@@ -20,12 +20,12 @@ const Tools = () => {
         <Card title='Glassmorphism Generator' slug='glassmorphism' img='4.png' />
         <Card title='Neumorphism Generator' slug='neumorphism' img='5.png?version=' />
       </div>
-      <div className='w-auto md:w-full mt-4 font-manrope text-lg lg:mx-0 mb-6'>
-        <span className='text-3xl text-center' style={{
+      <div className='w-auto md:w-full mt-4 font-GilroyMedium text-lg lg:mx-0 mb-6'>
+        <span className='text-2xl text-center' style={{
           backgroundImage: 'linear-gradient(80deg, #1D4ED8, #4972d8 100%)',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 0.3em',
-          backgroundPosition: '0 110%'
+          backgroundSize: '100% 0.25em',
+          backgroundPosition: '0 120%'
         }} >CSS Tools</span>
       </div>
       <div className='flex flex-wrap w-full'>
