@@ -19,6 +19,7 @@ const Tools = () => {
         <Card title='Underline Gradient' slug='underline-gradient' img='3.png' />
         <Card title='Glassmorphism Generator' slug='glassmorphism' img='4.png' />
         <Card title='Neumorphism Generator' slug='neumorphism' img='5.png?version=' />
+        <Card title='Scrollbar Generator' slug='scrollbar-generator' img='scrollbar-generator.png?version=2' />
       </div>
       <div className='w-auto md:w-full mt-4 font-GilroyMedium text-lg lg:mx-0 mb-6'>
         <span className='text-2xl text-center' style={{
@@ -30,7 +31,7 @@ const Tools = () => {
       </div>
       <div className='flex flex-wrap w-full'>
         <Card title='Gradient Pallete' slug='gradient-pallete' img='6.png' />
-        <Card title='CSS Formatter' slug='css-formatter' img='css-formatter.png' />
+        <Card title='CSS Formatter' slug='css-formatter' img='css-formatter.png?version=' />
       </div>
     </div>
   )

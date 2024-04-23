@@ -76,8 +76,11 @@ export default function Navbar() {
                     <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/glassmorphism'>Glassmorphism</Link>
                     </li>
-                    <li className='p-2 rounded-md w-full m-22'>
+                    <li className='p-2 rounded-md w-full m-2'>
                       <Link href='/neumorphism'>Neumorphism</Link>
+                    </li>
+                    <li className='p-2 rounded-md w-full m-2'>
+                      <Link href='/scrollbar-generator'>Scrollbar Generator</Link>
                     </li>
                   </ul>
                 </span>
@@ -143,6 +146,12 @@ export default function Navbar() {
               </li>
               <li className='text-slate-900 block md:hidden'>
                 <Link href='/neumorphism'>Neumorphism</Link>
+              </li>
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/css-formatter'>CSS Formatter</Link>
+              </li>
+              <li className='text-slate-900 block md:hidden'>
+                <Link href='/scrollbar-generator'>Scrollbar Generator</Link>
               </li>
               <li className='text-slate-900  border-2 border-slate-900 rounded-full p-2 flex justify-center items-center gap-2 hover:bg-slate-200'>
                 <a href='https://github.com/gomestzx/tools4CSS' className=' flex justify-center items-center gap-2'>
