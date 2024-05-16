@@ -40,6 +40,9 @@ module.exports = {
       },
       width: {
         '22': '74px'
+      },
+      colors: {
+        main: '#1a4fd8'
       }
     },
   },
