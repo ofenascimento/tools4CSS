@@ -25,7 +25,8 @@ module.exports = {
     },
     extend: {
       lineHeight: {
-        '85': '85%'
+        '85': '85%',
+        '08': '0.8'
       },
       fontFamily: {
         'manrope': 'Manrope',
@@ -36,7 +37,6 @@ module.exports = {
         'EuclidRegular': 'EuclidRegular',
         'EuclidMedium': 'EuclidMedium',
         'EuclidBold': 'EuclidBold'
-
       },
       width: {
         '22': '74px'
