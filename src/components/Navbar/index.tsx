@@ -27,7 +27,7 @@ export default function Navbar() {
               />
             </Link>
 
-            <div className="md:hidden">
+            <div className="md:hidden flex flex-row gap-3">
               <button
                 className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
@@ -61,6 +61,26 @@ export default function Navbar() {
                     />
                   </svg>
                 )}
+              </button>
+              <button
+                onClick={toggleDrawer}
+                className="px-2 py-2 rounded-full text-white flex flex-row justify-center items-center gap-2"
+                style={{ backgroundColor: "#FF407D" }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
               </button>
             </div>
           </div>
@@ -187,11 +207,11 @@ export default function Navbar() {
               <li className="text-slate-900 block md:hidden">
                 <Link href="/scrollbar-generator">Scrollbar Generator</Link>
               </li>
-              <li>
+              <li className="hidden md:block">
                 <button
                   onClick={toggleDrawer}
-                  className="px-6 py-2 rounded-full text-white flex flex-row justify-center items-center gap-2" 
-                  style={{backgroundColor: '#FF407D'}}
+                  className="px-6 py-2 rounded-full text-white flex flex-row justify-center items-center gap-2"
+                  style={{ backgroundColor: "#FF407D" }}
                 >
                   Favorites
                   <svg
@@ -209,12 +229,13 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                <Drawer isOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
+                
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <Drawer isOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
     </nav>
   );
 }
