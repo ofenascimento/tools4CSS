@@ -5,7 +5,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div
-      className="w-full lg:w-4/6 mx-auto flex justify-center items-center flex-wrap"
+      className="w-full lg:w-4/6 mx-auto flex justify-center items-center flex-wrap px-2"
       id="hero"
     >
       <div className="w-full flex flex-col justify-center items-center leading-10 font-GilroyBold">
@@ -39,13 +39,13 @@ const Hero = () => {
           `}
         </style>
         <Link href="https://github.com/gomestzx/tools4CSS">
-          <span className="font-EuclidMedium rounded-full px-24 text-white mt-3 cursor-pointer w-auto md:w-1/2 text-center gradient whitespace-nowrap">
+          <span className="font-EuclidMedium rounded-full px-24 text-white mt-3 cursor-pointer text-center gradient whitespace-nowrap max-w-[400px] w-full">
             ⭐ Give it a star on GitHub!
           </span>
         </Link>
         <Link href="#generators">
           <span
-            className="font-EuclidMedium text-center rounded-full px-24 text-white mt-1 cursor-pointer w-auto md:w-1/2 mx-8"
+            className="font-EuclidMedium text-center rounded-full px-24 text-white mt-1 cursor-pointer mx-8 max-w-[400px] w-full"
             style={{
               backgroundColor: "#1A4FD8",
             }}
