@@ -13,15 +13,15 @@ const SnackBar = ({ id, type, title, subtitle, action }: TSnackBar): React.React
     <div className={clsx('snackbar pb-2', `snackbar-${id}`)}>
       <div
         className={clsx(
-          'bg-white border-l-8 border border-slate-300 text-orange-700 p-4 shadow-drop-2 rounded-sm transition-opacity flex z-30  justify-center items-center',
+          'bg-white dark:bg-mainDark border-l-8 border border-slate-300 dark:border-slate-600 text-orange-700 p-4 shadow-drop-2 rounded-sm transition-opacity flex z-30  justify-center items-center',
           border,
         )}
         role="alert"
       >
         {icon}
         <div className='ml-2'>
-          <p className="text-base text-black font-EuclidRegular leading-6 m-0">{title}</p>
-          {subtitle && <span className="text-sm font-medium leading-6">{subtitle}</span>}
+          <p className="text-base text-black dark:text-white font-EuclidRegular leading-6 m-0">{title}</p>
+          {subtitle && <span className="text-sm font-medium leading-6 dark:text-white">{subtitle}</span>}
         </div>
       </div>
     </div>

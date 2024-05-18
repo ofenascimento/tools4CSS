@@ -22,7 +22,7 @@ const Neumorphism = () => {
     <>
       <SEO title="Neumorphism" />
       <Navbar />
-      <div className="w-full lg:w-4/6 mx-auto font-medium">
+      <div className="w-full lg:w-4/6 mx-auto font-medium bg-transparent">
         <div className=" flex flex-row justify-between items-center">
           <Breadcrumb
             links={[{ href: "/", label: "Home" }, { label: "Neumorphism" }]}
@@ -32,7 +32,7 @@ const Neumorphism = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <div className="mt-4 flex justify-center">
+        <div className="mt-4 flex justify-center bg-white py-6 rounded-lg">
           <div
             style={{
               width: "240px",

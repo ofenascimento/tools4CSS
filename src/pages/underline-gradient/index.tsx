@@ -43,7 +43,7 @@ const UnderlineGradient = () => {
         </div>
         <div className="mt-4 text-center">
           <span
-            className="text-6xl xl:text-9xl lg:text-8xl font-GilroyBold"
+            className="text-6xl xl:text-9xl lg:text-8xl font-GilroyBold dark:text-white"
             style={{
               backgroundImage: `linear-gradient(${direction}, ${colorVariant1},${colorVariant2} 100%)`,
               backgroundRepeat: "no-repeat",

@@ -41,7 +41,7 @@ const Card = (props: ICard) => {
       <Link href={`/${props.slug}`}>
         <div className="w-full lg:w-2/4">
           <div
-            className={` ${styles.card} border border-slate-300 hover:border rounded-md shadow-sm bg-white flex items-center justify-center m-2 lg:mr-2 lg:mb-2 lg:m-auto relative cursor-pointer`}
+            className={` ${styles.card} border border-slate-300 dark:border-slate-600 dark:hover:border-slate-500 hover:border rounded-md shadow-sm bg-white dark:bg-mainDark flex items-center justify-center m-2 lg:mr-2 lg:mb-2 lg:m-auto relative cursor-pointer`}
           >
             <Image
               className={`${styles.imageContainer} rounded-l-sm`}
@@ -52,25 +52,25 @@ const Card = (props: ICard) => {
             />
             <div className=" w-full h-full flex flex-col items-start justify-center">
               <h2
-                className={`${styles.title} text-lg pr-4 font-EuclidSemiBold ml-2`}
+                className={`${styles.title} text-lg pr-4 font-EuclidSemiBold ml-2 dark:text-white`}
               >
                 {props.title}
               </h2>
 
               <p
-                className={`${styles.info} mt-1 ml-1 text-slate-800 leading-4 text-sm font-EuclidRegular mb-2 cursor-pointer p-1`}
+                className={`${styles.info} mt-1 ml-1 text-slate-800 leading-4 text-sm font-EuclidRegular mb-2 cursor-pointer p-1 dark:text-white`}
               >
                 {props.info}
               </p>
 
               <button
                 onClick={handleFavorite}
-                className="mt-2 text-lg font-medium text-white rounded-full px-3 absolute top-0 right-0 p-1"
+                className="mt-2 text-lg font-medium text-white  rounded-full px-3 absolute top-0 right-0 p-1"
               >
                 {isFavorited ? (
                   <MdFavorite size={18} color="#FF407D" />
                 ) : (
-                  <MdFavoriteBorder size={18} color="#000" />
+                  <MdFavoriteBorder size={18} className="  text-black dark:text-white" />
                 )}
               </button>
             </div>

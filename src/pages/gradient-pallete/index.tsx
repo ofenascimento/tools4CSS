@@ -51,7 +51,7 @@ const PalleteGradient = () => {
                 <div>
                   <CopyButton
                     className="text-black bg-transparent m-0 p-0 w-auto"
-                    textClassName="text-black"
+                    textClassName="text-black dark:text-white"
                     textToCopy={gradient.color1}
                     initialText={gradient.color1}
                     copiedText="copied"
@@ -60,7 +60,7 @@ const PalleteGradient = () => {
                 <div>
                   <CopyButton
                     className="text-black bg-transparent m-0 p-0 w-auto"
-                    textClassName="text-black"
+                    textClassName="text-black dark:text-white"
                     textToCopy={gradient.color2}
                     initialText={gradient.color2}
                     copiedText="copied"

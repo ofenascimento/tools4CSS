@@ -1,17 +1,22 @@
-import '../../styles/globals.scss';
-import type { AppProps } from 'next/app';
-import { ControlsProvider } from '../context/ControlsContext';
-import { RenderProvider } from '../context/RenderContext';
-import { FavoriteProvider } from '../context/FavoriteContext';
-
+import "../../styles/globals.scss";
+import type { AppProps } from "next/app";
+import { ControlsProvider } from "../context/ControlsContext";
+import { RenderProvider } from "../context/RenderContext";
+import { FavoriteProvider } from "../context/FavoriteContext";
+import { ThemeProvider } from "../context/ThemeContext";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <FavoriteProvider>
-      <ControlsProvider>
-        <Component {...pageProps} />
-      </ControlsProvider>
-    </FavoriteProvider>
+    <ThemeProvider>
+      <FavoriteProvider>
+        <ControlsProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ControlsProvider>
+      </FavoriteProvider>
+    </ThemeProvider>
   );
 }
 

@@ -3,10 +3,13 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import Drawer from "../Drawer/Drawer";
+import { useTheme } from "../../context/ThemeContext";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -94,7 +97,7 @@ export default function Navbar() {
             <ul className="items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300 font-EuclidMedium">
               <li className="md:block text-slate-900  group relative cursor-pointer">
                 <span className="group-hover:block hidden">
-                  <ul className="mt-7 absolute bg-slate-100 border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                  <ul className="mt-7 absolute bg-slate-100 dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
                     <li className="p-2 rounded-md w-full m-2">
                       <Link href="/background-gradient">
                         Background Gradient
@@ -121,8 +124,8 @@ export default function Navbar() {
                 </span>
 
                 <Link href="">
-                  <div className="gap-2 justify-center items-center hidden md:flex">
-                    CSS Generators
+                  <div className="gap-2 justify-center items-center hidden md:flex ">
+                    <h1 className=" dark:text-white">CSS Generators</h1>
                     <svg
                       width="18"
                       height="18"
@@ -145,9 +148,9 @@ export default function Navbar() {
                   </div>
                 </Link>
               </li>
-              <li className="md:block text-slate-900  group relative cursor-pointer">
+              <li className="md:block text-slate-900  group relative cursor-pointer ">
                 <span className="group-hover:block hidden">
-                  <ul className="mt-7 absolute bg-slate-100 border border-gray-200 z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                  <ul className="mt-7 absolute bg-slate-100 dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
                     <li className="p-2 rounded-md w-full m-2">
                       <Link href="/gradient-pallete">Gradient Pallete</Link>
                     </li>
@@ -159,7 +162,10 @@ export default function Navbar() {
 
                 <Link href="">
                   <div className="gap-2 justify-center items-center hidden md:flex">
+                    <h1 className=" dark:text-white">
                     CSS Tools
+                    </h1>
+                    
                     <svg
                       width="18"
                       height="18"
@@ -183,28 +189,28 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/background-gradient">Background Gradient</Link>
               </li>
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/text-gradient">Text Gradient</Link>
               </li>
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/underline-gradient">Underline Gradient</Link>
               </li>
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/glassmorphism">Glassmorphism</Link>
               </li>
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/gradient-pallete">Gradient Pallete</Link>
               </li>
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/neumorphism">Neumorphism</Link>
               </li>
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/css-formatter">CSS Formatter</Link>
               </li>
-              <li className="text-slate-900 block md:hidden">
+              <li className="text-slate-900 dark:text-white block md:hidden">
                 <Link href="/scrollbar-generator">Scrollbar Generator</Link>
               </li>
               <li className="hidden md:block">
@@ -229,7 +235,14 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                
+              </li>
+              <li>
+                <button
+                  onClick={toggleTheme}
+                  className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full"
+                >
+                  {theme === "dark" ? <FaSun color="#A0AFBF" /> : <FaMoon />}
+                </button>
               </li>
             </ul>
           </div>

@@ -62,14 +62,14 @@ body {
 }
 
 @media (min-width: 1024px) {
-  body {
+  .bg-blured {
     background-image: url("/background.svg");
     background-size: cover;
   }
 }
 
 @media (max-width: 1023px) {
-  body {
+  .bg-blured {
     background-image: none; 
   }
 }

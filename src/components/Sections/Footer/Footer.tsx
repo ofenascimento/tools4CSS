@@ -11,12 +11,12 @@ const Footer = () => {
                 <Image src="/logo.png" width={40} height={40} alt='' />
             </div>
             
-            <div className='flex justify-around gap-4'>
+            <div className='flex justify-around gap-4 dark:text-white'>
                 <Link href='/privacity'>Privacy</Link>
                 <Link href='/service-terms'>Service Terms</Link>
                 <Link href='/about'>About</Link>
             </div>
-            <p>Made with ❤️ <br className='lg:block hidden' /> by gomestzx</p>  
+            <p className='dark:text-white'>Made with ❤️ by gomestzx</p>  
         </div>
     )
 }
