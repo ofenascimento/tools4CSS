@@ -9,15 +9,15 @@ const Hero = () => {
       id="hero"
     >
       <div className="w-full flex flex-col justify-center items-center leading-10 font-GilroyBold">
-        <h1 className="lg:leading-08 text-6xl xl:text-9xl lg:text-8xl flex mt-0 lg:mt-6 gap-5 font-GilroyBold">
+        <h1 className="lg:leading-08 text-6xl xl:text-8xl lg:text-8xl flex mt-0 lg:mt-6 gap-5 font-GilroyBold">
           Lets build
         </h1>
         <h1
-          className={`lg:leading-08 text-6xl xl:text-9xl lg:text-8xl ${styles.textGradient}`}
+          className={`lg:leading-08 text-6xl xl:text-8xl lg:text-8xl ${styles.textGradient}`}
         >
           awesome
         </h1>
-        <h1 className="lg:leading-08 text-6xl xl:text-9xl lg:text-8xl">
+        <h1 className="lg:leading-08 text-6xl xl:text-8xl lg:text-8xl">
           interfaces
         </h1>
         <h3 className="text-slate-900 text-center text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4">
