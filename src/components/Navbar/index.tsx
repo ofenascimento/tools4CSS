@@ -5,6 +5,7 @@ import Image from "next/image";
 import Drawer from "../Drawer/Drawer";
 import { useTheme } from "../../context/ThemeContext";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { MdClose, MdFavoriteBorder, MdMenu } from "react-icons/md";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -32,65 +33,34 @@ export default function Navbar() {
 
             <div className="md:hidden flex flex-row gap-3">
               <button
-                className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
+                onClick={toggleDrawer}
+                className="px-3 py-3 rounded-full text-white flex flex-row justify-center items-center gap-2"
+                style={{ backgroundColor: "#FF407D" }}
               >
-                {navbar ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-slate-900"
-                    viewBox="0 0 20 20"
-                    fill="#000"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                <MdFavoriteBorder size={20} />
+              </button>
+              <button
+                onClick={toggleTheme}
+                className="bg-gray-200 px-3 py-3 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full"
+              >
+                {theme === "dark" ? (
+                  <FaSun color="#A0AFBF" size={20} />
                 ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6  text-slate-900"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="#000"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
+                  <FaMoon size={20} />
                 )}
               </button>
               <button
-                onClick={toggleDrawer}
-                className="px-2 py-2 rounded-full text-white flex flex-row justify-center items-center gap-2"
-                style={{ backgroundColor: "#FF407D" }}
+                className="p-2  dark:text-white rounded-md outline-none focus:border-gray-400 focus:border"
+                onClick={() => setNavbar(!navbar)}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                  />
-                </svg>
+                {navbar ? <MdClose size={28} /> : <MdMenu size={28} />}
               </button>
             </div>
           </div>
         </div>
         <div>
           <div
-            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 h-screen ${
               navbar ? "block" : "hidden"
             }`}
           >
@@ -162,10 +132,8 @@ export default function Navbar() {
 
                 <Link href="">
                   <div className="gap-2 justify-center items-center hidden md:flex">
-                    <h1 className=" dark:text-white">
-                    CSS Tools
-                    </h1>
-                    
+                    <h1 className=" dark:text-white">CSS Tools</h1>
+
                     <svg
                       width="18"
                       height="18"
@@ -236,7 +204,7 @@ export default function Navbar() {
                   </svg>
                 </button>
               </li>
-              <li>
+              <li className="hidden md:block">
                 <button
                   onClick={toggleTheme}
                   className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full"

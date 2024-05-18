@@ -1,5 +1,5 @@
 import React from "react";
-import { MdDelete } from "react-icons/md";
+import { MdClose, MdDelete } from "react-icons/md";
 import { useFavorites } from "../../context/FavoriteContext";
 
 interface DrawerProps {
@@ -16,7 +16,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
 
   return (
     <div
-      className={` z-30 fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
+      className={` z-30 fixed top-0 right-0 h-full w-64 bg-white dark:bg-black dark:border-l-2 dark:border-l-dark-100 shadow-lg transform transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -24,21 +24,11 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
         id="header"
         className="p-4 flex flex-row justify-between items-center"
       >
-        <h1 className="font-GilroyMedium text-black">Favorites</h1>
-        <button onClick={toggleDrawer}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#000"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
-          </svg>
+        <h1 className="font-GilroyMedium text-black dark:text-white">
+          Favorites
+        </h1>
+        <button onClick={toggleDrawer} className="text-black dark:text-white">
+          <MdClose size={28} />
         </button>
       </div>
       <div className="px-4 py-2" id="content">
