@@ -31,27 +31,38 @@ const Tools = () => {
           title="Background Gradient"
           slug="background-gradient"
           img="1.png?version="
+          info="Customize gradient backgrounds by specifying colors, angles and
+          other properties to achieve the desired visual effect"
         />
-        <Card title="Text Gradient" slug="text-gradient" img="2.png?version=" />
+        <Card
+          title="Text Gradient"
+          slug="text-gradient"
+          img="2.png?version="
+          info="Create stunning text gradients by selecting from a range of colors, angles, and gradient types."
+        />
         <Card
           title="Underline Gradient"
           slug="underline-gradient"
           img="3.png"
+          info="Transform your text with vibrant gradient underlines. Customize colors and styles for a unique look."
         />
         <Card
           title="Glassmorphism Generator"
           slug="glassmorphism"
           img="4.png"
+          info="Create stunning glassmorphism effects effortlessly. Customize blur, transparency, and colors for a sleek, modern look."
         />
         <Card
           title="Neumorphism Generator"
           slug="neumorphism"
           img="5.png?version="
+          info=" Design soft, 3D-like elements with our Neumorphism Generator. Customize shadows and highlights for a modern, tactile look."
         />
         <Card
           title="Scrollbar Generator"
           slug="scrollbar-generator"
           img="scrollbar-generator.png?version=2"
+          info=" Customize your scrollbars with ease. Choose colors, sizes, and styles to enhance your web design."
         />
       </div>
       <div className="w-auto md:w-full mt-8 font-GilroyMedium text-lg lg:mx-0 mb-6">
@@ -59,16 +70,22 @@ const Tools = () => {
           CSS Tools
         </h1>
         <h3 className="text-slate-900 text-center text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4">
-          Explore powerful CSS tools to<br /> enhance your styling
-          capabilities
+          Explore powerful CSS tools to
+          <br /> enhance your styling capabilities
         </h3>
       </div>
       <div className="flex flex-wrap w-full">
-        <Card title="Gradient Pallete" slug="gradient-pallete" img="6.png" />
+        <Card
+          title="Gradient Pallete"
+          slug="gradient-pallete"
+          img="6.png"
+          info=" Explore a collection of stunning CSS gradients. Pick your favorite styles to enhance your design."
+        />
         <Card
           title="CSS Formatter"
           slug="css-formatter"
           img="css-formatter.png?version="
+          info="Beautify and format your CSS code effortlessly. Improve readability and maintain clean stylesheets."
         />
       </div>
     </div>
