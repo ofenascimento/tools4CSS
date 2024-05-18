@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
+	<title>ffflux (6)-svg</title>
+	<defs>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f1"> <feGaussianBlur stdDeviation="100.3"/> </filter>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,780.5,-780.5,0,-174.25,-592)">
+			<stop offset="0" stop-color="#dcbfe1"/>
+			<stop offset="1" stop-color="#0947e4"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { opacity: .3;filter: url(#f1);fill: url(#g1) } 
+		.s1 { opacity: .2;filter: url(#f1);fill: #ff00dd } 
+	</style>
+	<path id="Layer" class="s0" d="m-564.5-592h780.5v780.5h-780.5z"/>
+	<path id="Layer copy" class="s1" d="m1048.3-478.5l466.3 625.9-625.9 466.3-466.3-625.9z"/>
+</svg>
