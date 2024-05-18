@@ -9,37 +9,18 @@ const Hero = () => {
       id="hero"
     >
       <div className="w-full flex flex-col justify-center items-center leading-10 font-GilroyBold">
-        <h1 className="lg:leading-08 text-6xl xl:text-8xl lg:text-8xl flex mt-0 lg:mt-6 gap-5 font-GilroyBold">
-          Lets build
+        <h1 className="lg:leading-08 text-6xl xl:text-8xl lg:text-7xl mt-0 lg:mt-6 gap-5 font-GilroyBold text-center">
+          Let&apos;s build{" "}
+          <span className={`${styles.textGradient} inline`}>awesome</span> and{" "}
+          <span className={styles.underlineGradient}>functional</span> interface
+          <span className={styles.wave}>s</span>
         </h1>
-        <h1
-          className={`lg:leading-08 text-6xl xl:text-8xl lg:text-8xl ${styles.textGradient}`}
-        >
-          awesome
-        </h1>
-        <h1 className="lg:leading-08 text-6xl xl:text-8xl lg:text-8xl">
-          interfaces
-        </h1>
-        <h3 className="text-slate-900 text-center text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4">
-          Take advantage of our tools to speed <br /> up the styling of your
-          components
+        <h3 className="text-slate-900 text-center w-4/5 text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4">
+          Take advantage of our CSS tools and generators to speed up the styling
+          of your components
         </h3>
-        <style>
-          {`
-            @keyframes gradient {
-              0% { background-position: 0% 50%; }
-              50% { background-position: 100% 50%; }
-              100% { background-position: 0% 50%; }
-            }
-            .gradient {
-              background-image: linear-gradient(80deg, #000000, #1A4FD8);
-              background-size: 400% 400%;
-              animation: gradient 10s ease infinite;
-            }
-          `}
-        </style>
         <Link href="https://github.com/gomestzx/tools4CSS">
-          <span className="font-EuclidMedium rounded-full px-24 text-white mt-3 cursor-pointer text-center gradient whitespace-nowrap max-w-[400px] w-full">
+          <span className={`${styles.gradientButton} font-EuclidMedium rounded-full px-2 text-white mt-3 cursor-pointer text-center whitespace-nowrap max-w-[400px] w-full`}>
             ⭐ Give it a star on GitHub!
           </span>
         </Link>

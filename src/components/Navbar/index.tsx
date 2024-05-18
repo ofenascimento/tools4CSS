@@ -210,7 +210,7 @@ export default function Navbar() {
               <li className="hidden md:block">
                 <button
                   onClick={toggleDrawer}
-                  className="px-6 py-2 rounded-full text-white flex flex-row justify-center items-center gap-2"
+                  className="px-6 py-1 rounded-full text-white flex flex-row justify-center items-center gap-2"
                   style={{ backgroundColor: "#FF407D" }}
                 >
                   Favorites

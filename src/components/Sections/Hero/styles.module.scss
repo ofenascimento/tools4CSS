@@ -1,57 +1,99 @@
 .textGradient {
-    background: linear-gradient(-80deg, #b23fe0, #ff00dd, #096ffe, #096ffe);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animated_text 8s ease-in-out infinite;
-    -moz-animation: animated_text 8s ease-in-out infinite;
-    -webkit-animation: animated_text 8s ease-in-out infinite;
+  background: linear-gradient(-80deg, #b23fe0, #ff00dd, #096ffe, #096ffe);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 8s ease-in-out infinite;
+  -moz-animation: animated_text 8s ease-in-out infinite;
+  -webkit-animation: animated_text 8s ease-in-out infinite;
 
-    @keyframes animated_text {
-        0% {
-            background-position: 0px 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0px 50%;
-        }
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
     }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0px 50%;
+    }
+  }
 }
 
 .underlineGradient {
-    background-image: linear-gradient(-80deg, #009dff, #ff00dd 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: 0 100%;
-    transition: background-size 0.25s ease-in;
-    animation: animated 15s ease-in-out infinite;
-    -moz-animation: animated 15s ease-in-out infinite;
-    -webkit-animation: animated 15s ease-in-out infinite;
-
-    
-
-    @keyframes animated {
-        0% {
-            background-size: 100% 0%;
-        }
-
-        50% {
-            background-size: 100% 90%;
-        }
-
-        100% {
-            background-size: 100% 0%;
-        }
-
-        
-
-    }
+  background-image: linear-gradient(-80deg, #009dff, #ff00dd 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  background-position: 100%;
+  transition: background-size 0.25s ease-in;
+  animation: animated 15s ease-in-out infinite;
+  -moz-animation: animated 15s ease-in-out infinite;
+  -webkit-animation: animated 15s ease-in-out infinite;
+  color: #fff;
 }
 
-.buttonGradient {
-    background-image: linear-gradient(-80deg, #8ed1fc, #ff00dd) !important;
+.underlineGradient::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px; 
+  bottom: -3px; 
+  left: 0;
+  background-image: linear-gradient(-80deg, #009dff, #ff00dd 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: background-size 0.25s ease-in-out;
+  z-index: -1; 
 }
+
+.underlineGradient:hover::after {
+  background-size: 0 100%;
+  transition: background-size 0.25s ease-in-out;
+}
+
+.wave {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom left;
+  animation: wave 8s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-18deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.gradientButton {
+    background-image: linear-gradient(80deg, #000000, #1a4fd8);
+    background-size: 400% 400%;
+    animation: gradientButton 10s ease infinite;
+  }
+
+@keyframes gradientButton {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
