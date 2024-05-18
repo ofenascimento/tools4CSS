@@ -6,7 +6,7 @@ import StarButton from "../../StarButton/StarButton";
 const Hero = () => {
   return (
     <div
-      className="w-full lg:w-4/6 mx-auto flex justify-center items-center flex-wrap px-2"
+      className="w-full lg:w-4/6 mt-4 md:mt-0 mx-auto flex justify-center items-center flex-wrap px-2"
       id="hero"
     >
       <div className="w-full flex flex-col justify-center items-center leading-10 font-GilroyBold">

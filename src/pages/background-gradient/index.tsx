@@ -63,7 +63,7 @@ const BakcgroundGradient = () => {
             }}
           ></div>
         </div>
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white dark:bg-mainDark p-4 text-gray-700 mt-4 flex flex-wrap justify-center items-center gap-6 font-EuclidRegular mx-4 lg:mx-0">
+        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 mt-4 flex flex-wrap justify-center items-center gap-6 font-EuclidRegular mx-4 lg:mx-0">
           <ColorInput
             preview={colorVariant1}
             value={colorVariant1}
