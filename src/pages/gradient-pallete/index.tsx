@@ -22,7 +22,7 @@ import Tooltip from "../../components/Tooltip/Tooltip";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 const PalleteGradient = () => {
-  const { isFavorited, handleFavorite } = useFavoriteTool("Pallete Gradient");
+  const { isFavorited, handleFavorite } = useFavoriteTool("Gradient Pallete ");
   const [fullScreen, setFullScreen] = useState<boolean>(false);
   const [selectedGradient, setSelectedGradient] = useState<null | {
     color1: string;
@@ -31,7 +31,7 @@ const PalleteGradient = () => {
   const [textCopied, setTextCopied] = useState<boolean>(false);
 
   return (
-    <>
+    <div className="bg-white dark:bg-transparent">
       <SEO title="Gradient Pallete" />
       <Navbar />
       <div className="w-full lg:w-4/6 mx-auto font-medium">
@@ -61,7 +61,7 @@ const PalleteGradient = () => {
                     backgroundImage: `linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`,
                   }}
                 ></div>
-                <div className="mt-2 flex justify-between items-center dark:bg-mainDark rounded-2xl p-2 border border-slate-300 dark:border-slate-600">
+                <div className="mt-2 flex justify-between items-center bg-white dark:bg-mainDark rounded-2xl p-2 border border-slate-300 dark:border-slate-600">
                   <div className="flex gap-1">
                     <Tooltip text={textCopied ? "Copied" : gradient.color1}>
                       <CopyToClipboard text={gradient.color1}>
@@ -175,7 +175,7 @@ const PalleteGradient = () => {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
