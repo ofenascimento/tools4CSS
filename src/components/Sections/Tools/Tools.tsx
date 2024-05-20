@@ -31,8 +31,7 @@ const Tools = () => {
           title="Background Gradient"
           slug="background-gradient"
           img="1.png?version="
-          info="Customize gradient backgrounds by specifying colors, angles and
-          other properties to achieve the desired visual effect"
+          info="Easily customize gradient backgrounds with your colors, angles, and styles."
         />
         <Card
           title="Text Gradient"
@@ -50,13 +49,13 @@ const Tools = () => {
           title="Glassmorphism Generator"
           slug="glassmorphism"
           img="4.png"
-          info="Create stunning glassmorphism effects effortlessly. Customize blur, transparency, and colors for a sleek, modern look."
+          info="Customize blur, transparency, and colors for a sleek, modern look."
         />
         <Card
           title="Neumorphism Generator"
           slug="neumorphism"
           img="5.png?version="
-          info=" Design soft, 3D-like elements with our Neumorphism Generator. Customize shadows and highlights for a modern, tactile look."
+          info="Customize shadows and highlights for a modern, tactile look."
         />
         <Card
           title="Scrollbar Generator"
@@ -85,7 +84,7 @@ const Tools = () => {
           title="CSS Formatter"
           slug="css-formatter"
           img="css-formatter.png?version="
-          info="Beautify and format your CSS code effortlessly. Improve readability and maintain clean stylesheets."
+          info="Beautify and format your CSS code effortlessly."
         />
       </div>
     </div>
