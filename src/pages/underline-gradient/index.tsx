@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import ColorInput from "../../components/ColorInput/ColorInput";
 import { useControls } from "../../hooks/useControls";
@@ -11,16 +11,12 @@ import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
+import CustomSlider from "../../components/CustomSlider/CustomSlider";
 
 const UnderlineGradient = () => {
-  const {
-    colorVariant1,
-    setColorVariant1,
-    colorVariant2,
-    setColorVariant2,
-    direction,
-    setAnimated,
-  } = useControls();
+  const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
+  const [colorVariant2, setColorVariant2] = useState<string>("#24ff8e");
+  const [weight, setWeight] = useState<number>(3);
 
   const { isFavorited, handleFavorite } = useFavoriteTool("Underline Gradient");
 
@@ -45,16 +41,16 @@ const UnderlineGradient = () => {
           <span
             className="text-6xl xl:text-9xl lg:text-8xl font-GilroyBold dark:text-white"
             style={{
-              backgroundImage: `linear-gradient(${direction}, ${colorVariant1},${colorVariant2} 100%)`,
+              backgroundImage: `linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%)`,
               backgroundRepeat: "no-repeat",
-              backgroundSize: "100% 0.3em",
+              backgroundSize: `100% 0.${weight}em`,
               backgroundPosition: "0 80%",
             }}
           >
             Underline Gradient
           </span>
         </div>
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 lg:mx-0">
+        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 lg:mx-0 dark:bg-mainDark dark:text-white dark:border-slate-600">
           <ColorInput
             preview={colorVariant1}
             value={colorVariant1}
@@ -65,18 +61,29 @@ const UnderlineGradient = () => {
             value={colorVariant2}
             onChange={(e) => setColorVariant2(e.target.value)}
           />
-          <DirectionButton />
+          <div className="flex items-center justify-center gap-2">
+            <span>Direction:</span>
+
+            <CustomSlider
+              style={{ width: 140, marginLeft: 20, marginRight: 20 }}
+              value={weight}
+              onChange={(_e: any, value: number) => setWeight(value as number)}
+              step={1}
+              min={1}
+              max={9}
+            />
+          </div>
         </div>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
           <SyntaxHighlighter language="css" style={darcula}>
-            {`background-image: linear-gradient(${direction}, ${colorVariant1},${colorVariant2} 100%); \nbackground-repeat: no-repeat; \nbackground-size: 100% 0.3em; \nbackground-position: 0 80%;`}
+            {`background-image: linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%); \nbackground-repeat: no-repeat; \nbackground-size: 100% 0.${weight}em; \nbackground-position: 0 80%;`}
           </SyntaxHighlighter>
         </div>
 
         <div className="mx-4 lg:mx-0">
           <CopyButton
-            textToCopy={`background-image: linear-gradient(${direction}, ${colorVariant1},${colorVariant2} 100%); \n background-repeat: no-repeat; \n background-size: 100% 0.3em; \n background-position: 0 80%;`}
+            textToCopy={`background-image: linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%); \n background-repeat: no-repeat; \n background-size: 100% 0.${weight}em; \n background-position: 0 80%;`}
           />
         </div>
 
