@@ -48,6 +48,9 @@ module.exports = {
         dark: {
           100: '#1F2937'
         }
+      },
+      whiteSpace: {
+        'nowrap': 'nowrap',
       }
     },
   },
