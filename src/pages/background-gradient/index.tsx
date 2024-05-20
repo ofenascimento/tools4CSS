@@ -1,33 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import ColorInput from "../../components/ColorInput/ColorInput";
-import { useControls } from "../../hooks/useControls";
 import style from "./styles.module.scss";
 import Switch from "react-switch";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import Footer from "../../components/Sections/Footer/Footer";
-import { Slider } from "@material-ui/core";
 import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
-import { useFavorites } from "../../context/FavoriteContext";
-import { useRouter } from "next/router";
-import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
+import CustomSlider from "../../components/CustomSlider/CustomSlider";
+import Tooltip from "../../components/Tooltip/Tooltip";
+import { MdArrowBack, MdFullscreen } from "react-icons/md";
 
 const BakcgroundGradient = () => {
-  const {
-    colorVariant1,
-    setColorVariant1,
-    colorVariant2,
-    setColorVariant2,
-    animated,
-    setAnimated,
-    angle,
-    setAngle,
-  } = useControls();
+  const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
+  const [colorVariant2, setColorVariant2] = useState<string>("#24ff8e");
+  const [animated, setAnimated] = useState<boolean>(false);
+  const [angle, setAngle] = useState<number>(80);
+  const [fullScreen, setFullScreen] = useState<boolean>(false);
 
   const { isFavorited, handleFavorite } = useFavoriteTool(
     "Background Gradient"
@@ -55,15 +48,24 @@ const BakcgroundGradient = () => {
           <div
             className={`${
               animated ? style.animatedApp : style.app
-            } py-32 rounded-md  `}
+            } py-32 rounded-md relative `}
             style={{
               backgroundImage: `linear-gradient(${angle}deg, ${colorVariant1}, ${
                 animated ? colorVariant1 + "," : ""
               } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
             }}
-          ></div>
+          >
+            <button
+              className=" text-gray-600 bg-white dark:bg-mainDark dark:text-slate-200 absolute right-0 top-0 m-4 flex justify-center items-center rounded-sm"
+              onClick={() => setFullScreen(true)}
+            >
+              <Tooltip text="View in full screen">
+                <MdFullscreen size={22} />
+              </Tooltip>
+            </button>
+          </div>
         </div>
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 mt-4 flex flex-wrap justify-center items-center gap-6 font-EuclidRegular mx-4 lg:mx-0">
+        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 mt-4 flex flex-wrap justify-center items-center gap-6 font-EuclidRegular mx-4 lg:mx-0 dark:bg-mainDark dark:text-white dark:border-slate-600">
           <ColorInput
             preview={colorVariant1}
             value={colorVariant1}
@@ -76,10 +78,11 @@ const BakcgroundGradient = () => {
           />
           <div className="flex items-center justify-center gap-2">
             <span>Direction:</span>
-            <Slider
+
+            <CustomSlider
               style={{ width: 140, marginLeft: 20, marginRight: 20 }}
               value={angle}
-              onChange={(e, value) => setAngle(value as number)}
+              onChange={(_e: any, value: number) => setAngle(value as number)}
               className={style.slider}
               step={1}
               min={0}
@@ -90,12 +93,7 @@ const BakcgroundGradient = () => {
             <span>Animation:</span>
             <Switch
               checked={animated}
-              onChange={(
-                nextChecked: boolean | ((prevState: boolean) => boolean)
-              ) => {
-                setAnimated(nextChecked);
-                setAngle(120);
-              }}
+              onChange={() => setAnimated((prev) => !prev)}
               onColor="#CBD5FF"
               onHandleColor="#0f54b4"
               className="mt-0 border border-slate-300 shadow-sm"
@@ -152,6 +150,27 @@ const BakcgroundGradient = () => {
         </div>
       </div>
       <Footer />
+      <div
+        id="full-screen"
+        className={`fixed inset-0 h-screen w-screen ${
+          animated ? style.animatedApp : style.app
+        } ${
+          fullScreen ? "block" : "hidden"
+        }`}
+        style={{
+          backgroundImage: `linear-gradient(${angle}deg, ${colorVariant1}, ${
+            animated ? colorVariant1 + "," : ""
+          } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+        }}
+      >
+        <button
+          className="p-4 rounded-full bg-white m-2 flex gap-2 justify-center items-center"
+          onClick={() => setFullScreen(false)}
+        >
+          <MdArrowBack />
+          Back to generator 
+        </button>
+      </div>
     </>
   );
 };
