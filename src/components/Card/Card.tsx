@@ -41,7 +41,7 @@ const Card = (props: ICard) => {
       <Link href={`/${props.slug}`}>
         <div className="w-full lg:w-2/4">
           <div
-            className={` ${styles.card} border border-slate-300 dark:border-slate-600 dark:hover:border-slate-500 hover:border rounded-md shadow-sm bg-white dark:bg-mainDark flex items-center justify-center m-2 lg:mr-2 lg:mb-2 lg:m-auto relative cursor-pointer`}
+            className={` ${styles.card} border border-slate-300 dark:border-slate-600 dark:hover:border-slate-500 rounded-md shadow-sm bg-white dark:bg-mainDark flex items-center justify-center m-2 lg:mr-2 lg:mb-2 lg:m-auto relative cursor-pointer`}
           >
             <Image
               className={`${styles.imageContainer} rounded-l-sm`}

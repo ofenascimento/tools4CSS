@@ -12,7 +12,7 @@
   .info {
     position: relative;
     display: inline-block;
-    background: linear-gradient(to right, #1a4fd8 0%, #1a4fd8 100%);
+    background: linear-gradient(to right, #000000 0%, #000000 100%);
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 0.3s ease, color 0.4s ease;
@@ -35,32 +35,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px; 
-    background: #1a4fd8;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-  }
-
-  .title:hover::after,
-  .title:focus::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  .title {
-    position: relative;
-    display: inline-block;
-  }
-
-  .title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     height: 2px;
-    background: #1a4fd8;
+    background: #FF407D;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
