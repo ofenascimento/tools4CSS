@@ -33,7 +33,6 @@ const PalleteGradient = () => {
   return (
     <div className="bg-white dark:bg-transparent">
       <SEO title="Gradient Pallete" />
-      <Navbar />
       <div className="w-full lg:w-4/6 mx-auto font-medium">
         <div className=" flex flex-row justify-between items-center mx-4 md:mx-0">
           <Breadcrumb
@@ -154,7 +153,6 @@ const PalleteGradient = () => {
           </div>
         </div>
       </div>
-      <Footer />
       {selectedGradient && (
         <div
           id="full-screen"

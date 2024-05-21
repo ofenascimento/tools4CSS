@@ -24,7 +24,6 @@ const UnderlineGradient = () => {
   return (
     <>
       <SEO title="Underline Gradient Generator" />
-      <Navbar />
       <div className="w-full lg:w-4/6 mx-auto font-medium">
         <div className=" flex flex-row justify-between items-center mx-4 lg:mx-0">
           <Breadcrumb
@@ -120,7 +119,6 @@ const UnderlineGradient = () => {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
