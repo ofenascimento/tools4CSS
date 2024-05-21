@@ -10,6 +10,8 @@ import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
+import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
+import CustomSlider from "../../components/CustomSlider/CustomSlider";
 
 const ScrollbarGenerator = () => {
   const [scrollbarStyle, setScrollbarStyle] = useState({
@@ -60,8 +62,7 @@ const ScrollbarGenerator = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 mt-4 flex flex-wrap justify-center items-center gap-6 font-EuclidRegular mx-4 lg:mx-0">
+        <ControlsContainer>
           <div className="flex items-center justify-center gap-2">
             <span>Thumb Color:</span>
             <ColorInput
@@ -90,10 +91,10 @@ const ScrollbarGenerator = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <span>Width:</span>
-            <Slider
+            <CustomSlider
               style={{ width: 140, marginLeft: 20, marginRight: 20 }}
               value={scrollbarStyle.width}
-              onChange={(e, value) =>
+              onChange={(_e: any, value: number) =>
                 setScrollbarStyle({ ...scrollbarStyle, width: value as number })
               }
               step={1}
@@ -103,10 +104,10 @@ const ScrollbarGenerator = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <span>Border Radius:</span>
-            <Slider
+            <CustomSlider
               style={{ width: 140, marginLeft: 20, marginRight: 20 }}
               value={scrollbarStyle.borderRadius}
-              onChange={(e, value) =>
+              onChange={(_e: any, value: number) =>
                 setScrollbarStyle({
                   ...scrollbarStyle,
                   borderRadius: value as number,
@@ -119,10 +120,10 @@ const ScrollbarGenerator = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <span>Border Width:</span>
-            <Slider
+            <CustomSlider
               style={{ width: 140, marginLeft: 20, marginRight: 20 }}
               value={scrollbarStyle.borderWidth}
-              onChange={(e, value) =>
+              onChange={(_e: any, value: number) =>
                 setScrollbarStyle({
                   ...scrollbarStyle,
                   borderWidth: value as number,
@@ -146,7 +147,7 @@ const ScrollbarGenerator = () => {
               }
             />
           </div>
-        </div>
+        </ControlsContainer>
 
         <div
           className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 custom-scrollbar"

@@ -13,6 +13,8 @@ import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import { Slider } from "@material-ui/core";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
+import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
+import CustomSlider from "../../components/CustomSlider/CustomSlider";
 
 const TextGradient = () => {
   const {
@@ -67,7 +69,7 @@ const TextGradient = () => {
             Text Gradient
           </h1>
         </div>
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 lg:mx-0">
+        <ControlsContainer>
           <ColorInput
             preview={colorVariant1}
             value={colorVariant1}
@@ -80,10 +82,10 @@ const TextGradient = () => {
           />
           <div className="flex items-center justify-center gap-2">
             <span>Direction:</span>
-            <Slider
+            <CustomSlider
               style={{ width: 120, marginLeft: 20, marginRight: 20 }}
               value={angle}
-              onChange={(e, value) => setAngle(value as number)}
+              onChange={(_e: any, value: number) => setAngle(value as number)}
               className={style.slider}
               step={90}
               min={0}
@@ -115,7 +117,7 @@ const TextGradient = () => {
               id="material-switch"
             />
           </div>
-        </div>
+        </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
           <SyntaxHighlighter language="css" style={darcula}>

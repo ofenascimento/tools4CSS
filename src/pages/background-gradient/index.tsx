@@ -14,6 +14,7 @@ import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import { MdArrowBack, MdFullscreen } from "react-icons/md";
+import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 
 const BakcgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
@@ -65,7 +66,7 @@ const BakcgroundGradient = () => {
             </button>
           </div>
         </div>
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 mt-4 flex flex-wrap justify-center items-center gap-6 font-EuclidRegular mx-4 lg:mx-0 dark:bg-mainDark dark:text-white dark:border-slate-600">
+        <ControlsContainer>
           <ColorInput
             preview={colorVariant1}
             value={colorVariant1}
@@ -108,7 +109,7 @@ const BakcgroundGradient = () => {
               id="material-switch"
             />
           </div>
-        </div>
+        </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
           <SyntaxHighlighter language="css" style={darcula}>
@@ -154,9 +155,7 @@ const BakcgroundGradient = () => {
         id="full-screen"
         className={`fixed inset-0 h-screen w-screen ${
           animated ? style.animatedApp : style.app
-        } ${
-          fullScreen ? "block" : "hidden"
-        }`}
+        } ${fullScreen ? "block" : "hidden"}`}
         style={{
           backgroundImage: `linear-gradient(${angle}deg, ${colorVariant1}, ${
             animated ? colorVariant1 + "," : ""
@@ -168,7 +167,7 @@ const BakcgroundGradient = () => {
           onClick={() => setFullScreen(false)}
         >
           <MdArrowBack />
-          Back to generator 
+          Back to generator
         </button>
       </div>
     </>

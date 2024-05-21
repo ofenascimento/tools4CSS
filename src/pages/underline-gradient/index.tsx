@@ -12,6 +12,7 @@ import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
+import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 
 const UnderlineGradient = () => {
   const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
@@ -50,7 +51,7 @@ const UnderlineGradient = () => {
             Underline Gradient
           </span>
         </div>
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 lg:mx-0 dark:bg-mainDark dark:text-white dark:border-slate-600">
+        <ControlsContainer>
           <ColorInput
             preview={colorVariant1}
             value={colorVariant1}
@@ -73,7 +74,7 @@ const UnderlineGradient = () => {
               max={9}
             />
           </div>
-        </div>
+        </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
           <SyntaxHighlighter language="css" style={darcula}>

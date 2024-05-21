@@ -12,6 +12,8 @@ import styles from "./styles.module.scss";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
+import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
+import CustomSlider from "../../components/CustomSlider/CustomSlider";
 
 const Glassmorphism = () => {
   const [blur, setBlur] = useState(4);
@@ -59,7 +61,7 @@ const Glassmorphism = () => {
             </span>
           </div>
         </div>
-        <div className="border border-slate-300 rounded-md shadow-sm bg-white p-4 text-gray-700 flex gap-10 mt-4 flex-wrap justify-center items-center font-EuclidRegular mx-4 lg:mx-0">
+        <ControlsContainer>
           <ColorInput
             label="Color:"
             preview={color}
@@ -68,10 +70,10 @@ const Glassmorphism = () => {
           />
           <div className="flex items-center justify-center gap-2">
             <span>Blur:</span>
-            <Slider
+            <CustomSlider
               style={{ width: 140, marginLeft: 20, marginRight: 20 }}
               value={blur}
-              onChange={(e, value) => setBlur(value as number)}
+              onChange={(_e: any, value: number) => setBlur(value as number)}
               step={0.5}
               min={0}
               max={20}
@@ -79,16 +81,16 @@ const Glassmorphism = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <span>Transparency:</span>
-            <Slider
+            <CustomSlider
               style={{ width: 140, marginLeft: 20, marginRight: 20 }}
               value={trasnparency}
-              onChange={(e, value) => setTransparency(value as number)}
+              onChange={(_e: any, value: number) => setTransparency(value as number)}
               step={0.05}
               min={0.0}
               max={0.99}
             />
           </div>
-        </div>
+        </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
           <SyntaxHighlighter language="css" style={darcula}>
