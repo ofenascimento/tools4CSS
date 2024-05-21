@@ -25,7 +25,7 @@ const Neumorphism = () => {
       <SEO title="Neumorphism" />
       <Navbar />
       <div className="w-full lg:w-4/6 mx-auto font-medium bg-transparent">
-        <div className=" flex flex-row justify-between items-center">
+        <div className=" flex flex-row justify-between items-center mx-4 lg:mx-0">
           <Breadcrumb
             links={[{ href: "/", label: "Home" }, { label: "Neumorphism" }]}
           />

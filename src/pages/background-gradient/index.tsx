@@ -32,7 +32,7 @@ const BakcgroundGradient = () => {
       <SEO title="Background Gradient Generator" />
       <Navbar />
       <div className="w-full lg:w-4/6 mx-auto">
-        <div className=" flex flex-row justify-between items-center">
+        <div className=" flex flex-row justify-between items-center mx-4 md:mx-0">
           <Breadcrumb
             links={[
               { href: "/", label: "Home" },
