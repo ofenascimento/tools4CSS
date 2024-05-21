@@ -37,13 +37,13 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
             favoriteTools.map((tool, index) => (
               <li
                 key={index}
-                className="mb-2 flex justify-between items-center"
+                className="mb-2 flex p-2 rounded-lg justify-between items-center border border-slate-300 dark:bg-dark-100 dark:border-slate-600"
               >
                 <a
                   href={tool.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline font-EuclidRegular text-md"
+                  className="text-blue-500 dark:text-white hover:underline font-EuclidRegular text-md"
                 >
                   {tool.name}
                 </a>
