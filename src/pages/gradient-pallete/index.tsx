@@ -31,7 +31,7 @@ const PalleteGradient = () => {
   const [textCopied, setTextCopied] = useState<boolean>(false);
 
   return (
-    <div className="bg-white dark:bg-transparent">
+    <div>
       <SEO title="Gradient Pallete" />
       <div className="w-full lg:w-4/6 mx-auto font-medium">
         <div className=" flex flex-row justify-between items-center mx-4 md:mx-0">

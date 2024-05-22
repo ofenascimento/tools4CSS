@@ -10,7 +10,7 @@ const Hero = () => {
       id="hero"
     >
       <div className="w-full flex flex-col justify-center items-center leading-10 font-GilroyBold">
-        <h1 className="lg:leading-08 text-6xl xl:text-8xl lg:text-7xl mt-0 lg:mt-6 gap-5 font-GilroyBold text-center dark:text-white">
+        <h1 className="lg:leading-08 text-6xl lg:text-7xl mt-0 lg:mt-6 gap-5 font-GilroyBold text-center dark:text-white">
           Let&apos;s build{" "}
           <span className={`${styles.textGradient} inline`}>awesome</span> and{" "}
           <span className={styles.underlineGradient}>functional</span>{" "}
@@ -19,7 +19,7 @@ const Hero = () => {
             <span className={styles.wave}>s</span>
           </span>
         </h1>
-        <h3 className="text-slate-900 text-center w-4/5 text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4 dark:text-white">
+        <h3 className="text-slate-900 text-center w-4/5 text-xl md:text-2xl mt-5 mb-2 font-GilroyMedium lg:pr-4 dark:text-white lg:leading-6">
           Take advantage of our CSS tools and generators to speed up the styling
           of your components
         </h3>

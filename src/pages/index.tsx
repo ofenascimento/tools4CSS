@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
 import { SEO } from "../components/SEO";
 import React from "react";
-import Navbar from "../components/Navbar";
 import Hero from "../components/Sections/Hero/Hero";
 import Tools from "../components/Sections/Tools/Tools";
-import Footer from "../components/Sections/Footer/Footer";
 
 const Home: NextPage = () => {
   return (

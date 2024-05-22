@@ -16,12 +16,12 @@ const Tools = () => {
           }}
         ></span>
         <h1
-          className={` lg:leading-08 text-6xl xl:text-7xl lg:text-6xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white`}
+          className={` lg:leading-08 text-6xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white`}
           id="generators"
         >
           CSS Generators
         </h1>
-        <h3 className=" text-slate-900 text-center text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4 dark:text-white">
+        <h3 className=" text-slate-900 text-center text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4 dark:text-white lg:leading-6">
           Discover a variety of CSS generators <br /> to simplify your
           development process
         </h3>
@@ -65,10 +65,10 @@ const Tools = () => {
         />
       </div>
       <div className="w-auto md:w-full mt-8 font-GilroyMedium text-lg lg:mx-0 mb-6">
-        <h1 className="lg:leading-08 text-6xl xl:text-7xl lg:text-6xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white">
+        <h1 className="lg:leading-08 text-6xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white">
           CSS Tools
         </h1>
-        <h3 className="text-slate-900 text-center text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4 dark:text-white">
+        <h3 className="text-slate-900 text-center text-xl md:text-2xl mt-2 font-GilroyMedium lg:pr-4 dark:text-white lg:leading-6">
           Explore powerful CSS tools to
           <br /> enhance your styling capabilities
         </h3>
