@@ -15,6 +15,7 @@ import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
+import Title from "../../components/Title/Title";
 
 const TextGradient = () => {
   const {
@@ -48,7 +49,8 @@ const TextGradient = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <div className="mt-4">
+        <Title title="Text Gradient CSS" info="Create stunning gradient text effects effortlessly with our CSS Text Gradient Generator. Ideal for enhancing headlines, logos, and important text in your web projects." customInfoClassname="lg:w-3/4" />
+        <div className="mt-4 border border-slate-300 bg-white dark:border-slate-600 dark:bg-mainDark p-2 rounded-lg">
           <h1
             className={`${
               animated ? style.animated : style.textGradient

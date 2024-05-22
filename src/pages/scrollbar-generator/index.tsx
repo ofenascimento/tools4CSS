@@ -12,6 +12,7 @@ import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
+import Title from "../../components/Title/Title";
 
 const ScrollbarGenerator = () => {
   const [scrollbarStyle, setScrollbarStyle] = useState({
@@ -61,6 +62,7 @@ const ScrollbarGenerator = () => {
             handleFavorite={handleFavorite}
           />
         </div>
+        <Title title="Scrollbar CSS Generator" info="Customize and generate stylish scrollbars with our Scrollbar CSS Generator" />
         <ControlsContainer>
           <div className="flex items-center justify-center gap-2">
             <span>Thumb Color:</span>

@@ -20,6 +20,7 @@ import {
 } from "react-icons/md";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import CopyToClipboard from "react-copy-to-clipboard";
+import Title from "../../components/Title/Title";
 
 const PalleteGradient = () => {
   const { isFavorited, handleFavorite } = useFavoriteTool("Gradient Pallete ");
@@ -46,6 +47,10 @@ const PalleteGradient = () => {
             handleFavorite={handleFavorite}
           />
         </div>
+        <Title
+          title="Gradient Pallete"
+          info="Explore a collection of stunning CSS gradients. Pick your favorite styles to enhance your design."
+        />
         <div className="flex mt-4 gap-4 justify-start p-5 md:p-0 lg:justify-between md:justify-center items-center flex-wrap">
           {palleteGradient.map((gradient) => (
             <>

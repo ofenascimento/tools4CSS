@@ -15,6 +15,7 @@ import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import { MdArrowBack, MdFullscreen } from "react-icons/md";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
+import Title from "../../components/Title/Title";
 
 const BakcgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
@@ -43,6 +44,8 @@ const BakcgroundGradient = () => {
             handleFavorite={handleFavorite}
           />
         </div>
+
+        <Title title="CSS Gradient" info="The CSS Gradient Generator is a user-friendly online tool designed to help developers and designers create beautiful gradient backgrounds." customInfoClassname="lg:w-3/4" />
 
         <div className="mt-4 mx-4 lg:mx-0">
           <div

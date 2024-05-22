@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar";
 import ColorInput from "../../components/ColorInput/ColorInput";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import Footer from "../../components/Sections/Footer/Footer";
 import { SEO } from "../../components/SEO";
-import { Slider } from "@material-ui/core";
 import { hexToRgb } from "../../utils/hexToRGB";
 import styles from "./styles.module.scss";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
@@ -14,6 +11,7 @@ import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
+import Title from "../../components/Title/Title";
 
 const Glassmorphism = () => {
   const [blur, setBlur] = useState(4);
@@ -44,6 +42,7 @@ const Glassmorphism = () => {
             handleFavorite={handleFavorite}
           />
         </div>
+        <Title title="Glassmorphism CSS Generator" info="Easily create modern glassmorphism effects for your web projects with our Glassmorphism CSS Generator. Perfect for achieving the trendy frosted glass look in your designs." customInfoClassname="lg:w-3/4" />
         <div className="mt-4">
           <div
             className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center mx-4 lg:mx-0`}

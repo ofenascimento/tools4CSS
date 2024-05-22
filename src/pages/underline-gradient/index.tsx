@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar";
 import ColorInput from "../../components/ColorInput/ColorInput";
-import { useControls } from "../../hooks/useControls";
-import DirectionButton from "../../components/DirectionButton/DirectionButton";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import Footer from "../../components/Sections/Footer/Footer";
 import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
+import Title from "../../components/Title/Title";
 
 const UnderlineGradient = () => {
   const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
@@ -37,9 +34,13 @@ const UnderlineGradient = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <div className="mt-4 text-center">
+        <Title
+          title="Underline Gradient"
+          info="Easily create stylish text with gradient underlines using our CSS Gradient Underline Generator."
+        />
+        <div className="mt-4 text-center bg-white dark:bg-mainDark border border-slate-300 dark:border-slate-600 p-2 rounded-lg">
           <span
-            className="text-6xl xl:text-9xl lg:text-8xl font-GilroyBold dark:text-white"
+            className="text-6xl font-GilroyBold dark:text-white"
             style={{
               backgroundImage: `linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%)`,
               backgroundRepeat: "no-repeat",

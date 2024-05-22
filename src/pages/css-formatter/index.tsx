@@ -12,6 +12,7 @@ import Textarea from "../../components/Textarea/Textarea";
 import Button from "../../components/Button";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
+import Title from "../../components/Title/Title";
 
 const CSSFormatter = () => {
   const [inputCSS, setInputCSS] = useState("");
@@ -50,6 +51,8 @@ const CSSFormatter = () => {
             handleFavorite={handleFavorite}
           />
         </div>
+        <Title title="CSS Formatter" info="Format and beautify your CSS code with our CSS Formatter tool" />
+
 
         <div className="w-auto md:w-full mt-4 mx-4 lg:mx-0">
           <Textarea

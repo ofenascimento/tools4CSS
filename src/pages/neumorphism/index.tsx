@@ -12,6 +12,7 @@ import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
+import Title from "../../components/Title/Title";
 
 const Neumorphism = () => {
   const { blur, setBlur, borderRadius, distance, setDistance } = useControls();
@@ -33,6 +34,7 @@ const Neumorphism = () => {
             handleFavorite={handleFavorite}
           />
         </div>
+        <Title title="Neumorphism CSS Gnerator" info="Effortlessly create soft, subtle 3D effects with our Neumorphism CSS Generator" />
         <div className="mt-4 flex justify-center bg-white py-6 rounded-lg">
           <div
             style={{
