@@ -38,7 +38,7 @@ const UnderlineGradient = () => {
           title="Underline Gradient"
           info="Easily create stylish text with gradient underlines using our CSS Gradient Underline Generator."
         />
-        <div className="mt-4 text-center bg-white dark:bg-mainDark border border-slate-300 dark:border-slate-600 p-2 rounded-lg">
+        <div className="mt-4 text-center bg-white dark:bg-mainDark border border-slate-300 dark:border-slate-600 p-2 rounded-lg mx-4 lg:mx-0">
           <span
             className="text-6xl font-GilroyBold dark:text-white"
             style={{

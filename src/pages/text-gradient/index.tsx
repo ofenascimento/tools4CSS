@@ -50,7 +50,7 @@ const TextGradient = () => {
           />
         </div>
         <Title title="Text Gradient CSS" info="Create stunning gradient text effects effortlessly with our CSS Text Gradient Generator. Ideal for enhancing headlines, logos, and important text in your web projects." customInfoClassname="lg:w-3/4" />
-        <div className="mt-4 border border-slate-300 bg-white dark:border-slate-600 dark:bg-mainDark p-2 rounded-lg">
+        <div className="mt-4 border border-slate-300 bg-white dark:border-slate-600 dark:bg-mainDark p-2 rounded-lg mx-4 lg:mx-0">
           <h1
             className={`${
               animated ? style.animated : style.textGradient
