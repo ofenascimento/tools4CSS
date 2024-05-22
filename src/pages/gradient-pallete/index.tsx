@@ -21,6 +21,7 @@ import {
 import Tooltip from "../../components/Tooltip/Tooltip";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Title from "../../components/Title/Title";
+import Info from "../../components/Info/Info";
 
 const PalleteGradient = () => {
   const { isFavorited, handleFavorite } = useFavoriteTool("Gradient Pallete ");
@@ -133,11 +134,9 @@ const PalleteGradient = () => {
               </div>
             </>
           ))}
-          <div className="w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg">
-            <h1 className="text-3xl">What is Gradient Pallete ?</h1>
-            <br />
-            <p>
-              Gradient Palette is a versatile and user-friendly CSS gradient
+          <Info
+            title="What is Gradient Pallete?"
+            paragraph="Gradient Palette is a versatile and user-friendly CSS gradient
               generator designed for web developers and designers who seek to
               add a vibrant touch to their projects. This tool provides an
               extensive collection of beautiful and modern background gradients,
@@ -149,13 +148,11 @@ const PalleteGradient = () => {
               these stunning backgrounds into your web designs. Gradient Palette
               also offers customization options, allowing users to tweak the
               colors and direction of the gradients to match their specific
-              design needs. Whether you&apos;re building a professional website,
+              design needs. Whether you're building a professional website,
               a personal blog, or a creative portfolio, Gradient Palette is an
               invaluable resource for making your projects stand out with
-              minimal effort.
-            </p>{" "}
-            <br />
-          </div>
+              minimal effort."
+          />
         </div>
       </div>
       {selectedGradient && (

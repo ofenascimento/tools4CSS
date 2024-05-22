@@ -13,6 +13,7 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
+import Info from "../../components/Info/Info";
 
 const Neumorphism = () => {
   const { blur, setBlur, borderRadius, distance, setDistance } = useControls();
@@ -34,7 +35,10 @@ const Neumorphism = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <Title title="Neumorphism CSS Gnerator" info="Effortlessly create soft, subtle 3D effects with our Neumorphism CSS Generator" />
+        <Title
+          title="Neumorphism CSS Generator"
+          info="Effortlessly create soft, subtle 3D effects with our Neumorphism CSS Generator"
+        />
         <div className="mt-4 flex justify-center bg-white py-6 rounded-lg">
           <div
             style={{
@@ -80,26 +84,29 @@ const Neumorphism = () => {
             textToCopy={`box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;\n-webkit-box-shadow: ${distance}px ${distance}px ${blur}px #b2b8c9, -${distance}px -${distance}px ${blur}px #f0f8ff;`}
           />
         </div>
-
-        <div className="w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 lg:mx-0">
-          <h1 className="text-3xl">What is Neumorphism?</h1>
-          <br />
-          <p>
-            Neumorphism is a design trend that has gained popularity in user
-            interface (UI) design. It represents a blend of background colors,
-            soft shadow, and smooth shapes to emulate physicality through
-            digital elements. Unlike traditional skeuomorphism, which aims to
-            mimic real-world textures and objects closely, neumorphism focuses
-            on subtle, soft, and almost tactile surfaces that appear to extrude
-            from or recede into the background.{" "}
-          </p>
-          <br />
-          <p>
-            The Neumorphism Generator is a web development tool designed to
-            assist in crafting user interface (UI) elements featuring the
-            neumorphic design style, using Cascading Style Sheets (CSS)
-          </p>
-        </div>
+        <Info
+          title="What is Neumorphism?"
+          paragraph={
+            <>
+              {" "}
+              <p>
+                Neumorphism is a design trend that has gained popularity in user
+                interface (UI) design. It represents a blend of background
+                colors, soft shadow, and smooth shapes to emulate physicality
+                through digital elements. Unlike traditional skeuomorphism,
+                which aims to mimic real-world textures and objects closely,
+                neumorphism focuses on subtle, soft, and almost tactile surfaces
+                that appear to extrude from or recede into the background.{" "}
+              </p>
+              <br />
+              <p>
+                The Neumorphism Generator is a web development tool designed to
+                assist in crafting user interface (UI) elements featuring the
+                neumorphic design style, using Cascading Style Sheets (CSS)
+              </p>
+            </>
+          }
+        />
       </div>
     </>
   );

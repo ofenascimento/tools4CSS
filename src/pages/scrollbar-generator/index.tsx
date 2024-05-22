@@ -13,6 +13,7 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
+import Info from "../../components/Info/Info";
 
 const ScrollbarGenerator = () => {
   const [scrollbarStyle, setScrollbarStyle] = useState({
@@ -62,7 +63,10 @@ const ScrollbarGenerator = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <Title title="Scrollbar CSS Generator" info="Customize and generate stylish scrollbars with our Scrollbar CSS Generator" />
+        <Title
+          title="Scrollbar CSS Generator"
+          info="Customize and generate stylish scrollbars with our Scrollbar CSS Generator"
+        />
         <ControlsContainer>
           <div className="flex items-center justify-center gap-2">
             <span>Thumb Color:</span>
@@ -193,11 +197,9 @@ const ScrollbarGenerator = () => {
           />
         </div>
 
-        <div className="w-auto md:w-full mt-4 p-4 bg-slate-200 font-manrope text-lg mx-4 lg:mx-0">
-          <h1 className="text-3xl">What is Scrollbar Generator?</h1>
-          <br />
-          <p>
-            The CSS Scrollbar Generator is a powerful web development tool
+        <Info
+          title="What is Scrollbar Generator?"
+          paragraph="The CSS Scrollbar Generator is a powerful web development tool
             designed to help designers and developers create customized
             scrollbars for web pages. Utilizing Cascading Style Sheets (CSS),
             this tool enables users to easily specify various attributes of
@@ -209,10 +211,8 @@ const ScrollbarGenerator = () => {
             projects, enhancing the visual consistency and user experience. With
             the Scrollbar Generator, implementing stylish and cohesive
             scrollbars is straightforward, elevating the functional and
-            aesthetic appeal of web interfaces.
-          </p>{" "}
-          <br />
-        </div>
+            aesthetic appeal of web interfaces."
+        />
       </div>
     </>
   );

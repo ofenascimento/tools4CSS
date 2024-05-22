@@ -13,6 +13,7 @@ import Button from "../../components/Button";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import Title from "../../components/Title/Title";
+import Info from "../../components/Info/Info";
 
 const CSSFormatter = () => {
   const [inputCSS, setInputCSS] = useState("");
@@ -51,8 +52,10 @@ const CSSFormatter = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <Title title="CSS Formatter" info="Format and beautify your CSS code with our CSS Formatter tool" />
-
+        <Title
+          title="CSS Formatter"
+          info="Format and beautify your CSS code with our CSS Formatter tool"
+        />
 
         <div className="w-auto md:w-full mt-4 mx-4 lg:mx-0">
           <Textarea
@@ -83,12 +86,9 @@ const CSSFormatter = () => {
             </div>
           </>
         )}
-
-        <div className="w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 lg:mx-0">
-          <h1 className="text-3xl">What is CSS Formatter?</h1>
-          <br />
-          <p>
-            A CSS Formatter is a specialized tool or software application that
+        <Info
+          title="What is CSS Formatter?"
+          paragraph="A CSS Formatter is a specialized tool or software application that
             enables designers and developers to beautify and organize Cascading
             Style Sheets (CSS) code. CSS is crucial for defining the visual
             presentation of web pages, and maintaining clean and orderly CSS can
@@ -97,9 +97,8 @@ const CSSFormatter = () => {
             spacing, alignment, and syntax to ensure that CSS code is not only
             functional but also aesthetically pleasing and easy to understand.
             This tool is essential for professionals aiming to optimize web
-            development workflows and uphold high standards in web design.
-          </p>
-        </div>
+            development workflows and uphold high standards in web design."
+        />
       </div>
     </>
   );

@@ -12,6 +12,7 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
+import Info from "../../components/Info/Info";
 
 const Glassmorphism = () => {
   const [blur, setBlur] = useState(4);
@@ -42,7 +43,11 @@ const Glassmorphism = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <Title title="Glassmorphism CSS Generator" info="Easily create modern glassmorphism effects for your web projects with our Glassmorphism CSS Generator. Perfect for achieving the trendy frosted glass look in your designs." customInfoClassname="lg:w-3/4" />
+        <Title
+          title="Glassmorphism CSS Generator"
+          info="Easily create modern glassmorphism effects for your web projects with our Glassmorphism CSS Generator. Perfect for achieving the trendy frosted glass look in your designs."
+          customInfoClassname="lg:w-3/4"
+        />
         <div className="mt-4">
           <div
             className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center mx-4 lg:mx-0`}
@@ -82,7 +87,9 @@ const Glassmorphism = () => {
             <CustomSlider
               style={{ width: 140, marginLeft: 20, marginRight: 20 }}
               value={trasnparency}
-              onChange={(_e: any, value: number) => setTransparency(value as number)}
+              onChange={(_e: any, value: number) =>
+                setTransparency(value as number)
+              }
               step={0.05}
               min={0.0}
               max={0.99}
@@ -102,18 +109,15 @@ const Glassmorphism = () => {
           />
         </div>
 
-        <div className="w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 lg:mx-0">
-          <h1 className="text-3xl">What is Glassmorphism Generator?</h1>
-          <br />
-          <p>
-            A Glassmorphism Generator is a specialized tool or software
+        <Info
+          title="What is Glassmorphism Generator?"
+          paragraph=" A Glassmorphism Generator is a specialized tool or software
             application that allows designers and developers to create graphical
             user interface (GUI) elements with the popular glassmorphism design
             style. Glassmorphism is characterized by frosted glass-like elements
             that are semi-transparent, with a blurred background, creating a
-            sleek and modern look for UI components.
-          </p>
-        </div>
+            sleek and modern look for UI components."
+        />
       </div>
     </>
   );

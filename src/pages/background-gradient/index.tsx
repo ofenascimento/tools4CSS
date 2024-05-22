@@ -16,6 +16,7 @@ import Tooltip from "../../components/Tooltip/Tooltip";
 import { MdArrowBack, MdFullscreen } from "react-icons/md";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import Title from "../../components/Title/Title";
+import Info from "../../components/Info/Info";
 
 const BakcgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
@@ -45,7 +46,11 @@ const BakcgroundGradient = () => {
           />
         </div>
 
-        <Title title="CSS Gradient" info="The CSS Gradient Generator is a user-friendly online tool designed to help developers and designers create beautiful gradient backgrounds." customInfoClassname="lg:w-3/4" />
+        <Title
+          title="CSS Gradient"
+          info="The CSS Gradient Generator is a user-friendly online tool designed to help developers and designers create beautiful gradient backgrounds."
+          customInfoClassname="lg:w-3/4"
+        />
 
         <div className="mt-4 mx-4 lg:mx-0">
           <div
@@ -132,25 +137,19 @@ const BakcgroundGradient = () => {
             } `}
           />
         </div>
-
-        <div className="w-auto md:w-full mt-4 p-4 bg-slate-200 font-manrope text-lg mx-4 lg:mx-0">
-          <h1 className="text-3xl">What is Background Gradient Generator?</h1>
-          <br />
-          <p>
-            The CSS Background Gradient Generator is a web development tool that
-            assists in creating gradient backgrounds for HTML elements using
-            Cascading Style Sheets (CSS). With this generator, designers and
-            developers can define and customize gradients, specifying colors,
-            angles, and other properties to achieve the desired visual effect.
-            The resulting CSS code can then be easily integrated into web
-            projects, allowing for the creation of stylish and dynamic
-            backgrounds for web pages and user interfaces. This tool simplifies
-            the process of implementing gradient backgrounds in CSS, enhancing
-            the overall design and user experience of websites and web
-            applications.
-          </p>{" "}
-          <br />
-        </div>
+        <Info
+          title="What is CSS Gradient Generator?"
+          paragraph=" The CSS Background Gradient Generator is a web development tool that
+        assists in creating gradient backgrounds for HTML elements using
+        Cascading Style Sheets (CSS). With this generator, designers and
+        developers can define and customize gradients, specifying colors,
+        angles, and other properties to achieve the desired visual effect. The
+        resulting CSS code can then be easily integrated into web projects,
+        allowing for the creation of stylish and dynamic backgrounds for web
+        pages and user interfaces. This tool simplifies the process of
+        implementing gradient backgrounds in CSS, enhancing the overall design
+        and user experience of websites and web applications."
+        />
       </div>
       <div
         id="full-screen"

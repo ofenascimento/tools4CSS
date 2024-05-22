@@ -16,6 +16,7 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
+import Info from "../../components/Info/Info";
 
 const TextGradient = () => {
   const {
@@ -49,7 +50,11 @@ const TextGradient = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-        <Title title="Text Gradient CSS" info="Create stunning gradient text effects effortlessly with our CSS Text Gradient Generator. Ideal for enhancing headlines, logos, and important text in your web projects." customInfoClassname="lg:w-3/4" />
+        <Title
+          title="Text Gradient CSS"
+          info="Create stunning gradient text effects effortlessly with our CSS Text Gradient Generator. Ideal for enhancing headlines, logos, and important text in your web projects."
+          customInfoClassname="lg:w-3/4"
+        />
         <div className="mt-4 border border-slate-300 bg-white dark:border-slate-600 dark:bg-mainDark p-2 rounded-lg mx-4 lg:mx-0">
           <h1
             className={`${
@@ -159,25 +164,20 @@ const TextGradient = () => {
             }`}
           />
         </div>
-
-        <div className="w-auto md:w-full mt-4 p-4 bg-slate-200 famil font-manrope text-lg mx-4 lg:mx-0">
-          <h1 className="text-3xl">What is Text Gradient Generator?</h1>
-          <br />
-          <p>
-            A text gradient is a graphic design technique that involves applying
+        <Info
+          title="What is Text Gradient Generator?"
+          paragraph="A text gradient is a graphic design technique that involves applying
             a smooth color transition to specific text or words. Instead of
             solid text in a single color, text gradient creates an visually
             appealing effect by having the text blend gradually from one color
             to another, giving a sense of depth and dynamism. This is often
             achieved using a spectrum of colors or a custom color blend, and it
             can be a powerful way to make text elements in design projects stand
-            out and captivate the viewer&apos;s attention. Text gradients are
+            out and captivate the viewer's attention. Text gradients are
             commonly used in various design applications, including web design,
             advertising, and branding, to create eye-catching and engaging
-            typography.
-          </p>{" "}
-          <br />
-        </div>
+            typography."
+        />
       </div>
     </>
   );
