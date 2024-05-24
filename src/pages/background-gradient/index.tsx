@@ -149,7 +149,7 @@ const BakcgroundGradient = () => {
       </div>
       <div
         id="full-screen"
-        className={`fixed inset-0 h-screen w-screen ${
+        className={`fixed inset-0 h-screen w-screen z-50 ${
           animated ? style.animatedApp : style.app
         } ${fullScreen ? "block" : "hidden"}`}
         style={{

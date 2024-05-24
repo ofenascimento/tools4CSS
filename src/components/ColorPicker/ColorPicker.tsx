@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ChromePicker, ColorResult, SketchPicker } from "react-color";
+import { ColorResult, SketchPicker } from "react-color";
 import { IColorPicker } from "./types";
-import "./ColorPicker.module.scss";
 
 const ColorPicker: React.FC<IColorPicker> = ({ value, onChange }) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
