@@ -56,6 +56,12 @@ module.exports = {
         center: "center",
         unset: "unset",
       },
+      backgroundColor: {
+        "white-glass": "rgba(255, 255, 255, 0.15);",
+        "black-glass": "rgba(2, 2, 2, 0.15);",
+        "white-glass-mobile": "rgba(255, 255, 255, 0.85);",
+        "black-glass-mobile": "rgba(2, 2, 2, 0.65);",
+      },
     },
   },
   plugins: [],

@@ -1,13 +1,10 @@
 import React from "react";
 import { MdClose, MdDelete } from "react-icons/md";
 import { useFavorites } from "../../context/FavoriteContext";
+import styles from "./Drawer.module.scss";
+import { IDrawer } from "./types";
 
-interface DrawerProps {
-  isOpen: boolean;
-  toggleDrawer: () => void;
-}
-
-const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
+const Drawer: React.FC<IDrawer> = ({ isOpen, toggleDrawer }) => {
   const { favoriteTools, deleteFavorite } = useFavorites();
 
   const handleDelete = (toolName: string) => {
@@ -16,7 +13,9 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
 
   return (
     <div
-      className={` z-30 fixed top-0 right-0 h-full w-64 bg-white dark:bg-black dark:border-l-2 dark:border-l-dark-100 shadow-lg transform transition-transform duration-300 ${
+      className={`${
+        styles.glass
+      } bg-white-glass-mobile dark:bg-black-glass-mobile lg:bg-white-glass lg:dark:bg-black-glass z-30 fixed top-0 right-0 h-full w-64   dark:border-l-2 dark:border-l-dark-100 shadow-lg transform transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -24,11 +23,11 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
         id="header"
         className="p-4 flex flex-row justify-between items-center"
       >
-        <h1 className="font-GilroyMedium text-black dark:text-white">
+        <h1 className="font-GilroyBold text-lg text-black dark:text-white">
           Favorites
         </h1>
         <button onClick={toggleDrawer} className="text-black dark:text-white">
-          <MdClose size={28} />
+          <MdClose size={24} />
         </button>
       </div>
       <div className="px-4 py-2" id="content">
@@ -37,7 +36,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
             favoriteTools.map((tool, index) => (
               <li
                 key={index}
-                className="mb-2 flex p-2 rounded-lg justify-between items-center border border-slate-300 dark:bg-dark-100 dark:border-slate-600"
+                className="mb-2 flex p-2 rounded-lg justify-between items-center border  bg-slate-100 border-slate-300 dark:bg-dark-100 dark:border-slate-600"
               >
                 <a
                   href={tool.url}
@@ -59,7 +58,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, toggleDrawer }) => {
             <></>
           )}
         </ul>
-        <p className="font-EuclidRegular text-sm bg-main rounded-md p-4 text-white mt-4">
+        <p className="opacity-80 font-EuclidRegular text-sm bg-main rounded-md p-4 text-white mt-4">
           Your favorites are saved in your browser&apos;s cache. Clearing your
           browsing data will result in the deletion of your favorites as well.
         </p>
