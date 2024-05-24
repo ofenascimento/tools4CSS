@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import ColorInput from "../../components/ColorInput/ColorInput";
 import style from "./styles.module.scss";
 import Switch from "react-switch";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import Footer from "../../components/Sections/Footer/Footer";
 import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
@@ -16,9 +14,10 @@ import { MdArrowBack, MdFullscreen } from "react-icons/md";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import ColorPicker from "../../components/ColorPicker/ColorPicker";
 
 const BakcgroundGradient = () => {
-  const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
+  const [colorVariant1, setColorVariant1] = useState<string>("#1d4ed8");
   const [colorVariant2, setColorVariant2] = useState<string>("#24ff8e");
   const [animated, setAnimated] = useState<boolean>(false);
   const [angle, setAngle] = useState<number>(80);
@@ -73,15 +72,13 @@ const BakcgroundGradient = () => {
           </div>
         </div>
         <ControlsContainer>
-          <ColorInput
-            preview={colorVariant1}
+          <ColorPicker
             value={colorVariant1}
-            onChange={(e) => setColorVariant1(e.target.value)}
+            onChange={(color: string) => setColorVariant1(color)}
           />
-          <ColorInput
-            preview={colorVariant2}
+           <ColorPicker
             value={colorVariant2}
-            onChange={(e) => setColorVariant2(e.target.value)}
+            onChange={(color: string) => setColorVariant2(color)}
           />
           <div className="flex items-center justify-center gap-2">
             <span>Direction:</span>

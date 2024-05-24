@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ColorInput from "../../components/ColorInput/ColorInput";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -13,6 +12,7 @@ import ControlsContainer from "../../components/ControlsContainer/ControlsContai
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import ColorPicker from "../../components/ColorPicker/ColorPicker";
 
 const Glassmorphism = () => {
   const [blur, setBlur] = useState(4);
@@ -65,11 +65,9 @@ const Glassmorphism = () => {
           </div>
         </div>
         <ControlsContainer>
-          <ColorInput
-            label="Color:"
-            preview={color}
+          <ColorPicker
             value={color}
-            onChange={(e) => setColor(e.target.value)}
+            onChange={(color) => setColor(color)}
           />
           <div className="flex items-center justify-center gap-2">
             <span>Blur:</span>

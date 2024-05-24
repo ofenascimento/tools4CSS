@@ -1,5 +1,4 @@
 import React from "react";
-import ColorInput from "../../components/ColorInput/ColorInput";
 import { useControls } from "../../hooks/useControls";
 import style from "./styles.module.scss";
 import Switch from "react-switch";
@@ -14,6 +13,7 @@ import ControlsContainer from "../../components/ControlsContainer/ControlsContai
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import ColorPicker from "../../components/ColorPicker/ColorPicker";
 
 const TextGradient = () => {
   const {
@@ -21,7 +21,6 @@ const TextGradient = () => {
     setColorVariant1,
     colorVariant2,
     setColorVariant2,
-    direction,
     setDirection,
     animated,
     setAnimated,
@@ -73,15 +72,13 @@ const TextGradient = () => {
           </h1>
         </div>
         <ControlsContainer>
-          <ColorInput
-            preview={colorVariant1}
+          <ColorPicker
             value={colorVariant1}
-            onChange={(e) => setColorVariant1(e.target.value)}
+            onChange={(color) => setColorVariant1(color)}
           />
-          <ColorInput
-            preview={colorVariant2}
+          <ColorPicker
             value={colorVariant2}
-            onChange={(e) => setColorVariant2(e.target.value)}
+            onChange={(color) => setColorVariant2(color)}
           />
           <div className="flex items-center justify-center gap-2">
             <span>Direction:</span>

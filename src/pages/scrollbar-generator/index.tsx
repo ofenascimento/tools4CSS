@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ColorInput from "../../components/ColorInput/ColorInput";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -11,6 +10,7 @@ import ControlsContainer from "../../components/ControlsContainer/ControlsContai
 import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import ColorPicker from "../../components/ColorPicker/ColorPicker";
 
 const ScrollbarGenerator = () => {
   const [scrollbarStyle, setScrollbarStyle] = useState({
@@ -67,26 +67,24 @@ const ScrollbarGenerator = () => {
         <ControlsContainer>
           <div className="flex items-center justify-center gap-2">
             <span>Thumb Color:</span>
-            <ColorInput
-              preview={scrollbarStyle.thumbColor}
+            <ColorPicker
               value={scrollbarStyle.thumbColor}
-              onChange={(e) =>
+              onChange={(color) =>
                 setScrollbarStyle({
                   ...scrollbarStyle,
-                  thumbColor: e.target.value,
+                  thumbColor: color,
                 })
               }
             />
           </div>
           <div className="flex items-center justify-center gap-2">
             <span>Track Color:</span>
-            <ColorInput
-              preview={scrollbarStyle.trackColor}
+            <ColorPicker
               value={scrollbarStyle.trackColor}
-              onChange={(e) =>
+              onChange={(color) =>
                 setScrollbarStyle({
                   ...scrollbarStyle,
-                  trackColor: e.target.value,
+                  trackColor: color,
                 })
               }
             />
@@ -138,13 +136,12 @@ const ScrollbarGenerator = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <span>Border Color:</span>
-            <ColorInput
-              preview={scrollbarStyle.borderColor}
+            <ColorPicker
               value={scrollbarStyle.borderColor}
-              onChange={(e) =>
+              onChange={(color) =>
                 setScrollbarStyle({
                   ...scrollbarStyle,
-                  borderColor: e.target.value,
+                  borderColor: color,
                 })
               }
             />

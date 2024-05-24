@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ColorInput from "../../components/ColorInput/ColorInput";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -11,6 +10,7 @@ import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import ColorPicker from "../../components/ColorPicker/ColorPicker";
 
 const UnderlineGradient = () => {
   const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
@@ -53,15 +53,13 @@ const UnderlineGradient = () => {
           </span>
         </div>
         <ControlsContainer>
-          <ColorInput
-            preview={colorVariant1}
+          <ColorPicker
             value={colorVariant1}
-            onChange={(e) => setColorVariant1(e.target.value)}
+            onChange={(color) => setColorVariant1(color)}
           />
-          <ColorInput
-            preview={colorVariant2}
+          <ColorPicker
             value={colorVariant2}
-            onChange={(e) => setColorVariant2(e.target.value)}
+            onChange={(color) => setColorVariant2(color)}
           />
           <div className="flex items-center justify-center gap-2">
             <span>Direction:</span>

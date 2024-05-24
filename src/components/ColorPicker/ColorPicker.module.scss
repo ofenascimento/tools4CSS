@@ -1,0 +1,18 @@
+.custom-sketch-picker {
+    --sketch-picker-background: #fff; /* Define a cor de fundo do picker */
+    --sketch-picker-text-color: #000; /* Define a cor do texto no picker */
+  }
+  
+  .custom-sketch-picker .sketch-picker {
+    background-color: var(--sketch-picker-background) !important;
+    color: var(--sketch-picker-text-color) !important;
+  }
+  
+  .custom-sketch-picker .sketch-picker input {
+    color: var(--sketch-picker-text-color) !important;
+  }
+
+  #rc-editable-input-2 {
+    color: #000;
+  }
+  
