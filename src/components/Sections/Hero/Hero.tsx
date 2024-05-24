@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import StarButton from "../../StarButton/StarButton";
+import Banner from "../../Banner/Banner";
 
 const Hero = () => {
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
         <StarButton />
         <Link href="#generators">
           <span
-            className="font-EuclidMedium text-center rounded-full px-24 text-white mt-1 cursor-pointer mx-8 max-w-[400px] w-full"
+            className=" font-GilroyMedium text-center rounded-full px-24 text-white mt-1 cursor-pointer mx-8 max-w-[400px] w-full"
             style={{
               backgroundColor: "#1A4FD8",
             }}
@@ -35,6 +36,7 @@ const Hero = () => {
           </span>
         </Link>
       </div>
+      <Banner />
     </div>
   );
 };

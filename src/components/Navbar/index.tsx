@@ -64,7 +64,7 @@ export default function Navbar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300 font-EuclidMedium">
+            <ul className="items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300  font-GilroyMedium">
               <li className="md:block text-slate-900  group relative cursor-pointer">
                 <span className="group-hover:block hidden">
                   <ul className="mt-7 absolute bg-slate-100 dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
