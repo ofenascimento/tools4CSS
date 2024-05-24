@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
-import Navbar from "../../components/Navbar";
 import { SEO } from "../../components/SEO";
-import Footer from "../../components/Sections/Footer/Footer";
-import CopyButton from "../../components/CopyButton/CopyButton";
 import { palleteGradient } from "../../utils/gradients";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
@@ -100,7 +97,7 @@ const PalleteGradient = () => {
                   <div className="w-full flex justify-end items-center gap-2 ">
                     <Tooltip text={textCopied ? "Copied" : "Copy the code"}>
                       <CopyToClipboard
-                        text={`backgroundImage: linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`}
+                        text={`background-image: linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`}
                       >
                         <button
                           onClick={() => {

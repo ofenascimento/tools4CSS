@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 import ColorInput from "../../components/ColorInput/ColorInput";
 import { useControls } from "../../hooks/useControls";
 import style from "./styles.module.scss";
@@ -7,10 +6,8 @@ import Switch from "react-switch";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import Footer from "../../components/Sections/Footer/Footer";
 import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
-import { Slider } from "@material-ui/core";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";

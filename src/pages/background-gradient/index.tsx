@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar";
 import ColorInput from "../../components/ColorInput/ColorInput";
 import style from "./styles.module.scss";
 import Switch from "react-switch";
