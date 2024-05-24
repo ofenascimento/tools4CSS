@@ -155,12 +155,11 @@ const PalleteGradient = () => {
       {selectedGradient && (
         <div
           id="full-screen"
-          className={`fixed inset-0 h-screen w-screen ${
+          className={`fixed inset-0 h-screen w-screen z-50 ${
             fullScreen ? "block" : "hidden"
           }`}
           style={{
             backgroundImage: `linear-gradient(80deg, ${selectedGradient.color1}, ${selectedGradient.color2})`,
-            zIndex: 9999,
           }}
         >
           <button
