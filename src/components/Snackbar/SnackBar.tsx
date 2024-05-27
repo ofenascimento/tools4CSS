@@ -20,7 +20,7 @@ const SnackBar = ({ id, type, title, subtitle, action }: TSnackBar): React.React
       >
         {icon}
         <div className='ml-2'>
-          <p className="text-base text-black dark:text-white font-EuclidRegular leading-6 m-0">{title}</p>
+          <p className="text-base text-black dark:text-white font-raleway font-medium leading-6 m-0">{title}</p>
           {subtitle && <span className="text-sm font-medium leading-6 dark:text-white">{subtitle}</span>}
         </div>
       </div>

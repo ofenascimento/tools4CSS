@@ -32,12 +32,10 @@ module.exports = {
       fontFamily: {
         manrope: "Manrope",
         prompt: "Prompt",
+        raleway: "Raleway",
         GilroyMedium: "GilroyMedium",
         GilroyBold: "GilroyBold",
         GilroyExtraBold: "GilroyExtraBold",
-        EuclidRegular: "EuclidRegular",
-        EuclidMedium: "EuclidMedium",
-        EuclidBold: "EuclidBold",
       },
       width: {
         22: "74px",

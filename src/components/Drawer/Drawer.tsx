@@ -42,7 +42,7 @@ const Drawer: React.FC<IDrawer> = ({ isOpen, toggleDrawer }) => {
                   href={tool.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 dark:text-white hover:underline font-EuclidRegular text-md"
+                  className="text-blue-500 dark:text-white hover:underline font-raleway font-semibold text-md"
                 >
                   {tool.name}
                 </a>
@@ -58,7 +58,7 @@ const Drawer: React.FC<IDrawer> = ({ isOpen, toggleDrawer }) => {
             <></>
           )}
         </ul>
-        <p className="opacity-80 font-EuclidRegular text-sm bg-main rounded-md p-4 text-white mt-4">
+        <p className="opacity-80 font-raleway text-sm bg-main rounded-md p-4 text-white mt-4">
           Your favorites are saved in your browser&apos;s cache. Clearing your
           browsing data will result in the deletion of your favorites as well.
         </p>
