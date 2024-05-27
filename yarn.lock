@@ -103,11 +103,6 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@icons/material@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
-  integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
-
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
@@ -343,14 +338,6 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react-color@^3.0.12":
-  version "3.0.12"
-  resolved "https://registry.yarnpkg.com/@types/react-color/-/react-color-3.0.12.tgz#231e75f11dd6805bdf1c954774588fefc8172f30"
-  integrity sha512-pr3uKE3lSvf7GFo1Rn2K3QktiZQFFrSgSGJ/3iMvSOYWt2pPAJ97rVdVfhWxYJZ8prAEXzoP2XX//3qGSQgu7Q==
-  dependencies:
-    "@types/react" "*"
-    "@types/reactcss" "*"
-
 "@types/react-copy-to-clipboard@^5.0.3":
   version "5.0.3"
   resolved "https://registry.npmjs.org/@types/react-copy-to-clipboard/-/react-copy-to-clipboard-5.0.3.tgz"
@@ -387,13 +374,6 @@
     "@types/prop-types" "*"
     "@types/scheduler" "*"
     csstype "^3.0.2"
-
-"@types/reactcss@*":
-  version "1.2.12"
-  resolved "https://registry.yarnpkg.com/@types/reactcss/-/reactcss-1.2.12.tgz#57f6f046e7aafbe0288689bd96a2d5664378ca7b"
-  integrity sha512-BrXUQ86/wbbFiZv8h/Q1/Q1XOsaHneYmCb/tHe9+M8XBAAUc2EHfdY0DY22ZZjVSaXr5ix7j+zsqO2eGZub8lQ==
-  dependencies:
-    "@types/react" "*"
 
 "@types/scheduler@*":
   version "0.16.2"
@@ -1757,20 +1737,10 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.17.15:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
-
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
-
-lodash@^4.0.1, lodash@^4.17.15:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
@@ -1793,11 +1763,6 @@ lru-cache@^6.0.0:
   integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
   dependencies:
     yallist "^4.0.0"
-
-material-colors@^1.2.1:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
-  integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
 
 memoize-one@^5.1.1:
   version "5.2.1"
@@ -2158,7 +2123,7 @@ prismjs@~1.27.0:
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.27.0.tgz#bb6ee3138a0b438a3653dd4d6ce0cc6510a45057"
   integrity sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==
 
-prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2184,23 +2149,10 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-color@^2.19.3:
-  version "2.19.3"
-  resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.19.3.tgz#ec6c6b4568312a3c6a18420ab0472e146aa5683d"
-  integrity sha512-LEeGE/ZzNLIsFWa1TMe8y5VYqr7bibneWmvJwm1pCn/eNmrabWDh659JSPn9BuaMpEfU83WTOJfnCcjDZwNQTA==
-  dependencies:
-    "@icons/material" "^0.2.4"
-    lodash "^4.17.15"
-    lodash-es "^4.17.15"
-    material-colors "^1.2.1"
-    prop-types "^15.5.10"
-    reactcss "^1.2.0"
-    tinycolor2 "^1.4.1"
-
-react-colorful@^5.5.1:
-  version "5.5.1"
-  resolved "https://registry.npmjs.org/react-colorful/-/react-colorful-5.5.1.tgz"
-  integrity sha512-M1TJH2X3RXEt12sWkpa6hLc/bbYS0H6F4rIqjQZ+RxNBstpY67d9TrFXtqdZwhpmBXcCwEi7stKqFue3ZRkiOg==
+react-colorful@^5.6.1:
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.6.1.tgz#7dc2aed2d7c72fac89694e834d179e32f3da563b"
+  integrity sha512-1exovf0uGTGyq5mXQT0zgQ80uvj2PCwvF8zY1RN9/vbJVSjSo3fsB/4L3ObbF7u70NduSiK4xu4Y6q1MHoUGEw==
 
 react-copy-to-clipboard@^5.1.0:
   version "5.1.0"
@@ -2298,13 +2250,6 @@ react@18.2.0:
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
-
-reactcss@^1.2.0:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/reactcss/-/reactcss-1.2.3.tgz#c00013875e557b1cf0dfd9a368a1c3dab3b548dd"
-  integrity sha512-KiwVUcFu1RErkI97ywr8nvx8dNOpT03rbnma0SSalTYjkrPYaEajR4a/MRt6DZ46K6arDRbWMNHF+xH7G7n/8A==
-  dependencies:
-    lodash "^4.0.1"
 
 read-cache@^1.0.0:
   version "1.0.0"
@@ -2605,11 +2550,6 @@ tiny-warning@^1.0.2:
   version "1.0.3"
   resolved "https://registry.npmjs.org/tiny-warning/-/tiny-warning-1.0.3.tgz"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
-
-tinycolor2@^1.4.1:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.6.0.tgz#f98007460169b0263b97072c5ae92484ce02d09e"
-  integrity sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==
 
 to-regex-range@^5.0.1:
   version "5.0.1"

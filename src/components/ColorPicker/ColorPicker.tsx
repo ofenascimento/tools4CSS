@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ColorResult, SketchPicker } from "react-color";
+import { HexColorPicker } from "react-colorful";
 import { IColorPicker } from "./types";
 
 const ColorPicker: React.FC<IColorPicker> = ({ value, onChange }) => {
@@ -13,56 +13,40 @@ const ColorPicker: React.FC<IColorPicker> = ({ value, onChange }) => {
     setDisplayColorPicker(false);
   };
 
-  const handleChangeComplete = (color: ColorResult) => {
-    onChange(color.hex);
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    let newValue = event.target.value;
+    if (newValue.length === 6 && !newValue.startsWith("#")) {
+      newValue = "#" + newValue;
+    }
+    onChange(newValue);
   };
 
   return (
-    <div className="w-40" style={{ position: "relative" }}>
+    <div className="w-40 relative">
       <div className="flex justify-center items-center gap-4">
         <button
           onClick={handleClick}
-          className=" p-4 rounded-full cursor-pointer"
+          className="p-4 rounded-full cursor-pointer"
           style={{
             backgroundColor: value,
           }}
         ></button>
-        <div>{value}</div>
+        <input
+          onChange={handleInputChange}
+          value={value}
+          className="bg-transparent w-20"
+        />
       </div>
 
       {displayColorPicker && (
-        <div
-          style={{
-            position: "absolute",
-            zIndex: "2",
-            bottom: "100%",
-            marginBottom: "10px",
-          }}
-        >
+        <div className="absolute z-20 bottom-full mb-2 w-full max-w-xs">
           <div
-            className=" text-black"
-            style={{
-              position: "fixed",
-              top: "0px",
-              right: "0px",
-              bottom: "0px",
-              left: "0px",
-            }}
+            className="fixed inset-0"
             onClick={handleClose}
           />
-
-          <SketchPicker
-            styles={{
-              default: {
-                picker: {
-                  background: "#fff",
-                  color: "#000",
-                },
-              },
-            }}
-            color={value}
-            onChangeComplete={handleChangeComplete}
-          />
+          <div className="p-2 rounded">
+            <HexColorPicker color={value} onChange={onChange} />
+          </div>
         </div>
       )}
     </div>
