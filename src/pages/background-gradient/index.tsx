@@ -15,13 +15,14 @@ import ControlsContainer from "../../components/ControlsContainer/ControlsContai
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
+import AnglePicker from "../../components/AnglePicker/AnglePicker";
 
 const BakcgroundGradient = () => {
-  const [colorVariant1, setColorVariant1] = useState<string>("#1d4ed8");
-  const [colorVariant2, setColorVariant2] = useState<string>("#24ff8e");
-  const [animated, setAnimated] = useState<boolean>(false);
-  const [angle, setAngle] = useState<number>(80);
-  const [fullScreen, setFullScreen] = useState<boolean>(false);
+  const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
+  const [colorVariant2, setColorVariant2] = useState("#24ff8e");
+  const [animated, setAnimated] = useState(false);
+  const [angle, setAngle] = useState(80);
+  const [fullScreen, setFullScreen] = useState(false);
 
   const { isFavorited, handleFavorite } = useFavoriteTool(
     "Background Gradient"
@@ -31,7 +32,7 @@ const BakcgroundGradient = () => {
     <>
       <SEO title="Background Gradient Generator" />
       <div className="w-full lg:w-4/6 mx-auto">
-        <div className=" flex flex-row justify-between items-center mx-4 md:mx-0">
+        <div className="flex flex-row justify-between items-center mx-4 md:mx-0">
           <Breadcrumb
             links={[
               { href: "/", label: "Home" },
@@ -62,7 +63,7 @@ const BakcgroundGradient = () => {
             }}
           >
             <button
-              className=" text-gray-600 bg-white dark:bg-mainDark dark:text-slate-200 absolute right-0 top-0 m-4 flex justify-center items-center rounded-sm"
+              className="text-gray-600 bg-white dark:bg-mainDark dark:text-slate-200 absolute right-0 top-0 m-4 flex justify-center items-center rounded-sm"
               onClick={() => setFullScreen(true)}
             >
               <Tooltip text="View in full screen">
@@ -74,24 +75,15 @@ const BakcgroundGradient = () => {
         <ControlsContainer>
           <ColorPicker
             value={colorVariant1}
-            onChange={(color: string) => setColorVariant1(color)}
+            onChange={(color) => setColorVariant1(color)}
           />
-           <ColorPicker
+          <ColorPicker
             value={colorVariant2}
-            onChange={(color: string) => setColorVariant2(color)}
+            onChange={(color) => setColorVariant2(color)}
           />
-          <div className="flex items-center justify-center gap-2">
-            <span>Direction:</span>
-
-            <CustomSlider
-              style={{ width: 140, marginLeft: 20, marginRight: 20 }}
-              value={angle}
-              onChange={(_e: any, value: number) => setAngle(value as number)}
-              className={style.slider}
-              step={1}
-              min={0}
-              max={360}
-            />
+          <div className="flex items-center justify-center gap-2 w-36">
+            <span>Angle:</span>
+            <AnglePicker initialAngle={angle} onAngleChange={setAngle} />
           </div>
           <div className="flex items-center justify-center gap-4">
             <span>Animation:</span>
@@ -99,13 +91,13 @@ const BakcgroundGradient = () => {
               checked={animated}
               onChange={() => setAnimated((prev) => !prev)}
               onColor="#CBD5FF"
-              onHandleColor="#0f54b4"
-              className="mt-0 border border-slate-300 shadow-sm"
+              onHandleColor="#2563EB"
+              className="mt-0 border-2 rounded-full border-slate-300 shadow-sm"
               handleDiameter={10}
               uncheckedIcon={false}
               checkedIcon={false}
               offColor="#fff"
-              offHandleColor="#0f54b4"
+              offHandleColor="#2563EB"
               activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
               height={20}
               width={48}
@@ -135,16 +127,7 @@ const BakcgroundGradient = () => {
         </div>
         <Info
           title="What is CSS Gradient Generator?"
-          paragraph=" The CSS Background Gradient Generator is a web development tool that
-        assists in creating gradient backgrounds for HTML elements using
-        Cascading Style Sheets (CSS). With this generator, designers and
-        developers can define and customize gradients, specifying colors,
-        angles, and other properties to achieve the desired visual effect. The
-        resulting CSS code can then be easily integrated into web projects,
-        allowing for the creation of stylish and dynamic backgrounds for web
-        pages and user interfaces. This tool simplifies the process of
-        implementing gradient backgrounds in CSS, enhancing the overall design
-        and user experience of websites and web applications."
+          paragraph="The CSS Background Gradient Generator is a web development tool that assists in creating gradient backgrounds for HTML elements using Cascading Style Sheets (CSS). With this generator, designers and developers can define and customize gradients, specifying colors, angles, and other properties to achieve the desired visual effect. The resulting CSS code can then be easily integrated into web projects, allowing for the creation of stylish and dynamic backgrounds for web pages and user interfaces. This tool simplifies the process of implementing gradient backgrounds in CSS, enhancing the overall design and user experience of websites and web applications."
         />
       </div>
       <div

@@ -22,7 +22,7 @@ const ColorPicker: React.FC<IColorPicker> = ({ value, onChange }) => {
   };
 
   return (
-    <div className="w-40 relative">
+    <div className=" w-36 relative">
       <div className="flex justify-center items-center gap-4">
         <button
           onClick={handleClick}
@@ -34,7 +34,7 @@ const ColorPicker: React.FC<IColorPicker> = ({ value, onChange }) => {
         <input
           onChange={handleInputChange}
           value={value}
-          className="bg-transparent w-20"
+          className="bg-transparent w-16"
         />
       </div>
 
