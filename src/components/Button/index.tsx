@@ -2,7 +2,6 @@ import React from 'react'
 import { IButton } from './types'
 import { twMerge } from 'tailwind-merge'
 import clsx from 'clsx'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Button = (props: IButton) => {
     return (
