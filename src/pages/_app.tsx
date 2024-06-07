@@ -6,6 +6,7 @@ import { ThemeProvider } from "../context/ThemeContext";
 import Layout from "../components/Layout";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -15,6 +16,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <FavoriteProvider>
         <ControlsProvider>
           <Layout>
+            <Head>
+              <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2529229033686497"
+                crossOrigin="anonymous"
+              ></script>
+            </Head>
             <AnimatePresence mode="wait">
               <motion.div
                 key={router.route}
