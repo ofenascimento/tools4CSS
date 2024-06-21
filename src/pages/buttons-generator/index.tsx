@@ -9,9 +9,15 @@ import { MdClose, MdCode } from "react-icons/md";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import styles from "./styles.module.scss";
-import { buttons } from "./buttons";
 import CopyButton from "../../components/CopyButton/CopyButton";
-import { IButtonGenerator } from "./types";
+import { buttonsGenerator } from "@/constants/buttonsGenerator";
+
+export interface IButtonGenerator {
+  id: string;
+  className: string;
+  text: string;
+  css?: string;
+}
 
 const ButtonsGenerator: React.FC = () => {
   const { isFavorited, handleFavorite } = useFavoriteTool("Buttons Generator");
@@ -50,7 +56,7 @@ const ButtonsGenerator: React.FC = () => {
           info="Discover an amazing collection of CSS button styles. Explore different designs and get the code to enhance your projects with beautiful buttons."
         />
         <div className="flex mt-4 gap-4 justify-start p-5 md:p-0 lg:justify-between md:justify-center items-center flex-wrap">
-          {buttons.map((button) => (
+          {buttonsGenerator.map((button) => (
             <div
               className="flex w-full justify-center items-center md:w-[48%] lg:w-[30%] h-56 lg:h-52 bg-slate-200 dark:bg-gray-700 rounded-lg p-10 md:p-2 relative"
               key={button.id}
