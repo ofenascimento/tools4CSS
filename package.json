@@ -9,18 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.15.20",
+    "@mui/styles": "^5.15.20",
     "@types/cssbeautify": "^0.3.5",
     "@types/react-modal": "^3.13.1",
     "clsx": "^2.0.0",
     "cssbeautify": "^0.3.1",
     "framer-motion": "^11.2.6",
-    "next": "12.2.3",
+    "next": "^12.3.4",
     "react": "18.2.0",
     "react-colorful": "^5.6.1",
     "react-copy-to-clipboard": "^5.1.0",
@@ -39,13 +42,8 @@
     "@types/react-copy-to-clipboard": "^5.0.3",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.16",
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.3",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
     "typescript": "4.7.4"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }

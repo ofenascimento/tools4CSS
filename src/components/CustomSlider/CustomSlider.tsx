@@ -1,6 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Slider, { SliderProps } from "@material-ui/core/Slider";
+import Slider from "@mui/material/Slider";
+import { makeStyles } from "@mui/styles";
 import { useTheme } from "../../context/ThemeContext";
 import { ICustomSlider } from "./types";
 
@@ -16,19 +16,21 @@ const useStyles = makeStyles({
   },
 });
 
-const CustomSlider = (props: ICustomSlider ) => {
+const CustomSlider = (props: ICustomSlider) => {
   const { theme } = useTheme();
   const classes = useStyles();
 
-  return <Slider
-  classes={theme === "dark" ? classes : undefined}
-  {...props}
-  onChange={(event: any, value: any) => {
-    if (props.onChange) {
-      props.onChange(event, value);
-    }
-  }}
-/>;
+  return (
+    <Slider
+      classes={theme === "dark" ? classes : undefined}
+      {...props}
+      onChange={(event: any, value: any) => {
+        if (props.onChange) {
+          props.onChange(event, value);
+        }
+      }}
+    />
+  );
 };
 
 export default CustomSlider;
