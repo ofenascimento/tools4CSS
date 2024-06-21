@@ -106,6 +106,12 @@ function Navbar() {
                       Underline Gradient
                     </SubmenuItem>
                     <SubmenuItem
+                      href="/buttons-generator"
+                      onClick={handleSubmenuClick}
+                    >
+                      Buttons Generator
+                    </SubmenuItem>
+                    <SubmenuItem
                       href="/glassmorphism"
                       onClick={handleSubmenuClick}
                     >
@@ -213,6 +219,12 @@ function Navbar() {
                 onClick={() => setNavbar(false)}
               >
                 <Link href="/underline-gradient">Underline Gradient</Link>
+              </li>
+              <li
+                className="text-slate-900 dark:text-white block md:hidden"
+                onClick={() => setNavbar(false)}
+              >
+                <Link href="/buttons-generator">Buttons Generator</Link>
               </li>
               <li
                 className="text-slate-900 dark:text-white block md:hidden"

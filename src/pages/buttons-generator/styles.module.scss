@@ -1,0 +1,194 @@
+.btn1 {
+  background-color: #ffb84c;
+  position: relative;
+  padding: 6px 20px;
+  width: 100%;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(100%);
+    left: calc(0% - 2px);
+    width: calc(100% + (2 * 2px));
+    border-top: 4px solid #060606;
+    border-left: 8px solid rgba(0, 0, 0, 0);
+    border-right: 8px solid rgba(0, 0, 0, 0);
+    height: 0;
+  }
+}
+
+.btn2 {
+  background-color: transparent;
+  border: 2px solid #615efc;
+  position: relative;
+  padding: 6px 20px;
+  width: 100%;
+  color: #fff;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: calc(0% - 2px);
+    width: calc(100% + (2 * 2px));
+    border-top: 4px solid #615efc;
+    border-left: 8px solid rgba(0, 0, 0, 0);
+    border-right: 8px solid rgba(0, 0, 0, 0);
+    height: 0;
+  }
+}
+
+.btn3 {
+  border-radius: 8px;
+  background: linear-gradient(92.83deg, #ff7556 0%, #fb4bff 100%);
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  font-weight: 700;
+  line-height: normal;
+  box-sizing: border-box;
+}
+
+.btn4 {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #836fff;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(92.83deg, #ff7556 0%, #fb4bff 100%);
+    z-index: -1;
+    filter: blur(4px);
+    transform: rotate(0deg);
+    transform-origin: center;
+    transition: transform 0.4s;
+    animation: rotateGradient 4s linear infinite;
+  }
+
+  @keyframes rotateGradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.btn5 {
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  border-radius: 5px;
+  background: linear-gradient(to right, #00ffa3, #dc1fff);
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 4px;
+    background-color: #000;
+    z-index: -1;
+    transition: 200ms;
+  }
+  &::after {
+    content: attr(data);
+    font-size: 16px;
+    background: linear-gradient(to left, #00ffa3, #dc1fff);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 200ms;
+  }
+}
+
+.btn6 {
+  padding: 10px 20px;
+  width: 100%;
+  color: #fff;
+  border-radius: 20px;
+  background-image: linear-gradient(80deg, #000000, #1a4fd8);
+  background-size: 400% 400%;
+  animation: gradientButton 10s ease infinite;
+}
+
+@keyframes gradientButton {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+//Hover
+.btn10 {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #836fff;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: color 0.4s;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #fff;
+    transition: transform 0.4s;
+    box-sizing: border-box;
+  }
+
+  &::before {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &::after {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:hover::after {
+    transform: scaleY(1);
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
