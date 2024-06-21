@@ -1,4 +1,4 @@
-export interface IButton {
+export interface IButtonGenerator {
     id: string;
     className: string;
     text: string;

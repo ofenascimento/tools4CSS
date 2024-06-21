@@ -11,12 +11,12 @@ import Info from "../../components/Info/Info";
 import styles from "./styles.module.scss";
 import { buttons } from "./buttons";
 import CopyButton from "../../components/CopyButton/CopyButton";
-import { IButton } from "./types";
+import { IButtonGenerator } from "./types";
 
-const PalleteGradient: React.FC = () => {
+const ButtonsGenerator: React.FC = () => {
   const { isFavorited, handleFavorite } = useFavoriteTool("Buttons Generator");
   const [fullScreen, setFullScreen] = useState<boolean>(false);
-  const [selectedButton, setSelectedButton] = useState<IButton | null>(null);
+  const [selectedButton, setSelectedButton] = useState<IButtonGenerator | null>(null);
 
   const handleButtonClick = (button: any) => {
     setSelectedButton(button);
@@ -116,4 +116,4 @@ const PalleteGradient: React.FC = () => {
   );
 };
 
-export default PalleteGradient;
+export default ButtonsGenerator;
