@@ -13,11 +13,9 @@ const Drawer: React.FC<IDrawer> = ({ isOpen, toggleDrawer }) => {
 
   return (
     <div
-      className={`${
-        styles.glass
-      } bg-white-glass-mobile dark:bg-black-glass-mobile lg:bg-white-glass lg:dark:bg-black-glass z-30 fixed top-0 right-0 h-full w-64   dark:border-l-2 dark:border-l-dark-100 shadow-lg transform transition-transform duration-300 ${
-        isOpen ? "translate-x-0" : "translate-x-full"
-      }`}
+      className={`${styles.glass
+        } bg-white-glass-mobile dark:bg-black-glass-mobile lg:bg-white-glass lg:dark:bg-black-glass z-30 fixed top-0 right-0 h-full w-64   dark:border-l-2 dark:border-l-dark-100 shadow-lg transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
     >
       <div
         id="header"
@@ -58,7 +56,7 @@ const Drawer: React.FC<IDrawer> = ({ isOpen, toggleDrawer }) => {
             <></>
           )}
         </ul>
-        <p className="opacity-80 font-raleway text-sm bg-main rounded-md p-4 text-white mt-4">
+        <p className=" font-raleway text-sm bg-main rounded-md p-4 text-white mt-4">
           Your favorites are saved in your browser&apos;s cache. Clearing your
           browsing data will result in the deletion of your favorites as well.
         </p>
