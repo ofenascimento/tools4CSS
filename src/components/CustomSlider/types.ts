@@ -1,4 +1,5 @@
+import { SliderProps } from "@mui/material/Slider";
 
-export interface ICustomSlider {
-    onChange: any;
-  }
+export interface ICustomSlider extends SliderProps {
+  onChange: any;
+}
