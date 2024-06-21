@@ -3,7 +3,6 @@ import { useControls } from "../../hooks/useControls";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { Slider } from "@material-ui/core";
 import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
