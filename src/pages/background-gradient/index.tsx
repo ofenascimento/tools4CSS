@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import style from "./styles.module.scss";
-import Switch from "react-switch";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -8,25 +7,39 @@ import { SEO } from "../../components/SEO";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
-import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Tooltip from "../../components/Tooltip/Tooltip";
-import { MdArrowBack, MdFullscreen } from "react-icons/md";
+import { MdArrowBack, MdFullscreen, MdOutlineBlurLinear, MdOutlineCircle } from "react-icons/md";
 import ControlsContainer from "../../components/ControlsContainer/ControlsContainer";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
-import ColorPicker from "../../components/ColorPicker/ColorPicker";
 import AnglePicker from "../../components/AnglePicker/AnglePicker";
+import { HexColorPicker } from "react-colorful";
+import CustomSwitch from "@/components/CustomSwitch/CustomSwitch";
+import { palleteGradient } from "@/utils/gradients";
+import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
+import { parseHexToRgb } from "@/utils/parseHexToRGB";
+import { parseRgbToHex } from "@/utils/parseRGBToHex";
 
-const BakcgroundGradient = () => {
+const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
   const [colorVariant2, setColorVariant2] = useState("#24ff8e");
+  const [type, setType] = useState("linear");
   const [animated, setAnimated] = useState(false);
   const [angle, setAngle] = useState(80);
   const [fullScreen, setFullScreen] = useState(false);
-
   const { isFavorited, handleFavorite } = useFavoriteTool(
     "Background Gradient"
   );
+
+  const color1Rgb = parseHexToRgb(colorVariant1);
+  const color2Rgb = parseHexToRgb(colorVariant2);
+
+  const handleRgbChange = (color: any, setColor: any) => (e: any) => {
+    const { name, value } = e.target;
+    const sanitizedValue = value.replace(/^0+/, '');
+    const rgb = { ...color, [name]: Math.max(0, Math.min(255, Number(sanitizedValue))) };
+    setColor(parseRgbToHex(rgb.r, rgb.g, rgb.b));
+  };
 
   return (
     <>
@@ -51,15 +64,13 @@ const BakcgroundGradient = () => {
           customInfoClassname="lg:w-3/4"
         />
 
-        <div className="mt-4 mx-4 lg:mx-0">
+        <div className="mt-4 mx-4 lg:mx-0 flex flex-col lg:flex-row  gap-1">
           <div
-            className={`${
-              animated ? style.animatedApp : style.app
-            } py-32 rounded-md relative `}
+            className={`${animated ? style.animatedApp : style.app
+              } py-32 rounded-md relative p-2 w-full lg:w-[64%]`}
             style={{
-              backgroundImage: `linear-gradient(${angle}deg, ${colorVariant1}, ${
-                animated ? colorVariant1 + "," : ""
-              } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+              backgroundImage: `${type}-gradient(${type === 'linear' ? `${angle}deg,` : ''} ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+                } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
             }}
           >
             <button
@@ -70,59 +81,147 @@ const BakcgroundGradient = () => {
                 <MdFullscreen size={22} />
               </Tooltip>
             </button>
+
+            <div
+              className="text-gray-600 bg-white border border-slate-300 p-2 rounded-lg dark:bg-mainDark dark:text-slate-200 absolute right-0 bottom-0 m-2 flex justify-center items-center"
+            >
+              <div className="flex items-center justify-center gap-4">
+                <span className=" text-sm">Animation:</span>
+                <CustomSwitch
+                  checked={animated}
+                  onChange={() => setAnimated((prev) => !prev)}
+
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full lg:w-[35%] p-2 bg-white border shadow-none border-slate-300 dark:bg-mainDark dark:text-white dark:border-slate-600 rounded-lg">
+            <div id="controls">
+              <div className="items-center p-2 rounded-lg">
+                <HexColorPicker style={{ width: '100%', height: 100 }} color={colorVariant1} onChange={setColorVariant1} />
+                <div className="mt-3 flex gap-2 justify-between items-center">
+                  <div className=" flex flex-col gap-2 justify-center items-center">
+                    <input value={colorVariant1} onChange={e => validateAndFormatHex(e, setColorVariant1)} className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border w-[88px] p-2 rounded-lg" />
+                    <span className=" text-xs">HEX</span>
+                  </div>
+                  <div className="flex gap-1">
+                    <div className=" flex flex-col gap-2 justify-center items-center">
+                      <input
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        type="number"
+                        name="r"
+                        value={color1Rgb.r}
+                        onChange={handleRgbChange(color1Rgb, setColorVariant1)}
+                      />
+                      <span className=" text-xs">R</span>
+                    </div>
+                    <div className=" flex flex-col gap-2 justify-center items-center">
+                      <input
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        type="number"
+                        name="g"
+                        value={color1Rgb.g}
+                        onChange={handleRgbChange(color1Rgb, setColorVariant1)}
+                      />
+                      <span className=" text-xs">G</span>
+                    </div>
+                    <div className=" flex flex-col gap-2 justify-center items-center">
+
+                      <input
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        type="number"
+                        name="b"
+                        value={color1Rgb.b}
+                        onChange={handleRgbChange(color1Rgb, setColorVariant1)}
+                      />
+                      <span className=" text-xs">R</span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div className="items-center p-2 rounded-lg">
+                <HexColorPicker style={{ width: '100%', height: 100 }} color={colorVariant2} onChange={setColorVariant2} />
+                <div className="mt-3 flex gap-2 justify-between items-center">
+                  <div className=" flex flex-col gap-2 justify-center items-center">
+                    <input value={colorVariant2} onChange={e => validateAndFormatHex(e, setColorVariant2)} className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border w-[88px] p-2 rounded-lg" />
+                    <span className=" text-xs">HEX</span>
+                  </div>
+                  <div className="flex gap-1">
+                    <div className=" flex flex-col gap-2 justify-center items-center">
+                      <input
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        type="number"
+                        name="r"
+                        value={color2Rgb.r}
+                        onChange={handleRgbChange(color2Rgb, setColorVariant2)}
+                      />
+                      <span className=" text-xs">R</span>
+                    </div>
+                    <div className=" flex flex-col gap-2 justify-center items-center">
+                      <input
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        type="number"
+                        name="g"
+                        value={color2Rgb.g}
+                        onChange={handleRgbChange(color2Rgb, setColorVariant2)}
+                      />
+                      <span className=" text-xs">G</span>
+                    </div>
+                    <div className=" flex flex-col gap-2 justify-center items-center">
+                      <input
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        type="number"
+                        name="b"
+                        value={color2Rgb.b}
+                        onChange={handleRgbChange(color2Rgb, setColorVariant2)}
+                      />
+                      <span className=" text-xs">R</span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <ControlsContainer>
-          <ColorPicker
-            value={colorVariant1}
-            onChange={(color) => setColorVariant1(color)}
-          />
-          <ColorPicker
-            value={colorVariant2}
-            onChange={(color) => setColorVariant2(color)}
-          />
-          <div className="flex items-center justify-center gap-2 w-36">
-            <span>Angle:</span>
-            <AnglePicker initialAngle={angle} onAngleChange={setAngle} />
+        <ControlsContainer className=" justify-between">
+          <div className=" flex">
+            <button className={`${type === 'linear' ? 'bg-blue-700 text-white' : 'dark:bg-gray-700 bg-slate-300'} px-6 py-2  flex gap-2 rounded-l-lg justify-center items-center`} onClick={() => setType('linear')}> <MdOutlineBlurLinear style={{ marginBottom: 3 }} /> Linear</button>
+            <button className={`${type === 'radial' ? 'bg-blue-700 text-white' : 'dark:bg-gray-700 bg-slate-300'} px-6 py-2  flex gap-2 rounded-r-lg justify-center items-center`} onClick={() => setType('radial')}> <MdOutlineCircle style={{ marginBottom: 3 }} /> <span>Circle</span></button>
+            {type === 'linear' && <div className="flex items-center justify-center gap-2 w-36 ml-6">
+              <AnglePicker initialAngle={angle} onAngleChange={setAngle} />
+            </div>}
+
           </div>
-          <div className="flex items-center justify-center gap-4">
-            <span>Animation:</span>
-            <Switch
-              checked={animated}
-              onChange={() => setAnimated((prev) => !prev)}
-              onColor="#CBD5FF"
-              onHandleColor="#2563EB"
-              className="mt-0 border-2 rounded-full border-slate-300 shadow-sm"
-              handleDiameter={10}
-              uncheckedIcon={false}
-              checkedIcon={false}
-              offColor="#fff"
-              offHandleColor="#2563EB"
-              activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-              height={20}
-              width={48}
-              id="material-switch"
-            />
+          <div className=" flex gap-2">
+            {palleteGradient.slice(0, 5).map((item, index) => (
+              <button key={index} className="p-4 rounded-full" onClick={() => {
+                setColorVariant1(item.color1);
+                setColorVariant2(item.color2);
+              }} style={{
+                backgroundImage: `linear-gradient(80deg, ${item.color1}, ${item.color2})`,
+              }}></button>
+            ))}
           </div>
         </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
           <SyntaxHighlighter language="css" style={darcula}>
-            {`background-image: linear-gradient(${angle}deg, ${colorVariant1}, ${colorVariant2});${
-              animated
-                ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
-                : ""
-            } `}
+            {`background-image: ${type}-gradient(${type === 'linear' ? `${angle}deg,` : ''} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
+              ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
+              : ""
+              } `}
           </SyntaxHighlighter>
         </div>
 
         <div className="mx-4 lg:mx-0">
           <CopyButton
-            textToCopy={`background-image: linear-gradient(${angle}deg, ${colorVariant1}, ${colorVariant2});${
-              animated
-                ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
-                : ""
-            } `}
+            textToCopy={`background-image: ${type}-gradient(${type === 'linear' ? `${angle}deg,` : ''} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
+              ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
+              : ""
+              } `}
           />
         </div>
         <Info
@@ -132,13 +231,11 @@ const BakcgroundGradient = () => {
       </div>
       <div
         id="full-screen"
-        className={`fixed inset-0 h-screen w-screen z-50 ${
-          animated ? style.animatedApp : style.app
-        } ${fullScreen ? "block" : "hidden"}`}
+        className={`fixed inset-0 h-screen w-screen z-50 ${animated ? style.animatedApp : style.app
+          } ${fullScreen ? "block" : "hidden"}`}
         style={{
-          backgroundImage: `linear-gradient(${angle}deg, ${colorVariant1}, ${
-            animated ? colorVariant1 + "," : ""
-          } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+          backgroundImage: `${type}-gradient(${type === 'linear' ? `${angle}deg,` : ''} ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+            } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
         }}
       >
         <button
@@ -153,4 +250,4 @@ const BakcgroundGradient = () => {
   );
 };
 
-export default BakcgroundGradient;
+export default BackgroundGradient;

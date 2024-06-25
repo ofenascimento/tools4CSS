@@ -79,6 +79,18 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 99px;
 }
 
+/* Remover setas de input type="number" no Chrome */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remover setas de input type="number" no Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .page-transition-enter {
   opacity: 0;
 }
