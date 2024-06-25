@@ -1,4 +1,4 @@
-export const parseRgbToHex = (r: number, g: number, b: number) => {
+export const parseRGBToHex = (r: number, g: number, b: number) => {
     return (
       "#" +
       ((1 << 24) + (r << 16) + (g << 8) + b)

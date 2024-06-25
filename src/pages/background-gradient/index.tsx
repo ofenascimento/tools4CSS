@@ -17,8 +17,8 @@ import { HexColorPicker } from "react-colorful";
 import CustomSwitch from "@/components/CustomSwitch/CustomSwitch";
 import { palleteGradient } from "@/utils/gradients";
 import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
-import { parseHexToRgb } from "@/utils/parseHexToRGB";
-import { parseRgbToHex } from "@/utils/parseRGBToHex";
+import { parseHexToRGB } from "@/utils/parseHexToRGB";
+import { parseRGBToHex } from "@/utils/parseRGBToHex";
 
 const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
@@ -31,14 +31,14 @@ const BackgroundGradient = () => {
     "Background Gradient"
   );
 
-  const color1Rgb = parseHexToRgb(colorVariant1);
-  const color2Rgb = parseHexToRgb(colorVariant2);
+  const color1Rgb = parseHexToRGB(colorVariant1);
+  const color2Rgb = parseHexToRGB(colorVariant2);
 
   const handleRgbChange = (color: any, setColor: any) => (e: any) => {
     const { name, value } = e.target;
     const sanitizedValue = value.replace(/^0+/, '');
     const rgb = { ...color, [name]: Math.max(0, Math.min(255, Number(sanitizedValue))) };
-    setColor(parseRgbToHex(rgb.r, rgb.g, rgb.b));
+    setColor(parseRGBToHex(rgb.r, rgb.g, rgb.b));
   };
 
   return (

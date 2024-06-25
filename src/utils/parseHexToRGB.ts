@@ -1,4 +1,4 @@
-export const parseHexToRgb = (hex: string) => {
+export const parseHexToRGB = (hex: string) => {
     hex = hex.replace(/^#/, '');
     let bigint = parseInt(hex, 16);
     let r = (bigint >> 16) & 255;
