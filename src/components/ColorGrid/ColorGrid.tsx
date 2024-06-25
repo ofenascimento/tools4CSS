@@ -65,7 +65,9 @@ const ColorGrid: FC = () => {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      if (width >= 1250) {
+      if (width >= 1400) {
+        setNumCards(6);
+      } else if(width >= 1250 && width < 1400) {
         setNumCards(5);
       } else if (width >= 1100 && width < 1250) {
         setNumCards(4);
