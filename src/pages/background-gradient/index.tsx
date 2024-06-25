@@ -18,7 +18,6 @@ import CustomSwitch from "@/components/CustomSwitch/CustomSwitch";
 import { palleteGradient } from "@/utils/gradients";
 import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
 import { parseHexToRGB } from "../../utils/parseHexToRGB";
-import { parseRGBToHex } from "../../utils/parseRGBToHex";
 
 const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
@@ -33,6 +32,16 @@ const BackgroundGradient = () => {
 
   const color1Rgb = parseHexToRGB(colorVariant1);
   const color2Rgb = parseHexToRGB(colorVariant2);
+
+  const parseRGBToHex = (r: number, g: number, b: number) => {
+    return (
+      "#" +
+      ((1 << 24) + (r << 16) + (g << 8) + b)
+        .toString(16)
+        .slice(1)
+        .toUpperCase()
+    );
+  };
 
   const handleRgbChange = (color: any, setColor: any) => (e: any) => {
     const { name, value } = e.target;
