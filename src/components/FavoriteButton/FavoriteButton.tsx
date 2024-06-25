@@ -5,7 +5,7 @@ const FavoriteButton = ({ handleFavorite, isFavorited }: IFavoriteButton) => {
   return (
     <button
       onClick={handleFavorite}
-      className="text-lg font-medium text-white rounded-full  md:px-1 dark:bg-dark-100 bg-slate-200"
+      className="text-lg font-medium text-white rounded-full  md:px-1 dark:bg-dark-100 bg-white border border-slate-300 dark:border-slate-600"
     >
       {isFavorited ? (
         <div className="flex flex-row justify-center items-center gap-2 p-3 md:px-4 md:py-2">

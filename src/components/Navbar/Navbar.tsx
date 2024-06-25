@@ -283,7 +283,7 @@ function Navbar() {
               <li className="hidden md:block">
                 <button
                   onClick={toggleTheme}
-                  className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full"
+                  className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full border border-slate-300 dark:border-slate-600"
                 >
                   {theme === "dark" ? <FaSun color="#A0AFBF" /> : <FaMoon />}
                 </button>

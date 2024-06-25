@@ -17,7 +17,7 @@ import { HexColorPicker } from "react-colorful";
 import CustomSwitch from "@/components/CustomSwitch/CustomSwitch";
 import { palleteGradient } from "@/utils/gradients";
 import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
-import { parseHexToRGB } from "../../utils/parseHexToRGB";
+import { parseHexToRGB } from "@/utils/parseHexToRGB";
 
 const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
@@ -92,7 +92,7 @@ const BackgroundGradient = () => {
             </button>
 
             <div
-              className="text-gray-600 bg-white border border-slate-300 p-2 rounded-lg dark:bg-mainDark dark:text-slate-200 absolute right-0 bottom-0 m-2 flex justify-center items-center"
+              className="text-gray-600 bg-white border border-slate-300 dark:border-slate-600 p-2 rounded-lg dark:bg-mainDark dark:text-slate-200 absolute right-0 bottom-0 m-2 flex justify-center items-center"
             >
               <div className="flex items-center justify-center gap-4">
                 <span className=" text-sm">Animation:</span>
