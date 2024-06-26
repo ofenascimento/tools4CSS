@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, MouseEvent, TouchEvent } from 'react';
+import React, { useState, useRef, useEffect, MouseEvent, TouchEvent, ChangeEvent } from 'react';
 
 interface AnglePickerProps {
   initialAngle?: number;
@@ -46,6 +46,14 @@ const AnglePicker: React.FC<AnglePickerProps> = ({ initialAngle = 0, onAngleChan
     document.removeEventListener('touchend', handleMouseUp);
   };
 
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const newAngle = Number(e.target.value);
+    setAngle(newAngle);
+    if (onAngleChange) {
+      onAngleChange(newAngle);
+    }
+  };
+
   useEffect(() => {
     return () => {
       document.removeEventListener('mousemove', handleMouseMove as any);
@@ -66,7 +74,15 @@ const AnglePicker: React.FC<AnglePickerProps> = ({ initialAngle = 0, onAngleChan
       >
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-blue-600 w-2 h-2 rounded-full m-1"></div>
       </div>
-      <div className="ml-2 text-md w-4">{Math.round(angle)}°</div>
+      <div className="relative ml-2">
+        <input
+          type="number"
+          className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-1 rounded-lg w-16 text-center"
+          value={angle}
+          onChange={handleInputChange}
+        />
+        <span className="absolute top-1/2 transform -translate-y-1/2 right-2">°</span>
+      </div>
     </div>
   );
 };
