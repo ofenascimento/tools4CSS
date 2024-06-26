@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import Link from "next/link";
 import StarButton from "../../StarButton/StarButton";
 import Banner from "../../Banner/Banner";
+import { MdArrowRightAlt, MdAutoFixHigh } from "react-icons/md";
 
 const Hero = () => {
   return (
@@ -24,15 +25,13 @@ const Hero = () => {
           Take advantage of our CSS tools and generators to speed up the styling
           of your components
         </h3>
-        <StarButton />
+        {/* <StarButton /> */}
         <Link href="#generators">
           <span
-            className=" font-GilroyMedium text-center rounded-full px-24 text-white mt-1 cursor-pointer mx-8 max-w-[400px] w-full"
-            style={{
-              backgroundColor: "#1A4FD8",
-            }}
+            className=" font-GilroyMedium text-center rounded-lg mt-4 bg-blue-700 hover:bg-blue-800 px-24 text-white cursor-pointer mx-2   flex gap-2 justify-center items-center"
+            
           >
-            Discover All Tools
+            Discover All Tools <MdAutoFixHigh size={20} />
           </span>
         </Link>
       </div>

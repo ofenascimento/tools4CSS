@@ -198,7 +198,7 @@ const BackgroundGradient = () => {
         <ControlsContainer className=" justify-between mt-1">
           <div className=" flex">
             <button className={`${type === 'linear' ? 'bg-blue-700 text-white' : 'dark:bg-gray-700 bg-slate-300'} px-6 py-2  flex gap-2 rounded-l-lg justify-center items-center`} onClick={() => setType('linear')}> <MdOutlineBlurLinear style={{ marginBottom: 3 }} /> Linear</button>
-            <button className={`${type === 'radial' ? 'bg-blue-700 text-white' : 'dark:bg-gray-700 bg-slate-300'} px-6 py-2  flex gap-2 rounded-r-lg justify-center items-center`} onClick={() => setType('radial')}> <MdOutlineCircle style={{ marginBottom: 3 }} /> <span>Circle</span></button>
+            <button className={`${type === 'radial' ? 'bg-blue-700 text-white' : 'dark:bg-gray-700 bg-slate-300'} px-6 py-2  flex gap-2 rounded-r-lg justify-center items-center`} onClick={() => setType('radial')}> <MdOutlineCircle style={{ marginBottom: 3 }} /> <span>Radial</span></button>
             {type === 'linear' && <div className="flex items-center justify-center gap-2 w-36 ml-6">
               <AnglePicker initialAngle={angle} onAngleChange={setAngle} />
             </div>}
