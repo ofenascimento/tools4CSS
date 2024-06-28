@@ -13,8 +13,7 @@ const SnackBar = ({ id, type, title, subtitle, action }: TSnackBar): React.React
     <div className={clsx('snackbar pb-2', `snackbar-${id}`)}>
       <div
         className={clsx(
-          'bg-white dark:bg-mainDark border-l-8 border border-slate-300 dark:border-slate-600 text-orange-700 p-4 shadow-drop-2 rounded-sm transition-opacity flex z-30  justify-center items-center',
-          border,
+          'bg-white dark:bg-mainDark border border-slate-300 dark:border-slate-600 p-4 shadow-drop-2 transition-opacity flex z-30  justify-center items-center rounded-lg',
         )}
         role="alert"
       >
