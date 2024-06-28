@@ -1,7 +1,8 @@
 import React from "react";
-import { MdOutlineArrowForward } from "react-icons/md";
 import Link from "next/link";
 import ColorGrid from "../ColorGrid/ColorGrid";
+import { BsPalette2 } from "react-icons/bs";
+import { LuPaintbrush2 } from "react-icons/lu";
 
 export default function Banner() {
   return (
@@ -16,12 +17,22 @@ export default function Banner() {
           </h2>
           <Link href='/gradient-pallete'>
             <button
-              className="font-GilroyMedium text-white py-2 px-6 lg:px-14 mt-2 rounded-full flex justify-center items-center gap-3 w-full lg:w-auto"
+              className="font-GilroyMedium text-white py-2 px-6 lg:px-14 mt-2 rounded-full flex justify-center items-center gap-3 w-full"
               style={{
-                backgroundImage: `linear-gradient(80deg, #5761B2, #1FC5A8)`,
+                backgroundImage: `linear-gradient(80deg, #f97d98, #d41f46)`,
               }}
             >
-              Try color palette <MdOutlineArrowForward className=" hover:ml-4" />
+              Explore Gradient Palette <BsPalette2 className=" hover:ml-4" />
+            </button>
+          </Link>
+          <Link href='/background-gradient'>
+            <button
+              className="font-GilroyMedium text-white py-2 px-6 lg:px-14 mt-2 rounded-full flex justify-center items-center gap-3 w-full"
+              style={{
+                backgroundImage: `linear-gradient(80deg, #6a25cb, #2580fc)`,
+              }}
+            >
+              Create Your Gradient <LuPaintbrush2 className=" hover:ml-4" />
             </button>
           </Link>
         </div>
