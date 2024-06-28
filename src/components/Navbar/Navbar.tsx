@@ -7,11 +7,14 @@ import { useTheme } from "../../context/ThemeContext";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { MdClose, MdFavoriteBorder, MdMenu } from "react-icons/md";
 import { ISubmenuItem } from "./types";
+import styles from './styles.module.scss'
 
 function SubmenuItem({ href, children, onClick }: ISubmenuItem) {
   return (
-    <li className="p-2 rounded-md w-full m-2" onClick={onClick}>
-      <Link href={href}>{children}</Link>
+    <li className={`p-2 rounded-md w-full m-1 `} onClick={onClick}>
+      <Link href={href}>
+      <span className={`${styles.link} cursor-pointer font-raleway text-base`}>{children}</span>
+      </Link>
     </li>
   );
 }
@@ -75,13 +78,12 @@ function Navbar() {
         </div>
         <div>
           <div
-            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 h-screen md:h-auto ${
-              navbar ? "block" : "hidden"
-            }`}
+            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 h-screen md:h-auto ${navbar ? "block" : "hidden"
+              }`}
           >
             <ul className="items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300 font-GilroyMedium">
               <li
-                className="md:block text-slate-900 group relative cursor-pointer"
+                className="md:block text-slate-900 group relative"
                 onMouseEnter={() => setIsCssGeneratorsOpen(true)}
                 onMouseLeave={() => setIsCssGeneratorsOpen(false)}
               >
@@ -131,8 +133,8 @@ function Navbar() {
                     </SubmenuItem>
                   </ul>
                 </span>
-                <Link href="">
-                  <div className="gap-2 justify-center items-center hidden md:flex ">
+                <Link href="/css-generators">
+                  <div className="gap-2 justify-center items-center hidden md:flex cursor-pointer" onClick={handleSubmenuClick}>
                     <h1 className="dark:text-white">CSS Generators</h1>
                     <svg
                       width="18"
@@ -177,8 +179,8 @@ function Navbar() {
                     </SubmenuItem>
                   </ul>
                 </span>
-                <Link href="">
-                  <div className="gap-2 justify-center items-center hidden md:flex">
+                <Link href="/css-tools">
+                  <div className="gap-2 justify-center items-center hidden md:flex" onClick={handleSubmenuClick}>
                     <h1 className="dark:text-white">CSS Tools</h1>
                     <svg
                       width="18"
@@ -277,7 +279,7 @@ function Navbar() {
                       d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
                     />
                   </svg>
-                  
+
                 </button>
               </li>
               <li className="hidden md:block">
