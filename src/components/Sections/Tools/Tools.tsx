@@ -13,11 +13,13 @@ const Tools = () => {
           CSS Generators
         </h1>
         <Link href='css-generators' >
-          <div className="flex justify-center items-center gap-2 cursor-pointer">
-            <span className="lg:leading-08 text-xl font-GilroyMedium  text-blue-600">
+          <div className="flex justify-center items-center gap-2 cursor-pointer ">
+            <span  className="lg:leading-08 text-base font-GilroyMedium  dark:text-white text-black border-b-2 border-blue-700">
               See All
             </span>
-            <MdArrowForward color="#2563eb" />
+            <div className=" dark:text-white text-black">
+              <MdArrowForward />
+            </div>
           </div>
         </Link>
       </div>
@@ -29,10 +31,12 @@ const Tools = () => {
         </h1>
         <Link href='/css-tools' >
           <div className="flex justify-center items-center gap-2 cursor-pointer">
-            <span className="lg:leading-08 text-xl font-GilroyMedium  text-blue-600">
+          <span  className="lg:leading-08 text-base font-GilroyMedium  dark:text-white text-black border-b-2 border-blue-700">
               See All
             </span>
-            <MdArrowForward color="#2563eb" />
+            <div className=" dark:text-white text-black">
+              <MdArrowForward />
+            </div>
           </div>
         </Link>
       </div>
