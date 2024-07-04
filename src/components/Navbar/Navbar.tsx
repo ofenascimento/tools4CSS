@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Drawer from "../Drawer/Drawer";
 import { useTheme } from "../../context/ThemeContext";
@@ -8,12 +8,13 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { MdClose, MdFavoriteBorder, MdMenu } from "react-icons/md";
 import { ISubmenuItem } from "./types";
 import styles from './styles.module.scss'
+import { useRouter } from "next/router";
 
 function SubmenuItem({ href, children, onClick }: ISubmenuItem) {
   return (
     <li className={`p-2 rounded-md w-full m-1 `} onClick={onClick}>
       <Link href={href}>
-      <span className={`${styles.link} cursor-pointer font-raleway text-base`}>{children}</span>
+        <span className={`${styles.link} cursor-pointer font-raleway text-base`}>{children}</span>
       </Link>
     </li>
   );
@@ -26,6 +27,11 @@ function Navbar() {
   const [isCssGeneratorsOpen, setIsCssGeneratorsOpen] = useState(false);
   const [isCssToolsOpen, setIsCssToolsOpen] = useState(false);
 
+  const router = useRouter();
+  const currentPath = router.asPath;
+
+  useEffect(() => {console.log(currentPath.split("/")[1])}, [])
+
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
@@ -37,7 +43,7 @@ function Navbar() {
 
   return (
     <nav className="w-full pt-2 z-50 top-0">
-      <div className="justify-between lg:w-4/6 px-4 mx-auto lg:max-w-7xl md:items-center md:flex lg:px-0">
+      <div className={`justify-between ${currentPath.split("/")[1] === 'tailwind-components' ? 'lg:w-5/6' : 'lg:w-4/6 lg:max-w-7xl'} px-4 mx-auto  md:items-center md:flex lg:px-0`}>
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link href="/" className="cursor-pointer">
