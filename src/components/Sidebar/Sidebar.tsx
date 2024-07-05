@@ -4,9 +4,9 @@ import { useRouter } from 'next/router';
 
 const componentsData = [
     { name: "Hero", count: 3 },
-    { name: "Navbar", count: 2 },
-    { name: "Footer", count: 1 },
-    { name: "Card", count: 1 },
+    // { name: "Navbar", count: 2 },
+    // { name: "Footer", count: 1 },
+    // { name: "Card", count: 1 },
 ];
 
 const Sidebar = () => {
