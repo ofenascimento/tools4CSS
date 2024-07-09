@@ -71,12 +71,15 @@ const NavbarTailwindComponentsPage = () => {
     };
 
     const handleCopy = async (index: number) => {
-        await navigator.clipboard.writeText(currentComponents[index].content);
-        setCopiedIndex(index);
-        setTimeout(() => {
-            setCopiedIndex(null);
-        }, 2000);
+        if (currentComponents) {
+            await navigator.clipboard.writeText(currentComponents[index].content);
+            setCopiedIndex(index);
+            setTimeout(() => {
+                setCopiedIndex(null);
+            }, 2000);
+        }
     };
+    
 
     const formatHtml = (content: string): string => {
         return beautify.html(content, { indent_size: 2 });
@@ -86,7 +89,7 @@ const NavbarTailwindComponentsPage = () => {
 
     return (
         <>
-            <SEO title="Navbar Tailwind Components" />
+            <SEO title={`${title} Tailwind Components`}  />
             <div className="w-full lg:w-5/6 mx-auto font-medium">
                 <div className="flex flex-row justify-between items-center mx-4 lg:mx-0 cap">
                     <Breadcrumb
@@ -99,8 +102,8 @@ const NavbarTailwindComponentsPage = () => {
                 </div>
                 <Title
                     customTitleClassname='capitalize'
-                    title="Navbar Tailwind Components"
-                    info="Explore a collection of Tailwind CSS Navbar components"
+                    title={`${title} Tailwind Components`} 
+                    info={`Explore a collection of Tailwind CSS ${title} components`}
                     customInfoClassname="lg:w-3/4"
                 />
                 <div className=' grid grid-cols-12 mt-6'>
