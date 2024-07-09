@@ -27,7 +27,7 @@ const NavbarTailwindComponentsPage = () => {
         card: CardTailwindComponents
     };
 
-    let currentComponents = null;
+    let currentComponents: { name: string; content: string }[] | null = null;
     if (typeof slug === 'string') {
         currentComponents = componentsMap[slug] || null;
     }
