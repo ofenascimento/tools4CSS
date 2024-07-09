@@ -1,22 +1,21 @@
-const Card = () => {
-    return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-2">
+const Card1 = `
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white m-2">
             <img
-                className="w-full"
+                class="w-full"
                 src="https://via.placeholder.com/300x200"
                 alt="Course thumbnail"
             />
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">Card Example</div>
-                <p className="text-gray-700 text-base">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Card Example</div>
+                <p class="text-gray-700 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis
                 </p>
             </div>
-            <div className="px-6 pt-4 pb-2">
-                <a href="#" className="text-blue-500 hover:text-blue-700 font-semibold inline-flex items-center">
+            <div class="px-6 pt-4 pb-2">
+                <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold inline-flex items-center">
                     Learn more
                     <svg
-                        className="w-4 h-4 ml-1"
+                        class="w-4 h-4 ml-1"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -27,7 +26,10 @@ const Card = () => {
                 </a>
             </div>
         </div>
-    );
-};
+`
 
-export default Card;
+const CardTailwindComponents = [
+    { name: 'Card 1', content: Card1 },
+  ];
+  
+  export default CardTailwindComponents;
