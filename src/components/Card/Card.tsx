@@ -39,18 +39,15 @@ const Card = (props: ICard) => {
   return (
     <>
       <Link href={`/${props.slug}`}>
-        <div className="w-full lg:w-[49%]">
+        <div className="w-full">
+
           <div
-            className={` ${styles.card} border border-slate-300 dark:border-slate-600 dark:hover:border-slate-500 rounded-md shadow-sm bg-white dark:bg-mainDark flex items-center justify-center m-2 lg:mb-2 lg:m-auto relative cursor-pointer`}
+            className={` ${styles.card} border border-slate-300 dark:border-slate-600 dark:hover:border-slate-500 rounded-md shadow-sm bg-white dark:bg-mainDark m-2 lg:mb-2 lg:m-auto relative cursor-pointer h-48 p-4`}
           >
-            <Image
-              className={`${styles.imageContainer} rounded-l-sm`}
-              src={`/cover/${props.img}`}
-              width={200}
-              height={200}
-              alt=""
-            />
-            <div className=" w-full h-full flex flex-col items-start justify-center">
+            <Image src={props.img ?? ''} width={50} height={50} />
+
+            <div className=" w-full flex flex-col items-start justify-center">
+
               <h2
                 className={`${styles.title} text-lg pr-4 font-raleway font-bold ml-2 dark:text-white`}
               >
