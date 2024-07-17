@@ -11,6 +11,7 @@ import Info from "../../components/Info/Info";
 import styles from "./styles.module.scss";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { buttonsGenerator } from "@/constants/buttonsGenerator";
+import { css as beautifyCSS } from 'js-beautify';
 
 export interface IButtonGenerator {
   id: string;
@@ -24,10 +25,12 @@ const ButtonsGenerator: React.FC = () => {
   const [fullScreen, setFullScreen] = useState<boolean>(false);
   const [selectedButton, setSelectedButton] = useState<IButtonGenerator | null>(null);
 
-  const handleButtonClick = (button: any) => {
-    setSelectedButton(button);
+  const handleButtonClick = (button: IButtonGenerator) => {
+    const beautifiedCSS = beautifyCSS(button.css ?? '', { indent_size: 2 });
+    setSelectedButton({ ...button, css: beautifiedCSS });
     setFullScreen(true);
   };
+
 
   const handleCloseModal = () => {
     setFullScreen(false);
@@ -82,9 +85,8 @@ const ButtonsGenerator: React.FC = () => {
       </div>
       {selectedButton && (
         <div
-          className={`fixed inset-0 z-50 flex items-center justify-center ${
-            fullScreen ? "block" : "hidden"
-          }`}
+          className={`fixed inset-0 z-50 flex items-center justify-center ${fullScreen ? "block" : "hidden"
+            }`}
         >
           <div
             className="fixed inset-0 bg-black opacity-50"
