@@ -14,7 +14,7 @@ import { buttonsGenerator } from "@/constants/buttonsGenerator";
 import { css as beautifyCSS } from 'js-beautify';
 
 export interface IButtonGenerator {
-  id: string;
+  id: number;
   className: string;
   text: string;
   css?: string;
