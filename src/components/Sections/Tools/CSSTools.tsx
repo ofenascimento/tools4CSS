@@ -3,7 +3,7 @@ import React from 'react'
 
 function CSSTools() {
     return (
-        <div className="gap-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <Card
                 title="Gradient Pallete"
                 slug="gradient-pallete"
