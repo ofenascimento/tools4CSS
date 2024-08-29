@@ -1,0 +1,48 @@
+.loading {
+    width: 45.5px; /* 30% menor que 65px */
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.loading:before,
+.loading:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 2.1px inset #fff; /* Reduzido de 3px para 2.1px */
+    animation: l4 2.5s infinite;
+}
+
+.loading:after {
+    animation-delay: -1.25s;
+}
+
+@keyframes l4 {
+    0% {
+        inset: 0 24.5px 24.5px 0;
+    }
+    12.5% {
+        inset: 0 24.5px 0 0;
+    }
+    25% {
+        inset: 24.5px 24.5px 0 0;
+    }
+    37.5% {
+        inset: 24.5px 0 0 0;
+    }
+    50% {
+        inset: 24.5px 0 0 24.5px;
+    }
+    62.5% {
+        inset: 0 0 0 24.5px;
+    }
+    75% {
+        inset: 0 0 24.5px 24.5px;
+    }
+    87.5% {
+        inset: 0 0 24.5px 0;
+    }
+    100% {
+        inset: 0 24.5px 24.5px 0;
+    }
+}
