@@ -133,14 +133,6 @@ const NavbarTailwindComponentsPage = () => {
     ? slug[0]
     : `${slug?.charAt(0).toUpperCase()}${slug?.slice(1)}`;
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <p>Loading...</p>
-      </div>
-    );
-  }
-
   return (
     <>
       <SEO title={`${title} Tailwind Components`} />
@@ -203,14 +195,14 @@ const NavbarTailwindComponentsPage = () => {
                           onClick={() => toggleView(index, "preview")}
                         >
                           <HiOutlineEye size={18} />
-                          <span className="hidden md:block">Preview</span>
+                          <span className="hidden md:block font-lexend font-normal">Preview</span>
                         </button>
                         <button
                           className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-slate-300 text-black dark:text-white"}`}
                           onClick={() => toggleView(index, "code")}
                         >
                           <HiOutlineCodeBracket size={18} />
-                          <span className="hidden md:block">Code</span>
+                          <span className="hidden md:block font-lexend font-light">Code</span>
                         </button>
                       </div>
                       <button

@@ -53,7 +53,7 @@ const Sidebar: React.FC = () => {
                     return (
                         <Link href={linkPath} key={index}>
                             <div className={`flex justify-between items-center cursor-pointer px-2 py-1 rounded-lg ${currentPath === linkPath ? 'dark:bg-dark-100 bg-white border dark:border-gray-600 border-gray-300' : ''}`}>
-                                <h3 className='font-raleway text-base dark:text-white text-black'>{component.name}</h3>
+                                <h3 className='font-lexend font-normal text-base dark:text-white text-black'>{component.name}</h3>
                                 <span className='dark:bg-gray-600 bg-slate-200 border dark:border-slate-600 border-slate-300 px-2 py-1 rounded-full text-xs text-black dark:text-white'>{component.count}</span>
                             </div>
                         </Link>
