@@ -30,21 +30,28 @@ const ScrollbarGenerator = () => {
     <>
       <style>
         {`
+  /* Estilos para navegadores WebKit (Chrome, Safari) */
   *::-webkit-scrollbar {
     width: ${scrollbarStyle.width}px;
   }
-  
+
   *::-webkit-scrollbar-track {
     background: ${scrollbarStyle.trackColor};
     border-radius: ${scrollbarStyle.borderRadius}px;
   }
-  
+
   *::-webkit-scrollbar-thumb {
     background: ${scrollbarStyle.thumbColor};
     border-radius: ${scrollbarStyle.borderRadius}px;
-    border:${scrollbarStyle.borderWidth}px solid ${scrollbarStyle.borderColor};
+    border: ${scrollbarStyle.borderWidth}px solid ${scrollbarStyle.borderColor};
   }
-                `}
+
+  /* Estilos para Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: ${scrollbarStyle.thumbColor} ${scrollbarStyle.trackColor};
+  }
+        `}
       </style>
       <SEO title="Scrollbar Generator" />
       <div className="w-full lg:w-4/6 mx-auto">
@@ -64,6 +71,38 @@ const ScrollbarGenerator = () => {
           title="Scrollbar CSS Generator"
           info="Customize and generate stylish scrollbars with our Scrollbar CSS Generator"
         />
+
+        {/* Scrollbar Preview */}
+        <div className="w-full rounded-lg p-4 mt-4">
+          <div
+            className="custom-scrollbar overflow-y-scroll"
+            style={{
+              height: "150px",
+              maxHeight: "150px",
+              overflow: "auto",
+              background: scrollbarStyle.trackColor,
+              padding: "10px",
+            }}
+          >
+            <p className="text-white">
+              This is a preview of your custom scrollbar. Try scrolling inside
+              this box to see how the scrollbar looks with the current settings.
+              You can customize the thumb color, track color, width, border
+              radius, and more. Adjust the settings below to see the scrollbar
+              change in real-time.
+            </p>
+            <p className="text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+
         <ControlsContainer>
           <div className="flex items-center justify-center gap-2">
             <span>Thumb Color:</span>
@@ -167,6 +206,12 @@ const ScrollbarGenerator = () => {
     border-radius: ${scrollbarStyle.borderRadius}px;
     border:${scrollbarStyle.borderWidth}px solid ${scrollbarStyle.borderColor};
   }
+
+/* Estilos para Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: ${scrollbarStyle.thumbColor} ${scrollbarStyle.trackColor};
+  }
                 `}
           </SyntaxHighlighter>
         </div>
@@ -186,6 +231,12 @@ const ScrollbarGenerator = () => {
     background: ${scrollbarStyle.thumbColor};
     border-radius: ${scrollbarStyle.borderRadius}px;
     border:${scrollbarStyle.borderWidth}px solid ${scrollbarStyle.borderColor};
+  }
+
+/* Estilos para Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: ${scrollbarStyle.thumbColor} ${scrollbarStyle.trackColor};
   }
                 `}
           />
