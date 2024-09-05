@@ -1,5 +1,5 @@
 .loading {
-    width: 45.5px; /* 30% menor que 65px */
+    width: 45.5px; 
     aspect-ratio: 1;
     position: relative;
 }
@@ -9,7 +9,7 @@
     content: "";
     position: absolute;
     border-radius: 50px;
-    box-shadow: 0 0 0 2.1px inset #fff; /* Reduzido de 3px para 2.1px */
+    box-shadow: 0 0 0 2.1px inset #fff; 
     animation: l4 2.5s infinite;
 }
 
@@ -46,3 +46,24 @@
         inset: 0 24.5px 24.5px 0;
     }
 }
+
+.loadingDark {
+    width: 45.5px; 
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.loadingDark:before,
+.loadingDark:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 2.1px inset #000; 
+    animation: l4 2.5s infinite;
+}
+
+.loadingDark:after {
+    animation-delay: -1.25s;
+}
+
+
