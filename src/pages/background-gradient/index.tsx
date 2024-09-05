@@ -112,7 +112,7 @@ const BackgroundGradient = () => {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-4 lg:flex justify-center items-center p-2 px-6 border  border-slate-300 dark:bg-mainDark dark:text-white dark:border-slate-600 rounded-md">
+          <div className="lg:col-span-4 lg:flex justify-center items-center p-2 px-6 border bg-white  border-slate-300 dark:bg-mainDark dark:text-white dark:border-slate-600 rounded-md">
             <div id="controls">
               <div className="items-center p-2 rounded-lg">
                 <HexColorPicker
