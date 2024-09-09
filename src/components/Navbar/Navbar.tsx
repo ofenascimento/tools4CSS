@@ -94,7 +94,7 @@ function Navbar() {
                 onMouseLeave={() => setIsCssGeneratorsOpen(false)}
               >
                 <span className={`${isCssGeneratorsOpen ? "block" : "hidden"}`}>
-                  <ul className="mt-7 absolute bg-slate-100 dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
                     <SubmenuItem
                       href="/background-gradient"
                       onClick={handleSubmenuClick}
@@ -170,7 +170,7 @@ function Navbar() {
                 onMouseLeave={() => setIsCssToolsOpen(false)}
               >
                 <span className={`${isCssToolsOpen ? "block" : "hidden"}`}>
-                  <ul className="mt-7 absolute bg-slate-100 dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
                     <SubmenuItem
                       href="/gradient-pallete"
                       onClick={handleSubmenuClick}
