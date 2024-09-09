@@ -63,80 +63,60 @@ const Navbar1 = `
         </div>
       </div>
     </nav>
-`
+`;
 
 const Navbar2 = ` 
-        <nav class="bg-gray-800 p-4">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="text-white text-2xl font-bold">
-                    <svg
-                        class="h-8 w-8"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                    >       
-                        <path
-                            d="M13 2L3 14h9l-1 8 10-12h-9z"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
-                </div>
-                <div class="flex-grow hidden md:flex justify-center space-x-4">
-                    <Link href="/">
-                        <a class="text-gray-300 hover:text-white">Home</a>
-                    </Link>
-                    <Link href="/about">
-                        <a class="text-gray-300 hover:text-white">About</a>
-                    </Link>
-                    <Link href="/services">
-                        <a class="text-gray-300 hover:text-white">Services</a>
-                    </Link>
-                    <Link href="/contact">
-                        <a class="text-gray-300 hover:text-white">Contact</a>
-                    </Link>
-                </div>
-                <div class="hidden md:block">
-                    <Link href="/login">
-                        <a class="text-gray-300 hover:text-white bg-blue-600 px-4 py-2 rounded">Login</a>
-                    </Link>
-                </div>
-                <div class="md:hidden">
-                    <input type="checkbox" id="menu-toggle" class="hidden" />
-                    <label htmlFor="menu-toggle" class="text-gray-300 hover:text-white cursor-pointer">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </label>
-                    <div id="menu" class="hidden">
-                        <div class="flex flex-col space-y-4 mt-2">
-                            <Link href="/">
-                                <a class="text-gray-300 hover:text-white">Home</a>
-                            </Link>
-                            <Link href="/about">
-                                <a class="text-gray-300 hover:text-white">About</a>
-                            </Link>
-                            <Link href="/services">
-                                <a class="text-gray-300 hover:text-white">Services</a>
-                            </Link>
-                            <Link href="/contact">
-                                <a class="text-gray-300 hover:text-white">Contact</a>
-                            </Link>
-                            <Link href="/login">
-                                <a class="text-gray-300 hover:text-white bg-blue-600 px-4 py-2 rounded">Login</a>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>`
-
+       <nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-white text-2xl font-bold">
+      <svg
+        class="h-8 w-8"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M13 2L3 14h9l-1 8 10-12h-9z"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <div class="flex-grow hidden md:flex justify-center space-x-4">
+      <a href="/" class="text-gray-300 hover:text-white">Home</a>
+      <a href="/about" class="text-gray-300 hover:text-white">About</a>
+      <a href="/services" class="text-gray-300 hover:text-white">Services</a>
+      <a href="/contact" class="text-gray-300 hover:text-white">Contact</a>
+    </div>
+    <div class="hidden md:block">
+      <a href="/login" class="text-gray-300 hover:text-white bg-blue-600 px-4 py-2 rounded">Login</a>
+    </div>
+    <div class="md:hidden">
+      <input type="checkbox" id="menu-toggle" class="hidden" />
+      <label for="menu-toggle" class="text-gray-300 hover:text-white cursor-pointer">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </label>
+      <div id="menu" class="hidden">
+        <div class="flex flex-col space-y-4 mt-2">
+          <a href="/" class="text-gray-300 hover:text-white">Home</a>
+          <a href="/about" class="text-gray-300 hover:text-white">About</a>
+          <a href="/services" class="text-gray-300 hover:text-white">Services</a>
+          <a href="/contact" class="text-gray-300 hover:text-white">Contact</a>
+          <a href="/login" class="text-gray-300 hover:text-white bg-blue-600 px-4 py-2 rounded">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
 
 const NavbarTailwindComponents = [
-    { name: 'Navbar1', content: Navbar1 },
-    { name: 'Navbar2', content: Navbar2 }
-]
+  { name: "Navbar1", content: Navbar1 },
+  { name: "Navbar2", content: Navbar2 },
+];
 
 export default NavbarTailwindComponents;

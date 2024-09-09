@@ -26,10 +26,8 @@ const Card1 = `
                 </a>
             </div>
         </div>
-`
+`;
 
-const CardTailwindComponents = [
-    { name: 'Card 1', content: Card1 },
-  ];
-  
-  export default CardTailwindComponents;
+const CardTailwindComponents = [{ name: "Card 1", content: Card1 }];
+
+export default CardTailwindComponents;

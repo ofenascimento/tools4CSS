@@ -1,5 +1,5 @@
 .loading {
-    width: 45.5px; 
+    width: 30px; /* Diminuído de 45.5px */
     aspect-ratio: 1;
     position: relative;
 }
@@ -9,7 +9,7 @@
     content: "";
     position: absolute;
     border-radius: 50px;
-    box-shadow: 0 0 0 2.1px inset #fff; 
+    box-shadow: 0 0 0 1.5px inset #fff; /* Ajuste no tamanho da sombra */
     animation: l4 2.5s infinite;
 }
 
@@ -19,36 +19,36 @@
 
 @keyframes l4 {
     0% {
-        inset: 0 24.5px 24.5px 0;
+        inset: 0 16px 16px 0; /* Ajustado proporcionalmente ao novo tamanho */
     }
     12.5% {
-        inset: 0 24.5px 0 0;
+        inset: 0 16px 0 0;
     }
     25% {
-        inset: 24.5px 24.5px 0 0;
+        inset: 16px 16px 0 0;
     }
     37.5% {
-        inset: 24.5px 0 0 0;
+        inset: 16px 0 0 0;
     }
     50% {
-        inset: 24.5px 0 0 24.5px;
+        inset: 16px 0 0 16px;
     }
     62.5% {
-        inset: 0 0 0 24.5px;
+        inset: 0 0 0 16px;
     }
     75% {
-        inset: 0 0 24.5px 24.5px;
+        inset: 0 0 16px 16px;
     }
     87.5% {
-        inset: 0 0 24.5px 0;
+        inset: 0 0 16px 0;
     }
     100% {
-        inset: 0 24.5px 24.5px 0;
+        inset: 0 16px 16px 0;
     }
 }
 
 .loadingDark {
-    width: 45.5px; 
+    width: 30px; /* Diminuído de 45.5px */
     aspect-ratio: 1;
     position: relative;
 }
@@ -58,12 +58,10 @@
     content: "";
     position: absolute;
     border-radius: 50px;
-    box-shadow: 0 0 0 2.1px inset #000; 
+    box-shadow: 0 0 0 1.5px inset #000; /* Ajuste no tamanho da sombra */
     animation: l4 2.5s infinite;
 }
 
 .loadingDark:after {
     animation-delay: -1.25s;
 }
-
-

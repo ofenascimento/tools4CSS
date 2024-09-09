@@ -43,7 +43,7 @@ function Navbar() {
 
   return (
     <nav className="w-full pt-2 z-50 top-0">
-      <div className={`justify-between ${currentPath.split("/")[1] === 'tailwind-components' ? 'lg:w-5/6' : 'lg:w-4/6 lg:max-w-7xl'} px-4 mx-auto  md:items-center md:flex lg:px-0`}>
+      <div className={`justify-between ${currentPath.split("/")[1] === 'tailwind-components' ? 'lg:w-[90%]' : 'lg:w-4/6 lg:max-w-7xl'} px-4 mx-auto  md:items-center md:flex lg:px-0`}>
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link href="/" className="cursor-pointer">

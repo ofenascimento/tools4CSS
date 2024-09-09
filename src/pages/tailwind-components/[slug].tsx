@@ -24,6 +24,7 @@ import { useRouter } from "next/router";
 import CookiesTailwindComponents from "@/constants/tailwind-components/cookies";
 import CardTailwindComponents from "@/constants/tailwind-components/card";
 import Loading from "@/components/Loading/Loading";
+import TestimonialsTailwindComponents from "@/constants/tailwind-components/testimonials";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
@@ -35,6 +36,7 @@ const NavbarTailwindComponentsPage = () => {
       hero: HeroTailwindComponents,
       cookies: CookiesTailwindComponents,
       card: CardTailwindComponents,
+      testimonials: TestimonialsTailwindComponents
     };
 
   let currentComponents: { name: string; content: string }[] | null = null;
@@ -136,7 +138,7 @@ const NavbarTailwindComponentsPage = () => {
   return (
     <>
       <SEO title={`${title} Tailwind Components`} />
-      <div className="w-full lg:w-5/6 mx-auto font-medium">
+      <div className="w-full lg:w-[90%] mx-auto font-medium">
         <div className="flex flex-row justify-between items-center mx-4 lg:mx-0 cap">
           <Breadcrumb
             links={[
