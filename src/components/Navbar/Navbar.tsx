@@ -26,11 +26,12 @@ function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const [isCssGeneratorsOpen, setIsCssGeneratorsOpen] = useState(false);
   const [isCssToolsOpen, setIsCssToolsOpen] = useState(false);
+  const [isCssComponentsOpen, setIsCssComponentsOpen] = useState(false);
 
   const router = useRouter();
   const currentPath = router.asPath;
 
-  useEffect(() => {console.log(currentPath.split("/")[1])}, [])
+  useEffect(() => { console.log(currentPath.split("/")[1]) }, [])
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -211,6 +212,52 @@ function Navbar() {
                 </Link>
               </li>
               <li
+                className="md:block text-slate-900 group relative cursor-pointer"
+                onMouseEnter={() => setIsCssComponentsOpen(true)}
+                onMouseLeave={() => setIsCssComponentsOpen(false)}
+              >
+                <span className={`${isCssComponentsOpen ? "block" : "hidden"}`}>
+                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                    <SubmenuItem
+                      href="/tailwind-components/hero"
+                      onClick={handleSubmenuClick}
+                    >
+                      Tailwind Components
+                    </SubmenuItem>
+                    <SubmenuItem
+                      href="/css-generators"
+                      onClick={handleSubmenuClick}
+                    >
+                      CSS Buttons
+                    </SubmenuItem>
+                  </ul>
+                </span>
+                <Link href="/css-tools">
+                  <div className="gap-2 justify-center items-center hidden md:flex" onClick={handleSubmenuClick}>
+                    <h1 className="dark:text-white">CSS Components</h1>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 320 512"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clipPath="url(#clip0_127_13614)">
+                        <path
+                          d="M137.4 374.6C149.9 387.1 170.2 387.1 182.7 374.6L310.7 246.6C319.9 237.4 322.6 223.7 317.6 211.7C312.6 199.7 301 191.9 288 191.9L32 192C19.1 192 7.40001 199.8 2.40001 211.8C-2.59999 223.8 0.200006 237.5 9.30001 246.7L137.3 374.7L137.4 374.6Z"
+                          fill="#c7cbd8"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_127_13614">
+                          <rect width="320" height="512" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </Link>
+              </li>
+              <li
                 className="text-slate-900 dark:text-white block md:hidden"
                 onClick={() => setNavbar(false)}
               >
@@ -264,38 +311,39 @@ function Navbar() {
               >
                 <Link href="/scrollbar-generator">Scrollbar Generator</Link>
               </li>
-              <li className="hidden md:block">
-                <button
-                  onClick={toggleDrawer}
-                  className="px-6 py-1 rounded-full text-white flex flex-row justify-center items-center gap-2"
-                  style={{ backgroundColor: "#FF407D" }}
-                >
-                  Favorites
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-6 h-6"
+              <div className=" flex justify-center items-center gap-3">
+                <li className="hidden md:block">
+                  <button
+                    onClick={toggleDrawer}
+                    className="p-2 rounded-full text-white flex flex-row justify-center items-center gap-2"
+                    style={{ backgroundColor: "#FF407D" }}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                    />
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      />
+                    </svg>
 
-                </button>
-              </li>
-              <li className="hidden md:block">
-                <button
-                  onClick={toggleTheme}
-                  className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full border border-slate-300 dark:border-slate-600"
-                >
-                  {theme === "dark" ? <FaSun color="#A0AFBF" /> : <FaMoon />}
-                </button>
-              </li>
+                  </button>
+                </li>
+                <li className="hidden md:block">
+                  <button
+                    onClick={toggleTheme}
+                    className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full border border-slate-300 dark:border-slate-600"
+                  >
+                    {theme === "dark" ? <FaSun color="#A0AFBF" /> : <FaMoon />}
+                  </button>
+                </li>
+              </div>
             </ul>
           </div>
         </div>
