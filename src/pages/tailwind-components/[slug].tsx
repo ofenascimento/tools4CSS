@@ -12,6 +12,7 @@ import {
   HiOutlineCodeBracket,
   HiOutlineCheck,
   HiOutlineClipboard,
+  HiOutlineClipboardDocumentCheck,
 } from "react-icons/hi2";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import FavoriteButton from "@/components/FavoriteButton/FavoriteButton";
@@ -191,16 +192,16 @@ const NavbarTailwindComponentsPage = () => {
                       </button>
                     </div>
                     <div className="text-white flex">
-                      <div className="flex dark:bg-gray-600 bg-slate-300 p-1 rounded-lg font-raleway">
+                      <div className="flex dark:bg-gray-600 bg-custom-gray-secondary p-1 rounded-lg font-raleway">
                         <button
-                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "preview" ? "bg-blue-600" : "dark:bg-gray-600 bg-slate-300 text-gray-700 dark:text-white"}`}
+                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "preview" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
                           onClick={() => toggleView(index, "preview")}
                         >
                           <HiOutlineEye size={18} />
                           <span className="hidden md:block font-lexend font-medium">Preview</span>
                         </button>
                         <button
-                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-slate-300 text-gray-700 dark:text-white"}`}
+                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
                           onClick={() => toggleView(index, "code")}
                         >
                           <HiOutlineCodeBracket size={18} />
@@ -208,18 +209,18 @@ const NavbarTailwindComponentsPage = () => {
                         </button>
                       </div>
                       <button
-                        className="ml-6 flex gap-2 justify-center items-center"
+                        className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4"
                         onClick={() => handleCopy(index)}
                       >
                         {copiedIndex === index ? (
-                          <HiOutlineCheck
-                            className="text-green-400"
-                            size={20}
+                          <HiOutlineClipboardDocumentCheck
+                            className="text-main"
+                            size={18}
                           />
                         ) : (
                           <HiOutlineClipboard
                             className="text-black dark:text-white"
-                            size={20}
+                            size={18}
                           />
                         )}
                       </button>

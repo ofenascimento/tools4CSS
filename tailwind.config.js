@@ -49,6 +49,7 @@ module.exports = {
         },
         'custom-gray': {
           main: '#F4F5F8',
+          secondary: '#dce3ea'
         },
       },
       whiteSpace: {
