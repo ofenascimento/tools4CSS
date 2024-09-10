@@ -158,16 +158,16 @@ const NavbarTailwindComponentsPage = () => {
           info={`Explore a collection of Tailwind CSS ${title} components`}
           customInfoClassname="lg:w-3/4"
         />
-        <div className=" grid grid-cols-12 mt-6">
-          <div className=" col-span-2 pr-2 hidden lg:block">
+        <div className=" grid grid-cols-14 mt-6">
+          <div className=" col-span-3 pr-2 hidden lg:block">
             <Sidebar />
           </div>
-          <div className=" col-span-12 px-4 lg:col-span-10  lg:px-0">
-            <div className="dark:bg-dark-100 bg-white border rounded-lg dark:border-gray-600 border-slate-300 p-6">
+          <div className=" col-span-12 px-4 lg:col-span-11  lg:px-0">
+            <div className="  p-6">
               {currentComponents.map((item, index) => (
-                <div key={index} className="mb-16 w-full">
+                <div key={index} className="mb-10 w-full dark:bg-dark-100 bg-custom-gray-main  dark:border rounded-lg dark:border-gray-600 p-6" >
                   <div className="flex justify-between items-center mb-4">
-                    <h1 className="dark:text-white text-black font-GilroyMedium text-base">
+                    <h1 className="dark:text-white text-gray-600 font-GilroyMedium font-semibold text-base">
                       {item.name}
                     </h1>
                     <div className="text-gray-400 gap-4 hidden lg:flex">
@@ -193,18 +193,18 @@ const NavbarTailwindComponentsPage = () => {
                     <div className="text-white flex">
                       <div className="flex dark:bg-gray-600 bg-slate-300 p-1 rounded-lg font-raleway">
                         <button
-                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "preview" ? "bg-blue-600" : "dark:bg-gray-600 bg-slate-300 text-black dark:text-white"}`}
+                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "preview" ? "bg-blue-600" : "dark:bg-gray-600 bg-slate-300 text-gray-700 dark:text-white"}`}
                           onClick={() => toggleView(index, "preview")}
                         >
                           <HiOutlineEye size={18} />
-                          <span className="hidden md:block font-lexend font-normal">Preview</span>
+                          <span className="hidden md:block font-lexend font-medium">Preview</span>
                         </button>
                         <button
-                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-slate-300 text-black dark:text-white"}`}
+                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-slate-300 text-gray-700 dark:text-white"}`}
                           onClick={() => toggleView(index, "code")}
                         >
                           <HiOutlineCodeBracket size={18} />
-                          <span className="hidden md:block font-lexend font-light">Code</span>
+                          <span className="hidden md:block font-lexend font-medium">Code</span>
                         </button>
                       </div>
                       <button

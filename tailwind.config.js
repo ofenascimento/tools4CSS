@@ -47,6 +47,9 @@ module.exports = {
         dark: {
           100: "#1F2937",
         },
+        'custom-gray': {
+          main: '#F4F5F8',
+        },
       },
       whiteSpace: {
         nowrap: "nowrap",
@@ -60,6 +63,10 @@ module.exports = {
         "black-glass": "rgba(2, 2, 2, 0.15);",
         "white-glass-mobile": "rgba(255, 255, 255, 0.85);",
         "black-glass-mobile": "rgba(2, 2, 2, 0.65);",
+        
+      },
+      gridTemplateColumns: {
+        '14': 'repeat(14, minmax(0, 1fr))',
       },
     },
   },

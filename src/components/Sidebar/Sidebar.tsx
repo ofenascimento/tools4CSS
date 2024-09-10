@@ -18,14 +18,14 @@ const componentsData: ComponentsData = {
         { name: "Card", count: 1 },
         { name: "Footer", count: 1 },
         { name: "Cookies", count: 1 },
-        // { name: "Blog", count: 3 },
+        { name: "Testimonials", count: 1 },
         // { name: "Snackbar", count: 4 },
         // { name: "Slider", count: 2 },
         // { name: "Carousel", count: 2 },
     ],
     Navigation: [
         { name: "Navbar", count: 2 },
-        { name: "Sidebar", count: 2 },
+        // { name: "Sidebar", count: 2 },
     ],
     Forms: [
         { name: "Form Elements", count: 2 },
@@ -45,16 +45,16 @@ const Sidebar: React.FC = () => {
                     {category === "Navigation" && <MdNearMe color='#fff' size={20} />}
                     {category === "Forms" && <MdDescription color='#fff' size={20} />}
                 </div>
-                <h1 className='font-raleway text-lg dark:text-white text-black'>{category}</h1>
+                <h1 className='text-lg dark:text-white font-lexend font-medium text-gray-700'>{category}</h1>
             </div>
             <div className='text-lg text-white mt-6 gap-1 flex flex-col'>
                 {components.map((component, index) => {
                     const linkPath = `/tailwind-components/${component.name.toLowerCase()}`;
                     return (
                         <Link href={linkPath} key={index}>
-                            <div className={`flex justify-between items-center cursor-pointer px-2 py-1 rounded-lg ${currentPath === linkPath ? 'dark:bg-dark-100 bg-white border dark:border-gray-600 border-gray-300' : ''}`}>
-                                <h3 className='font-lexend font-normal text-base dark:text-white text-black'>{component.name}</h3>
-                                <span className='dark:bg-gray-600 bg-slate-200 border dark:border-slate-600 border-slate-300 px-2 py-1 rounded-full text-xs text-black dark:text-white'>{component.count}</span>
+                            <div className={`flex justify-between items-center cursor-pointer px-3 py-2 rounded-2xl ${currentPath === linkPath ? 'dark:bg-dark-100  bg-custom-gray-main dark:border dark:border-gray-600 border-gray-300' : ''}`}>
+                                <h3 className='font-lexend font-normal text-base dark:text-white text-gray-700'>{component.name}</h3>
+                                <span className='dark:bg-gray-600 bg-slate-200 dark:border dark:border-slate-600 border-slate-300 px-2 py-1 w-6 h-6 rounded-full text-xs text-black dark:text-white'>{component.count}</span>
                             </div>
                         </Link>
                     );
