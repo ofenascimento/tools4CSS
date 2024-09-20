@@ -37,7 +37,7 @@ const NavbarTailwindComponentsPage = () => {
       hero: HeroTailwindComponents,
       cookies: CookiesTailwindComponents,
       card: CardTailwindComponents,
-      testimonials: TestimonialsTailwindComponents
+      testimonials: TestimonialsTailwindComponents,
     };
 
   let currentComponents: { name: string; content: string }[] | null = null;
@@ -155,18 +155,41 @@ const NavbarTailwindComponentsPage = () => {
         </div>
         <Title
           customTitleClassname="capitalize"
-          title={`${title} Tailwind Components`}
+          title={
+            <>
+              <h1
+                className="lg:leading-08 text-5xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white"
+                id="generators"
+              >
+                <span
+                  style={{
+                    textDecorationColor: "#1a4fd8",
+                    textDecorationThickness: "5px",
+                    textDecorationLine: "underline",
+                  }}
+                >
+                  {title}
+                </span>
+                {" "}
+                Tailwind Components
+              </h1>
+            </>
+          }
+          // title={`${title} Tailwind Components`}
           info={`Explore a collection of Tailwind CSS ${title} components`}
           customInfoClassname="lg:w-3/4"
         />
-        <div className=" grid grid-cols-14 mt-6">
-          <div className=" col-span-3 pr-2 hidden lg:block">
+        <div className=" lg:grid grid-cols-14 mt-6">
+          <div className=" col-span-14 lg:col-span-3 pr-2 hidden lg:block">
             <Sidebar />
           </div>
-          <div className=" col-span-12 px-4 lg:col-span-11  lg:px-0">
+          <div className="col-span-14 lg:col-span-11 lg:px-0">
             <div className="  p-6">
               {currentComponents.map((item, index) => (
-                <div key={index} className="mb-10 w-full dark:bg-dark-100 bg-custom-gray-main  dark:border rounded-lg dark:border-gray-600 p-6" >
+                <div
+                  key={index}
+                  className="mb-10 w-full dark:bg-dark-100 bg-custom-gray-main  dark:border rounded-lg dark:border-gray-600 p-6"
+                >
                   <div className="flex justify-between items-center mb-4">
                     <h1 className="dark:text-white text-gray-600 font-GilroyMedium font-semibold text-base">
                       {item.name}
@@ -198,14 +221,18 @@ const NavbarTailwindComponentsPage = () => {
                           onClick={() => toggleView(index, "preview")}
                         >
                           <HiOutlineEye size={18} />
-                          <span className="hidden md:block font-lexend font-medium">Preview</span>
+                          <span className="hidden md:block font-lexend font-medium">
+                            Preview
+                          </span>
                         </button>
                         <button
                           className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
                           onClick={() => toggleView(index, "code")}
                         >
                           <HiOutlineCodeBracket size={18} />
-                          <span className="hidden md:block font-lexend font-medium">Code</span>
+                          <span className="hidden md:block font-lexend font-medium">
+                            Code
+                          </span>
                         </button>
                       </div>
                       <button
@@ -214,7 +241,7 @@ const NavbarTailwindComponentsPage = () => {
                       >
                         {copiedIndex === index ? (
                           <HiOutlineClipboardDocumentCheck
-                            className="text-main"
+                            className="text-green-600 dark:text-green-400"
                             size={18}
                           />
                         ) : (

@@ -9,12 +9,12 @@ export default function Title({
 }: iTitle): React.ReactElement {
   return (
     <div className=" flex flex-col justify-center items-center mx-4 lg:mx-0 mt-3 lg:mt-0">
-      <h1
+      {typeof title === 'string' ? <h1
         className={`${customTitleClassname} lg:leading-08 text-5xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white `}
         id="generators"
       >
         {title}
-      </h1>
+      </h1> : title}
       <h3
         className={`${customInfoClassname} text-slate-900 text-center text-md md:text-lg mt-2 font-manrope dark:text-white lg:leading-6 w-full lg:w-1/2`}
       >

@@ -1,4 +1,29 @@
-const Hero1 = ` <div class="bg-gray-900 text-white py-16">
+const Hero1 = `
+<div
+  class="flex flex-col md:flex-row justify-between items-center p-8 bg-gray-100 h-full"
+>
+  <div class="w-full md:w-1/2 text-center md:text-left">
+    <h1 class="text-5xl font-black font-redhat">
+      Transform your business with <span class="text-orange-600">AI in minutes</span>
+    </h1>
+    <p class="text-lg mt-4">
+      Leverage the power of AI to automate, optimize, and scale your operations. Our platform makes AI accessible and easy to implement, so you can innovate faster and stay ahead of the competition.
+    </p>
+    <button class="mt-6 px-8 py-2 bg-orange-600 text-white rounded-3xl">
+      Start your AI journey
+    </button>
+  </div>
+  <div class="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
+    <img
+      src="/mocks/iphone.png"
+      alt="Mock Iphone"
+      class="w-64 h-auto md:w-96 md:h-96 object-contain"
+    />
+  </div>
+</div>
+`
+
+const Hero2 = ` <div class="bg-gray-900 text-white py-16">
       <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2">
           <h1 class="text-4xl font-extrabold mb-4">100% Free Components</h1>
@@ -45,8 +70,8 @@ const Hero1 = ` <div class="bg-gray-900 text-white py-16">
     </div>`
 
 
-const Hero2 =
-    ` <div class="bg-white text-center py-16 font-raleway">
+const Hero3 =
+  ` <div class="bg-white text-center py-16 font-raleway">
             <div class="container mx-auto px-4">
                 <h1 class=" text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Enjoy our <span class="text-red-500">COMPONENTS</span></h1>
                 <p class="text-lg text-gray-700 mb-6">Enhance your design skills with our expert-led workshops, suitable for all skill levels.</p>
@@ -69,7 +94,7 @@ const Hero2 =
             </div>
         </div>`
 
-const Hero3 = `
+const Hero4 = `
         <div class="bg-green-50 text-center py-16 font-raleway">
             <div class="container mx-auto px-4">
                 <div class="text-sm text-green-800 mb-4 hidden lg:flex justify-center items-center gap-2">
@@ -97,10 +122,13 @@ const Hero3 = `
         </div>
 `
 
+
+
 const HeroTailwindComponents = [
-    { name: 'Hero 1', content: Hero1 },
-    { name: 'Hero 2', content: Hero2 },
-    { name: 'Hero 3', content: Hero3 },
-  ];
-  
-  export default HeroTailwindComponents;
+  { name: 'Hero 1', content: Hero1 },
+  { name: 'Hero 2', content: Hero2 },
+  { name: 'Hero 3', content: Hero3 },
+  { name: 'Hero 4', content: Hero4 },
+];
+
+export default HeroTailwindComponents;
