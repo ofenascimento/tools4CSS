@@ -7,7 +7,7 @@ import { LuPaintbrush2 } from "react-icons/lu";
 export default function Banner() {
   return (
     <>
-      <div className="dark:bg-mainDark bg-white w-full mt-10 flex flex-col lg:flex-row justify-between items-center rounded-lg border dark:border-slate-600 p-4">
+      <div className="dark:bg-mainDark bg-custom-gray-main w-full mt-10 flex flex-col lg:flex-row justify-between items-center rounded-lg border border-slate-300 dark:border-slate-600 p-4">
         <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 mb-4 lg:mb-0">
           <ColorGrid />
         </div>

@@ -66,7 +66,7 @@ function Navbar() {
               </button>
               <button
                 onClick={toggleTheme}
-                className="bg-gray-200 px-3 py-3 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full"
+                className=" bg-custom-gray-main px-3 py-3 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full"
               >
                 {theme === "dark" ? (
                   <FaSun color="#A0AFBF" size={20} />
@@ -225,7 +225,7 @@ function Navbar() {
                       Tailwind Components
                     </SubmenuItem>
                     <SubmenuItem
-                      href="/css-generators"
+                      href="/buttons-generator"
                       onClick={handleSubmenuClick}
                     >
                       CSS Buttons
@@ -338,7 +338,7 @@ function Navbar() {
                 <li className="hidden md:block">
                   <button
                     onClick={toggleTheme}
-                    className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full border border-slate-300 dark:border-slate-600"
+                    className=" bg-custom-gray-main dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full border border-slate-300 dark:border-slate-600"
                   >
                     {theme === "dark" ? <FaSun color="#A0AFBF" /> : <FaMoon />}
                   </button>
