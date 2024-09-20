@@ -52,7 +52,7 @@ const Sidebar: React.FC = () => {
                     const linkPath = `/tailwind-components/${component.name.toLowerCase()}`;
                     return (
                         <Link href={linkPath} key={index}>
-                            <div className={`flex justify-between items-center cursor-pointer px-3 py-2 rounded-2xl ${currentPath === linkPath ? 'dark:bg-dark-100  bg-custom-gray-main dark:border dark:border-gray-600 border-gray-300' : ''}`}>
+                            <div className={`flex justify-between items-center cursor-pointer px-3 py-2 rounded-2xl ${currentPath === linkPath ? 'dark:bg-dark-100  bg-custom-gray-main border border-slate-300 dark:border-gray-600 border-gray-300' : ''}`}>
                                 <h3 className='font-lexend font-normal text-base dark:text-white text-gray-700'>{component.name}</h3>
                                 <span className='dark:bg-gray-600 bg-slate-200 dark:border dark:border-slate-600 border-slate-300 px-2 py-1 w-6 h-6 rounded-full text-xs text-black dark:text-white'>{component.count}</span>
                             </div>

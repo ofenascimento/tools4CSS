@@ -188,7 +188,7 @@ const NavbarTailwindComponentsPage = () => {
               {currentComponents.map((item, index) => (
                 <div
                   key={index}
-                  className="mb-10 w-full dark:bg-dark-100 bg-custom-gray-main  dark:border rounded-lg dark:border-gray-600 p-6"
+                  className="mb-10 w-full dark:bg-dark-100 bg-custom-gray-main border-slate-300 border  dark:border rounded-lg dark:border-gray-600 p-6"
                 >
                   <div className="flex justify-between items-center mb-4">
                     <h1 className="dark:text-white text-gray-600 font-GilroyMedium font-semibold text-base">
