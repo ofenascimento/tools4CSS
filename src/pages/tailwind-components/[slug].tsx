@@ -26,6 +26,7 @@ import CookiesTailwindComponents from "@/constants/tailwind-components/cookies";
 import CardTailwindComponents from "@/constants/tailwind-components/card";
 import Loading from "@/components/Loading/Loading";
 import TestimonialsTailwindComponents from "@/constants/tailwind-components/testimonials";
+import FooterTailwindComponents from "@/constants/tailwind-components/footer";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
@@ -38,6 +39,7 @@ const NavbarTailwindComponentsPage = () => {
       cookies: CookiesTailwindComponents,
       card: CardTailwindComponents,
       testimonials: TestimonialsTailwindComponents,
+      footer: FooterTailwindComponents
     };
 
   let currentComponents: { name: string; content: string }[] | null = null;
