@@ -84,7 +84,7 @@ const Hero3 =
                     </a>
                 </div>
                 <div class=" relative">
-                    <img src="https://via.placeholder.com/800x450" alt="Workshop preview" class="mx-auto mb-8 rounded-lg shadow-lg" />
+                    <img src="/mocks/banner.webp" alt="Workshop preview" class="mx-auto mb-8 rounded-lg shadow-lg" />
                     <button class="absolute inset-0 flex items-center justify-center">
                         <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z" />
