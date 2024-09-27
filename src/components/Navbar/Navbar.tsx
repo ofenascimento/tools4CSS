@@ -43,10 +43,10 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full pt-2 z-50 top-0">
+    <nav className={`w-full pt-2 z-50 top-0 ${currentPath.split("/")[1] === 'tailwind-components' ? 'border-b border-slate-300 dark:border-gray-700 mb-4' : ''}`}>
       <div className={`justify-between ${currentPath.split("/")[1] === 'tailwind-components' ? 'lg:w-[90%]' : 'lg:w-4/6 lg:max-w-7xl'} px-4 mx-auto  md:items-center md:flex lg:px-0`}>
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          <div className={`flex items-center justify-between py-3  md:block ${currentPath.split("/")[1] === 'tailwind-components' ? 'md:py-0' : 'md:py-5'} `}>
             <Link href="/" className="cursor-pointer">
               <Image
                 className="cursor-pointer"
