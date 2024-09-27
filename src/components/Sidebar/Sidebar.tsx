@@ -15,9 +15,9 @@ type ComponentsData = {
 const componentsData: ComponentsData = {
     Components: [
         { name: "Hero", count: 4 },
-        { name: "Card", count: 1 },
+        { name: "Card", count: 5 },
+        { name: "Testimonials", count: 6 },
         { name: "Cookies", count: 1 },
-        { name: "Testimonials", count: 4 },
         // { name: "Snackbar", count: 4 },
         // { name: "Slider", count: 2 },
         // { name: "Carousel", count: 2 },
