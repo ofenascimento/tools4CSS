@@ -219,7 +219,7 @@ function Navbar() {
                 <span className={`${isCssComponentsOpen ? "block" : "hidden"}`}>
                   <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
                     <SubmenuItem
-                      href="/tailwind-components/hero"
+                      href="/tailwind-components"
                       onClick={handleSubmenuClick}
                     >
                       Tailwind Components

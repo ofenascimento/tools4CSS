@@ -148,7 +148,7 @@ const NavbarTailwindComponentsPage = () => {
           <Breadcrumb
             links={[
               { href: "/", label: "Home" },
-              { href: "/", label: "Tailwind Components" },
+              { href: "/tailwind-components", label: "Tailwind Components" },
               { label: title },
             ]}
           />

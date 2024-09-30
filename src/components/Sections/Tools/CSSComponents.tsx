@@ -6,7 +6,7 @@ function CSSComponents() {
         <div className="gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <Card
                 title="Tailwind Components"
-                slug="tailwind-components/hero"
+                slug="tailwind-components"
                 img="/icons/tailwind.png"
                 info="Explore a wide range of ready-to-use Tailwind CSS components."
             />
