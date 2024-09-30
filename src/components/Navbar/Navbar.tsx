@@ -4,17 +4,21 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Drawer from "../Drawer/Drawer";
 import { useTheme } from "../../context/ThemeContext";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import { MdClose, MdFavoriteBorder, MdMenu } from "react-icons/md";
 import { ISubmenuItem } from "./types";
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 import { useRouter } from "next/router";
 
 function SubmenuItem({ href, children, onClick }: ISubmenuItem) {
   return (
     <li className={`p-2 rounded-md w-full m-1 `} onClick={onClick}>
       <Link href={href}>
-        <span className={`${styles.link} cursor-pointer font-raleway text-base`}>{children}</span>
+        <span
+          className={`${styles.link} cursor-pointer font-raleway text-base`}
+        >
+          {children}
+        </span>
       </Link>
     </li>
   );
@@ -31,7 +35,9 @@ function Navbar() {
   const router = useRouter();
   const currentPath = router.asPath;
 
-  useEffect(() => { console.log(currentPath.split("/")[1]) }, [])
+  useEffect(() => {
+    console.log(currentPath.split("/")[1]);
+  }, []);
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -43,10 +49,16 @@ function Navbar() {
   };
 
   return (
-    <nav className={`w-full pt-2 z-50 top-0 ${currentPath.split("/")[1] === 'tailwind-components' ? 'border-b border-slate-300 dark:border-gray-700 mb-4' : ''}`}>
-      <div className={`justify-between ${currentPath.split("/")[1] === 'tailwind-components' ? 'lg:w-[90%]' : 'lg:w-4/6 lg:max-w-7xl'} px-4 mx-auto  md:items-center md:flex lg:px-0`}>
+    <nav
+      className={`w-full pt-2 z-50 top-0 ${currentPath.split("/")[1] === "tailwind-components" ? "border-b border-slate-300 dark:border-gray-700 mb-4" : ""}`}
+    >
+      <div
+        className={`justify-between ${currentPath.split("/")[1] === "tailwind-components" ? "lg:w-[90%]" : "lg:w-4/6 lg:max-w-7xl"} px-4 mx-auto  md:items-center md:flex lg:px-0`}
+      >
         <div>
-          <div className={`flex items-center justify-between py-3  md:block ${currentPath.split("/")[1] === 'tailwind-components' ? 'md:py-0' : 'md:py-5'} `}>
+          <div
+            className={`flex items-center justify-between py-3  md:block ${currentPath.split("/")[1] === "tailwind-components" ? "md:py-0" : "md:py-5"} `}
+          >
             <Link href="/" className="cursor-pointer">
               <Image
                 className="cursor-pointer"
@@ -141,7 +153,10 @@ function Navbar() {
                   </ul>
                 </span>
                 <Link href="/css-generators">
-                  <div className="gap-2 justify-center items-center hidden md:flex cursor-pointer" onClick={handleSubmenuClick}>
+                  <div
+                    className="gap-2 justify-center items-center hidden md:flex cursor-pointer"
+                    onClick={handleSubmenuClick}
+                  >
                     <h1 className="dark:text-white">CSS Generators</h1>
                     <svg
                       width="18"
@@ -187,7 +202,10 @@ function Navbar() {
                   </ul>
                 </span>
                 <Link href="/css-tools">
-                  <div className="gap-2 justify-center items-center hidden md:flex" onClick={handleSubmenuClick}>
+                  <div
+                    className="gap-2 justify-center items-center hidden md:flex"
+                    onClick={handleSubmenuClick}
+                  >
                     <h1 className="dark:text-white">CSS Tools</h1>
                     <svg
                       width="18"
@@ -233,7 +251,10 @@ function Navbar() {
                   </ul>
                 </span>
                 <Link href="/css-tools">
-                  <div className="gap-2 justify-center items-center hidden md:flex" onClick={handleSubmenuClick}>
+                  <div
+                    className="gap-2 justify-center items-center hidden md:flex"
+                    onClick={handleSubmenuClick}
+                  >
                     <h1 className="dark:text-white">CSS Components</h1>
                     <svg
                       width="18"
@@ -332,8 +353,14 @@ function Navbar() {
                         d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
                       />
                     </svg>
-
                   </button>
+                </li>
+                <li className="hidden md:block">
+                  <Link href="https://github.com/gomestzx/tools4CSS">
+                    <div className=" bg-custom-gray-main dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full border border-slate-300 dark:border-slate-600 cursor-pointer">
+                      <FaGithub />
+                    </div>
+                  </Link>
                 </li>
                 <li className="hidden md:block">
                   <button
