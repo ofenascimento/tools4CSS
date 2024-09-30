@@ -183,12 +183,12 @@ const NavbarTailwindComponentsPage = () => {
           info={`Explore a collection of Tailwind CSS ${title} components`}
           customInfoClassname="lg:w-3/4"
         />
-        <div className=" lg:grid grid-cols-14 mt-6">
+        <div className=" lg:grid grid-cols-16 mt-10">
           <div className=" col-span-14 lg:col-span-3 pr-2 hidden lg:block">
             <Sidebar />
           </div>
-          <div className="col-span-14 lg:col-span-11 lg:px-0">
-            <div className="  p-6">
+          <div style={{ gridColumn: 'span 13 / span 13' }} className="col-span-14 lg:col-span-13 lg:px-0">
+            <div className="pl-6">
               {currentComponents.map((item, index) => (
                 <div
                   key={index}
