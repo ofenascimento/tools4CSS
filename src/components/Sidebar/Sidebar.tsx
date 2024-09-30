@@ -28,8 +28,7 @@ const componentsData: ComponentsData = {
         // { name: "Sidebar", count: 2 },
     ],
     Forms: [
-        { name: "Form Elements", count: 2 },
-        { name: "Login", count: 4 },
+        { name: "Login", count: 1 },
     ]
 };
 
