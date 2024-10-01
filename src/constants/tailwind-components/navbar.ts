@@ -1,7 +1,7 @@
 const Navbar1 = `
  <nav class="bg-white shadow">
       <div class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div class="flex text-red-500 gap-2">
+        <div class="flex text-blue-500 gap-2">
           <svg
             class="h-8 w-8"
             xmlns="http://www.w3.org/2000/svg"
@@ -34,14 +34,14 @@ const Navbar1 = `
         </div>
 
         <div class="flex-grow hidden md:flex justify-center space-x-4">
-          <a href="/" class="text-gray-600 hover:text-red-500 cursor-pointer">Home</a>
-          <a href="/about" class="text-gray-600 hover:text-red-500 cursor-pointer">About</a>
-          <a href="/blog" class="text-gray-600 hover:text-red-500 cursor-pointer">Blog</a>
+          <a href="/" class="text-gray-600 hover:text-blue-500 cursor-pointer">Home</a>
+          <a href="/about" class="text-gray-600 hover:text-blue-500 cursor-pointer">About</a>
+          <a href="/blog" class="text-gray-600 hover:text-blue-500 cursor-pointer">Blog</a>
         </div>
 
         <div class="hidden md:flex justify-center items-center gap-2">
-          <a href="/login" class="hover:text-red-600 bg-red-50 px-5 py-2.5 text-sm font-medium text-red-500 hover:bg-red-100 rounded-md">Login</a>
-          <a href="#" class="block rounded-md bg-red-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-600">Sign in</a>
+          <a href="/login" class="hover:text-blue-600 bg-blue-50 px-5 py-2.5 text-sm font-medium text-blue-500 hover:bg-red-100 rounded-md">Login</a>
+          <a href="#" class="block rounded-md bg-blue-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-600">Sign in</a>
         </div>
 
         <div class="md:hidden">

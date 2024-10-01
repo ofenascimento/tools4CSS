@@ -2,7 +2,7 @@ const Login1 = `
 <main class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
   <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 space-y-6">
     <!-- Title -->
-    <h2 class="text-3xl font-bold text-center text-orange-600">Login</h2>
+    <h2 class="text-3xl font-bold text-center text-blue-600">Login</h2>
     <p class="text-center text-gray-600">Enter your email and password to access your account</p>
 
     <!-- Login Form -->
@@ -15,7 +15,7 @@ const Login1 = `
           id="email"
           name="email"
           placeholder="Enter your email"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           required
         />
       </div>
@@ -28,7 +28,7 @@ const Login1 = `
           id="password"
           name="password"
           placeholder="Enter your password"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           required
         />
         <!-- Password Toggle Icon (Non-Functional) -->
@@ -39,13 +39,13 @@ const Login1 = `
 
       <!-- Forgot Password Link -->
       <div class="flex justify-end">
-        <a href="#" class="text-sm text-orange-500 hover:underline">Forgot your password?</a>
+        <a href="#" class="text-sm text-blue-500 hover:underline">Forgot your password?</a>
       </div>
 
       <!-- Login Button -->
       <button
         type="submit"
-        class="w-full px-4 py-2 text-white bg-orange-600 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 hover:bg-orange-700 transition-colors"
+        class="w-full px-4 py-2 text-white bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:bg-blue-700 transition-colors"
       >
         Login
       </button>
@@ -54,7 +54,7 @@ const Login1 = `
     <!-- Sign Up Link -->
     <div class="text-center text-gray-600">
       Don't have an account?
-      <a href="#" class="text-orange-500 hover:underline">Sign up</a>
+      <a href="#" class="text-blue-500 hover:underline">Sign up</a>
     </div>
   </div>
 </main>
@@ -66,7 +66,7 @@ const LoginWithSocialButtons = `
 <div class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
   <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 space-y-6">
     <!-- Title -->
-    <h2 class="text-3xl font-bold text-center text-orange-600">Login</h2>
+    <h2 class="text-3xl font-bold text-center text-blue-600">Login</h2>
     <p class="text-center text-gray-600">Enter your email and password to access your account</p>
 
     <!-- Login Form -->
@@ -79,7 +79,7 @@ const LoginWithSocialButtons = `
           id="email"
           name="email"
           placeholder="Enter your email"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           required
         />
       </div>
@@ -92,7 +92,7 @@ const LoginWithSocialButtons = `
           id="password"
           name="password"
           placeholder="Enter your password"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           required
         />
         <!-- Password Toggle Icon (Non-Functional) -->
@@ -103,13 +103,13 @@ const LoginWithSocialButtons = `
 
       <!-- Forgot Password Link -->
       <div class="flex justify-end">
-        <a href="#" class="text-sm text-orange-500 hover:underline">Forgot your password?</a>
+        <a href="#" class="text-sm text-blue-500 hover:underline">Forgot your password?</a>
       </div>
 
       <!-- Login Button -->
       <button
         type="submit"
-        class="w-full px-4 py-2 text-white bg-orange-600 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+        class="w-full px-4 py-2 text-white bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
       >
         Login
       </button>
@@ -155,7 +155,7 @@ const LoginWithSocialButtons = `
     <!-- Sign Up Link -->
     <p class="text-center text-gray-600">
       Don't have an account?
-      <a href="#" class="text-orange-500 hover:underline">Sign up</a>
+      <a href="#" class="text-blue-500 hover:underline">Sign up</a>
     </p>
   </div>
 </div>
