@@ -47,7 +47,7 @@ const ScrollbarGenerator = () => {
             Components
           </h1>
         </div>
-        <div className="flex gap-4 lg:gap-2 justify-center lg:justify-between flex-wrap mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-6 mx-4 lg:mx-0">
           <CardToComponentsCategory
             href="/tailwind-components/hero"
             urlImage="/mocks/tailwind-components/hero.png"
@@ -73,7 +73,8 @@ const ScrollbarGenerator = () => {
             subtitle="1 components"
           />
         </div>
-        {/* <div className=" flex items-center gap-4 mt-6 mx-4 lg:mx-0">
+
+        <div className=" flex items-center gap-4 mt-6 mx-4 lg:mx-0">
           <div className="bg-blue-600 w-8 h-8 rounded-lg flex justify-center items-center">
             <MdNearMe color="#fff" size={20} />
           </div>
@@ -81,18 +82,18 @@ const ScrollbarGenerator = () => {
             Navigation
           </h1>
         </div>
-        <div className="flex gap-4 lg:gap-2 justify-center lg:justify-start flex-wrap mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-6 mx-4 lg:mx-0">
           <CardToComponentsCategory
-            href="/tailwind-components/hero"
-            urlImage="/mocks/tailwind-components/hero.png"
-            title="Hero"
-            subtitle="5 components"
+            href="/tailwind-components/navbar"
+            urlImage="/mocks/tailwind-components/navbar.png"
+            title="Navbar"
+            subtitle="2 components"
           />
           <CardToComponentsCategory
-            href="/tailwind-components/hero"
-            urlImage="/mocks/tailwind-components/hero.png"
-            title="Hero"
-            subtitle="5 components"
+            href="/tailwind-components/footer"
+            urlImage="/mocks/tailwind-components/footer.png"
+            title="Footer"
+            subtitle="2 components"
           />
         </div>
         <div className=" flex items-center gap-4 mt-6 mx-4 lg:mx-0">
@@ -103,14 +104,14 @@ const ScrollbarGenerator = () => {
             Form
           </h1>
         </div>
-        <div className="flex gap-4 lg:gap-2 justify-center lg:justify-between flex-wrap mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-6 mx-4 lg:mx-0">
           <CardToComponentsCategory
-            href="/tailwind-components/hero"
-            urlImage="/mocks/tailwind-components/hero.png"
-            title="Hero"
-            subtitle="5 components"
+            href="/tailwind-components/login"
+            urlImage="/mocks/tailwind-components/login.png"
+            title="Login"
+            subtitle="3 components"
           />
-        </div> */}
+        </div>
 
         <Info
           title="What is the Tailwind CSS Component Library?"

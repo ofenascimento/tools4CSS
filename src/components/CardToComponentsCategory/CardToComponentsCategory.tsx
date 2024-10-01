@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const CardToComponentsCategory: React.FC<ICardToComponentsCategory> = ({ urlImage, title, subtitle, href }) => {
     return (
-        <Link href={href} >
-            <div className="rounded-lg overflow-hidden dark:bg-dark-100 bg-white border border-slate-300 dark:border-slate-600 w-[260px] font-lexend cursor-pointer">
+        <Link href={href}>
+            <div className="rounded-lg overflow-hidden dark:bg-dark-100 bg-white border border-slate-300 dark:border-slate-600 w-full font-lexend cursor-pointer">
                 <Image
                     className="w-full"
                     src={urlImage}
