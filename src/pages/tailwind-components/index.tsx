@@ -67,6 +67,12 @@ const ScrollbarGenerator = () => {
             subtitle="6 components"
           />
           <CardToComponentsCategory
+            href="/tailwind-components/pricing"
+            urlImage="/mocks/tailwind-components/pricing.png"
+            title="Pricing"
+            subtitle="2 components"
+          />
+          <CardToComponentsCategory
             href="/tailwind-components/cookies"
             urlImage="/mocks/tailwind-components/cookies.png"
             title="Cookies"
