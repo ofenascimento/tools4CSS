@@ -279,47 +279,48 @@ const NavbarTailwindComponentsPage = () => {
                   </div>
                   {activeView[index] === "preview" ? (
                     <iframe
-                      className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${getHeightBySlug(Array.isArray(slug) ? slug[0] : slug)}`}
-                      loading="lazy"
-                      style={{ maxWidth: widths[index] }}
-                      srcDoc={`
-                                                <!DOCTYPE html>
-                                                <html class="relative" dir="ltr">
-                                                <head>
-                                                    <link rel="preconnect" href="https://fonts.googleapis.com" />
-                                                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-                                                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
-                                                    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-                                                    <script>
-                                                    tailwind.config = {
-                                                        darkMode: 'class',
-                                                        safelist: ['keen-slider', 'keen-slider__slide'],
-                                                        theme: {
-                                                        extend: {
-                                                            fontFamily: {
-                                                            sans: ['Inter'],
-                                                            },
-                                                            animation: {
-                                                            background: 'background ease infinite',
-                                                            },
-                                                            keyframes: {
-                                                            background: {
-                                                                '0%, 100%': { backgroundPosition: '0% 50%' },
-                                                                '50%': { backgroundPosition: '100% 50%' },
-                                                            },
-                                                            },
-                                                        },
-                                                        },
-                                                    };
-                                                    </script>
-                                                </head>
-                                                <body class="">
-                                                    ${item.content}
-                                                </body>
-                                                </html>
-                                            `}
-                      title={`Component in ${item.name}`}
-                    />
+                    className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${getHeightBySlug(Array.isArray(slug) ? slug[0] : slug)}`}
+                    loading="lazy"
+                    style={{ maxWidth: widths[index] }}
+                    srcDoc={`
+                      <!DOCTYPE html>
+                      <html class="relative" dir="ltr">
+                        <head>
+                          <link rel="preconnect" href="https://fonts.googleapis.com" />
+                          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" />
+                          <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+                          <script>
+                            tailwind.config = {
+                              darkMode: 'class',
+                              safelist: ['keen-slider', 'keen-slider__slide'],
+                              theme: {
+                                extend: {
+                                  fontFamily: {
+                                    sans: ['Lexend', 'sans-serif'],
+                                  },
+                                  animation: {
+                                    background: 'background ease infinite',
+                                  },
+                                  keyframes: {
+                                    background: {
+                                      '0%, 100%': { backgroundPosition: '0% 50%' },
+                                      '50%': { backgroundPosition: '100% 50%' },
+                                    },
+                                  },
+                                },
+                              },
+                            };
+                          </script>
+                        </head>
+                        <body class="">
+                          ${item.content}
+                        </body>
+                      </html>
+                    `}
+                    title={`Component in ${item.name}`}
+                  />
+                  
                   ) : (
                     <Highlight className="html">
                       <div className="h-[400px]">
