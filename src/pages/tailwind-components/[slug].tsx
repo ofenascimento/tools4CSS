@@ -34,17 +34,25 @@ const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
   const { slug } = router.query;
 
+  const componentHeights: { [key: string]: string } = {
+    navbar: "h-[100px]",
+    pagination: "h-[80px]",
+    cookies: "h-[350px]",
+    default: "h-[500px]",
+  };
+
+
   const componentsMap: { [key: string]: { name: string; content: string }[] } =
-    {
-      navbar: NavbarTailwindComponents,
-      hero: HeroTailwindComponents,
-      cookies: CookiesTailwindComponents,
-      card: CardTailwindComponents,
-      testimonials: TestimonialsTailwindComponents,
-      footer: FooterTailwindComponents,
-      login: LoginTailwindComponents,
-      pagination: PaginationTailwindComponents
-    };
+  {
+    navbar: NavbarTailwindComponents,
+    hero: HeroTailwindComponents,
+    cookies: CookiesTailwindComponents,
+    card: CardTailwindComponents,
+    testimonials: TestimonialsTailwindComponents,
+    footer: FooterTailwindComponents,
+    login: LoginTailwindComponents,
+    pagination: PaginationTailwindComponents,
+  };
 
   let currentComponents: { name: string; content: string }[] | null = null;
   if (typeof slug === "string") {
@@ -142,6 +150,11 @@ const NavbarTailwindComponentsPage = () => {
     ? slug[0]
     : `${slug?.charAt(0).toUpperCase()}${slug?.slice(1)}`;
 
+  const getHeightBySlug = (slug: string | undefined): string => {
+    return componentHeights[slug as string] || componentHeights["default"];
+  };
+
+
   return (
     <>
       <SEO title={`${title} Tailwind Components`} />
@@ -175,8 +188,7 @@ const NavbarTailwindComponentsPage = () => {
                   }}
                 >
                   {title}
-                </span>
-                {" "}
+                </span>{" "}
                 Tailwind Components
               </h1>
             </>
@@ -189,7 +201,10 @@ const NavbarTailwindComponentsPage = () => {
           <div className=" col-span-14 lg:col-span-3 pr-2 hidden lg:block">
             <Sidebar />
           </div>
-          <div style={{ gridColumn: 'span 13 / span 13' }} className="col-span-14 lg:col-span-13 lg:px-0">
+          <div
+            style={{ gridColumn: "span 13 / span 13" }}
+            className="col-span-14 lg:col-span-13 lg:px-0"
+          >
             <div className="pl-6">
               {currentComponents.map((item, index) => (
                 <div
@@ -261,7 +276,7 @@ const NavbarTailwindComponentsPage = () => {
                   </div>
                   {activeView[index] === "preview" ? (
                     <iframe
-                      className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${slug === "navbar" ? "h-[300px]" : slug === "pagination" ?  "h-[100px]" : "h-[500px]"}`}
+                      className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${getHeightBySlug(Array.isArray(slug) ? slug[0] : slug)}`}
                       loading="lazy"
                       style={{ maxWidth: widths[index] }}
                       srcDoc={`
