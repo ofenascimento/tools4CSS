@@ -36,9 +36,27 @@ const ScrollbarGenerator = () => {
           />
         </div>
         <Title
-          title="Tailwind CSS Component Library"
-          info="Explore and utilize a variety of customizable components built with Tailwind CSS to speed up your development process."
-        />
+          title={
+            <>
+              <h1
+                className="lg:leading-08 text-5xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white"
+              >
+                Tailwind CSS {" "}
+                <span
+                  style={{
+                    textDecorationColor: "#1a4fd8",
+                    textDecorationThickness: "5px",
+                    textDecorationLine: "underline",
+                  }}
+                >
+                  Components
+                </span>
+              </h1>
+            </>
+
+          }
+          info="Explore and utilize a variety of free, customizable components built with Tailwind CSS to speed up your development process."
+          />
         <div className=" flex items-center gap-4 mt-6 mx-4 lg:mx-0">
           <div className="bg-blue-600 w-8 h-8 rounded-lg flex justify-center items-center">
             <MdGridOn color="#fff" size={20} />
