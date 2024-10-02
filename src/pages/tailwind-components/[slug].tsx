@@ -279,10 +279,10 @@ const NavbarTailwindComponentsPage = () => {
                   </div>
                   {activeView[index] === "preview" ? (
                     <iframe
-                    className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${getHeightBySlug(Array.isArray(slug) ? slug[0] : slug)}`}
-                    loading="lazy"
-                    style={{ maxWidth: widths[index] }}
-                    srcDoc={`
+                      className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${getHeightBySlug(Array.isArray(slug) ? slug[0] : slug)}`}
+                      loading="lazy"
+                      style={{ maxWidth: widths[index] }}
+                      srcDoc={`
                       <!DOCTYPE html>
                       <html class="relative" dir="ltr">
                         <head>
@@ -318,13 +318,14 @@ const NavbarTailwindComponentsPage = () => {
                         </body>
                       </html>
                     `}
-                    title={`Component in ${item.name}`}
-                  />
-                  
+                      title={`Component in ${item.name}`}
+                    />
+
                   ) : (
                     <Highlight className="html">
                       <div className="h-[400px]">
-                        {formatHtml(item.content)}
+                        {formatHtml(`${item.content}
+      <!-- This component uses the Lexend font. You can check it here: https://fonts.google.com/specimen/Lexend -->`)}
                       </div>
                     </Highlight>
                   )}
