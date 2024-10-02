@@ -94,7 +94,7 @@ const ScrollbarGenerator = () => {
             href="/tailwind-components/cookies"
             urlImage="/mocks/tailwind-components/cookies.png"
             title="Cookies"
-            subtitle="1 components"
+            subtitle="2 components"
           />
         </div>
 

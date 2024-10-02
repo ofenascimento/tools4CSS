@@ -25,12 +25,14 @@ const Card = (props: ICard) => {
       showSnackbar({
         type: "error",
         title: `${props.title} removed to favorites list`,
+        subtitle: 'It has been removed, but you can add it back anytime'
       });
     } else {
       saveFavorite(tool);
       showSnackbar({
         type: "success",
         title: `${props.title} added to favorites list`,
+        subtitle: 'You can now find it in your favorites'
       });
     }
     setIsFavorited(!isFavorited);

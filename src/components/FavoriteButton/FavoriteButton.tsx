@@ -14,12 +14,14 @@ const FavoriteButton = ({ handleFavorite, isFavorited }: IFavoriteButton) => {
             showSnackbar({
               type: "error",
               title: `Removed to favorites list`,
+              subtitle: 'It has been removed, but you can add it back anytime'
             });
 
           } else {
             showSnackbar({
               type: "success",
               title: `Added to favorites list`,
+              subtitle: 'You can now find it in your favorites'
             });
           }
 

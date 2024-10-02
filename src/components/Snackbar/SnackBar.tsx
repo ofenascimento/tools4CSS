@@ -7,20 +7,23 @@ import { snackbarStyles } from './snackbarStyles';
 
 
 const SnackBar = ({ id, type, title, subtitle, action }: TSnackBar): React.ReactElement => {
-  const { border, icon } = snackbarStyles[type ?? 'info'];
+  const { border, icon, color } = snackbarStyles[type ?? 'info'];
 
   return (
     <div className={clsx('snackbar pb-2', `snackbar-${id}`)}>
       <div
         className={clsx(
-          ' bg-custom-gray-main dark:bg-mainDark border border-slate-300 dark:border-slate-600 p-4 shadow-drop-2 transition-opacity flex z-30  justify-center items-center rounded-lg',
+          ' bg-white dark:bg-mainDark border border-slate-300 dark:border-slate-600 p-4 shadow-drop-2 transition-opacity flex z-30  justify-center items-center rounded-lg',
         )}
         role="alert"
       >
-        {icon}
+        <div className=' flex justify-center items-center p-2 rounded-lg mr-1 bg-gray-100' style={{backgroundColor: color}}>
+          {icon}
+        </div>
+
         <div className='ml-2'>
-          <p className="text-base text-black dark:text-white font-raleway font-medium leading-6 m-0">{title}</p>
-          {subtitle && <span className="text-sm font-medium leading-6 dark:text-white">{subtitle}</span>}
+          <p className="text-base text-black font-lexend dark:text-white font-medium leading-4 m-0">{title}</p>
+          {subtitle && <span className="text-sm text-gray-500 font-normal font-lexend leading-4 dark:text-white">{subtitle}</span>}
         </div>
       </div>
     </div>
