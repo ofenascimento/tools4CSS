@@ -95,6 +95,12 @@ const ScrollbarGenerator = () => {
             title="Footer"
             subtitle="2 components"
           />
+          <CardToComponentsCategory
+            href="/tailwind-components/pagination"
+            urlImage="/mocks/tailwind-components/pagination.png"
+            title="Pagination"
+            subtitle="2 components"
+          />
         </div>
         <div className=" flex items-center gap-4 mt-6 mx-4 lg:mx-0">
           <div className="bg-blue-600 w-8 h-8 rounded-lg flex justify-center items-center">

@@ -25,6 +25,7 @@ const componentsData: ComponentsData = {
     Navigation: [
         { name: "Navbar", count: 2 },
         { name: "Footer", count: 2 },
+        { name: "Pagination", count: 3 },
         // { name: "Sidebar", count: 2 },
     ],
     Forms: [

@@ -28,6 +28,7 @@ import Loading from "@/components/Loading/Loading";
 import TestimonialsTailwindComponents from "@/constants/tailwind-components/testimonials";
 import FooterTailwindComponents from "@/constants/tailwind-components/footer";
 import LoginTailwindComponents from "@/constants/tailwind-components/login";
+import PaginationTailwindComponents from "@/constants/tailwind-components/pagination";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
@@ -41,7 +42,8 @@ const NavbarTailwindComponentsPage = () => {
       card: CardTailwindComponents,
       testimonials: TestimonialsTailwindComponents,
       footer: FooterTailwindComponents,
-      login: LoginTailwindComponents
+      login: LoginTailwindComponents,
+      pagination: PaginationTailwindComponents
     };
 
   let currentComponents: { name: string; content: string }[] | null = null;
@@ -259,7 +261,7 @@ const NavbarTailwindComponentsPage = () => {
                   </div>
                   {activeView[index] === "preview" ? (
                     <iframe
-                      className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${slug === "navbar" ? "h-[300px]" : "h-[500px]"}`}
+                      className={`w-full rounded-md ring-2 dark:ring-gray-900 ring-gray-200 lg:transition-all bg-white ${slug === "navbar" ? "h-[300px]" : slug === "pagination" ?  "h-[100px]" : "h-[500px]"}`}
                       loading="lazy"
                       style={{ maxWidth: widths[index] }}
                       srcDoc={`
