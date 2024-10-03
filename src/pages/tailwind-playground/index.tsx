@@ -55,16 +55,19 @@ const TailwindPlayground: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
+    setCode(tailwindPlaygroundCode);
+  }, [])
+
+  useEffect(() => {
     if (theme !== "dark") {
       toggleTheme();
     }
   }, [theme]);
 
   useEffect(() => {
-    setCode(tailwindPlaygroundCode);
     const clean = DOMPurify.sanitize(code);
     setSanitizedCode(clean);
-  }, [code, tailwindPlaygroundCode]);
+  }, [code]);
 
   return (
     <>
