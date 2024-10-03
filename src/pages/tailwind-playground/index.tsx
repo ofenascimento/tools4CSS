@@ -12,6 +12,10 @@ import { FaSun, FaMoon, FaGithub } from "react-icons/fa";
 import { useControls } from "@/hooks/useControls";
 
 const TailwindPlayground: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+  
   const [code, setCode] =
     useState<string>(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34]">
   <div class="max-w-4xl mx-auto text-center">
@@ -146,7 +150,7 @@ const TailwindPlayground: React.FC = () => {
       </div>
 
       {screen === "split-horizontal" && (
-        <div className="flex flex-col md:flex-row min-h-screen">
+        <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex flex-col">
             <div className="flex-1">
               <CodeMirror

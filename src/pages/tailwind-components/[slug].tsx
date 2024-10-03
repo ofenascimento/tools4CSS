@@ -32,10 +32,13 @@ import PaginationTailwindComponents from "@/constants/tailwind-components/pagina
 import PricingTailwindComponents from "@/constants/tailwind-components/pricing";
 import LoadingTailwindComponents from "@/constants/tailwind-components/loading";
 import BreadcrumbTailwindComponents from "@/constants/tailwind-components/breadcrumb";
+import { useControls } from "@/hooks/useControls";
+import { FaCode, FaCut, FaMagic } from "react-icons/fa";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
   const { slug } = router.query;
+  const { setTailwindPlaygroundCode } = useControls()
 
   const componentHeights: { [key: string]: string } = {
     navbar: "h-[100px]",
@@ -224,30 +227,30 @@ const NavbarTailwindComponentsPage = () => {
                     <h1 className="dark:text-white text-gray-600 font-GilroyMedium font-semibold text-base">
                       {item.name}
                     </h1>
-                    <div className="text-gray-400 gap-4 hidden lg:flex">
+                    <div className="text-gray-400 gap-4 hidden lg:flex dark:bg-gray-600 bg-custom-gray-secondary px-6 py-2 rounded-lg">
                       <button onClick={() => handleWidthChange(index, "320px")}>
                         <HiOutlineDevicePhoneMobile
                           size={28}
-                          className={`${widths[index] === "320px" ? "text-blue-500" : ""}`}
+                          className={`${widths[index] === "320px" ? "text-blue-600" : "text-gray-600"}`}
                         />
                       </button>
                       <button onClick={() => handleWidthChange(index, "768px")}>
                         <HiOutlineDeviceTablet
                           size={28}
-                          className={`${widths[index] === "768px" ? "text-blue-500" : ""}`}
+                          className={`${widths[index] === "768px" ? "text-blue-600" : "text-gray-600"}`}
                         />
                       </button>
                       <button onClick={() => handleWidthChange(index, "100%")}>
                         <HiOutlineComputerDesktop
                           size={28}
-                          className={`${widths[index] === "100%" ? "text-blue-500" : ""}`}
+                          className={`${widths[index] === "100%" ? "text-blue-600" : "text-gray-600"}`}
                         />
                       </button>
                     </div>
                     <div className="text-white flex">
                       <div className="flex dark:bg-gray-600 bg-custom-gray-secondary p-1 rounded-lg font-raleway">
                         <button
-                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "preview" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
+                          className={`flex gap-2 justify-center items-center px-4 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "preview" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
                           onClick={() => toggleView(index, "preview")}
                         >
                           <HiOutlineEye size={18} />
@@ -256,7 +259,7 @@ const NavbarTailwindComponentsPage = () => {
                           </span>
                         </button>
                         <button
-                          className={`flex gap-2 justify-center items-center px-8 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
+                          className={`flex gap-2 justify-center items-center px-4 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "code" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
                           onClick={() => toggleView(index, "code")}
                         >
                           <HiOutlineCodeBracket size={18} />
@@ -264,6 +267,7 @@ const NavbarTailwindComponentsPage = () => {
                             Code
                           </span>
                         </button>
+
                       </div>
                       <button
                         className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4"
@@ -280,6 +284,17 @@ const NavbarTailwindComponentsPage = () => {
                             size={18}
                           />
                         )}
+                      </button>
+                      <button
+                        className="ml-4 flex gap-2 justify-center items-center bg-gray-900 border-2 dark:border-gray-700  text-white  rounded-lg px-4"
+                        onClick={() => {
+                          setTailwindPlaygroundCode(item.content);
+                          router.push('/tailwind-playground');
+                        }}
+                      >
+                        <FaMagic />
+                        <span className=" hidden md:block">Editor</span>
+
                       </button>
                     </div>
                   </div>
