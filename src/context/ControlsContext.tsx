@@ -23,6 +23,8 @@ interface IControlsContext {
   setDepth(e: any): void;
   angle: number;
   setAngle(e: any): void;
+  tailwindPlaygroundCode: string;
+  setTailwindPlaygroundCode(e: any): void;
 }
 
 interface IProvider {
@@ -43,6 +45,12 @@ export function ControlsProvider({ children }: IProvider) {
   const [trasnparency, setTransparency] = useState(0.15);
   const [depth, setDepth] = useState(4);
   const [angle, setAngle] = useState(80);
+  const [tailwindPlaygroundCode, setTailwindPlaygroundCode] = useState(`<div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+  <div>
+    <div class="text-xl font-medium text-black">ChitChat</div>
+    <p class="text-gray-500">You have a new message!</p>
+  </div>
+</div>`);
   return (
     <ControlsContext.Provider
       value={{
@@ -67,7 +75,9 @@ export function ControlsProvider({ children }: IProvider) {
         depth,
         setDepth,
         angle,
-        setAngle
+        setAngle,
+        tailwindPlaygroundCode,
+        setTailwindPlaygroundCode,
       }}
     >
       {children}
