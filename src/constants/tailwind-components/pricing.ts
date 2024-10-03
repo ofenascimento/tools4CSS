@@ -160,10 +160,152 @@ const Pricing2 = `
 
 `;
 
+const Pricing3 = `
+<div class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Choose your perfect plan</h2>
+    <p class="mt-4 text-lg text-gray-600">
+      Find the plan that suits your business needs.
+    </p>
+  </div>
+
+  <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col bg-white shadow-lg rounded-lg p-6">
+      <h3 class="text-2xl font-semibold text-gray-900">$15/mth</h3>
+      <p class="mt-2 text-gray-500">Starter plan</p>
+      <p class="text-sm text-gray-400">Billed monthly</p>
+
+      <ul class="mt-6 space-y-4 text-gray-700 flex-grow">
+        <li class="flex items-center"><span class="mr-2">✔</span> Essential tools and analytics</li>
+        <li class="flex items-center"><span class="mr-2">✔</span> Up to 5 team members</li>
+        <li class="flex items-center"><span class="mr-2">✔</span> 10GB data storage per user</li>
+        <li class="flex items-center"><span class="mr-2">✔</span> Email support</li>
+      </ul>
+
+      <button class="mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        Get started
+      </button>
+    </div>
+
+    <div class="flex flex-col bg-white shadow-lg rounded-lg p-6">
+      <h3 class="text-2xl font-semibold text-gray-900">$30/mth</h3>
+      <p class="mt-2 text-gray-500">Pro plan</p>
+      <p class="text-sm text-gray-400">Billed monthly</p>
+
+      <ul class="mt-6 space-y-4 text-gray-700 flex-grow">
+        <li class="flex items-center"><span class="mr-2">✔</span> All features from Starter plan</li>
+        <li class="flex items-center"><span class="mr-2">✔</span> Up to 20 team members</li>
+        <li class="flex items-center"><span class="mr-2">✔</span> 50GB data storage per user</li>
+        <li class="flex items-center"><span class="mr-2">✔</span> Priority email support</li>
+      </ul>
+
+      <button class="mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        Get started
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+`
+
+const Pricing4 = `<div class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Choose your perfect plan</h2>
+    <p class="mt-4 text-lg text-gray-600">
+      Select the plan that fits your business growth. Start today and scale with us.
+    </p>
+  </div>
+
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Left side options -->
+    <div class="bg-blue-100 p-6 rounded-lg">
+      <div class="flex justify-between items-center mb-6">
+        <button class="bg-blue-600 text-white py-1 px-4 rounded-full focus:outline-none">Monthly</button>
+        <button class="text-blue-600 py-1 px-4 focus:outline-none">Yearly</button>
+      </div>
+      
+      <ul class="space-y-4">
+        <li class="flex justify-between items-center">
+          <span>Custom Options</span>
+          <span class="text-blue-600">✔</span>
+        </li>
+        <li class="flex justify-between items-center">
+          <span>No Expiration</span>
+          <span class="text-blue-600">✔</span>
+        </li>
+        <li class="flex justify-between items-center">
+          <span>All Features Included</span>
+          <span class="text-blue-600">✔</span>
+        </li>
+        <li class="flex justify-between items-center">
+          <span>API Integrations</span>
+          <span class="text-blue-600">✔</span>
+        </li>
+        <li class="flex justify-between items-center">
+          <span>Unlimited Recipients</span>
+          <span class="text-blue-600">✔</span>
+        </li>
+        <li class="flex justify-between items-center">
+          <span>Premium Support</span>
+          <span class="text-gray-400">✖</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right side plan options -->
+    <div class="space-y-6">
+      <div class="p-6 border border-blue-600 rounded-lg flex justify-between items-center">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">Starter (1 User)</h3>
+          <p class="text-blue-600">5% Savings</p>
+        </div>
+        <div class="text-right">
+          <p class="text-gray-600">Total: <span class="text-black">$120.00</span></p>
+          <p class="text-gray-400">Sub-Total: $115.00</p>
+        </div>
+        <input type="radio" name="plan" checked class="ml-4">
+      </div>
+
+      <div class="p-6 border border-blue-600 rounded-lg flex justify-between items-center">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">Team (10 Users)</h3>
+          <p class="text-blue-600">10% Savings</p>
+        </div>
+        <div class="text-right">
+          <p class="text-gray-600">Total: <span class="text-black">$320.00</span></p>
+          <p class="text-gray-400">Sub-Total: $300.00</p>
+        </div>
+        <input type="radio" name="plan" class="ml-4">
+      </div>
+
+      <div class="p-6 border border-blue-600 rounded-lg flex justify-between items-center">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">Business (20 Users)</h3>
+          <p class="text-blue-600">20% Savings</p>
+        </div>
+        <div class="text-right">
+          <p class="text-gray-600">Total: <span class="text-black">$640.00</span></p>
+          <p class="text-gray-400">Sub-Total: $620.00</p>
+        </div>
+        <input type="radio" name="plan" class="ml-4">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+`
+
 
 const PricingTailwindComponents = [
   { name: "Pricing 1", content: Pricing1 },
   { name: "Pricing 2", content: Pricing2 },
+  { name: "Pricing 3", content: Pricing3 },
+  { name: "Pricing 4", content: Pricing4 },
 ];
 
 export default PricingTailwindComponents;
