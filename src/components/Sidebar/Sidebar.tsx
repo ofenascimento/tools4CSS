@@ -20,6 +20,7 @@ const componentsData: ComponentsData = {
         { name: "Pricing", count: 2 },
         { name: "Cookies", count: 2 },
         { name: "Loading", count: 6 },
+        { name: "Breadcrumb", count: 3 },
         // { name: "Snackbar", count: 4 },
         // { name: "Slider", count: 2 },
         // { name: "Carousel", count: 2 },

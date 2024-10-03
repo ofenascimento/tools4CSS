@@ -131,6 +131,12 @@ const ScrollbarGenerator = () => {
             title="Pagination"
             subtitle="2 components"
           />
+          <CardToComponentsCategory
+            href="/tailwind-components/breadcrumb"
+            urlImage="/mocks/tailwind-components/breadcrumb.png"
+            title="Breadcrumb"
+            subtitle="3 components"
+          />
         </div>
         <div className=" flex items-center gap-4 mt-6 mx-4 lg:mx-0">
           <div className="bg-blue-600 w-8 h-8 rounded-lg flex justify-center items-center">
