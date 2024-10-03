@@ -27,7 +27,7 @@ export default function Banner() {
           </Link>
           <Link href='/background-gradient'>
             <button
-              className="font-GilroyMedium text-white py-2 px-6 lg:px-14 mt-2 rounded-full flex justify-center items-center gap-3 w-full"
+              className="font-GilroyMedium text-white py-2 px-6 lg:px-14 mt-1 rounded-full flex justify-center items-center gap-3 w-full"
               style={{
                 backgroundImage: `linear-gradient(80deg, #6a25cb, #2580fc)`,
               }}

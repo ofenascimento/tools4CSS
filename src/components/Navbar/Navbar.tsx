@@ -76,6 +76,11 @@ function Navbar() {
               >
                 <MdFavoriteBorder size={20} />
               </button>
+              <Link href="https://github.com/gomestzx/tools4CSS">
+                <div className=" bg-custom-gray-main dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-3 py-3 rounded-full dark:border-slate-600 cursor-pointer">
+                  <FaGithub size={20} />
+                </div>
+              </Link>
               <button
                 onClick={toggleTheme}
                 className=" bg-custom-gray-main px-3 py-3 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full"
@@ -86,6 +91,7 @@ function Navbar() {
                   <FaMoon size={20} />
                 )}
               </button>
+
               <button
                 className="p-2 dark:text-white rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
@@ -97,8 +103,9 @@ function Navbar() {
         </div>
         <div>
           <div
-            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 h-screen md:h-auto ${navbar ? "block" : "hidden"
-              }`}
+            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 h-screen md:h-auto ${
+              navbar ? "block" : "hidden"
+            }`}
           >
             <ul className="items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300 font-GilroyMedium">
               <li
@@ -157,7 +164,9 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex cursor-pointer"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">CSS Generators</h1>
+                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">
+                      CSS Generators
+                    </h1>
                     <svg
                       width="18"
                       height="18"
@@ -206,7 +215,9 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">CSS Tools</h1>
+                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">
+                      CSS Tools
+                    </h1>
                     <svg
                       width="18"
                       height="18"
@@ -255,7 +266,9 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">CSS Components</h1>
+                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">
+                      CSS Components
+                    </h1>
                     <svg
                       width="18"
                       height="18"

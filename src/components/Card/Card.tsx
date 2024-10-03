@@ -51,7 +51,7 @@ const Card = (props: ICard) => {
             <div className=" w-full flex flex-col items-start justify-center">
 
               <h2
-                className={`${styles.title} text-lg pr-4 font-raleway font-bold ml-2 dark:text-white`}
+                className={`${styles.title} text-lg pr-4 font-raleway leading-6 font-bold ml-2 dark:text-white`}
               >
                 {props.title}
               </h2>
