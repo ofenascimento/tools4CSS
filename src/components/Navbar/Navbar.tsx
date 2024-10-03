@@ -15,7 +15,7 @@ function SubmenuItem({ href, children, onClick }: ISubmenuItem) {
     <li className={`p-2 rounded-md w-full m-1 `} onClick={onClick}>
       <Link href={href}>
         <span
-          className={`${styles.link} cursor-pointer text-base font-light font-lexend`}
+          className={`${styles.link} cursor-pointer text-base font-normal font-lexend`}
         >
           {children}
         </span>
