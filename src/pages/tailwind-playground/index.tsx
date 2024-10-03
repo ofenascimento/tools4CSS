@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
 import { FaSun, FaMoon, FaGithub } from "react-icons/fa";
+import { useControls } from "@/hooks/useControls";
 
 const TailwindPlayground: React.FC = () => {
   const [code, setCode] =
@@ -42,15 +43,18 @@ const TailwindPlayground: React.FC = () => {
 </div>
 
 `);
+
+  const { tailwindPlaygroundCode } = useControls();
   const [screen, setScreen] = useState<string>("split-horizontal");
 
   const [sanitizedCode, setSanitizedCode] = useState<string>("");
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
+    setCode(tailwindPlaygroundCode)
     const clean = DOMPurify.sanitize(code);
     setSanitizedCode(clean);
-  }, [code]);
+  }, [code, tailwindPlaygroundCode]);
 
   return (
     <>
