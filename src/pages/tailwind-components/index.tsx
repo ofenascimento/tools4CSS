@@ -96,6 +96,12 @@ const ScrollbarGenerator = () => {
             title="Cookies"
             subtitle="2 components"
           />
+          <CardToComponentsCategory
+            href="/tailwind-components/loading"
+            urlImage="/mocks/tailwind-components/loading.png"
+            title="Loading"
+            subtitle="6 components"
+          />
         </div>
 
         <div className=" flex items-center gap-4 mt-6 mx-4 lg:mx-0">

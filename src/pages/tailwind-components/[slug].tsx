@@ -30,6 +30,7 @@ import FooterTailwindComponents from "@/constants/tailwind-components/footer";
 import LoginTailwindComponents from "@/constants/tailwind-components/login";
 import PaginationTailwindComponents from "@/constants/tailwind-components/pagination";
 import PricingTailwindComponents from "@/constants/tailwind-components/pricing";
+import LoadingTailwindComponents from "@/constants/tailwind-components/loading";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
@@ -40,6 +41,7 @@ const NavbarTailwindComponentsPage = () => {
     pagination: "h-[80px]",
     cookies: "h-[350px]",
     pricing: "h-[600px]",
+    loading: "h-[70px]",
     default: "h-[500px]",
   };
 
@@ -55,6 +57,7 @@ const NavbarTailwindComponentsPage = () => {
     login: LoginTailwindComponents,
     pagination: PaginationTailwindComponents,
     pricing: PricingTailwindComponents,
+    loading: LoadingTailwindComponents,
   };
 
   let currentComponents: { name: string; content: string }[] | null = null;
