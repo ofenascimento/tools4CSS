@@ -35,6 +35,7 @@ import BreadcrumbTailwindComponents from "@/constants/tailwind-components/breadc
 import { useControls } from "@/hooks/useControls";
 import { FaCode, FaCut, FaMagic } from "react-icons/fa";
 import { useTheme } from "@/context/ThemeContext";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
@@ -52,19 +53,19 @@ const NavbarTailwindComponentsPage = () => {
   };
 
   const componentsMap: { [key: string]: { name: string; content: string }[] } =
-    {
-      navbar: NavbarTailwindComponents,
-      hero: HeroTailwindComponents,
-      cookies: CookiesTailwindComponents,
-      card: CardTailwindComponents,
-      testimonials: TestimonialsTailwindComponents,
-      footer: FooterTailwindComponents,
-      login: LoginTailwindComponents,
-      pagination: PaginationTailwindComponents,
-      pricing: PricingTailwindComponents,
-      loading: LoadingTailwindComponents,
-      breadcrumb: BreadcrumbTailwindComponents,
-    };
+  {
+    navbar: NavbarTailwindComponents,
+    hero: HeroTailwindComponents,
+    cookies: CookiesTailwindComponents,
+    card: CardTailwindComponents,
+    testimonials: TestimonialsTailwindComponents,
+    footer: FooterTailwindComponents,
+    login: LoginTailwindComponents,
+    pagination: PaginationTailwindComponents,
+    pricing: PricingTailwindComponents,
+    loading: LoadingTailwindComponents,
+    breadcrumb: BreadcrumbTailwindComponents,
+  };
 
   let currentComponents: { name: string; content: string }[] | null = null;
   if (typeof slug === "string") {
@@ -268,22 +269,31 @@ const NavbarTailwindComponentsPage = () => {
                           </span>
                         </button>
                       </div>
-                      <button
-                        className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4"
-                        onClick={() => handleCopy(index)}
-                      >
-                        {copiedIndex === index ? (
-                          <HiOutlineClipboardDocumentCheck
-                            className="text-green-600 dark:text-green-400"
-                            size={18}
-                          />
-                        ) : (
-                          <HiOutlineClipboard
-                            className="text-black dark:text-white"
-                            size={18}
-                          />
-                        )}
-                      </button>
+                      {copiedIndex === index ? (
+                        <>
+                          <Tooltip text="Copied" customStyle={{top: -45, left: 40, backgroundColor: '#16a34a'}}>
+                            <div className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4">
+                              <HiOutlineClipboardDocumentCheck
+                                className="text-green-600 dark:text-green-400"
+                                size={18}
+                              />
+                            </div>
+                          </Tooltip>
+                        </>
+                      ) : (
+                        <>
+                          <button
+                            className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4"
+                            onClick={() => handleCopy(index)}
+                          >
+                            <HiOutlineClipboard
+                              className="text-black dark:text-white"
+                              size={18}
+                            />
+                          </button>
+                        </>
+                      )}
+
                       <button
                         className="ml-4 flex gap-2 justify-center items-center bg-gray-900 border-2 dark:border-gray-700  text-white  rounded-lg px-4"
                         onClick={() => {

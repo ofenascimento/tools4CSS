@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Tooltip.module.scss";
 import { ITooltip } from "./types";
 
-const Tooltip = ({ children, text }: ITooltip) => {
+const Tooltip = ({ children, text, customStyle }: ITooltip) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -12,7 +12,11 @@ const Tooltip = ({ children, text }: ITooltip) => {
       onMouseLeave={() => setVisible(false)}
     >
       {children}
-      {visible && <div className={styles.tooltip}>{text}</div>}
+      {visible && (
+        <div className={styles.tooltip} style={customStyle}>
+          {text}
+        </div>
+      )}
     </div>
   );
 };
