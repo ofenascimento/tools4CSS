@@ -34,11 +34,12 @@ import LoadingTailwindComponents from "@/constants/tailwind-components/loading";
 import BreadcrumbTailwindComponents from "@/constants/tailwind-components/breadcrumb";
 import { useControls } from "@/hooks/useControls";
 import { FaCode, FaCut, FaMagic } from "react-icons/fa";
+import { useTheme } from "@/context/ThemeContext";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
   const { slug } = router.query;
-  const { setTailwindPlaygroundCode } = useControls()
+  const { setTailwindPlaygroundCode } = useControls();
 
   const componentHeights: { [key: string]: string } = {
     navbar: "h-[100px]",
@@ -50,21 +51,20 @@ const NavbarTailwindComponentsPage = () => {
     default: "h-[500px]",
   };
 
-
   const componentsMap: { [key: string]: { name: string; content: string }[] } =
-  {
-    navbar: NavbarTailwindComponents,
-    hero: HeroTailwindComponents,
-    cookies: CookiesTailwindComponents,
-    card: CardTailwindComponents,
-    testimonials: TestimonialsTailwindComponents,
-    footer: FooterTailwindComponents,
-    login: LoginTailwindComponents,
-    pagination: PaginationTailwindComponents,
-    pricing: PricingTailwindComponents,
-    loading: LoadingTailwindComponents,
-    breadcrumb: BreadcrumbTailwindComponents,
-  };
+    {
+      navbar: NavbarTailwindComponents,
+      hero: HeroTailwindComponents,
+      cookies: CookiesTailwindComponents,
+      card: CardTailwindComponents,
+      testimonials: TestimonialsTailwindComponents,
+      footer: FooterTailwindComponents,
+      login: LoginTailwindComponents,
+      pagination: PaginationTailwindComponents,
+      pricing: PricingTailwindComponents,
+      loading: LoadingTailwindComponents,
+      breadcrumb: BreadcrumbTailwindComponents,
+    };
 
   let currentComponents: { name: string; content: string }[] | null = null;
   if (typeof slug === "string") {
@@ -84,6 +84,7 @@ const NavbarTailwindComponentsPage = () => {
   const { isFavorited, handleFavorite } = useFavoriteTool(
     "Navbar Tailwind Components"
   );
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     if (currentComponents) {
@@ -166,7 +167,6 @@ const NavbarTailwindComponentsPage = () => {
     return componentHeights[slug as string] || componentHeights["default"];
   };
 
-
   return (
     <>
       <SEO title={`${title} Tailwind Components`} />
@@ -231,19 +231,19 @@ const NavbarTailwindComponentsPage = () => {
                       <button onClick={() => handleWidthChange(index, "320px")}>
                         <HiOutlineDevicePhoneMobile
                           size={28}
-                          className={`${widths[index] === "320px" ? "text-blue-600" : "text-gray-600"}`}
+                          className={`${widths[index] === "320px" ? "text-blue-600 dark:text-blue-500" : "text-gray-600  dark:text-white"}`}
                         />
                       </button>
                       <button onClick={() => handleWidthChange(index, "768px")}>
                         <HiOutlineDeviceTablet
                           size={28}
-                          className={`${widths[index] === "768px" ? "text-blue-600" : "text-gray-600"}`}
+                          className={`${widths[index] === "768px" ? "text-blue-600 dark:text-blue-500" : "text-gray-600 dark:text-white"}`}
                         />
                       </button>
                       <button onClick={() => handleWidthChange(index, "100%")}>
                         <HiOutlineComputerDesktop
                           size={28}
-                          className={`${widths[index] === "100%" ? "text-blue-600" : "text-gray-600"}`}
+                          className={`${widths[index] === "100%" ? "text-blue-600 dark:text-blue-500" : "text-gray-600  dark:text-white"}`}
                         />
                       </button>
                     </div>
@@ -267,7 +267,6 @@ const NavbarTailwindComponentsPage = () => {
                             Code
                           </span>
                         </button>
-
                       </div>
                       <button
                         className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4"
@@ -289,12 +288,11 @@ const NavbarTailwindComponentsPage = () => {
                         className="ml-4 flex gap-2 justify-center items-center bg-gray-900 border-2 dark:border-gray-700  text-white  rounded-lg px-4"
                         onClick={() => {
                           setTailwindPlaygroundCode(item.content);
-                          router.push('/tailwind-playground');
+                          router.push("/tailwind-playground");
                         }}
                       >
                         <FaMagic />
                         <span className=" hidden md:block">Editor</span>
-
                       </button>
                     </div>
                   </div>
@@ -341,7 +339,6 @@ const NavbarTailwindComponentsPage = () => {
                     `}
                       title={`Component in ${item.name}`}
                     />
-
                   ) : (
                     <Highlight className="html">
                       <div className="h-[400px]">

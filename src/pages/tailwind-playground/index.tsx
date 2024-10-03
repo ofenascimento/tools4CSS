@@ -13,9 +13,9 @@ import { useControls } from "@/hooks/useControls";
 
 const TailwindPlayground: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
-  
+
   const [code, setCode] =
     useState<string>(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34]">
   <div class="max-w-4xl mx-auto text-center">
@@ -55,7 +55,13 @@ const TailwindPlayground: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    setCode(tailwindPlaygroundCode)
+    if (theme !== "dark") {
+      toggleTheme();
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    setCode(tailwindPlaygroundCode);
     const clean = DOMPurify.sanitize(code);
     setSanitizedCode(clean);
   }, [code, tailwindPlaygroundCode]);
