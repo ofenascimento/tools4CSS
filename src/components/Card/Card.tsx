@@ -57,7 +57,7 @@ const Card = (props: ICard) => {
               </h2>
 
               <p
-                className={`${styles.info} mt-1 ml-1 text-slate-800 leading-4 text-sm font-medium font-raleway mb-2 cursor-pointer p-1 dark:text-white`}
+                className={`${styles.info} mt-1 ml-1 text-slate-800 leading-4 text-sm font-light font-lexend mb-2 cursor-pointer p-1 dark:text-white`}
               >
                 {props.info}
               </p>

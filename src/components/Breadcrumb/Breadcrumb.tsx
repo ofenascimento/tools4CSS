@@ -4,7 +4,7 @@ import { TBreadcrumb } from './types';
 export const Breadcrumb = ({ links }: TBreadcrumb): React.ReactElement => {
   return (
     <nav className='lg:ml-0 text-md font-medium'>
-      <ol className='list-none p-0 flex'>
+      <ol className='list-none p-0 flex font-lexend font-light'>
         {links.map((link, index) => (
           <li className='flex items-center' key={index}>
             {link.href ? (
@@ -15,11 +15,11 @@ export const Breadcrumb = ({ links }: TBreadcrumb): React.ReactElement => {
                 
               </Link>
             ) : (
-              <span className='font-medium dark:text-white'>{link.label}</span>
+              <span className='font-medium text-slate-600 dark:text-white'>{link.label}</span>
             )}
 
             {index < links.length - 1 && (
-              <span className='mx-2 dark:text-white'>/</span>
+              <span className='mx-2 text-slate-800 dark:text-white'>/</span>
             )}
           </li>
         ))}

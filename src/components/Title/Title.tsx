@@ -16,7 +16,7 @@ export default function Title({
         {title}
       </h1> : title}
       <h3
-        className={`${customInfoClassname} text-slate-900 text-center text-md md:text-lg mt-2 font-lexend font-light dark:text-white lg:leading-6 w-full lg:w-1/2`}
+        className={`${customInfoClassname} text-slate-900 text-center text-md md:text-lg mt-2 font-lexend font-normal dark:text-white lg:leading-6 w-full lg:w-1/2`}
       >
         {info}
       </h3>

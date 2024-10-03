@@ -15,7 +15,7 @@ function SubmenuItem({ href, children, onClick }: ISubmenuItem) {
     <li className={`p-2 rounded-md w-full m-1 `} onClick={onClick}>
       <Link href={href}>
         <span
-          className={`${styles.link} cursor-pointer font-raleway text-base`}
+          className={`${styles.link} cursor-pointer text-base font-light font-lexend`}
         >
           {children}
         </span>
@@ -57,14 +57,14 @@ function Navbar() {
       >
         <div>
           <div
-            className={`flex items-center justify-between py-3  md:block ${currentPath.split("/")[1] === "tailwind-components" ? "md:py-0" : "md:py-5"} `}
+            className={`flex items-center justify-between py-3  md:block ${currentPath.split("/")[1] === "tailwind-components" ? "md:py-0" : "md:pt-2 md:pb-4"} `}
           >
             <Link href="/" className="cursor-pointer">
               <Image
                 className="cursor-pointer"
                 src="/logo.png"
-                width={60}
-                height={60}
+                width={56}
+                height={56}
                 alt=""
               />
             </Link>
@@ -157,7 +157,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex cursor-pointer"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white">CSS Generators</h1>
+                    <h1 className="dark:text-white font-lexend font-medium text-slate-800">CSS Generators</h1>
                     <svg
                       width="18"
                       height="18"
@@ -206,7 +206,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white">CSS Tools</h1>
+                    <h1 className="dark:text-white font-lexend font-medium text-slate-800">CSS Tools</h1>
                     <svg
                       width="18"
                       height="18"
@@ -255,7 +255,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white">CSS Components</h1>
+                    <h1 className="dark:text-white font-lexend font-medium text-slate-800">CSS Components</h1>
                     <svg
                       width="18"
                       height="18"
