@@ -9,13 +9,13 @@ export const Breadcrumb = ({ links }: TBreadcrumb): React.ReactElement => {
           <li className='flex items-center' key={index}>
             {link.href ? (
               <Link href={link.href}>
-                <div className=' text-main dark:text-blue-500 dark:hover:text-blue-600 font-medium cursor-pointer'>
+                <div className=' text-main dark:text-blue-500 dark:hover:text-blue-600 font-normal cursor-pointer'>
                 {link.label}
                 </div>
                 
               </Link>
             ) : (
-              <span className='font-medium text-slate-600 dark:text-white'>{link.label}</span>
+              <span className='font-normal text-slate-800 dark:text-white'>{link.label}</span>
             )}
 
             {index < links.length - 1 && (

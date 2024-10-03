@@ -157,7 +157,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex cursor-pointer"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-medium text-slate-800">CSS Generators</h1>
+                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">CSS Generators</h1>
                     <svg
                       width="18"
                       height="18"
@@ -206,7 +206,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-medium text-slate-800">CSS Tools</h1>
+                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">CSS Tools</h1>
                     <svg
                       width="18"
                       height="18"
@@ -255,7 +255,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-medium text-slate-800">CSS Components</h1>
+                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">CSS Components</h1>
                     <svg
                       width="18"
                       height="18"
