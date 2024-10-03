@@ -63,7 +63,7 @@ const Login1 = `
 
 const LoginWithSocialButtons = `
 <!-- Login Component -->
-<div class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+<div class="flex items-center justify-center min-h-screen bg-gray-50 p-4">
   <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 space-y-6">
     <!-- Title -->
     <h2 class="text-3xl font-bold text-center text-blue-600">Login</h2>
@@ -164,10 +164,10 @@ const LoginWithSocialButtons = `
 
 const LoginEmailAndGoogle = `
 
-<div class="max-w-md mx-auto p-6 mt-4 bg-gray-50 rounded-lg shadow-md">
+<div class="max-w-md mx-auto p-6 mt-4 bg-white border border-slate-200 rounded-lg shadow-md">
   <h2 class="text-3xl font-bold text-center mb-4">Hello!</h2>
   <p class="text-center text-gray-600 mb-6">
-    Use your email or another service to continue with Coolors.
+    Enter your email and password to access your account
   </p>
 
   <div class="flex flex-col space-y-4">
