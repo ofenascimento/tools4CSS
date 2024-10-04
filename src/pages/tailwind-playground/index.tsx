@@ -179,7 +179,7 @@ const TailwindPlayground: React.FC = () => {
         <div className="flex flex-col md:flex-row min-h-screen bg-white dark:bg-[#282C34]">
           <div className="w-full min-h-screen overflow-auto bg-white dark:bg-[#282C34]">
             <div
-              className="h-full min-h-screen"
+              className="h-full min-h-screen font-lexend"
               dangerouslySetInnerHTML={{ __html: sanitizedCode }}
             ></div>
           </div>
@@ -195,14 +195,14 @@ const TailwindPlayground: React.FC = () => {
                 extensions={[html(), EditorView.lineWrapping]}
                 theme={oneDark}
                 onChange={(value) => setCode(value)}
-                className="rounded-lg h-full"
+                className="rounded-lg h-full font-lexend"
               />
             </div>
           </div>
 
           <div className="w-full flex-1 h-1/2 bg-white border-t border-slate-300 dark:border-slate-600 overflow-auto">
             <div
-              className="h-full"
+              className="h-full font-lexend"
               dangerouslySetInnerHTML={{ __html: sanitizedCode }}
             ></div>
           </div>
