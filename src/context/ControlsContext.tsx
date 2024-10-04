@@ -45,7 +45,7 @@ export function ControlsProvider({ children }: IProvider) {
   const [trasnparency, setTransparency] = useState(0.15);
   const [depth, setDepth] = useState(4);
   const [angle, setAngle] = useState(80);
-  const [tailwindPlaygroundCode, setTailwindPlaygroundCode] = useState(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34]">
+  const [tailwindPlaygroundCode, setTailwindPlaygroundCode] = useState(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34] bg-blured">
   <div class="max-w-4xl mx-auto text-center">
     <!-- Quotation Mark -->
     <div class="text-blue-600 text-4xl mb-4">“</div>
@@ -66,9 +66,9 @@ export function ControlsProvider({ children }: IProvider) {
 
     <!-- Social Buttons -->
     <div class="flex flex-col mt-5 gap-2">
-      <a class="bg-blue-600 mx-4 py-2 text-white rounded-xl border-4 border-blue-700">LinkedIn</a>
-      <a class="bg-red-500 mx-4 py-2 text-white rounded-xl border-4 border-red-700">Instagram</a>
-      <a class="bg-slate-600 mx-4 py-2 text-white rounded-xl border-4 border-gray-700">GitHub</a>
+      <a class="bg-blue-600 mx-4 py-2 text-white rounded-xl border-4 border-blue-700 cursor-pointer" href="https://www.linkedin.com/in/gomestzx/">Linkedin</a>
+      <a class="bg-red-500 mx-4 py-2 text-white rounded-xl border-4 border-red-700 cursor-pointer" href="https://www.instagram.com/felipematheus.dev/">Instagram</a>
+      <a class="bg-slate-600 mx-4 py-2 text-white rounded-xl border-4 border-gray-700 cursor-pointer" href="https://github.com/gomestzx">GitHub</a>
     </div>
     
   </div>

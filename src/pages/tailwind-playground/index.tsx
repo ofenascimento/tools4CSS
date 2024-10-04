@@ -58,11 +58,11 @@ const TailwindPlayground: React.FC = () => {
     setCode(tailwindPlaygroundCode);
   }, [])
 
-  useEffect(() => {
-    if (theme !== "dark") {
-      toggleTheme();
-    }
-  }, [theme]);
+  // useEffect(() => {
+  //   if (theme !== "dark") {
+  //     toggleTheme();
+  //   }
+  // }, []);
 
   useEffect(() => {
     const clean = DOMPurify.sanitize(code);
@@ -72,27 +72,18 @@ const TailwindPlayground: React.FC = () => {
   return (
     <>
       <SEO title="Tailwind Playground" />
-      <div className="p-3 w-full flex justify-between border-b border-slate-300 dark:border-slate-600 items-center bg-white dark:bg-[#282C34]">
+      <div className="p-3 w-full flex justify-between border-b border-slate-300 dark:border-slate-600 items-center bg-gray-50 dark:bg-[#282C34]">
         <Link href="/" className="cursor-pointer">
-          {theme === "dark" ? (
-            <Image
-              className="cursor-pointer"
-              src="/playground-logo-white.png"
-              width={152}
-              height={38}
-              alt=""
-            />
-          ) : (
-            <Image
-              className="cursor-pointer"
-              src="/playground-logo-dark.png"
-              width={152}
-              height={38}
-              alt=""
-            />
-          )}
+          <Image
+            className="cursor-pointer"
+            src="/logo-with-tailwind.png"
+            width={62.64}
+            height={46.08}
+            alt=""
+          />
+
         </Link>
-        <div className="bg-custom-gray-main dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-xl dark:border-slate-600 cursor-pointer">
+        <div className="bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-xl dark:border-slate-600 cursor-pointer">
           <button
             className={`px-3 py-3 ${screen === "split-horizontal" ? "text-blue-500" : ""}`}
             onClick={() => setScreen("split-horizontal")}
@@ -141,13 +132,13 @@ const TailwindPlayground: React.FC = () => {
 
         <div className=" flex justify-center items-center gap-2">
           <Link href="https://github.com/gomestzx/tools4CSS">
-            <div className=" bg-custom-gray-main dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-3 rounded-xl dark:border-slate-600 cursor-pointer">
+            <div className=" bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-3 rounded-xl dark:border-slate-600 cursor-pointer">
               <FaGithub size={20} />
             </div>
           </Link>
           <button
             onClick={toggleTheme}
-            className=" bg-custom-gray-main px-3 py-3 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-xl"
+            className=" bg-custom-gray-secondary px-3 py-3 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-xl"
           >
             {theme === "dark" ? (
               <FaSun color="#A0AFBF" size={20} />
@@ -167,18 +158,18 @@ const TailwindPlayground: React.FC = () => {
                 height="100%"
                 extensions={[
                   html(),
-                  EditorView.lineWrapping, // Habilita a quebra de linha
+                  EditorView.lineWrapping,
                 ]}
                 theme={oneDark}
                 onChange={(value) => setCode(value)}
-                className=" rounded-lg h-full"
+                className="h-full max-h-screen min-h-screen overflow-auto font-lexend"
               />
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 p-4 bg-white dark:bg-[#282C34] border-l border-slate-300 dark:border-slate-600 overflow-auto">
+          <div className="w-full md:w-1/2 bg-white dark:bg-[#282C34] border-l border-slate-300 dark:border-slate-600 overflow-auto">
             <div
-              className="h-full"
+              className="h-full max-h-screen min-h-screen font-lexend"
               dangerouslySetInnerHTML={{ __html: sanitizedCode }}
             ></div>
           </div>
