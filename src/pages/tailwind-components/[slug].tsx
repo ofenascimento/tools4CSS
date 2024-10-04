@@ -33,7 +33,7 @@ import PricingTailwindComponents from "@/constants/tailwind-components/pricing";
 import LoadingTailwindComponents from "@/constants/tailwind-components/loading";
 import BreadcrumbTailwindComponents from "@/constants/tailwind-components/breadcrumb";
 import { useControls } from "@/hooks/useControls";
-import { FaCode, FaCut, FaMagic } from "react-icons/fa";
+import { FaCode, FaCut, FaMagic, FaMoon, FaSun } from "react-icons/fa";
 import { useTheme } from "@/context/ThemeContext";
 import Tooltip from "@/components/Tooltip/Tooltip";
 
@@ -80,6 +80,7 @@ const NavbarTailwindComponentsPage = () => {
 
   const [widths, setWidths] = useState<string[]>([]);
   const [activeView, setActiveView] = useState<string[]>([]);
+  const [darkModes, setDarkModes] = useState<boolean[]>([]);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
   const { isFavorited, handleFavorite } = useFavoriteTool(
@@ -91,6 +92,7 @@ const NavbarTailwindComponentsPage = () => {
     if (currentComponents) {
       setWidths(currentComponents.map(() => "100%"));
       setActiveView(currentComponents.map(() => "preview"));
+      setDarkModes(currentComponents.map(() => false));
       setTimeout(() => {
         setLoading(false);
       }, 1000);
@@ -167,6 +169,15 @@ const NavbarTailwindComponentsPage = () => {
   const getHeightBySlug = (slug: string | undefined): string => {
     return componentHeights[slug as string] || componentHeights["default"];
   };
+
+  const toggleDarkMode = (index: number) => {
+    setDarkModes((prevDarkModes) => {
+      const newDarkModes = [...prevDarkModes];
+      newDarkModes[index] = !newDarkModes[index];
+      return newDarkModes;
+    });
+  };
+
 
   return (
     <>
@@ -269,9 +280,19 @@ const NavbarTailwindComponentsPage = () => {
                           </span>
                         </button>
                       </div>
+                      <button
+                        className={`ml-4 flex gap-2 justify-center items-center rounded-lg px-4 py-2 transition-colors duration-300 ${darkModes[index]
+                          ? "bg-gray-700 text-white hover:bg-gray-600"
+                          : "bg-gray-900 text-white hover:bg-gray-800"
+                          }`}
+                        onClick={() => toggleDarkMode(index)}
+                      >
+                        {darkModes[index] ? <FaSun color="#A0AFBF" /> : <FaMoon />}
+                      </button>
+
                       {copiedIndex === index ? (
                         <>
-                          <Tooltip text="Copied" customStyle={{top: -45, left: 40, backgroundColor: '#16a34a'}}>
+                          <Tooltip text="Copied" customStyle={{ top: -45, left: 40, backgroundColor: '#16a34a' }}>
                             <div className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4">
                               <HiOutlineClipboardDocumentCheck
                                 className="text-green-600 dark:text-green-400"
@@ -313,7 +334,7 @@ const NavbarTailwindComponentsPage = () => {
                       style={{ maxWidth: widths[index] }}
                       srcDoc={`
                       <!DOCTYPE html>
-                      <html class="relative" dir="ltr">
+                      <html class="${darkModes[index] ? 'dark' : ''}" dir="ltr">
                         <head>
                           <link rel="preconnect" href="https://fonts.googleapis.com" />
                           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -349,6 +370,7 @@ const NavbarTailwindComponentsPage = () => {
                     `}
                       title={`Component in ${item.name}`}
                     />
+
                   ) : (
                     <Highlight className="html">
                       <div className="h-[400px]">
