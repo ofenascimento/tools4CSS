@@ -203,6 +203,12 @@ function Navbar() {
                       Gradient Pallete
                     </SubmenuItem>
                     <SubmenuItem
+                      href="/tailwind-playground"
+                      onClick={handleSubmenuClick}
+                    >
+                      Tailwind Playground
+                    </SubmenuItem>
+                    <SubmenuItem
                       href="/css-formatter"
                       onClick={handleSubmenuClick}
                     >

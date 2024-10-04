@@ -16,6 +16,12 @@ function CSSTools() {
                 img="/icons/css.png"
                 info="Beautify and format your CSS code effortlessly."
             />
+            <Card
+                title="Tailwind Playground"
+                slug="tailwind-playground"
+                img="/icons/tailwind.png"
+                info="Customize and preview Tailwind components in real-time with our interactive playground."
+            />
         </div>
     )
 }
