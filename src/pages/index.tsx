@@ -3,6 +3,7 @@ import { SEO } from "../components/SEO";
 import React from "react";
 import Hero from "../components/Sections/Hero/Hero";
 import Tools from "../components/Sections/Tools/Tools";
+import GithubStargazers from "@/components/GithubStargazers/GithubStargazers";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       />
       <Hero />
       <Tools />
+      <GithubStargazers />
     </div>
   );
 };
