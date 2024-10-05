@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaStar } from "react-icons/fa";
 import { Stargazer } from "./types";
-
-
+import Link from "next/link";
 
 const GithubStargazers: React.FC = () => {
   const [stargazers, setStargazers] = useState<Stargazer[]>([]);
@@ -34,13 +33,15 @@ const GithubStargazers: React.FC = () => {
       </div>
 
       <div className="flex items-center justify-center mt-4">
-        <button className="bg-black text-white px-8 py-2 rounded-xl flex items-center justify-center gap-2">
-          <FaGithub />
-          <FaStar color="#FABC3F" />
-          <span className="font-lexend">{stargazers.length}</span>
-        </button>
+        <Link href="https://github.com/gomestzx/tools4CSS">
+          <div className="bg-black text-white px-8 py-2 rounded-xl flex items-center justify-center gap-2 dark:border dark:border-slate-600 cursor-pointer">
+            <FaGithub />
+            <FaStar color="#FABC3F" />
+            <span className="font-lexend">{stargazers.length}</span>
+          </div>
+        </Link>
       </div>
-      <p className="font-lexend text-gray-600 text-center mt-2">
+      <p className="font-lexend text-gray-600 dark:text-gray-300 text-center mt-2">
         Add a star on GitHub and join the community!
       </p>
     </div>
