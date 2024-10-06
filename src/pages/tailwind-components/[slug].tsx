@@ -43,8 +43,8 @@ const NavbarTailwindComponentsPage = () => {
   const { setTailwindPlaygroundCode } = useControls();
 
   const componentHeights: { [key: string]: string } = {
-    navbar: "h-[100px]",
-    pagination: "h-[80px]",
+    navbar: "h-[64px]",
+    pagination: "h-[66px]",
     cookies: "h-[350px]",
     pricing: "h-[600px]",
     loading: "h-[70px]",

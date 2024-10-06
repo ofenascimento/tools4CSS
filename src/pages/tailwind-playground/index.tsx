@@ -167,7 +167,7 @@ const TailwindPlayground: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 bg-white dark:bg-[#282C34] border-l border-slate-300 dark:border-slate-600 overflow-auto">
+          <div className="w-full md:w-1/2 bg-white border-l border-slate-300 dark:border-slate-600 overflow-auto">
             <div
               className="h-full max-h-screen min-h-screen font-lexend"
               dangerouslySetInnerHTML={{ __html: sanitizedCode }}

@@ -29,40 +29,41 @@ const Testimonials1 = `
 </div>`;
 
 const Testimonials2 = `
-<div class="grid grid-cols-1 gap-4 p-6 md:grid-cols-3">
+<div class="grid grid-cols-1 gap-4 p-6 md:grid-cols-3 dark:bg-gray-800">
   <!-- First row: 3 columns -->
-  <div class="bg-green-100 dark:bg-gray-700 p-4 rounded-lg">
+  <div class="bg-green-100 p-4 rounded-lg">
     <img src="https://tools4css.com/avatars/avatar1.png" alt="Lucas" class="rounded-full w-20 h-20 mx-auto mb-4">
-    <p class="text-center mb-2 font-normal text-gray-700 dark:text-gray-300">"This service was transformative for my business. The team truly cares about the results."</p>
-    <p class="text-center font-bold text-gray-800 dark:text-gray-100">Lucas Ferreira</p>
+    <p class="text-center mb-2 font-normal text-gray-700">"This service was transformative for my business. The team truly cares about the results."</p>
+    <p class="text-center font-bold text-gray-800">Lucas Ferreira</p>
   </div>
 
-  <div class="bg-yellow-100 dark:bg-gray-700 p-4 rounded-lg">
+  <div class="bg-yellow-100 p-4 rounded-lg">
     <img src="https://tools4css.com/avatars/avatar2.png" alt="Amanda" class="rounded-full w-20 h-20 mx-auto mb-4">
-    <p class="text-center font-normal mb-2 text-gray-700 dark:text-gray-300">"I've never seen such a dedicated and committed team. The support was incredible from start to finish!"</p>
-    <p class="text-center font-bold text-gray-800 dark:text-gray-100">Amanda Costa</p>
+    <p class="text-center font-normal mb-2 text-gray-700">"I've never seen such a dedicated and committed team. The support was incredible from start to finish!"</p>
+    <p class="text-center font-bold text-gray-800">Amanda Costa</p>
   </div>
 
-  <div class="bg-purple-100 dark:bg-gray-700 p-4 rounded-lg">
+  <div class="bg-purple-100 p-4 rounded-lg">
     <img src="https://tools4css.com/avatars/avatar3.png" alt="Carlos" class="rounded-full w-20 h-20 mx-auto mb-4">
-    <p class="text-center font-normal mb-2 text-gray-700 dark:text-gray-300">"Without a doubt, the best experience I've had in years. I recommend it to everyone!"</p>
-    <p class="text-center font-bold text-gray-800 dark:text-gray-100">Carlos Souza</p>
+    <p class="text-center font-normal mb-2 text-gray-700">"Without a doubt, the best experience I've had in years. I recommend it to everyone!"</p>
+    <p class="text-center font-bold text-gray-800">Carlos Souza</p>
   </div>
 
   <!-- Second row: 2 columns with 70/30 ratio -->
-  <div class="col-span-1 md:col-span-2 bg-pink-100 dark:bg-gray-700 p-6 rounded-lg">
+  <div class="col-span-1 md:col-span-2 bg-pink-100 p-6 rounded-lg">
     <img src="https://tools4css.com/avatars/avatar4.png" alt="Mariana" class="rounded-full w-20 h-20 mx-auto mb-4">
-    <p class="text-center font-normal text-lg text-gray-700 dark:text-gray-300">"Working with this company was amazing. They not only understood my needs but exceeded all expectations. The success of my project was thanks to them!"</p>
-    <p class="text-center font-bold text-gray-800 dark:text-gray-100">Mariana Lima</p>
+    <p class="text-center font-normal text-lg text-gray-700">"Working with this company was amazing. They not only understood my needs but exceeded all expectations. The success of my project was thanks to them!"</p>
+    <p class="text-center font-bold text-gray-800">Mariana Lima</p>
   </div>
 
-  <div class="bg-red-100 dark:bg-gray-700 p-4 rounded-lg">
+  <div class="bg-red-100 p-4 rounded-lg">
     <img src="https://tools4css.com/avatars/avatar5.png" alt="João" class="rounded-full w-20 h-20 mx-auto mb-4">
-    <p class="text-center font-normal text-xl text-gray-700 dark:text-gray-300">"I couldn't be more satisfied."</p>
-    <p class="text-center font-bold text-gray-800 dark:text-gray-100">João Almeida</p>
+    <p class="text-center font-normal text-xl text-gray-700">"I couldn't be more satisfied."</p>
+    <p class="text-center font-bold text-gray-800">João Almeida</p>
   </div>
 </div>
 `;
+
 
 const Testimonials3 = `
 <div class="py-12 bg-slate-50 dark:bg-gray-800 px-4">
@@ -96,7 +97,7 @@ const Testimonials3 = `
 
 const Testimonials4 = `
 
-<div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+<div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-3xl mx-auto mt-2">
   <!-- Stars -->
   <div class="flex items-center mb-4">
     <svg class="w-6 h-6 text-yellow-500 dark:text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
