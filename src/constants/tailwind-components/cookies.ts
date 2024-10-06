@@ -1,19 +1,25 @@
 const cookies1 = `
-<div class="fixed bottom-4 right-4 bg-white border border-gray-200 shadow-lg rounded-lg p-6 max-w-sm z-50">
-            <div class="flex items-center mb-4">
-                <h2 class="text-lg font-semibold mr-2">Cookies</h2>
-                <span role="img" aria-label="cookie" class="text-lg">🍪</span>
-            </div>
-            <p class="text-gray-700 mb-4">We use third-party cookies to give the best experience across our site. Learn more in our Privacy Policy.</p>
-            <div class="flex justify-end space-x-4">
-                <button class="bg-gray-100 text-gray-700 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300">No thanks</button>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300">Accept all</button>
-            </div>
-        </div>
-`
+<div class="fixed bottom-4 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-lg p-6 max-w-sm z-50">
+    <div class="flex items-center mb-4">
+        <h2 class="text-lg font-semibold mr-2 text-gray-900 dark:text-gray-100">Cookies</h2>
+        <span role="img" aria-label="cookie" class="text-lg">🍪</span>
+    </div>
+    <p class="text-gray-700 dark:text-gray-300 mb-4">
+        We use third-party cookies to give the best experience across our site. Learn more in our Privacy Policy.
+    </p>
+    <div class="flex justify-end space-x-4">
+        <button class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600">
+            No thanks
+        </button>
+        <button class="bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400">
+            Accept all
+        </button>
+    </div>
+</div>
+`;
 
 const cookies2 = `
-<div class="bg-white shadow-lg rounded-lg p-6 max-w-xs mx-auto text-center">
+<div class="bg-white mt-2 dark:bg-gray-800 shadow-lg rounded-lg p-6 max-w-xs mx-auto text-center">
   <div class="mb-4">
     <!-- Ícone de cookie (SVG fornecido) centralizado e com cor azul -->
     <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#3B82F6" class="mx-auto">
@@ -21,20 +27,19 @@ const cookies2 = `
     </svg>
   </div>
   <!-- Texto principal -->
-  <h2 class="text-2xl font-bold text-gray-900 mb-2">We use cookies</h2>
-  <p class="text-gray-600 mb-6">
+  <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">We use cookies</h2>
+  <p class="text-gray-600 dark:text-gray-300 mb-6">
     Please, accept these sweeties to continue enjoying our site!
   </p>
   <!-- Botões -->
-  <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+  <button class="bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-400">
     Mmm... Sweet!
   </button>
-  <p class="text-gray-500">
-    <a href="#" class="hover:underline text-blue-500">Nope... I am on a diet <span>🍪</span></a>
+  <p class="text-gray-500 dark:text-gray-400">
+    <a href="#" class="hover:underline text-blue-500 dark:text-blue-400">Nope... I am on a diet <span>🍪</span></a>
   </p>
 </div>
-
-`
+`;
 
 const CookiesTailwindComponents = [
     { name: 'Cookies 1', content: cookies1 },

@@ -1,145 +1,134 @@
 const Login1 = `
-<main class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-  <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 space-y-6">
+<main class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-4">
+  <div class="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 space-y-6">
     <!-- Title -->
-    <h2 class="text-3xl font-bold text-center text-blue-600">Login</h2>
-    <p class="text-center text-gray-600">Enter your email and password to access your account</p>
+    <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-blue-400">Login</h2>
+    <p class="text-center text-gray-600 dark:text-gray-300">Enter your email and password to access your account</p>
 
     <!-- Login Form -->
     <form class="space-y-4" action="#" method="POST">
       <!-- Email Field -->
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
         <input
           type="email"
           id="email"
           name="email"
           placeholder="Enter your email"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           required
         />
       </div>
 
       <!-- Password Field -->
       <div class="relative">
-        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
         <input
           type="password"
           id="password"
           name="password"
           placeholder="Enter your password"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           required
         />
         <!-- Password Toggle Icon (Non-Functional) -->
         <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
-          <i class="fas fa-eye-slash text-gray-500"></i>
+          <i class="fas fa-eye-slash text-gray-500 dark:text-gray-400"></i>
         </span>
       </div>
 
       <!-- Forgot Password Link -->
       <div class="flex justify-end">
-        <a href="#" class="text-sm text-blue-500 hover:underline">Forgot your password?</a>
+        <a href="#" class="text-sm text-blue-500 hover:underline dark:text-blue-400">Forgot your password?</a>
       </div>
 
       <!-- Login Button -->
       <button
         type="submit"
-        class="w-full px-4 py-2 text-white bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:bg-blue-700 transition-colors"
+        class="w-full px-4 py-2 text-white bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
       >
         Login
       </button>
     </form>
 
     <!-- Sign Up Link -->
-    <div class="text-center text-gray-600">
+    <div class="text-center text-gray-600 dark:text-gray-300">
       Don't have an account?
-      <a href="#" class="text-blue-500 hover:underline">Sign up</a>
+      <a href="#" class="text-blue-500 hover:underline dark:text-blue-400">Sign up</a>
     </div>
   </div>
 </main>
 `;
 
 
+
 const LoginWithSocialButtons = `
-<!-- Login Component -->
-<div class="flex items-center justify-center min-h-screen bg-gray-50 p-4">
-  <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 space-y-6">
+<div class="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 p-4">
+  <div class="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 space-y-6">
     <!-- Title -->
-    <h2 class="text-3xl font-bold text-center text-blue-600">Login</h2>
-    <p class="text-center text-gray-600">Enter your email and password to access your account</p>
+    <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-blue-400">Login</h2>
+    <p class="text-center text-gray-600 dark:text-gray-300">Enter your email and password to access your account</p>
 
     <!-- Login Form -->
     <form class="space-y-4">
       <!-- Email Field -->
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
         <input
           type="email"
           id="email"
           name="email"
           placeholder="Enter your email"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           required
         />
       </div>
 
       <!-- Password Field -->
       <div class="relative">
-        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
         <input
           type="password"
           id="password"
           name="password"
           placeholder="Enter your password"
-          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           required
         />
-        <!-- Password Toggle Icon (Non-Functional) -->
         <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
-          <i class="fas fa-eye-slash text-gray-500"></i>
+          <i class="fas fa-eye-slash text-gray-500 dark:text-gray-400"></i>
         </span>
       </div>
 
-      <!-- Forgot Password Link -->
       <div class="flex justify-end">
-        <a href="#" class="text-sm text-blue-500 hover:underline">Forgot your password?</a>
+        <a href="#" class="text-sm text-blue-500 hover:underline dark:text-blue-400">Forgot your password?</a>
       </div>
 
-      <!-- Login Button -->
       <button
         type="submit"
-        class="w-full px-4 py-2 text-white bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        class="w-full px-4 py-2 text-white bg-blue-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
       >
         Login
       </button>
     </form>
 
-    <!-- Divider -->
     <div class="flex items-center justify-center">
-      <span class="text-gray-400">OR</span>
+      <span class="text-gray-400 dark:text-gray-500">OR</span>
     </div>
 
     <!-- Social Login Buttons -->
     <div class="space-y-3">
-      <!-- Google Login -->
       <button
         type="button"
-        class="flex items-center justify-center w-full px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+        class="flex items-center justify-center gap-2 w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800"
       >
-        <svg class="w-5 h-5 mr-2" viewBox="0 0 48 48">
-          <path
-            fill="#FFC107"
-            d="M43.6 20.5H42V20H24v8h11.3c-1.7 4.7-6.4 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8.1 3.2l6-6C34.7 6.1 29.9 4 24 4 12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20c0-1.3-.1-2.5-.4-3.6z"
-          />
-        </svg>
-        <span>Continue with Google</span>
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg>
+        <span class="dark:text-white">Continue with Google</span>
       </button>
 
-      <!-- Apple Login -->
       <button
         type="button"
-        class="flex items-center justify-center w-full px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+        class="flex items-center justify-center w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800"
       >
         <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
           <path
@@ -148,49 +137,49 @@ const LoginWithSocialButtons = `
             clip-rule="evenodd"
           />
         </svg>
-        <span>Continue with Apple</span>
+        <span class="dark:text-white">Continue with Github</span>
       </button>
     </div>
 
-    <!-- Sign Up Link -->
-    <p class="text-center text-gray-600">
+    <p class="text-center text-gray-600 dark:text-gray-300">
       Don't have an account?
-      <a href="#" class="text-blue-500 hover:underline">Sign up</a>
+      <a href="#" class="text-blue-500 hover:underline dark:text-blue-400">Sign up</a>
     </p>
   </div>
 </div>
-
 `;
 
-const LoginEmailAndGoogle = `
 
-<div class="max-w-md mx-auto p-6 mt-4 bg-white border border-slate-200 rounded-lg shadow-md">
-  <h2 class="text-3xl font-bold text-center mb-4">Hello!</h2>
-  <p class="text-center text-gray-600 mb-6">
+
+const LoginEmailAndGoogle = `
+<div class="max-w-md mx-auto p-6 mt-4 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg shadow-md">
+  <h2 class="text-3xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">Hello!</h2>
+  <p class="text-center text-gray-600 dark:text-gray-300 mb-6">
     Enter your email and password to access your account
   </p>
 
   <div class="flex flex-col space-y-4">
-    <button class="flex items-center justify-center p-3 border border-gray-300 rounded-lg hover:bg-gray-100">
-      <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-        <path fill="#4285F4" d="M45.12 24.58c0-1.32-.12-2.58-.34-3.82H24v7.28h12.06c-.52 2.6-2.04 4.79-4.34 6.26v5.19h6.98c4.08-3.76 6.42-9.31 6.42-15.91z" />
-        <path fill="#34A853" d="M24 48c5.82 0 10.69-1.93 14.26-5.26l-6.98-5.19c-1.94 1.32-4.41 2.12-7.28 2.12-5.59 0-10.31-3.76-12-8.79H5.66v5.48C9.2 43.5 16.02 48 24 48z" />
-        <path fill="#FBBC05" d="M12 29.88c-1.32-3.76-1.32-7.8 0-11.56V12.82H5.66c-3.26 6.5-3.26 13.96 0 20.46L12 29.88z" />
-        <path fill="#EA4335" d="M24 9.32c2.47 0 4.71.85 6.48 2.5l4.79-4.79C31.88 3.32 27 1.34 24 1.34 16.02 1.34 9.2 5.84 5.66 12.32l6.34 5.48c1.69-5.03 6.41-8.48 12-8.48z" />
+    <button class="flex items-center justify-center gap-2 p-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24px" height="24px">
+        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+        <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+        <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+        <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
       </svg>
       Continue with Google
     </button>
 
-    <button class="p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+    <button class="p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 ">
       Continue with email
     </button>
   </div>
 
-  <p class="text-xs text-center text-gray-500 mt-4">
+  <p class="text-xs text-center text-gray-500 dark:text-gray-400 mt-4">
     By continuing, you agree to our <a href="#" class="underline">Terms of Service</a>. Read our <a href="#" class="underline">Privacy Policy</a>.
   </p>
 </div>
 `
+
 
 const LoginTailwindComponents = [
     { name: "Simple Login", content: Login1 },
