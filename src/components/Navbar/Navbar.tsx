@@ -134,12 +134,6 @@ function Navbar() {
                       Underline Gradient
                     </SubmenuItem>
                     <SubmenuItem
-                      href="/buttons-generator"
-                      onClick={handleSubmenuClick}
-                    >
-                      Buttons Generator
-                    </SubmenuItem>
-                    <SubmenuItem
                       href="/glassmorphism"
                       onClick={handleSubmenuClick}
                     >
@@ -260,7 +254,7 @@ function Navbar() {
                       Tailwind Components
                     </SubmenuItem>
                     <SubmenuItem
-                      href="/buttons-generator"
+                      href="/css-buttons"
                       onClick={handleSubmenuClick}
                     >
                       CSS Buttons
@@ -319,7 +313,7 @@ function Navbar() {
                 className="text-slate-900 dark:text-white block md:hidden"
                 onClick={() => setNavbar(false)}
               >
-                <Link href="/buttons-generator">Buttons Generator</Link>
+                <Link href="/css-buttons">CSS Buttons</Link>
               </li>
               <li
                 className="text-slate-900 dark:text-white block md:hidden"

@@ -12,7 +12,7 @@ function CSSComponents() {
             />
             <Card
                 title="CSS Buttons"
-                slug="buttons-generator"
+                slug="css-buttons"
                 img="/icons/button.png"
                 info="Browse through a variety of customizable CSS buttons."
             />
