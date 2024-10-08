@@ -36,6 +36,7 @@ import { useControls } from "@/hooks/useControls";
 import { FaCode, FaCut, FaMagic, FaMoon, FaSun } from "react-icons/fa";
 import { useTheme } from "@/context/ThemeContext";
 import Tooltip from "@/components/Tooltip/Tooltip";
+import FeaturesTailwindComponents from "@/constants/tailwind-components/features";
 
 const NavbarTailwindComponentsPage = () => {
   const router = useRouter();
@@ -65,6 +66,7 @@ const NavbarTailwindComponentsPage = () => {
     pricing: PricingTailwindComponents,
     loading: LoadingTailwindComponents,
     breadcrumb: BreadcrumbTailwindComponents,
+    features: FeaturesTailwindComponents
   };
 
   let currentComponents: { name: string; content: string }[] | null = null;

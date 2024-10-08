@@ -18,6 +18,7 @@ const componentsData: ComponentsData = {
         { name: "Card", count: 8 },
         { name: "Testimonials", count: 6 },
         { name: "Pricing", count: 4 },
+        { name: "Features", count: 1 },
         { name: "Cookies", count: 2 },
         { name: "Loading", count: 6 },
         // { name: "Snackbar", count: 4 },
