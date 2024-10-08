@@ -56,7 +56,7 @@ const TailwindPlayground: React.FC = () => {
 
   useEffect(() => {
     setCode(tailwindPlaygroundCode);
-  }, [])
+  }, []);
 
   // useEffect(() => {
   //   if (theme !== "dark") {
@@ -81,7 +81,6 @@ const TailwindPlayground: React.FC = () => {
             height={46.08}
             alt=""
           />
-
         </Link>
         <div className="bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-xl dark:border-slate-600 cursor-pointer">
           <button
@@ -156,10 +155,7 @@ const TailwindPlayground: React.FC = () => {
               <CodeMirror
                 value={code}
                 height="100%"
-                extensions={[
-                  html(),
-                  EditorView.lineWrapping,
-                ]}
+                extensions={[html(), EditorView.lineWrapping]}
                 theme={oneDark}
                 onChange={(value) => setCode(value)}
                 className="h-full max-h-screen min-h-screen overflow-auto font-lexend"

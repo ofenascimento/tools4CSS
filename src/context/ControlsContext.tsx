@@ -45,7 +45,7 @@ export function ControlsProvider({ children }: IProvider) {
   const [trasnparency, setTransparency] = useState(0.15);
   const [depth, setDepth] = useState(4);
   const [angle, setAngle] = useState(80);
-  const [tailwindPlaygroundCode, setTailwindPlaygroundCode] = useState(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34] bg-blured">
+  const [tailwindPlaygroundCode, setTailwindPlaygroundCode] = useState(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34] bg-blured h-screen">
   <div class="max-w-4xl mx-auto text-center">
     <!-- Quotation Mark -->
     <div class="text-blue-600 text-4xl mb-4">“</div>
