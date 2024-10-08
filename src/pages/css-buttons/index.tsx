@@ -101,17 +101,17 @@ const ButtonsGenerator: React.FC = () => {
             className="fixed inset-0 bg-black opacity-50"
             onClick={handleCloseModal}
           ></div>
-          <div className="bg-black border-4 border-dark-100 rounded-lg p-4 md:p-4 relative z-10 w-full max-w-lg mx-4 md:mx-auto">
+          <div className="bg-gray-50 dark:bg-black border-4 border-slate-300 dark:border-dark-100 rounded-lg p-4 md:p-4 relative z-10 w-full max-w-lg mx-4 md:mx-auto">
             <div className="mb-4 flex justify-end">
               <button
-                className="text-white bg-dark-100 p-2 rounded-full"
+                className="dark:text-white text-black bg-gray-200 dark:bg-dark-100 p-2 rounded-full"
                 onClick={handleCloseModal}
               >
                 <MdClose />
               </button>
             </div>
             <div className="flex flex-col items-center">
-              <div className="bg-gray-700 w-full p-2 rounded-lg">
+              <div className="bg-gray-200 dark:bg-gray-700 w-full p-2 rounded-lg">
                 <button className={selectedButton.className}>
                   {selectedButton.text}
                 </button>

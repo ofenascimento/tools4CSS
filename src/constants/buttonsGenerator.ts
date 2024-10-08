@@ -65,10 +65,9 @@ export const buttonsGenerator = [
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s ease;
-   color: #fff;
-}
-.bold-border-button:hover {
-  background-color: #F5F5F5;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
 }
 `,
   },
