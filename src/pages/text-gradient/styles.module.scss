@@ -1,32 +1,105 @@
 .textGradient {
-    font-size: 100px;
-    margin: 10px;
-    -webkit-background-clip: text !important;
-    @media screen and (max-width: 840px) {
-      font-size: 55px;
-    }
+  font-size: 60px;
+  -webkit-background-clip: text !important;
+  margin-top: 6px;
+
+  @media screen and (max-width: 840px) {
+    font-size: 55px;
   }
+}
 
 .animated {
-    margin-top: 50px;
-    font-size: 100px;
-    margin: 10px;
-    background-clip: text !important;
-    background-size: 300% !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent;
-    animation: animated_text 10s ease-in-out infinite;
-    -moz-animation: animated_text 10s ease-in-out infinite;
-    -webkit-animation: animated_text 10s ease-in-out infinite;
-    @keyframes animated_text {
-      0% {
-        background-position: 0px 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0px 50%;
-      }
+  font-size: 60px;
+  margin-top: 6px;
+  background-clip: text !important;
+  background-size: 300% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 10s ease-in-out infinite;
+  -moz-animation: animated_text 10s ease-in-out infinite;
+  -webkit-animation: animated_text 10s ease-in-out infinite;
+
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0px 50%;
     }
   }
+}
+
+.h3textGradient {
+  font-size: 26px;
+  -webkit-background-clip: text !important;
+  line-height: 1.5rem;
+  margin-top: 14px;
+}
+
+.h3animated {
+  font-size: 26px;
+  margin-top: 14px;
+  background-clip: text !important;
+  background-size: 300% !important;
+  line-height: 1.5rem;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 10s ease-in-out infinite;
+  -moz-animation: animated_text 10s ease-in-out infinite;
+  -webkit-animation: animated_text 10s ease-in-out infinite;
+
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0px 50%;
+    }
+  }
+}
+
+.h5textGradient {
+  font-size: 16px;
+  -webkit-background-clip: text !important;
+  line-height: 1.5rem;
+  margin-top: 10px;
+
+}
+
+.h5animated {
+  font-size: 16px;
+  margin-top: 10px;
+  background-clip: text !important;
+  background-size: 300% !important;
+  line-height: 1.5rem;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 10s ease-in-out infinite;
+  -moz-animation: animated_text 10s ease-in-out infinite;
+  -webkit-animation: animated_text 10s ease-in-out infinite;
+
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0px 50%;
+    }
+  }
+}
+

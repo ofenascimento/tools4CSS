@@ -38,8 +38,8 @@ export function ControlsProvider({ children }: IProvider) {
   const [borderRadius, setBorderRadius] = useState(25);
   const [distance, setDistance] = useState(10);
   const [color, setColor] = useState('#ffffff');
-  const [colorVariant1, setColorVariant1] = useState('#1D4ED8');
-  const [colorVariant2, setColorVariant2] = useState('#24ff8e');
+  const [colorVariant1, setColorVariant1] = useState('#7983f7');
+  const [colorVariant2, setColorVariant2] = useState('#ff2467');
   const [animated, setAnimated] = useState(false);
   const [direction, setDirection] = useState('80deg');
   const [trasnparency, setTransparency] = useState(0.15);

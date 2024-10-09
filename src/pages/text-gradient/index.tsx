@@ -14,6 +14,7 @@ import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
+import AnglePicker from "@/components/AnglePicker/AnglePicker";
 
 const TextGradient = () => {
   const {
@@ -52,24 +53,69 @@ const TextGradient = () => {
           customInfoClassname="lg:w-3/4"
         />
         <div className="mt-4 border border-slate-300 bg-white dark:border-slate-600 dark:bg-mainDark p-2 rounded-lg mx-4 lg:mx-0">
-          <h1
-            className={`${
-              animated ? style.animated : style.textGradient
-            } lg:text-8xl text-center font-GilroyBold`}
+          <h5
+            className={`${animated ? style.h5animated : style.h5textGradient
+              } lg:text-4xl text-center font-lexend leading-3`}
             style={{
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               color: "transparent",
               backgroundClip: "text",
-              background: `linear-gradient(${
-                animated ? 80 : angle
-              }deg, ${colorVariant1}, ${
-                animated ? colorVariant1 + "," : ""
-              } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+              fontSize: 20,
+              fontWeight: 700,
+              background: `linear-gradient(${animated ? 80 : angle
+                }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+                } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+            }}
+          >
+            TOOLS4CSS
+          </h5>
+          <h1
+            className={`${animated ? style.animated : style.textGradient
+              } lg:text-8xl text-center font-lexend`}
+            style={{
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+              backgroundClip: "text",
+              background: `linear-gradient(${animated ? 80 : angle
+                }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+                } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
             }}
           >
             Text Gradient
           </h1>
+          <h3
+            className={`${animated ? style.h3animated : style.h3textGradient
+              } lg:text-4xl text-center font-lexend leading-3`}
+            style={{
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+              backgroundClip: "text",
+              background: `linear-gradient(${animated ? 80 : angle
+                }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+                } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+            }}
+          >
+            Connecting You to a World of <br /> Possibilities and Innovations
+          </h3>
+          <h5
+            className={`${animated ? style.h5animated : style.h5textGradient
+              } lg:text-4xl text-center font-lexend leading-3`}
+            style={{
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+              backgroundClip: "text",
+              background: `linear-gradient(${animated ? 80 : angle
+                }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+                } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+            }}
+          >
+            Experience the Power of Color
+          </h5>
+
         </div>
         <ControlsContainer>
           <ColorPicker
@@ -82,16 +128,7 @@ const TextGradient = () => {
           />
           <div className="flex items-center justify-center gap-2">
             <span>Direction:</span>
-            <CustomSlider
-              style={{ width: 120, marginLeft: 20, marginRight: 20 }}
-              value={angle}
-              onChange={(_e: any, value: number) => setAngle(value as number)}
-              className={style.slider}
-              step={90}
-              min={0}
-              max={360}
-              disabled={animated}
-            />
+            <AnglePicker initialAngle={angle} onAngleChange={setAngle} />
           </div>
           <div className="flex items-center justify-center gap-4">
             <span>Animation:</span>
@@ -121,41 +158,29 @@ const TextGradient = () => {
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
           <SyntaxHighlighter language="css" style={darcula}>
-            {`background: linear-gradient(${
-              animated ? 80 : angle
-            }deg, ${colorVariant1}, ${
-              animated ? colorVariant1 + "," : ""
-            } ${colorVariant2}${
-              animated ? ", " + colorVariant2 : ""
-            }); \nbackground: -webkit-linear-gradient(${angle}deg, ${colorVariant1}, ${
-              animated ? colorVariant1 + "," : ""
-            } ${colorVariant2}${
-              animated ? ", " + colorVariant2 : ""
-            });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
-              animated
+            {`background: linear-gradient(${animated ? 80 : angle
+              }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+              } ${colorVariant2}${animated ? ", " + colorVariant2 : ""
+              }); \nbackground: -webkit-linear-gradient(${angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+              } ${colorVariant2}${animated ? ", " + colorVariant2 : ""
+              });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${animated
                 ? "background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} "
                 : ""
-            }`}
+              }`}
           </SyntaxHighlighter>
         </div>
 
         <div className="mx-4 lg:mx-0">
           <CopyButton
-            textToCopy={`background: linear-gradient(${
-              animated ? 80 : angle
-            }deg, ${colorVariant1}, ${
-              animated ? colorVariant1 + "," : ""
-            } ${colorVariant2}${
-              animated ? ", " + colorVariant2 : ""
-            });\nbackground: -webkit-linear-gradient(${angle}deg, ${colorVariant1}, ${
-              animated ? colorVariant1 + "," : ""
-            } ${colorVariant2}${
-              animated ? ", " + colorVariant2 : ""
-            });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${
-              animated
+            textToCopy={`background: linear-gradient(${animated ? 80 : angle
+              }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+              } ${colorVariant2}${animated ? ", " + colorVariant2 : ""
+              });\nbackground: -webkit-linear-gradient(${angle}deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+              } ${colorVariant2}${animated ? ", " + colorVariant2 : ""
+              });\n-webkit-background-clip: text;\nbackground-clip: text;\ncolor: transparent;\n${animated
                 ? "background-size: 300% !important;\n-webkit-background-clip: text;\n-webkit-text-fill-color: transparent;\nanimation: animated_text 10s ease-in-out infinite;\n-moz-animation: animated_text 10s ease-in-out infinite;\n-webkit-animation: animated_text 10s ease-in-out infinite;\n@keyframes animated_text {\n0% { background-position: 0px 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0px 50%; }} "
                 : ""
-            }`}
+              }`}
           />
         </div>
         <Info
