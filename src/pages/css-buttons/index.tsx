@@ -78,7 +78,7 @@ const ButtonsGenerator: React.FC = () => {
               </button>
               <div className="p-2 absolute bottom-0 right-0">
                 <button
-                  className="bg-dark-100 dark:bg-black py-1 px-4 rounded-full text-white flex gap-2 justify-center items-center"
+                  className="bg-dark-100 dark:bg-black py-1 px-4 rounded-lg text-white flex gap-2 justify-center items-center font-lexend font-normal"
                   onClick={() => handleButtonClick(button)}
                 >
                   Get the code <MdCode />
