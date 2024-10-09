@@ -22,6 +22,9 @@ const CustomSlider = (props: ICustomSlider) => {
 
   return (
     <Slider
+      sx={{
+        color: theme === "dark" ? "#2563eb" : "#2563eb", 
+      }}
       classes={theme === "dark" ? classes : undefined}
       {...props}
       onChange={(event: any, value: any) => {
