@@ -98,7 +98,7 @@ const TextGradient = () => {
                 } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
             }}
           >
-            Connecting You to a World of <br /> Possibilities and Innovations
+            Connecting You to a World of Possibilities and Innovations
           </h3>
           <h5
             className={`${animated ? style.h5animated : style.h5textGradient

@@ -4,7 +4,7 @@
   margin-top: 6px;
 
   @media screen and (max-width: 840px) {
-    font-size: 55px;
+    font-size: 40px;
   }
 }
 
@@ -18,6 +18,10 @@
   animation: animated_text 10s ease-in-out infinite;
   -moz-animation: animated_text 10s ease-in-out infinite;
   -webkit-animation: animated_text 10s ease-in-out infinite;
+
+  @media screen and (max-width: 840px) {
+    font-size: 40px;
+  }
 
   @keyframes animated_text {
     0% {
@@ -39,11 +43,20 @@
   -webkit-background-clip: text !important;
   line-height: 1.5rem;
   margin-top: 14px;
+  max-width: 30rem;
+  margin-inline: auto;
+
+  @media screen and (max-width: 840px) {
+    margin-top: 0px;
+    font-size: 20px;
+  }
 }
 
 .h3animated {
   font-size: 26px;
   margin-top: 14px;
+  max-width: 30rem;
+  margin-inline: auto;
   background-clip: text !important;
   background-size: 300% !important;
   line-height: 1.5rem;
@@ -52,6 +65,11 @@
   animation: animated_text 10s ease-in-out infinite;
   -moz-animation: animated_text 10s ease-in-out infinite;
   -webkit-animation: animated_text 10s ease-in-out infinite;
+
+  @media screen and (max-width: 840px) {
+    margin-top: 0px;
+    font-size: 20px;
+  }
 
   @keyframes animated_text {
     0% {
@@ -73,6 +91,7 @@
   -webkit-background-clip: text !important;
   line-height: 1.5rem;
   margin-top: 10px;
+
 
 }
 
@@ -102,4 +121,3 @@
     }
   }
 }
-
