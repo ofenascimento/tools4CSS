@@ -26,7 +26,7 @@ const ColorPicker: React.FC<IColorPicker> = ({ value, onChange }) => {
       <div className="flex justify-center items-center gap-4">
         <button
           onClick={handleClick}
-          className="p-4 rounded-full cursor-pointer"
+          className="p-4 rounded-lg cursor-pointer"
           style={{
             backgroundColor: value,
           }}
@@ -34,7 +34,7 @@ const ColorPicker: React.FC<IColorPicker> = ({ value, onChange }) => {
         <input
           onChange={handleInputChange}
           value={value}
-          className="bg-transparent w-16"
+          className="bg-transparent w-20"
         />
       </div>
 

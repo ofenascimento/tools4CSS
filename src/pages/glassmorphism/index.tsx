@@ -13,11 +13,12 @@ import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
+import { MdCheck } from "react-icons/md";
 
 const Glassmorphism = () => {
-  const [blur, setBlur] = useState(4);
+  const [blur, setBlur] = useState(12);
   const [trasnparency, setTransparency] = useState(0.15);
-  const [color, setColor] = useState("#ffffff");
+  const [color, setColor] = useState("#dddbdb");
 
   const r = hexToRgb(color)?.r;
   const g = hexToRgb(color)?.g;
@@ -52,7 +53,50 @@ const Glassmorphism = () => {
           <div
             className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center mx-4 lg:mx-0`}
           >
-            <span
+            <div
+              className=" p-4 rounded-2xl"
+              style={{
+                backdropFilter: `blur(${blur}px)`,
+                WebkitBackdropFilter: `blur(${blur}px)`,
+                backgroundColor: `rgba(${r}, ${g}, ${b}, ${trasnparency})`,
+              }}
+            >
+              <div className=" flex justify-center items-center gap-2 pb-4 border-b border-b-slate-300">
+                <img
+                  src="/avatars/avatar1.png"
+                  className=" w-16 h-16 rounded-xl"
+                  alt=""
+                />
+                <img
+                  src="/avatars/avatar2.png"
+                  className=" w-16 h-16 rounded-xl"
+                  alt=""
+                />
+                <img
+                  src="/avatars/avatar3.png"
+                  className=" w-16 h-16 rounded-xl"
+                  alt=""
+                />
+                <img
+                  src="/avatars/avatar4.png"
+                  className=" w-16 h-16 rounded-xl"
+                  alt=""
+                />
+              </div>
+              <div className="flex justify-start items-center mt-4 pb-4 border-b border-b-slate-300">
+                <div className=" p-2 rounded-lg bg-green-500"><MdCheck color="#fff" /></div>
+                <div className="ml-4">
+                  <h1 className="text-white text-xl m-0 p-0 font-lexend leading-5">Something with glass</h1>
+                  <p className=" font-lexend text-gray-300">Your subtitle here</p>
+                </div>
+
+              </div>
+              <div className=" mt-4">
+                <button className=" bg-blue-600 p-2 w-full rounded-lg text-white font-lexend hover:bg-blue-700">Click here</button>
+              </div>
+            </div>
+
+            {/* <span
               className="text-5xl lg:text-7xl text-center text-white p-4 rounded-md"
               style={{
                 backdropFilter: `blur(${blur}px)`,
@@ -61,14 +105,11 @@ const Glassmorphism = () => {
               }}
             >
               glassmorphism
-            </span>
+            </span> */}
           </div>
         </div>
         <ControlsContainer>
-          <ColorPicker
-            value={color}
-            onChange={(color) => setColor(color)}
-          />
+          <ColorPicker value={color} onChange={(color) => setColor(color)} />
           <div className="flex items-center justify-center gap-2">
             <span>Blur:</span>
             <CustomSlider
