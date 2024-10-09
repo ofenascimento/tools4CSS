@@ -14,7 +14,7 @@ const GithubStargazers: React.FC = () => {
   }, []);
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 w-full md:w-5/6 lg:w-4/6 mx-auto">
       <div className="flex items-center justify-center flex-wrap gap-2">
         {stargazers.map((user) => (
           <a
