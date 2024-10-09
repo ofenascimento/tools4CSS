@@ -127,14 +127,14 @@ const BackgroundGradient = () => {
                       onChange={(e) =>
                         validateAndFormatHex(e, setColorVariant1)
                       }
-                      className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border w-[88px] p-2 rounded-lg"
+                      className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border w-[88px] p-2 rounded-lg"
                     />
                     <span className=" text-xs">HEX</span>
                   </div>
                   <div className="flex gap-1">
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="r"
                         value={color1Rgb.r}
@@ -144,7 +144,7 @@ const BackgroundGradient = () => {
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="g"
                         value={color1Rgb.g}
@@ -154,7 +154,7 @@ const BackgroundGradient = () => {
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="b"
                         value={color1Rgb.b}
@@ -178,14 +178,14 @@ const BackgroundGradient = () => {
                       onChange={(e) =>
                         validateAndFormatHex(e, setColorVariant2)
                       }
-                      className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border w-[88px] p-2 rounded-lg"
+                      className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border w-[88px] p-2 rounded-lg"
                     />
                     <span className=" text-xs">HEX</span>
                   </div>
                   <div className="flex gap-1">
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="r"
                         value={color2Rgb.r}
@@ -195,7 +195,7 @@ const BackgroundGradient = () => {
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="g"
                         value={color2Rgb.g}
@@ -205,7 +205,7 @@ const BackgroundGradient = () => {
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="b"
                         value={color2Rgb.b}
