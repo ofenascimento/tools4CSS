@@ -77,7 +77,7 @@ const AnglePicker: React.FC<AnglePickerProps> = ({ initialAngle = 0, onAngleChan
       <div className="relative ml-2">
         <input
           type="number"
-          className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-400 border p-1 rounded-lg w-12 lg:w-16 text-center"
+          className="bg-white text-black dark:text-white dark:bg-gray-700  border-2 border-slate-300 p-1 rounded-lg w-12 lg:w-16 text-center"
           value={angle}
           onChange={handleInputChange}
         />
