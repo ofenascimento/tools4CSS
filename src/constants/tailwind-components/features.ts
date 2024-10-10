@@ -77,6 +77,30 @@ const Features1 = `
   </div>
 `;
 
-const FeaturesTailwindComponents = [{ name: "Features 1", content: Features1 }];
+const Features2 = `
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
+  <div class="border-t-4 border-yellow-400 rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+    <h3 class="text-xl font-bold text-gray-800 dark:text-white flex items-center mb-4">Quick Setup <span class="ml-2">⚡</span></h3>
+    <p class="text-gray-600 dark:text-gray-300">Set up your custom links in just a few steps. Fast and reliable, allowing you to share instantly!</p>
+  </div>
+
+  <div class="border-t-4 border-green-400 rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+    <h3 class="text-xl font-bold text-gray-800 dark:text-white flex items-center mb-4">Analytics Tracking <span class="ml-2">📊</span></h3>
+    <p class="text-gray-600 dark:text-gray-300">Track link performance with integrated analytics. Get detailed insights on clicks and user behavior.</p>
+  </div>
+
+  <div class="border-t-4 border-blue-400 rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+    <h3 class="text-xl font-bold text-gray-800 dark:text-white flex items-center mb-4">Branded Short Links <span class="ml-2">🔗</span></h3>
+    <p class="text-gray-600 dark:text-gray-300">Create short, memorable links with your brand name. Perfect for social media and marketing campaigns.</p>
+  </div>
+
+  <div class="border-t-4 border-purple-400 rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+    <h3 class="text-xl font-bold text-gray-800 dark:text-white flex items-center mb-4">Customization Options <span class="ml-2">🎨</span></h3>
+    <p class="text-gray-600 dark:text-gray-300">Fully customize your links' appearance and behavior. Tailor them to match your brand’s unique identity.</p>
+  </div>
+</div>
+`
+
+const FeaturesTailwindComponents = [{ name: "Features 1", content: Features1 }, { name: "Features 2", content: Features2 }];
 
 export default FeaturesTailwindComponents;
