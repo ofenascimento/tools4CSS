@@ -20,9 +20,9 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-     {currentPath === '/' && <TopBanner />}
-      <div className={`lg:flex items-center justify-center ${theme === 'dark' ? 'bg-blured' : 'bg-white'}   dark:bg-black bg-center bg-no-repeat dark:bg-unset dark:bg-repeat`}>
-        <div className="lg:max-w-[100rem] min-h-screen min-w-full">
+      {currentPath === '/' && <TopBanner />}
+      <div className={`lg:flex items-center justify-center ${theme === 'dark' ? 'bg-blured' : 'bg-white'}   dark:bg-black bg-center bg-no-repeat dark:bg-unset dark:bg-repeat w-full max-w-[100rem] mx-auto`}>
+        <div className="min-h-screen min-w-full">
           <Navbar />
           <div className="min-h-screen min-w-full">{children}</div>
           <Footer />
