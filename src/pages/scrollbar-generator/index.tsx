@@ -73,15 +73,16 @@ const ScrollbarGenerator = () => {
         />
 
         {/* Scrollbar Preview */}
-        <div className="w-full rounded-lg p-4 mt-4">
+        <div className="w-full rounded-lg mt-4 px-4 md:px-0">
           <div
             className="custom-scrollbar overflow-y-scroll"
             style={{
-              height: "150px",
-              maxHeight: "150px",
+              height: "180px",
+              maxHeight: "180px",
               overflow: "auto",
               background: scrollbarStyle.trackColor,
-              padding: "10px",
+              paddingInline: 20,
+              paddingBlock: 10,
             }}
           >
             <p className="text-white">
@@ -90,6 +91,15 @@ const ScrollbarGenerator = () => {
               You can customize the thumb color, track color, width, border
               radius, and more. Adjust the settings below to see the scrollbar
               change in real-time.
+            </p>
+            <p className="text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p className="text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
