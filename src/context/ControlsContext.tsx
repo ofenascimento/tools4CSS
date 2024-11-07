@@ -47,15 +47,14 @@ export function ControlsProvider({ children }: IProvider) {
   const [angle, setAngle] = useState(80);
   const [tailwindPlaygroundCode, setTailwindPlaygroundCode] = useState(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34] bg-blured h-screen">
   <div class="max-w-4xl mx-auto text-center">
-    <!-- Quotation Mark -->
+   
     <div class="text-blue-600 text-4xl mb-4">“</div>
 
-    <!-- Testimonial Quote -->
     <p class="text-2xl font-semibold text-gray-800 mb-6 dark:text-white">
       "I hope my tool helps you in some way. Let's push for faster development and a more beautiful web together.."
     </p>
 
-    <!-- Author & Company -->
+   
     <div class="flex justify-center items-center space-x-4">
       <img src="https://tools4css.com/avatars/avatar5.png" alt="Company Logo" class="w-12 h-12 rounded-lg">
       <div>
@@ -64,7 +63,7 @@ export function ControlsProvider({ children }: IProvider) {
       </div>
     </div>
 
-    <!-- Social Buttons -->
+   
     <div class="flex flex-col mt-5 gap-2">
       <a class="bg-blue-600 mx-4 py-2 text-white rounded-xl border-4 border-blue-700 cursor-pointer" href="https://www.linkedin.com/in/gomestzx/">Linkedin</a>
       <a class="bg-red-500 mx-4 py-2 text-white rounded-xl border-4 border-red-700 cursor-pointer" href="https://www.instagram.com/felipematheus.dev/">Instagram</a>

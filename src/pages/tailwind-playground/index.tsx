@@ -8,8 +8,11 @@ import { EditorView } from "@codemirror/view";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
-import { FaSun, FaMoon, FaGithub } from "react-icons/fa";
+import { FaSun, FaMoon, FaGithub, FaMagic } from "react-icons/fa";
 import { useControls } from "@/hooks/useControls";
+import { html as beautifyHTML } from 'js-beautify';
+import { IoCopy } from "react-icons/io5";
+import useCopyToClipboard from "@/utils/useCopyToClipboard";
 
 const TailwindPlayground: React.FC = () => {
   useEffect(() => {
@@ -17,17 +20,15 @@ const TailwindPlayground: React.FC = () => {
   }, []);
 
   const [code, setCode] =
-    useState<string>(`<div class="bg-white py-12 font-lexend dark:bg-[#282C34]">
+    useState<string>(`
+  <div class="bg-white py-12 font-lexend dark:bg-[#282C34]">
   <div class="max-w-4xl mx-auto text-center">
-    <!-- Quotation Mark -->
     <div class="text-blue-600 text-4xl mb-4">“</div>
 
-    <!-- Testimonial Quote -->
     <p class="text-2xl font-semibold text-gray-800 mb-6 dark:text-white">
       "I hope my tool helps you in some way. Let's push for faster development and a more beautiful web together.."
     </p>
 
-    <!-- Author & Company -->
     <div class="flex justify-center items-center space-x-4">
       <img src="https://tools4css.com/avatars/avatar5.png" alt="Company Logo" class="w-12 h-12 rounded-lg">
       <div>
@@ -36,7 +37,6 @@ const TailwindPlayground: React.FC = () => {
       </div>
     </div>
 
-    <!-- Social Buttons -->
     <div class="flex flex-col mt-5 gap-2">
       <a class="bg-blue-600 mx-4 py-2 text-white rounded-xl border-4 border-blue-700">LinkedIn</a>
       <a class="bg-red-500 mx-4 py-2 text-white rounded-xl border-4 border-red-700">Instagram</a>
@@ -55,7 +55,14 @@ const TailwindPlayground: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    setCode(tailwindPlaygroundCode);
+    const formattedCode = beautifyHTML(tailwindPlaygroundCode, {
+      indent_size: 1,
+      preserve_newlines: false,
+      max_preserve_newlines: 1,
+      wrap_line_length: 80,
+      end_with_newline: true,
+    });
+    setCode(formattedCode);
   }, []);
 
   // useEffect(() => {
@@ -66,8 +73,29 @@ const TailwindPlayground: React.FC = () => {
 
   useEffect(() => {
     const clean = DOMPurify.sanitize(code);
-    setSanitizedCode(clean);
+    const formattedCode = beautifyHTML(clean, {
+      indent_size: 1,
+      preserve_newlines: false,
+      max_preserve_newlines: 1,
+      wrap_line_length: 80,
+      end_with_newline: true,
+    });
+    setSanitizedCode(formattedCode);
   }, [code]);
+
+  const formatCode = () => {
+    const formattedCode = beautifyHTML(code, {
+      indent_size: 1,
+      preserve_newlines: false,
+      max_preserve_newlines: 1,
+      wrap_line_length: 80,
+      end_with_newline: true,
+    });
+    setCode(formattedCode);
+  };
+
+
+  const { isCopied, copyText } = useCopyToClipboard()
 
   return (
     <>
@@ -151,6 +179,10 @@ const TailwindPlayground: React.FC = () => {
       {screen === "split-horizontal" && (
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex flex-col">
+            <div className="border-b border-slate-300 dark:border-slate-600 bg-gray-50 dark:bg-[#282C34] py-2 flex gap-2 justify-start items-end font-lexend">
+              <button onClick={formatCode} className="bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200  flex justify-center items-center rounded-full p-2 px-6 gap-3 ml-2 " >Format <FaMagic /></button>
+              <button onClick={() => copyText(code)} className="bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200 flex justify-center items-center rounded-full p-2 px-6 gap-3 ">{isCopied ? <p>Copied!</p> : <><p>Copy</p> <IoCopy /></>} </button>
+            </div>
             <div className="flex-1">
               <CodeMirror
                 value={code}
@@ -158,7 +190,7 @@ const TailwindPlayground: React.FC = () => {
                 extensions={[html(), EditorView.lineWrapping]}
                 theme={oneDark}
                 onChange={(value) => setCode(value)}
-                className="h-full max-h-screen min-h-screen overflow-auto font-lexend"
+                className="h-full max-h-screen min-h-screen overflow-auto font-prompt"
               />
             </div>
           </div>
@@ -184,6 +216,10 @@ const TailwindPlayground: React.FC = () => {
       {screen === "split-vertical" && (
         <div className="flex flex-col min-h-screen">
           <div className="w-full flex flex-col">
+            <div className="border-b border-slate-300 dark:border-slate-600 bg-gray-50 dark:bg-[#282C34] py-2 flex gap-2 justify-start items-end font-lexend">
+              <button onClick={formatCode} className="bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200  flex justify-center items-center rounded-full p-2 px-6 gap-3 ml-2 " >Format <FaMagic /></button>
+              <button onClick={() => copyText(code)} className="bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200 flex justify-center items-center rounded-full p-2 px-6 gap-3 ">{isCopied ? <p>Copied!</p> : <><p>Copy</p> <IoCopy /></>} </button>
+            </div>
             <div className="flex-1 h-1/2">
               <CodeMirror
                 value={code}
@@ -191,7 +227,7 @@ const TailwindPlayground: React.FC = () => {
                 extensions={[html(), EditorView.lineWrapping]}
                 theme={oneDark}
                 onChange={(value) => setCode(value)}
-                className="rounded-lg h-full font-lexend"
+                className="rounded-lg h-full font-prompt"
               />
             </div>
           </div>
