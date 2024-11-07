@@ -21,13 +21,13 @@ const ScrollbarGenerator = () => {
 
   return (
     <>
-      <SEO title="Tailwind CSS Component" />
+      <SEO title="Tailwind CSS Components" />
       <div className="w-full lg:w-[90%] mx-auto">
         <div className=" flex flex-row justify-between items-center mx-4 lg:mx-0">
           <Breadcrumb
             links={[
               { href: "/", label: "Home" },
-              { label: "Tailwind CSS Component" },
+              { label: "Tailwind CSS Components" },
             ]}
           />
           <FavoriteButton
