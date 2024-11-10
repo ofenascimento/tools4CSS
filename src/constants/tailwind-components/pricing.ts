@@ -294,11 +294,79 @@ const Pricing4 = `
 </div>
 `;
 
+const Pricing5 = `
+<div class="flex flex-col md:flex-row justify-center gap-6 p-6 bg-gray-50 dark:bg-gray-900">
+  <div class="border rounded-lg shadow-lg p-6 text-center bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 flex-1 max-w-xs md:max-w-sm">
+    <h2 class="text-xl font-semibold">Basic Plan</h2>
+    <p class="text-4xl font-bold text-gray-900 dark:text-gray-100 mt-2">$0 <span class="text-lg font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+    <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400 flex justify-start items-start flex-col text-start">
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        Access to basic features
+      </li>
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        Limited customer support
+      </li>
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        User-friendly interface
+      </li>
+    </ul>
+    <button class="mt-6 px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200">Get Started</button>
+  </div>
+
+  <div class="border rounded-lg shadow-lg p-6 text-center bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 flex-1 max-w-xs md:max-w-sm">
+    <h2 class="text-xl font-semibold">Standard Plan</h2>
+    <p class="text-4xl font-bold text-gray-900 dark:text-gray-100 mt-2">$14.99 <span class="text-lg font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+    <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400 flex justify-start items-start flex-col text-start">
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        All basic features included
+      </li>
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        Priority support
+      </li>
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        Advanced analytics
+      </li>
+    </ul>
+    <button class="mt-6 px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200">Get Started</button>
+  </div>
+
+  <div class="border rounded-lg shadow-lg p-6 text-center bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 flex-1 max-w-xs md:max-w-sm">
+    <h2 class="text-xl font-semibold">Premium Plan</h2>
+    <p class="text-4xl font-bold text-gray-900 dark:text-gray-100 mt-2">$7 <span class="text-lg font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+    <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-400 flex justify-start items-start flex-col text-start">
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        All standard features included
+      </li>
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        Dedicated account manager
+      </li>
+      <li class="flex items-center justify-center">
+        <span class="text-blue-500 dark:text-blue-400 mr-2">✔</span>
+        Customizable settings
+      </li>
+    </ul>
+    <button class="mt-6 px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200">Get Started</button>
+  </div>
+</div>
+
+
+
+`
+
 const PricingTailwindComponents = [
   { name: "Pricing 1", content: Pricing1 },
   { name: "Pricing 2", content: Pricing2 },
   { name: "Pricing 3", content: Pricing3 },
   { name: "Pricing 4", content: Pricing4 },
+  { name: "Pricing 5", content: Pricing5 },
 ];
 
 export default PricingTailwindComponents;
