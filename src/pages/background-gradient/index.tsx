@@ -160,7 +160,7 @@ const BackgroundGradient = () => {
                         value={color1Rgb.b}
                         onChange={handleRgbChange(color1Rgb, setColorVariant1)}
                       />
-                      <span className=" text-xs">R</span>
+                      <span className=" text-xs">B</span>
                     </div>
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const BackgroundGradient = () => {
                         value={color2Rgb.b}
                         onChange={handleRgbChange(color2Rgb, setColorVariant2)}
                       />
-                      <span className=" text-xs">R</span>
+                      <span className=" text-xs">B</span>
                     </div>
                   </div>
                 </div>
