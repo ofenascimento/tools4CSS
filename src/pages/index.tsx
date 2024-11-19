@@ -10,8 +10,8 @@ const Home: NextPage = () => {
     <div>
       <SEO
         shouldExcludeTitleSuffix
-        title="Tools4CSS - Free CSS Generators"
-        description="Free CSS Generators. Our tools are designed to help you streamline your code development with dynamic and intuitive CSS generators."
+        title="Tools4CSS: Free CSS Generators, Tools, and Components"
+        description="Explore free CSS generators for gradients, glassmorphism, scrollbars, and more. Find tools, components, and resources to create modern and responsive designs."
       />
       <Hero />
       <Tools />
