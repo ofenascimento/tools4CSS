@@ -15,7 +15,7 @@ function SubmenuItem({ href, children, onClick }: ISubmenuItem) {
     <li className={`p-2 rounded-md w-full m-1 `} onClick={onClick}>
       <Link href={href}>
         <span
-          className={`${styles.link} cursor-pointer text-base font-normal font-lexend`}
+          className={`${styles.link} cursor-pointer text-base font-DMSans font-medium`}
         >
           {children}
         </span>
@@ -158,7 +158,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex cursor-pointer"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">
+                    <h1 className="dark:text-white font-DMSans font-medium text-slate-800">
                       CSS Generators
                     </h1>
                     <svg
@@ -215,7 +215,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">
+                    <h1 className="dark:text-white font-DMSans font-medium text-slate-800">
                       CSS Tools
                     </h1>
                     <svg
@@ -266,7 +266,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-lexend font-normal text-slate-800">
+                    <h1 className="dark:text-white font-DMSans font-medium text-slate-800">
                       CSS Components
                     </h1>
                     <svg
