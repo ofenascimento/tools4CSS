@@ -238,7 +238,7 @@ const NavbarTailwindComponentsPage = () => {
                   className="mb-10 w-full dark:bg-dark-100 bg-custom-gray-main border-slate-300 border  dark:border rounded-lg dark:border-gray-600 p-6"
                 >
                   <div className="flex justify-between items-center mb-4">
-                    <h1 className="dark:text-white text-gray-600 font-GilroyMedium font-semibold text-base">
+                    <h1 className="dark:text-white hidden md:block text-gray-600 font-GilroyMedium font-semibold text-base">
                       {item.name}
                     </h1>
                     <div className="text-gray-400 gap-4 hidden lg:flex dark:bg-gray-600 bg-custom-gray-secondary px-6 py-2 rounded-lg">
@@ -261,7 +261,7 @@ const NavbarTailwindComponentsPage = () => {
                         />
                       </button>
                     </div>
-                    <div className="text-white flex">
+                    <div className="text-white flex w-full md:w-auto justify-between md:justify-stretch">
                       <div className="flex dark:bg-gray-600 bg-custom-gray-secondary p-1 rounded-lg font-raleway">
                         <button
                           className={`flex gap-2 justify-center items-center px-4 lg:w-28 lg:px-2 py-[0.5rem] rounded-md text-sm ${activeView[index] === "preview" ? "bg-blue-600" : "dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white"}`}
