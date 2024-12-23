@@ -15,7 +15,7 @@ const Hero = () => {
         <h1 className="lg:leading-08 text-6xl lg:text-7xl mt-0 lg:mt-6 gap-5 font-GilroyBold text-center dark:text-white">
           Let&apos;s build{" "}
           <span className={`${styles.textGradient} inline`}>awesome</span> and{" "}
-          <span className={styles.underlineGradient}>functional</span>{" "}
+          <span>functional</span>{" "}
           <span className="whitespace-nowrap">
             interface
             <span className={styles.wave}>s</span>
