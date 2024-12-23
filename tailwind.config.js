@@ -36,6 +36,7 @@ module.exports = {
         GilroyMedium: "GilroyMedium",
         GilroyBold: "GilroyBold",
         GilroyExtraBold: "GilroyExtraBold",
+        DMSans: "DM Sans",
         lexend: ['Lexend', 'sans-serif'],
       },
       width: {

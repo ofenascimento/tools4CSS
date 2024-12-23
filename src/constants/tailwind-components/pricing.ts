@@ -361,12 +361,59 @@ const Pricing5 = `
 
 `
 
+const Pricing6 = `
+<div class="flex flex-col md:flex-row items-center justify-center gap-8 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white py-10 px-4 md:px-8 transition-colors duration-300 font-lexend">
+  <div class="w-full max-w-sm bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg transition-colors duration-300">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-2xl font-semibold">Basic</h2>
+      <span class="text-sm bg-blue-600 text-white px-4 py-1 rounded-full">Most Popular</span>
+    </div>
+    <p class="text-gray-500 dark:text-gray-400 mb-6">Ideal for individuals</p>
+    <div class="text-4xl font-bold">
+      $20<span class="text-lg font-normal">/month</span>
+    </div>
+    <p class="text-gray-500 dark:text-gray-400 text-sm">billed annually</p>
+    <button class="w-full mt-6 bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition">
+      Start now
+    </button>
+    <ul class="mt-6 space-y-3 text-gray-500 dark:text-gray-400 text-sm">
+      <li>Access all features</li>
+      <li>Customizable layouts</li>
+      <li>Analytics tools</li>
+      <li>Email support</li>
+      <li class="text-blue-600">...and more</li>
+    </ul>
+  </div>
+
+  <div class="w-full max-w-sm bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg transition-colors duration-300">
+    <h2 class="text-2xl font-semibold mb-4">Premium</h2>
+    <p class="text-gray-500 dark:text-gray-400 mb-6">Perfect for teams</p>
+    <div class="text-4xl font-bold">
+      $40<span class="text-lg font-normal">/user/month</span>
+    </div>
+    <p class="text-gray-500 dark:text-gray-400 text-sm">billed annually</p>
+    <button class="w-full mt-6 bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition">
+      Start now
+    </button>
+    <ul class="mt-6 space-y-3 text-gray-500 dark:text-gray-400 text-sm">
+      <li>All Basic features</li>
+      <li>Team collaboration</li>
+      <li>Advanced analytics</li>
+      <li>Priority support</li>
+      <li>Custom billing</li>
+    </ul>
+  </div>
+</div>
+`
+
+
 const PricingTailwindComponents = [
   { name: "Pricing 1", content: Pricing1 },
   { name: "Pricing 2", content: Pricing2 },
   { name: "Pricing 3", content: Pricing3 },
   { name: "Pricing 4", content: Pricing4 },
   { name: "Pricing 5", content: Pricing5 },
+  { name: "Pricing 6", content: Pricing6 },
 ];
 
 export default PricingTailwindComponents;
