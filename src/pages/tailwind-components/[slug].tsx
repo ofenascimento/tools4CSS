@@ -54,20 +54,20 @@ const NavbarTailwindComponentsPage = () => {
   };
 
   const componentsMap: { [key: string]: { name: string; content: string }[] } =
-  {
-    navbar: NavbarTailwindComponents,
-    hero: HeroTailwindComponents,
-    cookies: CookiesTailwindComponents,
-    card: CardTailwindComponents,
-    testimonials: TestimonialsTailwindComponents,
-    footer: FooterTailwindComponents,
-    login: LoginTailwindComponents,
-    pagination: PaginationTailwindComponents,
-    pricing: PricingTailwindComponents,
-    loading: LoadingTailwindComponents,
-    breadcrumb: BreadcrumbTailwindComponents,
-    features: FeaturesTailwindComponents
-  };
+    {
+      navbar: NavbarTailwindComponents,
+      hero: HeroTailwindComponents,
+      cookies: CookiesTailwindComponents,
+      card: CardTailwindComponents,
+      testimonials: TestimonialsTailwindComponents,
+      footer: FooterTailwindComponents,
+      login: LoginTailwindComponents,
+      pagination: PaginationTailwindComponents,
+      pricing: PricingTailwindComponents,
+      loading: LoadingTailwindComponents,
+      breadcrumb: BreadcrumbTailwindComponents,
+      features: FeaturesTailwindComponents,
+    };
 
   let currentComponents: { name: string; content: string }[] | null = null;
   if (typeof slug === "string") {
@@ -180,7 +180,6 @@ const NavbarTailwindComponentsPage = () => {
     });
   };
 
-
   return (
     <>
       <SEO title={`${title} Tailwind Components`} />
@@ -283,18 +282,30 @@ const NavbarTailwindComponentsPage = () => {
                         </button>
                       </div>
                       <button
-                        className={`ml-4 flex gap-2 justify-center items-center rounded-lg px-4 py-2 transition-colors duration-300 ${darkModes[index]
-                          ? "bg-gray-700 text-white hover:bg-gray-600"
-                          : "bg-gray-900 text-white hover:bg-gray-800"
-                          }`}
+                        className={`ml-4 flex gap-2 justify-center items-center rounded-lg px-4 py-2 transition-colors duration-300 ${
+                          darkModes[index]
+                            ? "bg-gray-700 text-white hover:bg-gray-600"
+                            : "bg-gray-900 text-white hover:bg-gray-800"
+                        }`}
                         onClick={() => toggleDarkMode(index)}
                       >
-                        {darkModes[index] ? <FaSun color="#A0AFBF" /> : <FaMoon />}
+                        {darkModes[index] ? (
+                          <FaSun color="#A0AFBF" />
+                        ) : (
+                          <FaMoon />
+                        )}
                       </button>
 
                       {copiedIndex === index ? (
                         <>
-                          <Tooltip text="Copied" customStyle={{ top: -45, left: 40, backgroundColor: '#16a34a' }}>
+                          <Tooltip
+                            text="Copied"
+                            customStyle={{
+                              top: -45,
+                              left: 40,
+                              backgroundColor: "#16a34a",
+                            }}
+                          >
                             <div className="ml-4 flex gap-2 justify-center items-center dark:bg-gray-600 bg-custom-gray-secondary text-gray-700 dark:text-white rounded-lg px-4">
                               <HiOutlineClipboardDocumentCheck
                                 className="text-green-600 dark:text-green-400"
@@ -336,7 +347,7 @@ const NavbarTailwindComponentsPage = () => {
                       style={{ maxWidth: widths[index] }}
                       srcDoc={`
                       <!DOCTYPE html>
-                      <html class="${darkModes[index] ? 'dark' : ''}" dir="ltr">
+                      <html class="${darkModes[index] ? "dark" : ""}" dir="ltr">
                         <head>
                           <link rel="preconnect" href="https://fonts.googleapis.com" />
                           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -372,12 +383,12 @@ const NavbarTailwindComponentsPage = () => {
                     `}
                       title={`Component in ${item.name}`}
                     />
-
                   ) : (
                     <Highlight className="html">
                       <div className="h-[400px]">
                         {formatHtml(`${item.content}
-      <!-- This component uses the Lexend font. You can check it here: https://fonts.google.com/specimen/Lexend -->`)}
+      ${slug !== "loading" ? "<!-- This component uses the Lexend font. You can check it here: https://fonts.google.com/specimen/Lexend -->" : ""} 
+      `)}
                       </div>
                     </Highlight>
                   )}
