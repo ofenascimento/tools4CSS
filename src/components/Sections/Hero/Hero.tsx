@@ -25,15 +25,38 @@ const Hero = () => {
           Take advantage of our CSS tools and generators to speed up the styling
           of your components
         </h3>
-        {/* <StarButton /> */}
-        <Link href="#generators">
+        {/* <Link href="#generators">
           <span
             className=" font-GilroyMedium text-center rounded-lg mt-4 bg-blue-700 hover:bg-blue-800 px-24 text-white cursor-pointer mx-2   flex gap-2 justify-center items-center"
-            
+
           >
             Discover All Tools <MdAutoFixHigh size={20} />
           </span>
-        </Link>
+        </Link> */}
+        <button
+          onClick={() => window.location.hash = '#generators'}
+          className="group cursor-pointer font-light mt-4 border-none outline-none bg-black dark:bg-transparent"
+          style={{
+            fontSize: '17px',
+            borderRadius: '0.75em',
+          }}
+        >
+          <span
+            className="box-border border-2 dark:border-0 flex justify-center items-center gap-2 
+               border-black px-24 bg-blue-700 text-white 
+               transition-transform duration-100 ease transform 
+               -translate-y-[0.2em] 
+               group-hover:-translate-y-[0.33em] dark:group-hover:-translate-y-[0.2em]
+               group-active:translate-y-0 
+               font-GilroyMedium font-light text-base py-2"
+            style={{
+              borderRadius: '0.75em'
+            }}
+          >
+            Discover All Tools <MdAutoFixHigh size={20} />
+          </span>
+        </button>
+
       </div>
       <Banner />
     </div>
