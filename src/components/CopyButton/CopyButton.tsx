@@ -35,7 +35,7 @@ const CopyButton = (props: ICopyButton) => {
   return (
     <>
       <CopyToClipboard text={props.textToCopy}>
-        <button className={twMerge(clsx('bg-blue-700 w-full text-white py-2', props.className))} onClick={() => Copy()}>
+        <button className={twMerge(clsx('bg-blue-700 w-full text-white py-2 rounded-b-lg', props.className))} onClick={() => Copy()}>
           {props.withIcon ? <FontAwesomeIcon icon={icon} /> : <span className={props.textClassName}>{text}</span>}
         </button>
       </CopyToClipboard>

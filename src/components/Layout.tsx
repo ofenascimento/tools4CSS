@@ -14,13 +14,11 @@ const Layout = ({ children }: LayoutProps) => {
   const currentPath = router.asPath;
   const { theme } = useTheme()
 
-  useEffect(() => { console.log(currentPath) }, [])
-
   if (currentPath === '/tailwind-playground') return <>{children}</>;
 
   return (
     <>
-      {currentPath === '/' && <TopBanner />}
+      {(currentPath === '/' || currentPath === '/#generators') && <TopBanner />}
       <div className={`lg:flex items-center justify-center ${theme === 'dark' ? 'bg-blured' : 'bg-white'}   dark:bg-black bg-center bg-no-repeat dark:bg-unset dark:bg-repeat w-full  mx-auto`}>
         <div className=" max-w-[100rem]">
           <Navbar />

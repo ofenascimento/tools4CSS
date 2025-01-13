@@ -82,13 +82,11 @@ const BackgroundGradient = () => {
           <div className="col-span-8">
             <div className="slg:mx-0 flex flex-col lg:flex-row  gap-1">
               <div
-                className={`${
-                  animated ? style.animatedApp : style.app
-                } py-52 rounded-md relative w-full`}
+                className={`${animated ? style.animatedApp : style.app
+                  } py-52 rounded-md relative w-full`}
                 style={{
-                  backgroundImage: `${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1}, ${
-                    animated ? colorVariant1 + "," : ""
-                  } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+                  backgroundImage: `${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+                    } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
                 }}
               >
                 <button
@@ -220,7 +218,7 @@ const BackgroundGradient = () => {
           </div>
         </div>
 
-        
+
         <ControlsContainer className=" justify-between mt-1">
           <div className=" flex">
             <button
@@ -261,23 +259,22 @@ const BackgroundGradient = () => {
           </div>
         </ControlsContainer>
 
-        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
-          <SyntaxHighlighter language="css" style={darcula}>
-            {`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${
-              animated
+
+        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-t-lg">
+          <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
+            {`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
                 ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
                 : ""
-            } `}
+              } `}
           </SyntaxHighlighter>
         </div>
 
         <div className="mx-4 lg:mx-0">
           <CopyButton
-            textToCopy={`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${
-              animated
+            textToCopy={`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
                 ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
                 : ""
-            } `}
+              } `}
           />
         </div>
         <Info
@@ -287,13 +284,11 @@ const BackgroundGradient = () => {
       </div>
       <div
         id="full-screen"
-        className={`fixed inset-0 h-screen w-screen z-50 ${
-          animated ? style.animatedApp : style.app
-        } ${fullScreen ? "block" : "hidden"}`}
+        className={`fixed inset-0 h-screen w-screen z-50 ${animated ? style.animatedApp : style.app
+          } ${fullScreen ? "block" : "hidden"}`}
         style={{
-          backgroundImage: `${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1}, ${
-            animated ? colorVariant1 + "," : ""
-          } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
+          backgroundImage: `${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
+            } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
         }}
       >
         <button
