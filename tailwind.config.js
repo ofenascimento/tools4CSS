@@ -37,7 +37,9 @@ module.exports = {
         GilroyBold: "GilroyBold",
         GilroyExtraBold: "GilroyExtraBold",
         DMSans: "DM Sans",
-        lexend: ['Lexend', 'sans-serif'],
+        lexend: ["Lexend", "sans-serif"],
+        redHat: "Red Hat Display",
+        nunito: "Nunito",
       },
       width: {
         22: "74px",
@@ -48,9 +50,9 @@ module.exports = {
         dark: {
           100: "#1F2937",
         },
-        'custom-gray': {
-          main: '#F4F5F8',
-          secondary: '#dce3ea'
+        "custom-gray": {
+          main: "#F4F5F8",
+          secondary: "#dce3ea",
         },
       },
       whiteSpace: {
@@ -65,13 +67,11 @@ module.exports = {
         "black-glass": "rgba(2, 2, 2, 0.15);",
         "white-glass-mobile": "rgba(255, 255, 255, 0.85);",
         "black-glass-mobile": "rgba(2, 2, 2, 0.65);",
-        
       },
       gridTemplateColumns: {
-        '14': 'repeat(14, minmax(0, 1fr))',
-        '16': 'repeat(16, minmax(0, 1fr))',
-        '13': 'repeat(13, minmax(0, 1fr))',
-
+        14: "repeat(14, minmax(0, 1fr))",
+        16: "repeat(16, minmax(0, 1fr))",
+        13: "repeat(13, minmax(0, 1fr))",
       },
     },
   },

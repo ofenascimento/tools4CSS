@@ -14,7 +14,8 @@ const Layout = ({ children }: LayoutProps) => {
   const currentPath = router.asPath;
   const { theme } = useTheme()
 
-  if (currentPath === '/tailwind-playground') return <>{children}</>;
+  if (currentPath === '/tailwind-playground' || currentPath === '/test-component') return <>{children}</>;
+
 
   return (
     <>
