@@ -260,7 +260,7 @@ const BackgroundGradient = () => {
         </ControlsContainer>
 
 
-        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-t-lg">
+        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
           <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
                 ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
@@ -269,7 +269,7 @@ const BackgroundGradient = () => {
           </SyntaxHighlighter>
         </div>
 
-        <div className="mx-4 lg:mx-0">
+        <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
             textToCopy={`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
                 ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"

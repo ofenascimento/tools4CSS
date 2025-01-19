@@ -75,13 +75,13 @@ const UnderlineGradient = () => {
           </div>
         </ControlsContainer>
 
-        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
-          <SyntaxHighlighter language="css" style={darcula}>
+        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
+          <SyntaxHighlighter language="css"  style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`background-image: linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%); \nbackground-repeat: no-repeat; \nbackground-size: 100% 0.${weight}em; \nbackground-position: 0 80%;`}
           </SyntaxHighlighter>
         </div>
 
-        <div className="mx-4 lg:mx-0">
+        <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
             textToCopy={`background-image: linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%); \n background-repeat: no-repeat; \n background-size: 100% 0.${weight}em; \n background-position: 0 80%;`}
           />

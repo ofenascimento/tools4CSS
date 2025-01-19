@@ -156,8 +156,8 @@ const TextGradient = () => {
           </div>
         </ControlsContainer>
 
-        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
-          <SyntaxHighlighter language="css" style={darcula}>
+        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
+          <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`background: linear-gradient(${animated ? 80 : angle
               }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
               } ${colorVariant2}${animated ? ", " + colorVariant2 : ""
@@ -170,7 +170,7 @@ const TextGradient = () => {
           </SyntaxHighlighter>
         </div>
 
-        <div className="mx-4 lg:mx-0">
+        <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
             textToCopy={`background: linear-gradient(${animated ? 80 : angle
               }deg, ${colorVariant1}, ${animated ? colorVariant1 + "," : ""

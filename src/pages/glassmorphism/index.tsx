@@ -136,13 +136,13 @@ const Glassmorphism = () => {
           </div>
         </ControlsContainer>
 
-        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
-          <SyntaxHighlighter language="css" style={darcula}>
+        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
+          <SyntaxHighlighter language="css"  style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
           </SyntaxHighlighter>
         </div>
 
-        <div className="mx-4 lg:mx-0">
+        <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
             textToCopy={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
           />

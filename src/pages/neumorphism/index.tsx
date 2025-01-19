@@ -141,15 +141,15 @@ const Neumorphism: React.FC = () => {
           </div>
         </ControlsContainer>
 
-        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0">
-          <SyntaxHighlighter language="css" style={darcula}>
+        <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
+          <SyntaxHighlighter language="css"  style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`background-color: ${color};
 box-shadow: ${boxShadowStyle};
 -webkit-box-shadow: ${boxShadowStyle};`}
           </SyntaxHighlighter>
         </div>
 
-        <div className="mx-4 lg:mx-0">
+        <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
             textToCopy={`background-color: ${color};
 box-shadow: ${boxShadowStyle};

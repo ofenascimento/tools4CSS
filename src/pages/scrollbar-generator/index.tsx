@@ -73,9 +73,9 @@ const ScrollbarGenerator = () => {
         />
 
         {/* Scrollbar Preview */}
-        <div className="w-full rounded-lg mt-4 px-4 md:px-0">
+        <div className="w-full mt-4 px-4 md:px-0  rounded-lg">
           <div
-            className="custom-scrollbar overflow-y-scroll"
+            className="custom-scrollbar overflow-y-scroll rounded-lg"
             style={{
               height: "180px",
               maxHeight: "180px",
@@ -198,10 +198,10 @@ const ScrollbarGenerator = () => {
         </ControlsContainer>
 
         <div
-          className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 custom-scrollbar"
+          className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 custom-scrollbar rounded-lg"
           style={{ maxHeight: "200px", overflow: "auto" }}
         >
-          <SyntaxHighlighter language="css" style={darcula}>
+          <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`.scrollbar::-webkit-scrollbar {
     width: ${scrollbarStyle.width}px;
   }
@@ -226,7 +226,7 @@ const ScrollbarGenerator = () => {
           </SyntaxHighlighter>
         </div>
 
-        <div className="mx-4 lg:mx-0">
+        <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
             textToCopy={`.scroll-bar::-webkit-scrollbar {
     width: ${scrollbarStyle.width}px;
