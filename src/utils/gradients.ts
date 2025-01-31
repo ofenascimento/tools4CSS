@@ -32,7 +32,6 @@ export const palleteGradient: Array<{ id: number; color1: string; color2: string
   { id: 31, color1: '#d3ccf3', color2: '#e9e4f0', name: 'Delicate' },
   { id: 32, color1: '#dae2f8', color2: '#d6a4a4', name: 'Moonrise' },
   { id: 33, color1: '#1f4037', color2: '#99f2c8', name: 'Harvey' },
-  // 20 gradientes adicionais inspirados em combinações populares:
   { id: 34, color1: '#ff7e5f', color2: '#feb47b', name: 'Warm Flame' },
   { id: 35, color1: '#6a11cb', color2: '#2575fc', name: 'Purple Passion' },
   { id: 36, color1: '#f7971e', color2: '#ffd200', name: 'Sun Kissed' },
@@ -52,5 +51,9 @@ export const palleteGradient: Array<{ id: number; color1: string; color2: string
   { id: 50, color1: '#a770ef', color2: '#cf8bf3', name: 'Lavender Twist' },
   { id: 51, color1: '#fe8c00', color2: '#f83600', name: 'Fiery Red' },
   { id: 52, color1: '#a8caba', color2: '#5e61d6', name: 'Serenity' },
-  { id: 53, color1: '#ff512f', color2: '#dd2476', name: 'Passion' }
+  { id: 53, color1: '#ff512f', color2: '#dd2476', name: 'Passion' },
+  { id: 54, color1: '#ff9a8b', color2: '#ff6a88', name: 'Crimson Sunset' },
+  { id: 55, color1: '#00d2ff', color2: '#3a7bd5', name: 'Ocean Breeze' },
+  { id: 56, color1: '#f12711', color2: '#f5af19', name: 'Citrus Burst' },
+  { id: 57, color1: '#dd5e89', color2: '#f7bb97', name: 'Rosy Outlook' }
 ];
