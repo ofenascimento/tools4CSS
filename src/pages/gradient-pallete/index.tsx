@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 import { SEO } from "../../components/SEO";
 import { palleteGradient } from "../../utils/gradients";
@@ -6,14 +6,8 @@ import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import {
   MdArrowBack,
-  MdBrush,
-  MdCode,
   MdContentCopy,
-  MdCopyAll,
-  MdEdit,
   MdFullscreen,
-  MdPalette,
-  MdShare,
 } from "react-icons/md";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import CopyToClipboard from "react-copy-to-clipboard";
@@ -29,11 +23,34 @@ const PalleteGradient = () => {
   }>(null);
   const [textCopied, setTextCopied] = useState<boolean>(false);
 
+  // Estado para armazenar os gradientes embaralhados
+  const [shuffledGradients, setShuffledGradients] = useState<
+    typeof palleteGradient
+  >([]);
+
+  // Função para embaralhar o array de gradientes
+  const shuffleArray = (array: typeof palleteGradient) => {
+    return array
+      .map((item) => ({ sort: Math.random(), value: item }))
+      .sort((a, b) => a.sort - b.sort)
+      .map((obj) => obj.value);
+  };
+
+  // Embaralha os gradientes somente no lado do cliente
+  useEffect(() => {
+    setShuffledGradients(shuffleArray(palleteGradient));
+  }, []);
+
+  // Enquanto o array não é definido no cliente, evita renderizar nada para prevenir inconsistências
+  if (shuffledGradients.length === 0) {
+    return null;
+  }
+
   return (
     <div>
       <SEO title="Gradient Pallete" />
       <div className="w-full lg:w-4/6 mx-auto font-medium">
-        <div className=" flex flex-row justify-between items-center mx-4 md:mx-0">
+        <div className="flex flex-row justify-between items-center mx-4 md:mx-0">
           <Breadcrumb
             links={[
               { href: "/", label: "Home" },
@@ -50,89 +67,85 @@ const PalleteGradient = () => {
           info="Explore a collection of stunning CSS gradients. Pick your favorite styles to enhance your design."
         />
         <div className="flex mt-4 gap-4 justify-start p-5 md:p-0 lg:justify-between md:justify-center items-center flex-wrap">
-          {palleteGradient.map((gradient) => (
-            <>
+          {shuffledGradients.map((gradient) => (
+            <div
+              key={gradient.id}
+              className="justify-center items-center gap-2 w-full md:mx-4 lg:mx-0 lg:w-[30%]"
+            >
               <div
-                key={gradient.id}
-                className="justify-center items-center gap-2 w-full md:mx-4 lg:mx-0 lg:w-[30%]"
-              >
-                <div
-                  id="preview"
-                  className="p-6 h-32 xl:h-32 rounded-lg relative"
-                  style={{
-                    backgroundImage: `linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`,
-                  }}
-                ></div>
-                <div className="mt-2 flex justify-between items-center bg-white dark:bg-mainDark rounded-2xl p-2 border border-slate-300 dark:border-slate-600">
-                  <div className="flex gap-1">
-                    <Tooltip text={textCopied ? "Copied" : gradient.color1}>
-                      <CopyToClipboard text={gradient.color1}>
-                        <button
-                          onClick={() => {
-                            setTextCopied(true);
-                            setTimeout(() => {
-                              setTextCopied(false);
-                            }, 600);
-                          }}
-                          className=" w-6 h-6 rounded-full cursor-pointer"
-                          style={{ backgroundColor: gradient.color1 }}
-                        ></button>
-                      </CopyToClipboard>
-                    </Tooltip>
-                    <Tooltip text={textCopied ? "Copied" : gradient.color2}>
-                      <CopyToClipboard text={gradient.color2}>
-                        <button
-                          onClick={() => {
-                            setTextCopied(true);
-                            setTimeout(() => {
-                              setTextCopied(false);
-                            }, 600);
-                          }}
-                          className=" w-6 h-6 rounded-full cursor-pointer"
-                          style={{ backgroundColor: gradient.color2 }}
-                        ></button>
-                      </CopyToClipboard>
-                    </Tooltip>
-                  </div>
-                  <span className=" text-xs w-52 ml-2">
-                    {gradient.name}
-                  </span>
-                  <div className="w-full flex justify-end items-center gap-2 ">
-                    <Tooltip text={textCopied ? "Copied" : "Copy the code"}>
-                      <CopyToClipboard
-                        text={`background-image: linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`}
-                      >
-                        <button
-                          onClick={() => {
-                            setTextCopied(true);
-                            setTimeout(() => {
-                              setTextCopied(false);
-                            }, 600);
-                          }}
-                          className="cursor-pointer text-gray-600 dark:text-white"
-                        >
-                          <MdContentCopy size={18} />
-                        </button>
-                      </CopyToClipboard>
-                    </Tooltip>
-                    <Tooltip text="View in full screen">
+                id="preview"
+                className="p-6 h-32 xl:h-32 rounded-lg relative"
+                style={{
+                  backgroundImage: `linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`,
+                }}
+              ></div>
+              <div className="mt-2 flex justify-between items-center bg-white dark:bg-mainDark rounded-2xl p-2 border border-slate-300 dark:border-slate-600">
+                <div className="flex gap-1">
+                  <Tooltip text={textCopied ? "Copied" : gradient.color1}>
+                    <CopyToClipboard text={gradient.color1}>
                       <button
-                        className=" text-gray-600 dark:text-white"
                         onClick={() => {
-                          setSelectedGradient({
-                            color1: gradient.color1,
-                            color2: gradient.color2,
-                          });
-                          setFullScreen(true);
+                          setTextCopied(true);
+                          setTimeout(() => {
+                            setTextCopied(false);
+                          }, 600);
                         }}
+                        className="w-6 h-6 rounded-full cursor-pointer"
+                        style={{ backgroundColor: gradient.color1 }}
+                      ></button>
+                    </CopyToClipboard>
+                  </Tooltip>
+                  <Tooltip text={textCopied ? "Copied" : gradient.color2}>
+                    <CopyToClipboard text={gradient.color2}>
+                      <button
+                        onClick={() => {
+                          setTextCopied(true);
+                          setTimeout(() => {
+                            setTextCopied(false);
+                          }, 600);
+                        }}
+                        className="w-6 h-6 rounded-full cursor-pointer"
+                        style={{ backgroundColor: gradient.color2 }}
+                      ></button>
+                    </CopyToClipboard>
+                  </Tooltip>
+                </div>
+                <span className="text-xs w-64 ml-2">{gradient.name}</span>
+                <div className="w-full flex justify-end items-center gap-2">
+                  <Tooltip text={textCopied ? "Copied" : "Copy the code"}>
+                    <CopyToClipboard
+                      text={`background-image: linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`}
+                    >
+                      <button
+                        onClick={() => {
+                          setTextCopied(true);
+                          setTimeout(() => {
+                            setTextCopied(false);
+                          }, 600);
+                        }}
+                        className="cursor-pointer text-gray-600 dark:text-white"
                       >
-                        <MdFullscreen size={22} />
+                        <MdContentCopy size={18} />
                       </button>
-                    </Tooltip>
-                  </div>
+                    </CopyToClipboard>
+                  </Tooltip>
+                  <Tooltip text="View in full screen">
+                    <button
+                      className="text-gray-600 dark:text-white"
+                      onClick={() => {
+                        setSelectedGradient({
+                          color1: gradient.color1,
+                          color2: gradient.color2,
+                        });
+                        setFullScreen(true);
+                      }}
+                    >
+                      <MdFullscreen size={22} />
+                    </button>
+                  </Tooltip>
                 </div>
               </div>
-            </>
+            </div>
           ))}
           <Info
             title="What is Gradient Pallete?"
