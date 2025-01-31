@@ -110,7 +110,7 @@ const PalleteGradient = () => {
                     </CopyToClipboard>
                   </Tooltip>
                 </div>
-                <span className="text-xs w-64 ml-2">{gradient.name}</span>
+                <span className="text-xs w-64 ml-2 dark:text-white">{gradient.name}</span>
                 <div className="w-full flex justify-end items-center gap-2">
                   <Tooltip text={textCopied ? "Copied" : "Copy the code"}>
                     <CopyToClipboard
