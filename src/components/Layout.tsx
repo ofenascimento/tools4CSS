@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      {(currentPath === '/' || currentPath === '/#generators') && <TopBanner />}
+      {/* {(currentPath === '/' || currentPath === '/#generators') && <TopBanner />} */}
       <div className={`lg:flex items-center justify-center ${theme === 'dark' ? 'bg-blured' : 'bg-white'}   dark:bg-black bg-center bg-no-repeat dark:bg-unset dark:bg-repeat w-full  mx-auto`}>
         <div className=" max-w-[100rem]">
           <Navbar />
