@@ -5,6 +5,7 @@ import { SnackBarContainer } from "../Snackbar/SnackbarContainer";
 
 const FavoriteButton = ({ handleFavorite, isFavorited }: IFavoriteButton) => {
   const { showSnackbar, snackbarList } = useSnackbar();
+  return null;
   return (
     <>
       <button
@@ -46,7 +47,6 @@ const FavoriteButton = ({ handleFavorite, isFavorited }: IFavoriteButton) => {
           </div>
         )}
       </button >
-      <SnackBarContainer>{snackbarList}</SnackBarContainer>
     </>
   );
 };

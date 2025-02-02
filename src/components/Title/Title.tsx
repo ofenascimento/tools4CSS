@@ -8,7 +8,7 @@ export default function Title({
   customInfoClassname,
 }: iTitle): React.ReactElement {
   return (
-    <div className=" flex flex-col justify-center items-center mx-4 lg:mx-0 mt-3 lg:mt-0">
+    <div className=" flex flex-col justify-center items-center mx-4 lg:mx-0 mt-3 lg:mt-1">
       {typeof title === 'string' ? <h1
         className={`${customTitleClassname} lg:leading-08 text-5xl text-center mt-0 lg:mt-6 gap-5 font-GilroyBold dark:text-white `}
         id="generators"

@@ -62,7 +62,7 @@ const Card = (props: ICard) => {
                 {props.info}
               </p>
 
-              <button
+              {/* <button
                 onClick={handleFavorite}
                 className="mt-2 text-lg font-medium text-white  rounded-full px-3 absolute top-0 right-0 p-1"
               >
@@ -71,12 +71,11 @@ const Card = (props: ICard) => {
                 ) : (
                   <MdFavoriteBorder size={18} className="  text-black dark:text-white" />
                 )}
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
       </Link>
-      <SnackBarContainer>{snackbarList}</SnackBarContainer>
     </>
   );
 };
