@@ -53,6 +53,7 @@ module.exports = {
         DMSans: "DM Sans",
         lexend: ["Lexend", "sans-serif"],
         redHat: "Red Hat Display",
+        inter: "Inter",
         nunito: "Nunito",
       },
       width: {

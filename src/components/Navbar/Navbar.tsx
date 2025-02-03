@@ -15,7 +15,7 @@ function SubmenuItem({ href, children, onClick }: ISubmenuItem) {
     <li className={`p-2 rounded-md w-full m-1 `} onClick={onClick}>
       <Link href={href}>
         <span
-          className={`${styles.link} cursor-pointer text-base font-GilroyMedium font-medium`}
+          className={`${styles.link} cursor-pointer text-base font-redHat font-semibold`}
         >
           {children}
         </span>
@@ -57,7 +57,7 @@ function Navbar() {
       >
         <div>
           <div
-            className={`flex items-center justify-between py-3  md:block ${currentPath.split("/")[1] === "tailwind-components" ? "md:py-0" : "md:pt-2 md:pb-4"} `}
+            className={`flex items-center justify-between  md:block `}
           >
             <Link href="/" className="cursor-pointer">
               <Image
@@ -103,18 +103,17 @@ function Navbar() {
         </div>
         <div>
           <div
-            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 h-screen md:h-auto ${
-              navbar ? "block" : "hidden"
-            }`}
+            className={`text-md flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 h-screen md:h-auto ${navbar ? "block" : "hidden"
+              }`}
           >
-            <ul className="items-center justify-center text-lg font-medium space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300 font-GilroyMedium">
+            <ul className="items-center justify-center text-lg font-semibold space-y-8 md:flex md:space-x-6 md:space-y-0 text-gray-300 font-redHat">
               <li
                 className="md:block text-slate-900 group relative"
                 onMouseEnter={() => setIsCssGeneratorsOpen(true)}
                 onMouseLeave={() => setIsCssGeneratorsOpen(false)}
               >
                 <span className={`${isCssGeneratorsOpen ? "block" : "hidden"}`}>
-                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-redHat">
                     <SubmenuItem
                       href="/background-gradient"
                       onClick={handleSubmenuClick}
@@ -158,7 +157,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex cursor-pointer"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-GilroyMedium font-medium text-base text-slate-800">
+                    <h1 className="dark:text-white font-redHat font-semibold text-base text-slate-800">
                       CSS Generators
                     </h1>
                     <svg
@@ -189,7 +188,7 @@ function Navbar() {
                 onMouseLeave={() => setIsCssToolsOpen(false)}
               >
                 <span className={`${isCssToolsOpen ? "block" : "hidden"}`}>
-                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-redHat">
                     <SubmenuItem
                       href="/gradient-pallete"
                       onClick={handleSubmenuClick}
@@ -215,7 +214,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-GilroyMedium font-medium text-base text-slate-800">
+                    <h1 className="dark:text-white font-redHat font-semibold text-base text-slate-800">
                       CSS Tools
                     </h1>
                     <svg
@@ -246,7 +245,7 @@ function Navbar() {
                 onMouseLeave={() => setIsCssComponentsOpen(false)}
               >
                 <span className={`${isCssComponentsOpen ? "block" : "hidden"}`}>
-                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-GilroyMedium">
+                  <ul className="mt-7 absolute bg-white dark:bg-mainDark border border-gray-200 dark:border-slate-700 dark:text-white z-50 shadow-lg w-56 flex flex-col justify-center items-center rounded-lg p-4 font-redHat">
                     <SubmenuItem
                       href="/tailwind-components"
                       onClick={handleSubmenuClick}
@@ -266,7 +265,7 @@ function Navbar() {
                     className="gap-2 justify-center items-center hidden md:flex"
                     onClick={handleSubmenuClick}
                   >
-                    <h1 className="dark:text-white font-GilroyMedium text-base font-medium text-slate-800">
+                    <h1 className="dark:text-white font-redHat text-base font-semibold text-slate-800">
                       CSS Components
                     </h1>
                     <svg

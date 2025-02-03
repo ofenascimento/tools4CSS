@@ -3,19 +3,19 @@ import { TBreadcrumb } from './types';
 
 export const Breadcrumb = ({ links }: TBreadcrumb): React.ReactElement => {
   return (
-    <nav className='lg:ml-0 text-md font-medium'>
-      <ol className='list-none p-0 flex font-GilroyMedium font-light'>
+    <nav className='lg:ml-0 text-md font-semibold pt-2'>
+      <ol className='list-none p-0 flex'>
         {links.map((link, index) => (
           <li className='flex items-center' key={index}>
             {link.href ? (
               <Link href={link.href}>
-                <div className=' text-main dark:text-blue-500 dark:hover:text-blue-600 font-normal cursor-pointer'>
+                <div className=' text-main dark:text-blue-500 dark:hover:text-blue-600 cursor-pointer'>
                 {link.label}
                 </div>
                 
               </Link>
             ) : (
-              <span className='font-normal text-slate-800 dark:text-white'>{link.label}</span>
+              <span className=' text-slate-800 dark:text-white'>{link.label}</span>
             )}
 
             {index < links.length - 1 && (
