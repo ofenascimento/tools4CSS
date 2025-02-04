@@ -21,7 +21,7 @@ const Hero = () => {
             <span className={styles.wave}>s</span>
           </span>
         </h1>
-        <h3 className="text-slate-800 text-center max-w-xl w-4/5 text-lg mt-3 mb-2 font-semibold font-redHat lg:pr-4 dark:text-white leading-5 lg:leading-6">
+        <h3 className="text-slate-800 text-center max-w-xl w-4/5 text-lg mt-3 mb-2 font-semibold font-manrope lg:pr-4 dark:text-white leading-5 lg:leading-6">
           Take advantage of our CSS tools and generators to speed up the styling
           of your components
         </h3>

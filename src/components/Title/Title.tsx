@@ -16,7 +16,7 @@ export default function Title({
         {title}
       </h1> : title}
       <h3
-        className={`${customInfoClassname} text-slate-900 text-center text-md mt-2 font-semibold dark:text-white lg:leading-6 w-full lg:w-[80%]`}
+        className={`${customInfoClassname} text-slate-900 text-center font-manrope text-md mt-2 font-semibold dark:text-white lg:leading-6 w-full lg:w-[80%]`}
       >
         {info}
       </h3>
