@@ -98,9 +98,9 @@ const BackgroundGradient = () => {
                   </Tooltip>
                 </button>
 
-                <div className="text-gray-600 bg-white border border-slate-300 dark:border-slate-600 p-2 rounded-lg dark:bg-mainDark dark:text-slate-200 absolute right-0 bottom-0 m-2 flex justify-center items-center">
+                <div className="text-black bg-white border border-slate-300 dark:border-slate-600 p-2 rounded-lg dark:bg-mainDark dark:text-slate-200 absolute right-0 bottom-0 m-2 flex justify-center items-center">
                   <div className="flex items-center justify-center gap-4">
-                    <span className=" text-sm">Animation:</span>
+                    <span className=" text-sm font-semibold">Animation:</span>
                     <CustomSwitch
                       checked={animated}
                       onChange={() => setAnimated((prev) => !prev)}
@@ -125,40 +125,40 @@ const BackgroundGradient = () => {
                       onChange={(e) =>
                         validateAndFormatHex(e, setColorVariant1)
                       }
-                      className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border w-[88px] p-2 rounded-lg"
+                      className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border w-[88px] p-2 rounded-lg"
                     />
-                    <span className=" text-xs">HEX</span>
+                    <span className=" text-xs font-semibold">HEX</span>
                   </div>
                   <div className="flex gap-1">
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="r"
                         value={color1Rgb.r}
                         onChange={handleRgbChange(color1Rgb, setColorVariant1)}
                       />
-                      <span className=" text-xs">R</span>
+                      <span className=" text-xs font-semibold">R</span>
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="g"
                         value={color1Rgb.g}
                         onChange={handleRgbChange(color1Rgb, setColorVariant1)}
                       />
-                      <span className=" text-xs">G</span>
+                      <span className=" text-xs font-semibold">G</span>
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="b"
                         value={color1Rgb.b}
                         onChange={handleRgbChange(color1Rgb, setColorVariant1)}
                       />
-                      <span className=" text-xs">B</span>
+                      <span className=" text-xs font-semibold">B</span>
                     </div>
                   </div>
                 </div>
@@ -176,40 +176,40 @@ const BackgroundGradient = () => {
                       onChange={(e) =>
                         validateAndFormatHex(e, setColorVariant2)
                       }
-                      className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border w-[88px] p-2 rounded-lg"
+                      className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border w-[88px] p-2 rounded-lg"
                     />
-                    <span className=" text-xs">HEX</span>
+                    <span className=" text-xs font-semibold">HEX</span>
                   </div>
                   <div className="flex gap-1">
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="r"
                         value={color2Rgb.r}
                         onChange={handleRgbChange(color2Rgb, setColorVariant2)}
                       />
-                      <span className=" text-xs">R</span>
+                      <span className=" text-xs font-semibold">R</span>
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="g"
                         value={color2Rgb.g}
                         onChange={handleRgbChange(color2Rgb, setColorVariant2)}
                       />
-                      <span className=" text-xs">G</span>
+                      <span className=" text-xs font-semibold">G</span>
                     </div>
                     <div className=" flex flex-col gap-2 justify-center items-center">
                       <input
-                        className="bg-white text-black dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
+                        className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
                         type="number"
                         name="b"
                         value={color2Rgb.b}
                         onChange={handleRgbChange(color2Rgb, setColorVariant2)}
                       />
-                      <span className=" text-xs">B</span>
+                      <span className=" text-xs font-semibold">B</span>
                     </div>
                   </div>
                 </div>
@@ -219,10 +219,10 @@ const BackgroundGradient = () => {
         </div>
 
 
-        <ControlsContainer className=" justify-between mt-1">
+        <ControlsContainer className=" justify-between mt-1 font-redHat font-semibold">
           <div className=" flex">
             <button
-              className={`${type === "linear" ? "bg-blue-700 text-white" : "dark:bg-gray-700 bg-slate-200"} px-6 py-2  flex gap-2 rounded-l-lg justify-center items-center`}
+              className={`${type === "linear" ? "bg-blue-700 text-white" : "dark:bg-gray-700 bg-slate-200"} px-6 py-2  flex gap-2 rounded-l-lg justify-center items-center font-redHat`}
               onClick={() => setType("linear")}
             >
               {" "}

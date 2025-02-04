@@ -12,7 +12,7 @@ function CustomSwitch(props: any) {
                 {...props}
                 onColor={theme === 'dark' ? '#1C2939' : '#fff'}                
                 onHandleColor="#36BA98"
-                className="mt-0 border-2 border-slate-300 shadow-sm"           
+                className="mt-0 border border-slate-300 shadow-sm"           
                 uncheckedIcon={false}
                 handleDiameter={10}
                 checkedIcon={false}

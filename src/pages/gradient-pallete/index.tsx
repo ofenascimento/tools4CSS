@@ -23,12 +23,10 @@ const PalleteGradient = () => {
   }>(null);
   const [textCopied, setTextCopied] = useState<boolean>(false);
 
-  // Estado para armazenar os gradientes embaralhados
   const [shuffledGradients, setShuffledGradients] = useState<
     typeof palleteGradient
   >([]);
 
-  // Função para embaralhar o array de gradientes
   const shuffleArray = (array: typeof palleteGradient) => {
     return array
       .map((item) => ({ sort: Math.random(), value: item }))
@@ -36,12 +34,10 @@ const PalleteGradient = () => {
       .map((obj) => obj.value);
   };
 
-  // Embaralha os gradientes somente no lado do cliente
   useEffect(() => {
     setShuffledGradients(shuffleArray(palleteGradient));
   }, []);
 
-  // Enquanto o array não é definido no cliente, evita renderizar nada para prevenir inconsistências
   if (shuffledGradients.length === 0) {
     return null;
   }
@@ -50,7 +46,7 @@ const PalleteGradient = () => {
     <div>
       <SEO title="Gradient Pallete" />
       <div className="w-full lg:w-4/6 mx-auto font-medium">
-        <div className="flex flex-row justify-between items-center mx-4 md:mx-0">
+        <div className="flex flex-row justify-between items-center mx-4">
           <Breadcrumb
             links={[
               { href: "/", label: "Home" },
@@ -64,7 +60,7 @@ const PalleteGradient = () => {
         </div>
         <Title
           title="Gradient Pallete"
-          info="Explore a collection of stunning CSS gradients. Pick your favorite styles to enhance your design."
+          info="Explore a collection of stunning CSS gradients"
         />
         <div className="flex mt-4 gap-4 justify-start p-5 md:p-0 lg:justify-between md:justify-center items-center flex-wrap">
           {shuffledGradients.map((gradient) => (

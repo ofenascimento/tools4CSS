@@ -67,7 +67,7 @@ const AnglePicker: React.FC<AnglePickerProps> = ({ initialAngle = 0, onAngleChan
     <div className="flex items-center w-full">
       <div
         ref={knobRef}
-        className="relative w-9 h-9 rounded-full border-2 border-gray-300 flex items-center justify-center"
+        className="relative w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center"
         onMouseDown={handleMouseDown}
         onTouchStart={handleMouseDown}
         style={{ transform: `rotate(${angle}deg)` }}
