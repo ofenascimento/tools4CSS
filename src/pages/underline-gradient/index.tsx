@@ -11,6 +11,8 @@ import ControlsContainer from "../../components/ControlsContainer/ControlsContai
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const UnderlineGradient = () => {
   const [colorVariant1, setColorVariant1] = useState<string>("#1D4ED8");
@@ -39,6 +41,8 @@ const UnderlineGradient = () => {
           title="Underline Gradient"
           info="Easily create stylish text with gradient underlines using our CSS Gradient Underline Generator."
         />
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
         <div className="mt-4 text-center bg-white dark:bg-mainDark border border-slate-300 dark:border-slate-600 p-2 rounded-lg mx-4 lg:mx-0">
           <span
             className="text-6xl font-GilroyBold dark:text-white"
@@ -76,7 +80,7 @@ const UnderlineGradient = () => {
         </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
-          <SyntaxHighlighter language="css"  style={{ ...darcula, borderRadius: '0.5rem' }}>
+          <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`background-image: linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%); \nbackground-repeat: no-repeat; \nbackground-size: 100% 0.${weight}em; \nbackground-position: 0 80%;`}
           </SyntaxHighlighter>
         </div>
@@ -86,6 +90,8 @@ const UnderlineGradient = () => {
             textToCopy={`background-image: linear-gradient(80deg, ${colorVariant1},${colorVariant2} 100%); \n background-repeat: no-repeat; \n background-size: 100% 0.${weight}em; \n background-position: 0 80%;`}
           />
         </div>
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         <Info
           title="What is Underline Gradient Generator?"

@@ -11,6 +11,8 @@ import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const ScrollbarGenerator = () => {
   const [scrollbarStyle, setScrollbarStyle] = useState({
@@ -71,6 +73,9 @@ const ScrollbarGenerator = () => {
           title="Scrollbar CSS Generator"
           info="Customize and generate stylish scrollbars with our Scrollbar CSS Generator"
         />
+
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         {/* Scrollbar Preview */}
         <div className="w-full mt-4 px-4 md:px-0  rounded-lg">
@@ -251,6 +256,9 @@ const ScrollbarGenerator = () => {
                 `}
           />
         </div>
+
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         <Info
           title="What is Scrollbar Generator?"

@@ -7,6 +7,8 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 function rgbToHsv(r: number, g: number, b: number) {
     const rPrime = r / 255;
@@ -102,6 +104,9 @@ const RgbToHsvConverter = () => {
                     info="Convert an RGB value to its HSV representation"
                 />
 
+                <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+                <AdBannerMobile dataAdSlot='6317680736' />
+
                 <div className="w-auto md:w-full mt-4 mx-4 lg:mx-0">
                     <Textarea
                         customClassName="h-14"
@@ -141,6 +146,9 @@ const RgbToHsvConverter = () => {
                         </table>
                     </div>
                 )}
+
+                <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+                <AdBannerMobile dataAdSlot='6317680736' />
 
                 <Info title="What is RGB to HSV Conversion?" paragraph={<>  RGB to HSV conversion is an essential process for designers and developers working with color.
                     <br /><br />

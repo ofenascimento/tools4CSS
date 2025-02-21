@@ -7,6 +7,8 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const RgbToHexConverter = () => {
     // Default value: corresponds to RGB(29, 78, 216) => #1D4ED8
@@ -73,6 +75,9 @@ const RgbToHexConverter = () => {
                     info="Convert an RGB value to its hexadecimal representation"
                 />
 
+                <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+                <AdBannerMobile dataAdSlot='6317680736' />
+
                 <div className="w-auto md:w-full mt-4 mx-4 lg:mx-0">
                     <Textarea
                         customClassName="h-14"
@@ -112,6 +117,9 @@ const RgbToHexConverter = () => {
                         </table>
                     </div>
                 )}
+
+                <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+                <AdBannerMobile dataAdSlot='6317680736' />
 
                 <Info title="What is RGB to Hex Conversion?" paragraph={<> RGB to Hex conversion is a fundamental process for web developers and designers who work with color in different formats.
                     <br />

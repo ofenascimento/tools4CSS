@@ -12,6 +12,8 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const CSSFormatter = () => {
   const [inputCSS, setInputCSS] = useState("");
@@ -55,6 +57,9 @@ const CSSFormatter = () => {
           info="Format and beautify your CSS code with our CSS Formatter tool"
         />
 
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
+
         <div className="w-auto md:w-full mt-4 mx-4 lg:mx-0">
           <Textarea
             placeholder="Cole seu CSS aqui..."
@@ -66,6 +71,9 @@ const CSSFormatter = () => {
         <div className="mx-4 lg:mx-0">
           <Button text="Format" onClick={beautifyCSS} />
         </div>
+
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         {formattedCSS && (
           <>

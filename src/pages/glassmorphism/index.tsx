@@ -14,6 +14,8 @@ import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
 import { MdCheck } from "react-icons/md";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const Glassmorphism = () => {
   const [blur, setBlur] = useState(12);
@@ -49,6 +51,8 @@ const Glassmorphism = () => {
           info="Easily create modern glassmorphism effects for your web projects with our Glassmorphism CSS Generator. Perfect for achieving the trendy frosted glass look in your designs."
           customInfoClassname="lg:w-3/4"
         />
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
         <div className="mt-4">
           <div
             className={`${styles.backgroundImage} py-20 rounded-md flex items-center justify-center mx-4 lg:mx-0`}
@@ -137,7 +141,7 @@ const Glassmorphism = () => {
         </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
-          <SyntaxHighlighter language="css"  style={{ ...darcula, borderRadius: '0.5rem' }}>
+          <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
           </SyntaxHighlighter>
         </div>
@@ -147,6 +151,8 @@ const Glassmorphism = () => {
             textToCopy={`backdrop-filter: blur(${blur}px);\n--webkit-backdrop-filter: blur(${blur}px);\n--moz-backdrop-filter: blur(${blur}px);\nbackground-color: rgba(${r}, ${g}, ${b}, ${trasnparency});`}
           />
         </div>
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         <Info
           title="What is Glassmorphism Generator?"

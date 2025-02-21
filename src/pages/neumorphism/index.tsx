@@ -11,6 +11,8 @@ import CustomSlider from "../../components/CustomSlider/CustomSlider";
 import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "@/components/ColorPicker/ColorPicker";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const Neumorphism: React.FC = () => {
   const [blur, setBlur] = useState<number>(34);
@@ -20,7 +22,7 @@ const Neumorphism: React.FC = () => {
 
   // Ensure that the component only renders on the client side
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -101,6 +103,8 @@ const Neumorphism: React.FC = () => {
           title="Neumorphism CSS Generator"
           info="Effortlessly create soft, subtle 3D effects with our Neumorphism CSS Generator"
         />
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         <div
           style={{ backgroundColor: color }}
@@ -142,7 +146,7 @@ const Neumorphism: React.FC = () => {
         </ControlsContainer>
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
-          <SyntaxHighlighter language="css"  style={{ ...darcula, borderRadius: '0.5rem' }}>
+          <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`background-color: ${color};
 box-shadow: ${boxShadowStyle};
 -webkit-box-shadow: ${boxShadowStyle};`}
@@ -156,6 +160,8 @@ box-shadow: ${boxShadowStyle};
 -webkit-box-shadow: ${boxShadowStyle};`}
           />
         </div>
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         <Info
           title="What is Neumorphism?"
