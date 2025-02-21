@@ -23,6 +23,8 @@ import CustomSwitch from "@/components/CustomSwitch/CustomSwitch";
 import { palleteGradient } from "@/utils/gradients";
 import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
 import { parseHexToRGB } from "@/utils/parseHexToRGB";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
@@ -77,6 +79,9 @@ const BackgroundGradient = () => {
           info="The CSS Gradient Generator is a user-friendly online tool designed to help developers and designers create beautiful gradient backgrounds."
           customInfoClassname="lg:w-3/4"
         />
+
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
 
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-1 mx-4 mt-4 lg:mx-0">
           <div className="col-span-8">
@@ -263,8 +268,8 @@ const BackgroundGradient = () => {
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
           <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
             {`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
-                ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
-                : ""
+              ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
+              : ""
               } `}
           </SyntaxHighlighter>
         </div>
@@ -272,11 +277,13 @@ const BackgroundGradient = () => {
         <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
             textToCopy={`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
-                ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
-                : ""
+              ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
+              : ""
               } `}
           />
         </div>
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
         <Info
           title="What is CSS Gradient Generator?"
           paragraph="The CSS Background Gradient Generator is a web development tool that assists in creating gradient backgrounds for HTML elements using Cascading Style Sheets (CSS). With this generator, designers and developers can define and customize gradients, specifying colors, angles, and other properties to achieve the desired visual effect. The resulting CSS code can then be easily integrated into web projects, allowing for the creation of stylish and dynamic backgrounds for web pages and user interfaces. This tool simplifies the process of implementing gradient backgrounds in CSS, enhancing the overall design and user experience of websites and web applications."
