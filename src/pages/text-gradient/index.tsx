@@ -15,6 +15,8 @@ import Title from "../../components/Title/Title";
 import Info from "../../components/Info/Info";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
 import AnglePicker from "@/components/AnglePicker/AnglePicker";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const TextGradient = () => {
   const {
@@ -52,6 +54,8 @@ const TextGradient = () => {
           info="Create stunning gradient text effects effortlessly with our CSS Text Gradient Generator. Ideal for enhancing headlines, logos, and important text in your web projects."
           customInfoClassname="lg:w-3/4"
         />
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
         <div className="mt-4 border border-slate-300 bg-white dark:border-slate-600 dark:bg-mainDark p-2 rounded-lg mx-4 lg:mx-0">
           <h5
             className={`${animated ? style.h5animated : style.h5textGradient
@@ -115,6 +119,8 @@ const TextGradient = () => {
           >
             Experience the Power of Color
           </h5>
+
+
 
         </div>
         <ControlsContainer>
@@ -183,6 +189,8 @@ const TextGradient = () => {
               }`}
           />
         </div>
+        <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+        <AdBannerMobile dataAdSlot='6317680736' />
         <Info
           title="What is Text Gradient Generator?"
           paragraph="A text gradient is a graphic design technique that involves applying
