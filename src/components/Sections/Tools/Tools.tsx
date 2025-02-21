@@ -5,10 +5,14 @@ import CSSGenerators from "./CSSGenerators";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 import CSSComponents from "./CSSComponents";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const Tools = () => {
   return (
     <div className="w-full md:w-4/6 mx-auto mt-8 flex justify-center md:justify-between flex-wrap mb-4" id="generators">
+      <AdBanner dataAdSlot='9079575448' />
+      <AdBannerMobile dataAdSlot='6317680736' />
       <div className=" w-full flex justify-between px-2 lg:px-0 items-center py-4">
         <h1 className="text-2xl font-redHat font-bold dark:text-white">
           CSS Generators
@@ -26,6 +30,8 @@ const Tools = () => {
       </div>
       <CSSGenerators />
 
+      <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+      <AdBannerMobile dataAdSlot='6317680736' />
       <div className=" w-full flex justify-between px-2 lg:px-0 items-center py-4">
         <h1 className="text-2xl font-redHat font-bold dark:text-white">
           CSS Tools
@@ -42,6 +48,9 @@ const Tools = () => {
         </Link>
       </div>
       <CSSTools />
+
+      <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
+      <AdBannerMobile dataAdSlot='6317680736' />
 
       <div className=" w-full flex justify-between px-2 lg:px-0 items-center py-4">
         <h1 className="text-2xl font-redHat font-bold dark:text-white">

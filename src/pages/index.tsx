@@ -4,6 +4,8 @@ import React from "react";
 import Hero from "../components/Sections/Hero/Hero";
 import Tools from "../components/Sections/Tools/Tools";
 import GithubStargazers from "@/components/GithubStargazers/GithubStargazers";
+import AdBanner from "@/components/ADS/AdsBanner";
+import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
 
 const Home: NextPage = () => {
   return (
