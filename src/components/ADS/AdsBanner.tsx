@@ -45,7 +45,7 @@ const AdBanner = ({
 
      
       <ins
-        className="adsbygoogle bg-gray-200 rounded-lg"
+        className="adsbygoogle bg-gray-50 dark:bg-mainDark rounded-lg"
         style={{
           display: "inline-block",
           width: 728,
