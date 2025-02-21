@@ -7,7 +7,7 @@ const GithubStargazers: React.FC = () => {
   const [stargazers, setStargazers] = useState<Stargazer[]>([]);
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/gomestzx/tools4CSS/stargazers`)
+    fetch(`https://api.github.com/repos/ofenascimento/tools4CSS/stargazers?per_page=100`)
       .then((response) => response.json())
       .then((data: Stargazer[]) => setStargazers(data))
       .catch((error) => console.error("Error fetching stargazers:", error));
@@ -33,7 +33,7 @@ const GithubStargazers: React.FC = () => {
       </div>
 
       <div className="flex items-center justify-center mt-4">
-        <Link href="https://github.com/gomestzx/tools4CSS">
+        <Link href="https://github.com/ofenascimento/tools4CSS">
           <div className="bg-black text-white px-8 py-2 rounded-xl flex items-center justify-center gap-2 dark:border dark:border-slate-600 cursor-pointer">
             <FaGithub />
             <FaStar color="#FABC3F" />
