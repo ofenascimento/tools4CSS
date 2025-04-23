@@ -7,11 +7,21 @@ const GithubStargazers: React.FC = () => {
   const [stargazers, setStargazers] = useState<Stargazer[]>([]);
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/ofenascimento/tools4CSS/stargazers?per_page=100`)
-      .then((response) => response.json())
-      .then((data: Stargazer[]) => setStargazers(data))
-      .catch((error) => console.error("Error fetching stargazers:", error));
-  }, []);
+
+    const fetchStargazes = async () => {
+      try {
+        const response = await fetch('https://api.github.com/repos/ofenascimento/tools4CSS/stargazers?per_page=100')
+        const data = await response.json();
+        setStargazers(data)
+      }
+      catch (err) {
+        console.log(err)
+      }
+    }
+
+    fetchStargazes()
+
+  }, [])
 
   return (
     <div className="mt-10 w-full md:w-5/6 lg:w-4/6 mx-auto">
