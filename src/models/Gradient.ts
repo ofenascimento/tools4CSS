@@ -1,14 +1,6 @@
-import { Schema, Document, models, model } from 'mongoose';
+import mongoose, { Schema, model, models, InferSchemaType } from 'mongoose';
 
-export interface GradientDocument extends Document {
-  color1: string;
-  color2: string;
-  color3?: string | null;
-  name: string;
-  likes: number;
-}
-
-const GradientSchema = new Schema<GradientDocument>({
+const GradientSchema = new Schema({
   color1: { type: String, required: true },
   color2: { type: String, required: true },
   color3: { type: String, default: null },
@@ -16,5 +8,7 @@ const GradientSchema = new Schema<GradientDocument>({
   likes: { type: Number, default: 0 },
 });
 
+export type GradientDocument = InferSchemaType<typeof GradientSchema>;
+
 export const GradientModel =
-  models.Gradient || model<GradientDocument>('Gradient', GradientSchema);
+  models.Gradient || model('Gradient', GradientSchema);
