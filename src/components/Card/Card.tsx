@@ -46,7 +46,7 @@ const Card = (props: ICard) => {
           <div
             className={` ${styles.card} border border-slate-300 dark:border-slate-600 dark:hover:border-slate-500 rounded-md shadow-sm bg-gray-50 dark:bg-mainDark mx-2 md:mx-0 lg:m-auto relative cursor-pointer h-48 p-4`}
           >
-            <Image src={props.img ?? ''} width={50} height={50} />
+            <Image alt="" src={props.img ?? ''} width={50} height={50} />
 
             <div className=" w-full flex flex-col items-start justify-center">
 
