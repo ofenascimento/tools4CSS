@@ -18,7 +18,7 @@ export const useGradient = () => {
     const fetchGradients = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('http://147.93.67.22:4000/gradients');
+        const response = await fetch('https://tools4css.com/api/gradients');
         if (!response.ok) {
           throw new Error('Failed to fetch gradients');
         }
