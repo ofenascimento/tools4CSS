@@ -92,31 +92,40 @@ const RgbToHexConverter = () => {
                 </div>
 
                 {(rgbValue || hexValue) && (
-                    <div className="rounded-md border p-4 mt-6 mx-4 lg:mx-0">
+                    <div className="rounded-md border p-4 mt-6 mx-4 lg:mx-0 bg-white text-gray-900 border-gray-300 dark:bg-mainDark dark:text-white dark:border-gray-600">
                         <h2 className="text-xl font-bold mb-4">Conversions</h2>
                         <table className="w-full text-left">
                             <thead>
-                                <tr className="border-b">
+                                <tr className="border-b border-gray-200 dark:border-gray-700">
                                     <th className="py-2 font-medium">CODE</th>
                                     <th className="py-2 font-medium">VALUE</th>
                                     <th className="py-2 font-medium">HTML/CSS</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="border-b">
+                                <tr className="border-b border-gray-200 dark:border-gray-700">
                                     <td className="py-2">RGB</td>
                                     <td className="py-2">{rgbValue}</td>
-                                    <td className="py-2">background-color: {rgbValue};</td>
+                                    <td className="py-2">
+                                        <code className="px-1 rounded bg-gray-100 dark:bg-neutral-800">
+                                            background-color: {rgbValue};
+                                        </code>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td className="py-2">Hex</td>
                                     <td className="py-2">{hexValue}</td>
-                                    <td className="py-2">background-color: {hexValue};</td>
+                                    <td className="py-2">
+                                        <code className="px-1 rounded bg-gray-100 dark:bg-neutral-800">
+                                            background-color: {hexValue};
+                                        </code>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 )}
+
 
                 <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
                 <AdBannerMobile dataAdSlot='6317680736' />
