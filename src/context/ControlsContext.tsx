@@ -65,9 +65,9 @@ export function ControlsProvider({ children }: IProvider) {
 
    
     <div class="flex flex-col mt-5 gap-2">
-      <a class="bg-blue-600 mx-4 py-2 text-white rounded-xl border-4 border-blue-700 cursor-pointer" href="https://www.linkedin.com/in/gomestzx/">Linkedin</a>
+      <a class="bg-blue-600 mx-4 py-2 text-white rounded-xl border-4 border-blue-700 cursor-pointer" href="https://www.linkedin.com/in/ofenascimento/">Linkedin</a>
       <a class="bg-red-500 mx-4 py-2 text-white rounded-xl border-4 border-red-700 cursor-pointer" href="https://www.instagram.com/felipematheus.dev/">Instagram</a>
-      <a class="bg-slate-600 mx-4 py-2 text-white rounded-xl border-4 border-gray-700 cursor-pointer" href="https://github.com/gomestzx">GitHub</a>
+      <a class="bg-slate-600 mx-4 py-2 text-white rounded-xl border-4 border-gray-700 cursor-pointer" href="https://github.com/ofenascimento">GitHub</a>
     </div>
     
   </div>

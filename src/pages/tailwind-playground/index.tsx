@@ -158,7 +158,7 @@ const TailwindPlayground: React.FC = () => {
         </div>
 
         <div className=" flex justify-center items-center gap-2">
-          <Link href="https://github.com/gomestzx/tools4CSS">
+          <Link href="https://github.com/ofenascimento/tools4CSS">
             <div className=" bg-custom-gray-secondary dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-3 rounded-xl dark:border-slate-600 cursor-pointer">
               <FaGithub size={20} />
             </div>

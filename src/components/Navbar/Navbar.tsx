@@ -76,7 +76,7 @@ function Navbar() {
               >
                 <MdFavoriteBorder size={20} />
               </button> */}
-              <Link href="https://github.com/gomestzx/tools4CSS">
+              <Link href="https://github.com/ofenascimento/tools4CSS">
                 <div className=" bg-custom-gray-main dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-3 py-3 rounded-full dark:border-slate-600 cursor-pointer">
                   <FaGithub size={20} />
                 </div>
@@ -368,7 +368,7 @@ function Navbar() {
                   </button> */}
                 </li>
                 <li className="hidden md:block">
-                  <Link href="https://github.com/gomestzx/tools4CSS">
+                  <Link href="https://github.com/ofenascimento/tools4CSS">
                     <div className=" bg-custom-gray-main dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full border border-slate-300 dark:border-slate-600 cursor-pointer">
                       <FaGithub />
                     </div>

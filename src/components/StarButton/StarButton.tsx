@@ -8,7 +8,7 @@ const StarButton = () => {
   const {theme} = useTheme()
   return (
     <>
-      <Link href="https://github.com/gomestzx/tools4CSS">
+      <Link href="https://github.com/ofenascimento/tools4CSS">
           <span className={`${theme === 'dark' ? styles.gradientButtonDark : styles.gradientButton} font-GilroyMedium rounded-full px-2 text-white mt-3 cursor-pointer text-center whitespace-nowrap max-w-[400px] w-full`}>
             ⭐ Give it a star on GitHub!
           </span>

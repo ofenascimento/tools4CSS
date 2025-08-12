@@ -15,7 +15,7 @@ export default function Banner() {
           <h2 className="font-GilroyBold dark:text-white text-2xl mt-2 leading-6 text-center lg:text-left">
             Unlock Your Creativity with Our Ultimate CSS Gradients Collection
           </h2>
-          <Link href='/gradient-pallete'>
+          <Link className="w-full" href='/gradient-pallete'>
             <button
               className="font-GilroyMedium text-white py-2 px-6 lg:px-14 mt-2 rounded-full flex justify-center items-center gap-3 w-full"
               style={{
@@ -25,7 +25,7 @@ export default function Banner() {
               Explore Gradient Palette <BsPalette2 className=" hover:ml-4" />
             </button>
           </Link>
-          <Link href='/background-gradient'>
+          <Link className="w-full" href='/background-gradient'>
             <button
               className="font-GilroyMedium text-white py-2 px-6 lg:px-14 mt-1 rounded-full flex justify-center items-center gap-3 w-full"
               style={{

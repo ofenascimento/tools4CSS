@@ -11,7 +11,7 @@
 <h2>🔥 Run app</h2>
 
 ```
-git clone https://github.com/gomestzx/tools4CSS.git
+git clone https://github.com/ofenascimento/tools4CSS.git
 
 cd tools4CSS
 
