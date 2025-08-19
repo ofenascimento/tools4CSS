@@ -1,5 +1,6 @@
 import React, { CSSProperties, FC, useEffect, useState } from "react";
 import { palleteGradient } from "../../utils/gradients";
+import { useRouter } from "next/navigation";
 
 interface CardProps {
   color1: string;
@@ -8,7 +9,9 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ color1, color2, zIndex }) => {
+  const router = useRouter();
   return (
+
     <div
       className="card static lg:absolute m-2 lg:m-4 h-[140px] w-[100px] lg:h-[180px] lg:w-[140px]"
       style={{
@@ -16,7 +19,9 @@ const Card: FC<CardProps> = ({ color1, color2, zIndex }) => {
         left: `${zIndex * 60}px`,
         zIndex: zIndex,
       }}
+      onClick={() => router.push(`/background-gradient?color1=${color1.replace('#','')}&color2=${color2.replace('#','')}`)}
     >
+
       <style jsx>{`
         .card {
           border-radius: 1rem;
@@ -44,6 +49,7 @@ const Card: FC<CardProps> = ({ color1, color2, zIndex }) => {
         }
       `}</style>
     </div>
+
   );
 };
 
@@ -67,7 +73,7 @@ const ColorGrid: FC = () => {
 
       if (width >= 1400) {
         setNumCards(6);
-      } else if(width >= 1250 && width < 1400) {
+      } else if (width >= 1250 && width < 1400) {
         setNumCards(5);
       } else if (width >= 1100 && width < 1250) {
         setNumCards(4);

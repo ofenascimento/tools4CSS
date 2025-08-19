@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./styles.module.scss";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
@@ -25,6 +25,7 @@ import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
 import { parseHexToRGB } from "@/utils/parseHexToRGB";
 import AdBanner from "@/components/ADS/AdsBanner";
 import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
+import { useSearchParams } from 'next/navigation'
 
 const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
@@ -39,6 +40,26 @@ const BackgroundGradient = () => {
 
   const color1Rgb = parseHexToRGB(colorVariant1);
   const color2Rgb = parseHexToRGB(colorVariant2);
+
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const c1 = searchParams.get("color1");
+    const c2 = searchParams.get("color2");
+
+    if (c1 || c2) {
+      const norm = (v: string) => (v.startsWith("#") ? v : `#${v}`);
+
+      if (c1) {
+        const v1 = norm(c1);
+        setColorVariant1(v1);
+      }
+      if (c2) {
+        const v2 = norm(c2);
+        setColorVariant2(v2);
+      }
+    }
+  }, [searchParams]);
 
   const parseRGBToHex = (r: number, g: number, b: number) => {
     return (
