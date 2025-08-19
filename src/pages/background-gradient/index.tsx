@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./styles.module.scss";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
@@ -25,7 +25,7 @@ import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
 import { parseHexToRGB } from "@/utils/parseHexToRGB";
 import AdBanner from "@/components/ADS/AdsBanner";
 import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
@@ -78,6 +78,9 @@ const BackgroundGradient = () => {
     setColor(parseRGBToHex(rgb.r, rgb.g, rgb.b));
   };
 
+  const router = useRouter();
+
+
   return (
     <>
       <SEO title="Background Gradient Generator" />
@@ -108,6 +111,7 @@ const BackgroundGradient = () => {
           <div className="col-span-8">
             <div className="slg:mx-0 flex flex-col lg:flex-row  gap-1">
               <div
+                id="gradient-preview"
                 className={`${animated ? style.animatedApp : style.app
                   } py-52 rounded-md relative w-full`}
                 style={{
@@ -276,6 +280,10 @@ const BackgroundGradient = () => {
                 onClick={() => {
                   setColorVariant1(item.color1);
                   setColorVariant2(item.color2);
+                  document.getElementById("gradient-preview")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
                 }}
                 style={{
                   backgroundImage: `linear-gradient(80deg, ${item.color1}, ${item.color2})`,
@@ -305,6 +313,26 @@ const BackgroundGradient = () => {
         </div>
         <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
         <AdBannerMobile dataAdSlot='6317680736' />
+        <h1 className="text-3xl font-bold text-black dark:text-white my-4 mx-4 lg:mx-0">Presets</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 lg:mx-0">
+          {palleteGradient.map((gradient, i) => (
+            <div
+              key={i}
+              className="h-40 rounded-lg cursor-pointer"
+              style={{
+                backgroundImage: `linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`,
+              }}
+              onClick={() => {
+                setColorVariant1(gradient.color1)
+                setColorVariant2(gradient.color2)
+                router.push('#gradient-preview')
+              }}
+            >
+
+            </div>
+          ))}
+        </div>
+
         <Info
           title="What is CSS Gradient Generator?"
           paragraph="The CSS Background Gradient Generator is a web development tool that assists in creating gradient backgrounds for HTML elements using Cascading Style Sheets (CSS). With this generator, designers and developers can define and customize gradients, specifying colors, angles, and other properties to achieve the desired visual effect. The resulting CSS code can then be easily integrated into web projects, allowing for the creation of stylish and dynamic backgrounds for web pages and user interfaces. This tool simplifies the process of implementing gradient backgrounds in CSS, enhancing the overall design and user experience of websites and web applications."
