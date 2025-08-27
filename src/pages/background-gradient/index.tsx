@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./styles.module.scss";
 import CopyButton from "../../components/CopyButton/CopyButton";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
@@ -9,9 +9,7 @@ import { useFavoriteTool } from "../../hooks/useFavoriteTool";
 import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import {
-  MdAdd,
   MdArrowBack,
-  MdClose,
   MdFullscreen,
   MdOutlineBlurLinear,
   MdOutlineCircle,
@@ -27,12 +25,11 @@ import { validateAndFormatHex } from "@/utils/validateAndFormatHex";
 import { parseHexToRGB } from "@/utils/parseHexToRGB";
 import AdBanner from "@/components/ADS/AdsBanner";
 import AdBannerMobile from "@/components/ADS/AdsBannerMobile";
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 
 const BackgroundGradient = () => {
   const [colorVariant1, setColorVariant1] = useState("#1d4ed8");
   const [colorVariant2, setColorVariant2] = useState("#24ff8e");
-  const [colorVariant3, setColorVariant3] = useState("");
   const [type, setType] = useState("linear");
   const [animated, setAnimated] = useState(false);
   const [angle, setAngle] = useState(80);
@@ -43,7 +40,6 @@ const BackgroundGradient = () => {
 
   const color1Rgb = parseHexToRGB(colorVariant1);
   const color2Rgb = parseHexToRGB(colorVariant2);
-  const color3Rgb = parseHexToRGB(colorVariant3);
 
   const searchParams = useSearchParams()
 
@@ -82,9 +78,6 @@ const BackgroundGradient = () => {
     setColor(parseRGBToHex(rgb.r, rgb.g, rgb.b));
   };
 
-  const router = useRouter();
-
-
   return (
     <>
       <SEO title="Background Gradient Generator" />
@@ -115,12 +108,11 @@ const BackgroundGradient = () => {
           <div className="col-span-8">
             <div className="slg:mx-0 flex flex-col lg:flex-row  gap-1">
               <div
-                id="gradient-preview"
                 className={`${animated ? style.animatedApp : style.app
-                  }  ${colorVariant3 !== '' ? 'py-96' : 'py-64'} rounded-md relative w-full`}
+                  } py-52 rounded-md relative w-full`}
                 style={{
                   backgroundImage: `${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
-                    } ${colorVariant2} ${animated ? "," + colorVariant2 : ""} ${colorVariant3 ? `, ${colorVariant3}` : ""})`,
+                    } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
                 }}
               >
                 <button
@@ -245,79 +237,9 @@ const BackgroundGradient = () => {
                       />
                       <span className=" text-xs font-semibold">B</span>
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
-              {
-                colorVariant3 && <div className="items-center p-2 rounded-lg">
-                  <button className=" w-full flex justify-end items-end mb-4 cursor-pointer">
-                    <div className="bg-red-500 rounded-lg p-1" onClick={() => setColorVariant3("")}>
-                      <MdClose size={18} />
-                    </div>
-
-                  </button>
-                  <HexColorPicker
-                    style={{ width: "100%", height: 100 }}
-                    color={colorVariant3}
-                    onChange={setColorVariant3}
-                  />
-                  <div className="mt-3 flex gap-2 justify-between items-center">
-                    <div className=" flex flex-col gap-2 justify-center items-center">
-                      <input
-                        value={colorVariant3}
-                        onChange={(e) =>
-                          validateAndFormatHex(e, setColorVariant3)
-                        }
-                        className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border w-[88px] p-2 rounded-lg"
-                      />
-                      <span className=" text-xs font-semibold">HEX</span>
-                    </div>
-                    <div className="flex gap-1">
-                      <div className=" flex flex-col gap-2 justify-center items-center">
-                        <input
-                          className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
-                          type="number"
-                          name="r"
-                          value={color3Rgb.r}
-                          onChange={handleRgbChange(color3Rgb, setColorVariant3)}
-                        />
-                        <span className=" text-xs font-semibold">R</span>
-                      </div>
-                      <div className=" flex flex-col gap-2 justify-center items-center">
-                        <input
-                          className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
-                          type="number"
-                          name="g"
-                          value={color3Rgb.g}
-                          onChange={handleRgbChange(color3Rgb, setColorVariant3)}
-                        />
-                        <span className=" text-xs font-semibold">G</span>
-                      </div>
-                      <div className=" flex flex-col gap-2 justify-center items-center">
-                        <input
-                          className="bg-white text-black font-semibold dark:text-white dark:bg-gray-700 border-slate-300 border p-2 rounded-lg w-12 text-center"
-                          type="number"
-                          name="b"
-                          value={color3Rgb.b}
-                          onChange={handleRgbChange(color3Rgb, setColorVariant3)}
-                        />
-                        <span className=" text-xs font-semibold">B</span>
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-              }
-              {
-                !colorVariant3 && <button className="dark:bg-gray-700 bg-slate-200 w-full px-4 rounded-lg py-2 mt-3 font-semibold flex  justify-center items-center gap-2" onClick={() => setColorVariant3('#fc5c7d')}>Add color 3 <MdAdd size={24} /></button>
-              }
-
-
             </div>
           </div>
         </div>
@@ -354,7 +276,6 @@ const BackgroundGradient = () => {
                 onClick={() => {
                   setColorVariant1(item.color1);
                   setColorVariant2(item.color2);
-                  setColorVariant3("")
                 }}
                 style={{
                   backgroundImage: `linear-gradient(80deg, ${item.color1}, ${item.color2})`,
@@ -367,58 +288,35 @@ const BackgroundGradient = () => {
 
         <div className="w-auto md:w-full bg-slate-600 mt-4 mx-4 lg:mx-0 rounded-lg">
           <SyntaxHighlighter language="css" style={{ ...darcula, borderRadius: '0.5rem' }}>
-            {`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1},` : ""} ${colorVariant2}${animated ? `, ${colorVariant2}` : ""}${colorVariant3?.trim() ? `, ${colorVariant3}${animated ? `, ${colorVariant3}` : ""}` : ""});${animated
+            {`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
               ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
               : ""
-              }`}
-
-
+              } `}
           </SyntaxHighlighter>
         </div>
 
         <div className="mx-4 mt-2 lg:mx-0">
           <CopyButton
-            textToCopy={`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1},` : ""} ${colorVariant2}${animated ? `, ${colorVariant2}` : ""}${colorVariant3?.trim() ? `, ${colorVariant3}${animated ? `, ${colorVariant3}` : ""}` : ""});${animated
+            textToCopy={`background-image: ${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1},${animated ? ` ${colorVariant1}` + "," : ""} ${colorVariant2} ${animated ? "," + colorVariant2 : ""});${animated
               ? "\nbackground-size: 400% 400%;\nanimation: gradient 10s ease infinite;\n@keyframes gradient {\n0% { background-position: 0% 50%; }\n50% { background-position: 100% 50%; }\n100% { background-position: 0% 50%; }}"
               : ""
-              }`}
+              } `}
           />
         </div>
         <AdBanner customClassName="mt-4" dataAdSlot='9079575448' />
         <AdBannerMobile dataAdSlot='6317680736' />
-        <h1 className="text-3xl font-bold text-black dark:text-white my-4 mx-4 lg:mx-0">Presets</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 lg:mx-0">
-          {palleteGradient.map((gradient, i) => (
-            <div
-              key={i}
-              className="h-40 rounded-lg cursor-pointer"
-              style={{
-                backgroundImage: `linear-gradient(80deg, ${gradient.color1}, ${gradient.color2})`,
-              }}
-              onClick={() => {
-                setColorVariant1(gradient.color1)
-                setColorVariant2(gradient.color2)
-                setColorVariant3("")
-                router.push('#gradient-preview')
-              }}
-            >
-
-            </div>
-          ))}
-        </div>
-
         <Info
           title="What is CSS Gradient Generator?"
           paragraph="The CSS Background Gradient Generator is a web development tool that assists in creating gradient backgrounds for HTML elements using Cascading Style Sheets (CSS). With this generator, designers and developers can define and customize gradients, specifying colors, angles, and other properties to achieve the desired visual effect. The resulting CSS code can then be easily integrated into web projects, allowing for the creation of stylish and dynamic backgrounds for web pages and user interfaces. This tool simplifies the process of implementing gradient backgrounds in CSS, enhancing the overall design and user experience of websites and web applications."
         />
-      </div >
+      </div>
       <div
         id="full-screen"
         className={`fixed inset-0 h-screen w-screen z-50 ${animated ? style.animatedApp : style.app
           } ${fullScreen ? "block" : "hidden"}`}
         style={{
           backgroundImage: `${type}-gradient(${type === "linear" ? `${angle}deg,` : ""} ${colorVariant1}, ${animated ? colorVariant1 + "," : ""
-            } ${colorVariant2} ${animated ? "," + colorVariant2 : ""} ${colorVariant3 ? `, ${colorVariant3}` : ""})`,
+            } ${colorVariant2} ${animated ? "," + colorVariant2 : ""})`,
         }}
       >
         <button
